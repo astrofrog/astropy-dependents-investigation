@@ -208,20 +208,14 @@ def cmd_scan(args):
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     result = scan_package(args.package, output_dir)
-    print(f"Package: {result['package']}")
-    print(f"Installed: {result['install_ok']}")
-    print(f"Files scanned: {result['files_scanned']}")
-    print(f"Duration: {result['duration']}s")
+    n_pub = len(result["public_api"])
+    n_priv = len(result["private_api"])
+    ok = "yes" if result["install_ok"] else "no"
+    print(f"{result['package']}: {ok}, {n_pub} public, {n_priv} private API refs, "
+          f"{result['files_scanned']} files, {result['duration']}s")
     if result["error"]:
-        print(f"Error: {result['error']}")
-    if result["public_api"]:
-        print(f"\nPublic API ({len(result['public_api'])}):")
-        for i in sorted(result["public_api"]):
-            print(f"  {i}")
-    if result["private_api"]:
-        print(f"\nPrivate API ({len(result['private_api'])}):")
-        for i in sorted(result["private_api"]):
-            print(f"  {i}")
+        print(f"  error: {result['error'][:200]}")
+    print(f"  saved to {output_dir / (args.package + '.json')}")
 
 
 def cmd_scan_all(args):
@@ -256,7 +250,8 @@ def cmd_scan_all(args):
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"Scanning {len(packages)} packages, workers: {args.workers}, output: {output_dir}")
+    total = len(packages)
+    print(f"Scanning {total} packages, workers: {args.workers}, output: {output_dir}")
 
     done = 0
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
@@ -265,13 +260,13 @@ def cmd_scan_all(args):
             pkg = futures[future]
             done += 1
             try:
-                r = future.result()
-                n_api = len(r["imports"])
-                status = f"{n_api} imports" if r["install_ok"] else "install-fail"
-                if done % 20 == 0 or n_api > 0:
-                    print(f"  [{done}/{len(packages)}] {pkg}: {status}")
-            except Exception as e:
-                print(f"  [{done}/{len(packages)}] {pkg}: CRASH {e}")
+                future.result()
+            except Exception:
+                pass
+            pct = done * 100 // total
+            bar = f"[{'#' * (pct // 2)}{'.' * (50 - pct // 2)}]"
+            print(f"\r  {bar} {done}/{total} ({pct}%)", end="", flush=True)
+    print()
 
     # Write aggregate summary
     all_api = {}
