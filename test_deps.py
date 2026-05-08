@@ -76,7 +76,7 @@ def test_package(package, astropy_version, results_dir, pytest_extra=None,
         "duration": 0,
     }
     start = time.time()
-    tmpdir = tempfile.mkdtemp(prefix=f"atest-{package[:20]}-")
+    tmpdir = tempfile.mkdtemp(prefix=f"atest-{package[:20]}-", dir=".tmp")
 
     try:
         venv = os.path.join(tmpdir, "venv")
@@ -195,6 +195,7 @@ def cmd_run(args):
             print(f"  {p['name']}{extra}")
         return
 
+    Path(".tmp").mkdir(exist_ok=True)
     results_dir = Path(args.results_dir) / f"astropy-{args.astropy_version}"
     results_dir.mkdir(parents=True, exist_ok=True)
 

@@ -132,7 +132,7 @@ def scan_package(package, output_dir):
         "duration": 0,
     }
     start = time.time()
-    tmpdir = tempfile.mkdtemp(prefix=f"api-{package[:20]}-")
+    tmpdir = tempfile.mkdtemp(prefix=f"api-{package[:20]}-", dir=".tmp")
 
     try:
         venv = os.path.join(tmpdir, "venv")
@@ -251,6 +251,7 @@ def cmd_scan_all(args):
     output_dir.mkdir(parents=True, exist_ok=True)
 
     total = len(packages)
+    Path(".tmp").mkdir(exist_ok=True)
     print(f"Scanning {total} packages, workers: {args.workers}, output: {output_dir}")
 
     done = 0
