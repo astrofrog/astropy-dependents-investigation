@@ -1,0 +1,5 @@
+results/
+api-usage/
+__pycache__/
+*.pyc
+packages-old*.json

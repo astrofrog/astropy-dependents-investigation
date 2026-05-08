@@ -179,8 +179,8 @@ def scan_package(package, output_dir):
             usage["files_scanned"] += u["files_scanned"]
             usage["parse_errors"].extend(u["parse_errors"])
         usage["imports"] = sorted(set(usage["imports"]))
-        # Filter to only astropy imports (shouldn't need this but just in case)
-        all_imports = [i for i in usage["imports"] if i.startswith("astropy")]
+        # Filter to astropy.* only (excludes astropy_healpix etc)
+        all_imports = [i for i in usage["imports"] if i == "astropy" or i.startswith("astropy.")]
         public = [i for i in all_imports if not any(p.startswith("_") for p in i.split("astropy.", 1)[-1].split("."))]
         private = [i for i in all_imports if i not in set(public)]
 
