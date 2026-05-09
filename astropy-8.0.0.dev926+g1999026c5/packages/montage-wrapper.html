@@ -1,0 +1,219 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>montage-wrapper - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>montage-wrapper</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.9.9</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>4.3s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>montage_wrapper</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>
+    ERROR: Montage commands could not be found.
+
+    In order to use the montage_wrapper module, you will first need to
+    install the IPAC Montage software from:
+
+        http://montage.ipac.caltech.edu
+
+    and ensure that the Montage commands (e.g. mAdd, mProject, etc.) are in
+    your $PATH. Your current $PATH variable contains the following paths,
+    but none of them contain the Montage commands:
+
+        PATH = /home/tom/Claude/sandbox/astropy-
+           downstream/py312/bin:/home/tom/Claude/sandbox/astropy-downstr
+           eam/py312/bin:/Users/tom/usr/fv5.2.2/:/home/tom/usr/bin:/usr/
+           lib/ccache:/home/tom/.local/bin:/home/tom/.local/bin:/home/to
+           m/.pixi/bin:/home/tom/python/dev/bin:/Users/tom/usr/fv5.2.2/:
+           /home/tom/usr/bin:/home/tom/.nvm/versions/node/v20.13.1/bin:/
+           home/tom/.cargo/bin:/usr/lib/ccache:/usr/local/bin:/usr/bin:/
+           bin:/usr/local/games:/usr/games:/snap/bin
+
+    If the Montage commands are in one of these directories, then please
+    report this as an issue with montage-wrapper.
+    
+INTERNALERROR&gt; Traceback (most recent call last):
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/main.py&#34;, line 318, in wrap_session
+INTERNALERROR&gt;     session.exitstatus = doit(config, session) or 0
+INTERNALERROR&gt;                          ^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/main.py&#34;, line 371, in _main
+INTERNALERROR&gt;     config.hook.pytest_collection(session=session)
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/pluggy/_hooks.py&#34;, line 512, in __call__
+INTERNALERROR&gt;     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+INTERNALERROR&gt;            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/pluggy/_manager.py&#34;, line 120, in _hookexec
+INTERNALERROR&gt;     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+INTERNALERROR&gt;            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/pluggy/_callers.py&#34;, line 167, in _multicall
+INTERNALERROR&gt;     raise exception
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/pluggy/_callers.py&#34;, line 139, in _multicall
+INTERNALERROR&gt;     teardown.throw(exception)
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/logging.py&#34;, line 788, in pytest_collection
+INTERNALERROR&gt;     return (yield)
+INTERNALERROR&gt;             ^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/pluggy/_callers.py&#34;, line 139, in _multicall
+INTERNALERROR&gt;     teardown.throw(exception)
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/warnings.py&#34;, line 98, in pytest_collection
+INTERNALERROR&gt;     return (yield)
+INTERNALERROR&gt;             ^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/pluggy/_callers.py&#34;, line 139, in _multicall
+INTERNALERROR&gt;     teardown.throw(exception)
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/config/__init__.py&#34;, line 1409, in pytest_collection
+INTERNALERROR&gt;     return (yield)
+INTERNALERROR&gt;             ^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/pluggy/_callers.py&#34;, line 121, in _multicall
+INTERNALERROR&gt;     res = hook_impl.function(*args)
+INTERNALERROR&gt;           ^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/main.py&#34;, line 382, in pytest_collection
+INTERNALERROR&gt;     session.perform_collect()
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/main.py&#34;, line 857, in perform_collect
+INTERNALERROR&gt;     self.items.extend(self.genitems(node))
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/main.py&#34;, line 1020, in genitems
+INTERNALERROR&gt;     rep, duplicate = self._collect_one_node(node, handle_dupes)
+INTERNALERROR&gt;                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/main.py&#34;, line 883, in _collect_one_node
+INTERNALERROR&gt;     rep = collect_one_node(node)
+INTERNALERROR&gt;           ^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/runner.py&#34;, line 576, in collect_one_node
+INTERNALERROR&gt;     rep: CollectReport = ihook.pytest_make_collect_report(collector=collector)
+INTERNALERROR&gt;                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/pluggy/_hooks.py&#34;, line 512, in __call__
+INTERNALERROR&gt;     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+INTERNALERROR&gt;            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/pluggy/_manager.py&#34;, line 120, in _hookexec
+INTERNALERROR&gt;     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+INTERNALERROR&gt;            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/pluggy/_callers.py&#34;, line 167, in _multicall
+INTERNALERROR&gt;     raise exception
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/pluggy/_callers.py&#34;, line 139, in _multicall
+INTERNALERROR&gt;     teardown.throw(exception)
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/capture.py&#34;, line 889, in pytest_make_collect_report
+INTERNALERROR&gt;     rep = yield
+INTERNALERROR&gt;           ^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/pluggy/_callers.py&#34;, line 121, in _multicall
+INTERNALERROR&gt;     res = hook_impl.function(*args)
+INTERNALERROR&gt;           ^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/runner.py&#34;, line 400, in pytest_make_collect_report
+INTERNALERROR&gt;     call = CallInfo.from_call(
+INTERNALERROR&gt;            ^^^^^^^^^^^^^^^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/runner.py&#34;, line 353, in from_call
+INTERNALERROR&gt;     result: TResult | None = func()
+INTERNALERROR&gt;                              ^^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/runner.py&#34;, line 389, in collect
+INTERNALERROR&gt;     collector.config.pluginmanager._loadconftestmodules(
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/config/__init__.py&#34;, line 680, in _loadconftestmodules
+INTERNALERROR&gt;     mod = self._importconftest(
+INTERNALERROR&gt;           ^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/config/__init__.py&#34;, line 731, in _importconftest
+INTERNALERROR&gt;     mod = import_path(
+INTERNALERROR&gt;           ^^^^^^^^^^^^
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/_pytest/pathlib.py&#34;, line 587, in import_path
+INTERNALERROR&gt;     importlib.import_module(module_name)
+INTERNALERROR&gt;   File &#34;/home/tom/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py&#34;, line 90, in import_module
+INTERNALERROR&gt;     return _bootstrap._gcd_import(name[level:], package, level)
+INTERNALERROR&gt;            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR&gt;   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1387, in _gcd_import
+INTERNALERROR&gt;   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1360, in _find_and_load
+INTERNALERROR&gt;   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1310, in _find_and_load_unlocked
+INTERNALERROR&gt;   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
+INTERNALERROR&gt;   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1387, in _gcd_import
+INTERNALERROR&gt;   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1360, in _find_and_load
+INTERNALERROR&gt;   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 1331, in _find_and_load_unlocked
+INTERNALERROR&gt;   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 935, in _load_unlocked
+INTERNALERROR&gt;   File &#34;&lt;frozen importlib._bootstrap_external&gt;&#34;, line 999, in exec_module
+INTERNALERROR&gt;   File &#34;&lt;frozen importlib._bootstrap&gt;&#34;, line 488, in _call_with_frames_removed
+INTERNALERROR&gt;   File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-montage-wrapper-h0exra1e/venv/lib/python3.12/site-packages/montage_wrapper/__init__.py&#34;, line 63, in &lt;module&gt;
+INTERNALERROR&gt;     sys.exit(1)
+INTERNALERROR&gt; SystemExit: 1
+
+no tests ran in 0.81s
+
+--- stderr ---
+mainloop: caught unexpected SystemExit!
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (11)</strong></summary>
+<table class="meta-table">
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>montage-wrapper</td><td>0.9.9</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+</table>
+</details>
+
+</body></html>

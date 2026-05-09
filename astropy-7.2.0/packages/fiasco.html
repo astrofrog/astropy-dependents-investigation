@@ -1,0 +1,205 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>fiasco - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>fiasco</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.8.1</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>142.3s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>fiasco</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>E
+==================================== ERRORS ====================================
+________________ ERROR at setup of test_ion_sources[h_1.elvlc] _________________
+E   Failed: Timeout (&gt;120.0s) from pytest-timeout.
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/fiasco/io/sources/tests/test_sources.py::test_ion_sources[h_1.elvlc]
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-fiasco-kngk06ya/venv/lib/python3.12/site-packages/fiasco/util/setup_db.py:130: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+    tar.extractall(path=ascii_dbase_root)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR venv/lib/python3.12/site-packages/fiasco/io/sources/tests/test_sources.py::test_ion_sources[h_1.elvlc]
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 warning, 1 error in 135.24s (0:02:15)
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (58)</strong></summary>
+<table class="meta-table">
+
+<tr><td>asdf</td><td>5.3.0</td></tr>
+
+<tr><td>asdf-astropy</td><td>0.11.0</td></tr>
+
+<tr><td>asdf-coordinates-schemas</td><td>0.5.1</td></tr>
+
+<tr><td>asdf-standard</td><td>1.5.0</td></tr>
+
+<tr><td>asdf-transform-schemas</td><td>0.6.0</td></tr>
+
+<tr><td>asteval</td><td>1.0.8</td></tr>
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>attrs</td><td>26.1.0</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>dill</td><td>0.4.1</td></tr>
+
+<tr><td>fiasco</td><td>0.8.1</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>fortranformat</td><td>2.0.3</td></tr>
+
+<tr><td>h5py</td><td>3.16.0</td></tr>
+
+<tr><td>hypothesis</td><td>6.152.4</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>jmespath</td><td>1.1.0</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>lmfit</td><td>1.3.4</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>mpmath</td><td>1.4.1</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>plasmapy</td><td>2026.2.0</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-arraydiff</td><td>0.6.1</td></tr>
+
+<tr><td>pytest-astropy</td><td>0.11.0</td></tr>
+
+<tr><td>pytest-astropy-header</td><td>0.2.2</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-doctestplus</td><td>1.7.1</td></tr>
+
+<tr><td>pytest-filter-subpackage</td><td>0.2.0</td></tr>
+
+<tr><td>pytest-mock</td><td>3.15.1</td></tr>
+
+<tr><td>pytest-remotedata</td><td>0.4.1</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>semantic-version</td><td>2.10.0</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>sortedcontainers</td><td>2.4.0</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>uncertainties</td><td>3.2.3</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>wrapt</td><td>2.1.2</td></tr>
+
+<tr><td>xarray</td><td>2026.4.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

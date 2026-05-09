@@ -1,0 +1,807 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>geowatch - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>geowatch</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.20.0</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>71.3s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>geowatch</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>ss...F
+=================================== FAILURES ===================================
+* REASON: ModuleNotFoundError
+DOCTEST DEBUG INFO
+  XDoc &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-geowatch-_e_cf82d/venv/lib/python3.12/site-packages/geowatch/cli/coco_add_ignore_buffer.py::main:0&#34;, line 9 &lt;- wrt doctest
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-geowatch-_e_cf82d/venv/lib/python3.12/site-packages/geowatch/cli/coco_add_ignore_buffer.py&#34;, line 46, &lt;- wrt source file
+DOCTEST PART BREAKDOWN
+Failed Part:
+     1 &gt;&gt;&gt; from geowatch.cli.coco_add_ignore_buffer import *
+     2 &gt;&gt;&gt; import geowatch
+     3 &gt;&gt;&gt; import ubelt as ub
+     4 &gt;&gt;&gt; import kwcoco
+     5 &gt;&gt;&gt; dpath = ub.Path.appdir(&#39;geowatch/tests/ignore_buffer&#39;)
+     6 &gt;&gt;&gt; dpath.ensuredir()
+     7 &gt;&gt;&gt; ignore_buffer_size = &#39;10@10GSD&#39;
+     8 &gt;&gt;&gt; dst = dpath / &#39;out.kwcoco.zip&#39;
+     9 &gt;&gt;&gt; src = geowatch.coerce_kwcoco(&#39;geowatch-msi&#39;, geodata=True, dates=True)
+    10 &gt;&gt;&gt; kwargs = dict(src=src.data_fpath, dst=dst)
+    11 &gt;&gt;&gt; main(cmdline=0, **kwargs)
+    12 &gt;&gt;&gt; result_dest = kwcoco.CocoDataset(dst)
+    13 &gt;&gt;&gt; # Check non of the ignore polygons are overlaping non-ignore
+    14 &gt;&gt;&gt; from shapely.ops import unary_union
+    15 &gt;&gt;&gt; for video_id in result_dest.videos():
+    16 &gt;&gt;&gt;     images = result_dest.images(video_id=video_id)
+    17 &gt;&gt;&gt;     for image_id in images:
+    18 &gt;&gt;&gt;         src_coco_img = src.coco_image(image_id)
+    19 &gt;&gt;&gt;         dst_coco_img = result_dest.coco_image(image_id)
+    20 &gt;&gt;&gt;         src_annots = src_coco_img.annots()
+    21 &gt;&gt;&gt;         dst_annots = dst_coco_img.annots()
+    22 &gt;&gt;&gt;         new_aids = ub.oset(dst_annots) - ub.oset(src_annots)
+    23 &gt;&gt;&gt;         old_aids = list(src_annots)
+    24 &gt;&gt;&gt;         # The old polygons (new polys should not intersect these)
+    25 &gt;&gt;&gt;         old_polys = [p.to_shapely() for p in result_dest.annots(old_aids).detections.data[&#39;segmentations&#39;]]
+    26 &gt;&gt;&gt;         # The new polygons that should be the ignored regions
+    27 &gt;&gt;&gt;         new_polys = [p.to_shapely() for p in result_dest.annots(new_aids).detections.data[&#39;segmentations&#39;]]
+    28 &gt;&gt;&gt;         new_poly = unary_union(new_polys)
+    29 &gt;&gt;&gt;         old_poly = unary_union(old_polys)
+    30 &gt;&gt;&gt;         isect_poly = new_poly.intersection(old_poly)
+    31 &gt;&gt;&gt;         union_poly = new_poly.union(old_poly)
+    32 &gt;&gt;&gt;         iou = isect_poly.area / union_poly.area
+    33 &gt;&gt;&gt;         print(f&#39;image_id={image_id}, iou = {ub.urepr(iou, nl=1)}&#39;)
+    34 &gt;&gt;&gt;         # The iou should be nearly zero (up to float errors)
+    35 &gt;&gt;&gt;         assert iou &lt; 1e-5
+      [cacher] ... demo_kwcoco_multisensor cache miss
+      [cacher] stamp expired no_cert
+      min_time=1970-01-01 00:00:00+00:00
+      max_time=2101-01-01 00:00:00+00:00
+      Hacking in seed geom data
+      FAILED fpath=/home/tom/.cache/geowatch/demo_kwcoco_bundles/watch_vidshapes_64014247/_assets/auxiliary/aux_disparity/img_00001.tif
+DOCTEST TRACEBACK
+Traceback (most recent call last):
+
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-geowatch-_e_cf82d/venv/lib/python3.12/site-packages/xdoctest/doctest_example.py&#34;, line 1109, in run
+    exec(code, test_globals)
+
+  File &#34;&lt;doctest:/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-geowatch-_e_cf82d/venv/lib/python3.12/site-packages/geowatch/cli/coco_add_ignore_buffer.py::main:0&gt;&#34;, line rel: 9, abs: 46, in &lt;module&gt;
+    &gt;&gt;&gt; src = geowatch.coerce_kwcoco(&#39;geowatch-msi&#39;, geodata=True, dates=True)
+
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-geowatch-_e_cf82d/venv/lib/python3.12/site-packages/geowatch/demo/smart_kwcoco_demodata.py&#34;, line 86, in coerce_kwcoco
+    return demo_kwcoco_multisensor(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-geowatch-_e_cf82d/venv/lib/python3.12/site-packages/geowatch/demo/smart_kwcoco_demodata.py&#34;, line 307, in demo_kwcoco_multisensor
+    hack_seed_geometadata_in_dset(coco_dset, force=True, rng=rng,
+
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-geowatch-_e_cf82d/venv/lib/python3.12/site-packages/geowatch/demo/smart_kwcoco_demodata.py&#34;, line 714, in hack_seed_geometadata_in_dset
+    format_info = kwcoco_extensions.geotiff_format_info(fpath)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-geowatch-_e_cf82d/venv/lib/python3.12/site-packages/geowatch/utils/kwcoco_extensions.py&#34;, line 1578, in geotiff_format_info
+    from osgeo import gdal
+
+ModuleNotFoundError: No module named &#39;osgeo&#39;
+
+DOCTEST REPRODUCTION
+CommandLine:
+    pytest /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-geowatch-_e_cf82d/venv/lib/python3.12/site-packages/geowatch/cli/coco_add_ignore_buffer.py::main:0
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-geowatch-_e_cf82d/venv/lib/python3.12/site-packages/geowatch/cli/coco_add_ignore_buffer.py:46: ModuleNotFoundError
+----------------------------- Captured stdout call -----------------------------
+====== &lt;exec&gt; ======
+* DOCTEST : /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-geowatch-_e_cf82d/venv/lib/python3.12/site-packages/geowatch/cli/coco_add_ignore_buffer.py::main:0, line 38 &lt;- wrt source file
+[cacher] ... demo_kwcoco_multisensor cache miss
+[cacher] stamp expired no_cert
+min_time=1970-01-01 00:00:00+00:00
+max_time=2101-01-01 00:00:00+00:00
+Hacking in seed geom data
+FAILED fpath=/home/tom/.cache/geowatch/demo_kwcoco_bundles/watch_vidshapes_64014247/_assets/auxiliary/aux_disparity/img_00001.tif
+* REASON: ModuleNotFoundError
+DOCTEST DEBUG INFO
+ 
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/geopandas/_compat.py:10
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-geowatch-_e_cf82d/venv/lib/python3.12/site-packages/geopandas/_compat.py:10: DeprecationWarning: The &#39;shapely.geos&#39; module is deprecated, and will be removed in a future version. All attributes of &#39;shapely.geos&#39; are available directly from the top-level &#39;shapely&#39; namespace (since shapely 2.0.0).
+    import shapely.geos
+
+venv/lib/python3.12/site-packages/albumentations/augmentations/geometric/functional.py:6
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-geowatch-_e_cf82d/venv/lib/python3.12/site-packages/albumentations/augmentations/geometric/functional.py:6: DeprecationWarning: Please import `gaussian_filter` from the `scipy.ndimage` namespace; the `scipy.ndimage.filters` namespace is deprecated and will be removed in SciPy 2.0.0.
+    from scipy.ndimage.filters import gaussian_filter
+
+venv/lib/python3.12/site-packages/torch/jit/_script.py:1488
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-geowatch-_e_cf82d/venv/lib/python3.12/site-packages/torch/jit/_script.py:1488: DeprecationWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED artifact/geowatch-0.20.0/cli/coco_add_ignore_buffer.py::main:0
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 3 passed, 2 skipped, 3 warnings in 58.68s
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (312)</strong></summary>
+<table class="meta-table">
+
+<tr><td>absl-py</td><td>2.4.0</td></tr>
+
+<tr><td>affine</td><td>2.4.0</td></tr>
+
+<tr><td>aiobotocore</td><td>3.7.0</td></tr>
+
+<tr><td>aiohappyeyeballs</td><td>2.6.1</td></tr>
+
+<tr><td>aiohttp</td><td>3.13.5</td></tr>
+
+<tr><td>aiohttp-retry</td><td>2.9.1</td></tr>
+
+<tr><td>aioitertools</td><td>0.13.0</td></tr>
+
+<tr><td>aiosignal</td><td>1.4.0</td></tr>
+
+<tr><td>albumentations</td><td>1.0.0</td></tr>
+
+<tr><td>amqp</td><td>5.3.1</td></tr>
+
+<tr><td>annotated-doc</td><td>0.0.4</td></tr>
+
+<tr><td>annotated-types</td><td>0.7.0</td></tr>
+
+<tr><td>antlr4-python3-runtime</td><td>4.9.3</td></tr>
+
+<tr><td>anyio</td><td>4.13.0</td></tr>
+
+<tr><td>appdirs</td><td>1.4.4</td></tr>
+
+<tr><td>argcomplete</td><td>3.6.3</td></tr>
+
+<tr><td>arrow</td><td>1.4.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>asttokens</td><td>3.0.1</td></tr>
+
+<tr><td>astunparse</td><td>1.6.3</td></tr>
+
+<tr><td>asyncssh</td><td>2.23.0</td></tr>
+
+<tr><td>atomicwrites</td><td>1.4.1</td></tr>
+
+<tr><td>atpublic</td><td>7.0.0</td></tr>
+
+<tr><td>attrs</td><td>26.1.0</td></tr>
+
+<tr><td>authlib</td><td>1.7.2</td></tr>
+
+<tr><td>autopep8</td><td>2.3.2</td></tr>
+
+<tr><td>billiard</td><td>4.2.4</td></tr>
+
+<tr><td>blake3</td><td>1.0.8</td></tr>
+
+<tr><td>botocore</td><td>1.43.0</td></tr>
+
+<tr><td>celery</td><td>5.6.3</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>cffi</td><td>2.0.0</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>click</td><td>8.3.3</td></tr>
+
+<tr><td>click-didyoumean</td><td>0.3.1</td></tr>
+
+<tr><td>click-plugins</td><td>1.1.1.2</td></tr>
+
+<tr><td>click-repl</td><td>0.3.0</td></tr>
+
+<tr><td>cligj</td><td>0.7.2</td></tr>
+
+<tr><td>cloudpickle</td><td>3.1.2</td></tr>
+
+<tr><td>cmd-queue</td><td>0.2.3</td></tr>
+
+<tr><td>codecarbon</td><td>3.2.6</td></tr>
+
+<tr><td>colorama</td><td>0.4.6</td></tr>
+
+<tr><td>colormath</td><td>3.0.0</td></tr>
+
+<tr><td>configargparse</td><td>1.7.5</td></tr>
+
+<tr><td>configobj</td><td>5.0.9</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>cryptography</td><td>48.0.0</td></tr>
+
+<tr><td>cuda-bindings</td><td>13.2.0</td></tr>
+
+<tr><td>cuda-pathfinder</td><td>1.5.4</td></tr>
+
+<tr><td>cuda-toolkit</td><td>13.0.2</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>dask</td><td>2026.3.0</td></tr>
+
+<tr><td>decorator</td><td>5.2.1</td></tr>
+
+<tr><td>delayed-image</td><td>0.4.6</td></tr>
+
+<tr><td>dictdiffer</td><td>0.9.0</td></tr>
+
+<tr><td>diskcache</td><td>5.6.3</td></tr>
+
+<tr><td>distinctipy</td><td>1.3.4</td></tr>
+
+<tr><td>distro</td><td>1.9.0</td></tr>
+
+<tr><td>docstring-parser</td><td>0.18.0</td></tr>
+
+<tr><td>dpath</td><td>2.2.0</td></tr>
+
+<tr><td>dulwich</td><td>1.2.1</td></tr>
+
+<tr><td>dvc</td><td>3.67.1</td></tr>
+
+<tr><td>dvc-data</td><td>3.18.3</td></tr>
+
+<tr><td>dvc-http</td><td>2.32.0</td></tr>
+
+<tr><td>dvc-objects</td><td>5.2.0</td></tr>
+
+<tr><td>dvc-render</td><td>1.0.2</td></tr>
+
+<tr><td>dvc-studio-client</td><td>0.22.0</td></tr>
+
+<tr><td>dvc-task</td><td>0.40.2</td></tr>
+
+<tr><td>einops</td><td>0.8.2</td></tr>
+
+<tr><td>entrypoints</td><td>0.4</td></tr>
+
+<tr><td>executing</td><td>2.2.1</td></tr>
+
+<tr><td>fasteners</td><td>0.20</td></tr>
+
+<tr><td>filelock</td><td>3.29.0</td></tr>
+
+<tr><td>fiona</td><td>1.10.1</td></tr>
+
+<tr><td>fire</td><td>0.7.1</td></tr>
+
+<tr><td>flake8</td><td>7.3.0</td></tr>
+
+<tr><td>flatten-dict</td><td>0.5.0</td></tr>
+
+<tr><td>flexcache</td><td>0.3</td></tr>
+
+<tr><td>flexparser</td><td>0.4</td></tr>
+
+<tr><td>flufl-lock</td><td>9.1.0</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>frozenlist</td><td>1.8.0</td></tr>
+
+<tr><td>fsspec</td><td>2026.4.0</td></tr>
+
+<tr><td>funcy</td><td>2.0</td></tr>
+
+<tr><td>geodatasets</td><td>2026.5.0</td></tr>
+
+<tr><td>geojson</td><td>3.2.0</td></tr>
+
+<tr><td>geomet</td><td>1.1.0</td></tr>
+
+<tr><td>geopandas</td><td>0.14.4</td></tr>
+
+<tr><td>geowatch</td><td>0.20.0</td></tr>
+
+<tr><td>girder-client</td><td>5.0.5</td></tr>
+
+<tr><td>gitdb</td><td>4.0.12</td></tr>
+
+<tr><td>gitpython</td><td>3.1.50</td></tr>
+
+<tr><td>grandalf</td><td>0.8</td></tr>
+
+<tr><td>greenlet</td><td>3.5.0</td></tr>
+
+<tr><td>gto</td><td>1.9.0</td></tr>
+
+<tr><td>h11</td><td>0.16.0</td></tr>
+
+<tr><td>hf-xet</td><td>1.5.0</td></tr>
+
+<tr><td>httpcore</td><td>1.0.9</td></tr>
+
+<tr><td>httpx</td><td>0.28.1</td></tr>
+
+<tr><td>huggingface-hub</td><td>1.14.0</td></tr>
+
+<tr><td>humanize</td><td>4.15.0</td></tr>
+
+<tr><td>hydra-core</td><td>1.3.2</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>ijson</td><td>3.5.0</td></tr>
+
+<tr><td>imageio</td><td>2.37.3</td></tr>
+
+<tr><td>imagesize</td><td>2.0.0</td></tr>
+
+<tr><td>importlib-resources</td><td>7.1.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>ipython</td><td>9.13.0</td></tr>
+
+<tr><td>ipython-pygments-lexers</td><td>1.1.1</td></tr>
+
+<tr><td>iterative-telemetry</td><td>0.0.10</td></tr>
+
+<tr><td>jedi</td><td>0.20.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>jmespath</td><td>1.1.0</td></tr>
+
+<tr><td>joblib</td><td>1.5.3</td></tr>
+
+<tr><td>joserfc</td><td>1.6.5</td></tr>
+
+<tr><td>jq</td><td>1.11.0</td></tr>
+
+<tr><td>jsonargparse</td><td>4.48.0</td></tr>
+
+<tr><td>jsonschema</td><td>4.26.0</td></tr>
+
+<tr><td>jsonschema-specifications</td><td>2025.9.1</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>kombu</td><td>5.6.2</td></tr>
+
+<tr><td>kornia</td><td>0.8.2</td></tr>
+
+<tr><td>kornia-rs</td><td>0.1.11</td></tr>
+
+<tr><td>kwarray</td><td>0.7.1</td></tr>
+
+<tr><td>kwcoco</td><td>0.8.9</td></tr>
+
+<tr><td>kwcoco-dataloader</td><td>0.1.2</td></tr>
+
+<tr><td>kwgis</td><td>0.1.2</td></tr>
+
+<tr><td>kwimage</td><td>0.11.6</td></tr>
+
+<tr><td>kwplot</td><td>0.5.4</td></tr>
+
+<tr><td>kwutil</td><td>0.3.8</td></tr>
+
+<tr><td>lark</td><td>1.3.1</td></tr>
+
+<tr><td>lark-cython</td><td>0.0.17</td></tr>
+
+<tr><td>lazy-loader</td><td>0.5</td></tr>
+
+<tr><td>levenshtein</td><td>0.27.3</td></tr>
+
+<tr><td>liberator</td><td>0.1.1</td></tr>
+
+<tr><td>lightning-utilities</td><td>0.15.3</td></tr>
+
+<tr><td>linkify-it-py</td><td>2.1.0</td></tr>
+
+<tr><td>locket</td><td>1.0.0</td></tr>
+
+<tr><td>lxml</td><td>6.1.0</td></tr>
+
+<tr><td>markdown-it-py</td><td>4.2.0</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>matplotlib-inline</td><td>0.2.2</td></tr>
+
+<tr><td>mccabe</td><td>0.7.0</td></tr>
+
+<tr><td>mdit-py-plugins</td><td>0.6.0</td></tr>
+
+<tr><td>mdurl</td><td>0.1.2</td></tr>
+
+<tr><td>mgrs</td><td>1.5.4</td></tr>
+
+<tr><td>mkinit</td><td>1.2.0</td></tr>
+
+<tr><td>monai</td><td>1.5.2</td></tr>
+
+<tr><td>more-itertools</td><td>11.0.2</td></tr>
+
+<tr><td>mpmath</td><td>1.3.0</td></tr>
+
+<tr><td>multidict</td><td>6.7.1</td></tr>
+
+<tr><td>ndsampler</td><td>0.8.1</td></tr>
+
+<tr><td>networkx</td><td>3.6.1</td></tr>
+
+<tr><td>networkx-algo-common-subtree</td><td>0.2.2</td></tr>
+
+<tr><td>numexpr</td><td>2.14.1</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>nvidia-cublas</td><td>13.1.0.3</td></tr>
+
+<tr><td>nvidia-cuda-cupti</td><td>13.0.85</td></tr>
+
+<tr><td>nvidia-cuda-nvrtc</td><td>13.0.88</td></tr>
+
+<tr><td>nvidia-cuda-runtime</td><td>13.0.96</td></tr>
+
+<tr><td>nvidia-cudnn-cu13</td><td>9.19.0.56</td></tr>
+
+<tr><td>nvidia-cufft</td><td>12.0.0.61</td></tr>
+
+<tr><td>nvidia-cufile</td><td>1.15.1.6</td></tr>
+
+<tr><td>nvidia-curand</td><td>10.4.0.35</td></tr>
+
+<tr><td>nvidia-cusolver</td><td>12.0.4.66</td></tr>
+
+<tr><td>nvidia-cusparse</td><td>12.6.3.3</td></tr>
+
+<tr><td>nvidia-cusparselt-cu13</td><td>0.8.0</td></tr>
+
+<tr><td>nvidia-ml-py</td><td>13.595.45</td></tr>
+
+<tr><td>nvidia-nccl-cu13</td><td>2.28.9</td></tr>
+
+<tr><td>nvidia-nvjitlink</td><td>13.0.88</td></tr>
+
+<tr><td>nvidia-nvshmem-cu13</td><td>3.4.5</td></tr>
+
+<tr><td>nvidia-nvtx</td><td>13.0.85</td></tr>
+
+<tr><td>omegaconf</td><td>2.3.0</td></tr>
+
+<tr><td>opencv-python-headless</td><td>4.13.0.92</td></tr>
+
+<tr><td>orjson</td><td>3.11.9</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>parse</td><td>1.22.0</td></tr>
+
+<tr><td>parso</td><td>0.8.7</td></tr>
+
+<tr><td>partd</td><td>1.4.2</td></tr>
+
+<tr><td>pathspec</td><td>1.1.1</td></tr>
+
+<tr><td>pexpect</td><td>4.9.0</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>pint</td><td>0.25.3</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pooch</td><td>1.9.0</td></tr>
+
+<tr><td>portion</td><td>2.6.1</td></tr>
+
+<tr><td>progiter</td><td>2.0.0</td></tr>
+
+<tr><td>prometheus-client</td><td>0.25.0</td></tr>
+
+<tr><td>prompt-toolkit</td><td>3.0.52</td></tr>
+
+<tr><td>propcache</td><td>0.5.2</td></tr>
+
+<tr><td>psutil</td><td>7.2.2</td></tr>
+
+<tr><td>ptyprocess</td><td>0.7.0</td></tr>
+
+<tr><td>pure-eval</td><td>0.2.3</td></tr>
+
+<tr><td>py-cpuinfo</td><td>9.0.0</td></tr>
+
+<tr><td>pycodestyle</td><td>2.14.0</td></tr>
+
+<tr><td>pycountry</td><td>26.2.16</td></tr>
+
+<tr><td>pycparser</td><td>3.0</td></tr>
+
+<tr><td>pydantic</td><td>2.13.4</td></tr>
+
+<tr><td>pydantic-core</td><td>2.46.4</td></tr>
+
+<tr><td>pydantic-settings</td><td>2.14.1</td></tr>
+
+<tr><td>pydot</td><td>4.0.1</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pyflakes</td><td>3.4.0</td></tr>
+
+<tr><td>pygit2</td><td>1.19.2</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pygtrie</td><td>2.5.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pyproj</td><td>3.7.2</td></tr>
+
+<tr><td>pyqt5</td><td>5.15.11</td></tr>
+
+<tr><td>pyqt5-qt5</td><td>5.15.18</td></tr>
+
+<tr><td>pyqt5-sip</td><td>12.18.0</td></tr>
+
+<tr><td>pyqtree</td><td>1.0.0</td></tr>
+
+<tr><td>pystac</td><td>1.14.3</td></tr>
+
+<tr><td>pystac-client</td><td>0.9.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>python-dotenv</td><td>1.2.2</td></tr>
+
+<tr><td>pytimeparse</td><td>1.1.8</td></tr>
+
+<tr><td>pytorch-lightning</td><td>2.6.1</td></tr>
+
+<tr><td>pytorch-msssim</td><td>0.1.5</td></tr>
+
+<tr><td>pytorch-ranger</td><td>0.1.1</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>questionary</td><td>2.1.1</td></tr>
+
+<tr><td>rapidfuzz</td><td>3.14.5</td></tr>
+
+<tr><td>rasterio</td><td>1.5.0</td></tr>
+
+<tr><td>referencing</td><td>0.37.0</td></tr>
+
+<tr><td>regex</td><td>2026.4.4</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>requests-toolbelt</td><td>1.0.0</td></tr>
+
+<tr><td>rgd-client</td><td>0.3.11</td></tr>
+
+<tr><td>rgd-imagery-client</td><td>0.3.11</td></tr>
+
+<tr><td>rich</td><td>15.0.0</td></tr>
+
+<tr><td>rich-argparse</td><td>1.8.0</td></tr>
+
+<tr><td>rpds-py</td><td>0.30.0</td></tr>
+
+<tr><td>rtree</td><td>1.4.1</td></tr>
+
+<tr><td>ruamel-yaml</td><td>0.17.32</td></tr>
+
+<tr><td>s3fs</td><td>2026.4.0</td></tr>
+
+<tr><td>safer</td><td>5.4.0</td></tr>
+
+<tr><td>safetensors</td><td>0.7.0</td></tr>
+
+<tr><td>scikit-image</td><td>0.26.0</td></tr>
+
+<tr><td>scikit-learn</td><td>1.8.0</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>scmrepo</td><td>3.6.2</td></tr>
+
+<tr><td>scriptconfig</td><td>0.9.1</td></tr>
+
+<tr><td>seaborn</td><td>0.13.2</td></tr>
+
+<tr><td>semver</td><td>3.0.4</td></tr>
+
+<tr><td>setuptools</td><td>81.0.0</td></tr>
+
+<tr><td>shapely</td><td>2.1.2</td></tr>
+
+<tr><td>shellingham</td><td>1.5.4</td></tr>
+
+<tr><td>shortuuid</td><td>1.0.13</td></tr>
+
+<tr><td>shtab</td><td>1.8.0</td></tr>
+
+<tr><td>simple-dvc</td><td>0.2.1</td></tr>
+
+<tr><td>simplekml</td><td>1.3.6</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>smmap</td><td>5.0.3</td></tr>
+
+<tr><td>sortedcontainers</td><td>2.4.0</td></tr>
+
+<tr><td>sqlalchemy</td><td>2.0.49</td></tr>
+
+<tr><td>sqltrie</td><td>0.11.2</td></tr>
+
+<tr><td>stack-data</td><td>0.6.3</td></tr>
+
+<tr><td>sympy</td><td>1.14.0</td></tr>
+
+<tr><td>tabulate</td><td>0.10.0</td></tr>
+
+<tr><td>tempenv</td><td>2.1.0</td></tr>
+
+<tr><td>termcolor</td><td>3.3.0</td></tr>
+
+<tr><td>text-unidecode</td><td>1.3</td></tr>
+
+<tr><td>textual</td><td>8.2.5</td></tr>
+
+<tr><td>threadpoolctl</td><td>3.6.0</td></tr>
+
+<tr><td>tifffile</td><td>2026.5.2</td></tr>
+
+<tr><td>timerit</td><td>1.1.0</td></tr>
+
+<tr><td>timm</td><td>0.6.13</td></tr>
+
+<tr><td>tokenizers</td><td>0.22.2</td></tr>
+
+<tr><td>tomlkit</td><td>0.14.0</td></tr>
+
+<tr><td>toolz</td><td>1.1.0</td></tr>
+
+<tr><td>torch</td><td>2.11.0</td></tr>
+
+<tr><td>torch-liberator</td><td>0.2.1</td></tr>
+
+<tr><td>torch-optimizer</td><td>0.3.0</td></tr>
+
+<tr><td>torchmetrics</td><td>1.9.0</td></tr>
+
+<tr><td>torchvision</td><td>0.26.0</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>traitlets</td><td>5.15.0</td></tr>
+
+<tr><td>transformers</td><td>5.8.0</td></tr>
+
+<tr><td>triton</td><td>3.6.0</td></tr>
+
+<tr><td>typer</td><td>0.25.1</td></tr>
+
+<tr><td>typeshed-client</td><td>2.11.0</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>typing-inspection</td><td>0.4.2</td></tr>
+
+<tr><td>tzdata</td><td>2026.2</td></tr>
+
+<tr><td>tzlocal</td><td>5.3.1</td></tr>
+
+<tr><td>ubelt</td><td>1.4.2</td></tr>
+
+<tr><td>uc-micro-py</td><td>2.0.0</td></tr>
+
+<tr><td>ujson</td><td>5.12.1</td></tr>
+
+<tr><td>uritools</td><td>6.1.0</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>utm</td><td>0.8.1</td></tr>
+
+<tr><td>validators</td><td>0.35.0</td></tr>
+
+<tr><td>vine</td><td>5.1.0</td></tr>
+
+<tr><td>voluptuous</td><td>0.16.0</td></tr>
+
+<tr><td>wcwidth</td><td>0.7.0</td></tr>
+
+<tr><td>wheel</td><td>0.47.0</td></tr>
+
+<tr><td>wrapt</td><td>2.1.2</td></tr>
+
+<tr><td>xarray</td><td>2026.4.0</td></tr>
+
+<tr><td>xdoctest</td><td>1.3.2</td></tr>
+
+<tr><td>xmltodict</td><td>1.0.4</td></tr>
+
+<tr><td>xxhash</td><td>3.7.0</td></tr>
+
+<tr><td>yarl</td><td>1.23.0</td></tr>
+
+<tr><td>zc-lockfile</td><td>4.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

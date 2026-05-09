@@ -1,0 +1,421 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>pylongslit - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>pylongslit</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>1.1.5</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>191.7s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>pylongslit</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>....+++++++++++++++++++++++++++++++++++ Timeout ++++++++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~ Stack of Thread-1 (139725067785920) ~~~~~~~~~~~~~~~~~~~~~~
+  File &#34;/home/tom/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/threading.py&#34;, line 1032, in _bootstrap
+    self._bootstrap_inner()
+  File &#34;/home/tom/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/threading.py&#34;, line 1075, in _bootstrap_inner
+    self.run()
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-pylongslit-9ttfx3o0/venv/lib/python3.12/site-packages/tqdm/_monitor.py&#34;, line 60, in run
+    self.was_killed.wait(self.sleep_interval)
+  File &#34;/home/tom/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/threading.py&#34;, line 655, in wait
+    signaled = self._cond.wait(timeout)
+  File &#34;/home/tom/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/threading.py&#34;, line 359, in wait
+    gotit = waiter.acquire(True, timeout)
++++++++++++++++++++++++++++++++++++ Timeout ++++++++++++++++++++++++++++++++++++
+F
+=================================== FAILURES ===================================
+E   Failed: Timeout (&gt;120.0s) from pytest-timeout.
+----------------------------- Captured stdout call -----------------------------
+------------------------------------
+0003881201-20230707-OSIRIS-OsirisBias.fits
+0003881202-20230707-OSIRIS-OsirisBias.fits
+0003881203-20230707-OSIRIS-OsirisBias.fits
+0003881204-20230707-OSIRIS-OsirisBias.fits
+0003881205-20230707-OSIRIS-OsirisBias.fits
+0003881206-20230707-OSIRIS-OsirisBias.fits
+0003881207-20230707-OSIRIS-OsirisBias.fits
+0003881208-20230707-OSIRIS-OsirisBias.fits
+0003881209-20230707-OSIRIS-OsirisBias.fits
+0003881210-20230707-OSIRIS-OsirisBias.fits
+0003881211-20230707-OSIRIS-OsirisBias.fits
+------------------------------------
+------------------------------------
+----------------------------- Captured stderr call -----------------------------
+PyLongslit - INFO - logger.py:73 - Logger initialized. Log will be saved in /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-pylongslit-9ttfx3o0/venv/lib/python3.12/site-packages/pylongslit/tests/GQ1218+0832.log.
+PyLongslit - INFO - parser.py:27 - Config file found. Loading user parameters...
+PyLongslit - INFO - parser.py:64 - User parameters loaded successfully.
+PyLongslit - INFO - parser.py:77 - Output directory ./PyLongslit_dev-main/GQ1218+0832/output found.
+PyLongslit - INFO - mkspecbias.py:29 - Bias procedure running...
+PyLongslit - INFO - mkspecbias.py:30 - Using the following parameters:
+PyLongslit - INFO - mkspecbias.py:31 - xsize = 2073
+PyLongslit - INFO - mkspecbias.py:32 - ysize = 2056
+PyLongslit - INFO - mkspecbias.py:37 - Found 11 bias frames.
+PyLongslit - INFO - mkspecbias.py:38 - Files used for bias processing:
+PyLongslit - INFO - utils.py:475 - All files have the correct dimensions.
+PyLongslit - INFO - overscan.py:156 - Overscan subtraction is disabled.
+PyLongslit - INFO - overscan.py:157 - Skipping overscan subtraction...
+PyLongslit - INFO - mkspecbias.py:55 - Processing file: 0003881201-20230707-OSIRIS-OsirisBias.fits
+PyLongslit - INFO - mkspecbias.py:69 - File 0003881201-20230707-OSIRIS-OsirisBias.fits processed.
+
+PyLongslit - INFO - mkspecbias.py:55 - Processing file: 0003881202-20230707-OSIRIS-OsirisBias.fits
+PyLongslit - INFO - mkspecbias.py:69 - File 0003881202-20230707-OSIRIS-OsirisBias.fits processed.
+
+PyLongslit - INFO - mkspecbias.py:55 - Processing file: 0003881203-20230707-OSIRIS-OsirisBias.fits
+PyLongslit - INFO - mkspecbias.py:69 - File 0003881203-20230707-OSIRIS-OsirisBias.fits processed.
+
+PyLongslit - INFO - mkspecbias.py:55 - Processing file: 0003881204-20230707-OSIRIS-OsirisBias.fits
+PyLongslit - INFO - mkspecbias.py:69 - File 0003881204-20230707-OSIRIS-OsirisBias.fits processed.
+
+PyLongslit - INFO - mkspecbias.py:55 - Processing file: 0003881205-20230707-OSIRIS-OsirisBias.fits
+PyLongslit - INFO - mkspecbias.py:69 - File 0003881205-20230707-OSIRIS-OsirisBias.fits processed.
+
+PyLongslit - INFO - mkspecbias.py:55 - Processing file: 0003881206-20230707-OSIRIS-OsirisBias.fits
+PyLongslit - INFO - mkspecbias.py:69 - File 0003881206-20230707-OSIRIS-OsirisBias.fits processed.
+
+PyLongslit - INFO - mkspecbias.py:55 - Processing file: 0003881207-20230707-OSIRIS-OsirisBias.fits
+PyLongslit - INFO - mkspecbias.py:69 - File 0003881207-20230707-OSIRIS-OsirisBias.fits processed.
+
+PyLongslit - INFO - mkspecbias.py:55 - Processing file: 0003881208-20230707-OSIRIS-OsirisBias.fits
+PyLongslit - INFO - mkspecbias.py:69 - File 0003881208-20230707-OSIRIS-OsirisBias.fits processed.
+
+PyLongslit - INFO - mkspecbias.py:55 - Processing file: 0003881209-20230707-OSIRIS-OsirisBias.fits
+PyLongslit - INFO - mkspecbias.py:69 - File 0003881209-20230707-OSIRIS-OsirisBias.fits processed.
+
+PyLongslit - INFO - mkspecbias.py:55 - Processing file: 0003881210-20230707-OSIRIS-OsirisBias.fits
+PyLongslit - INFO - mkspecbias.py:69 - File 0003881210-20230707-OSIRIS-OsirisBias.fits processed.
+
+PyLongslit - INFO - mkspecbias.py:55 - Processing file: 0003881211-20230707-OSIRIS-OsirisBias.fits
+PyLongslit - INFO - mkspecbias.py:69 - File 0003881211-20230707-OSIRIS-OsirisBias.fits processed.
+
+PyLongslit - INFO - stats.py:41 - Bootstrapping errors. This will take a while...
+PyLongslit - INFO - stats.py:42 - You can turn off bootstrapping in the config file if you want to speed up the process.
+
+Bootstrapping:   0%|          | 0/1000 [00:00&lt;?, ?it/s]
+Bootstrapping:   0%|          | 1/1000 [00:03&lt;1:03:13,  3.80s/it]
+Bootstrapping:   0%|          | 2/1000 [00:06&lt;48:49,  2.94s/it]  
+Bootstrapping:   0%|          | 3/1000 [00:07&lt;37:23,  2.25s/it]
+Bootstrapping:   0%|          | 4/1000 [00:08&lt;30:37,  1.85s/it]
+Bootstrapping:   0%|          | 5/1000 [00:09&lt;25:48,  1.56s/it]
+Bootstrapping:   1%|          | 6/1000 [00:11&lt;25:27,  1.54s/it]
+Bootstrapping:   1%|          | 7/1000 [00:12&lt;24:58,  1.51s/it]
+Bootstrapping:   1%|          | 8/1000 [00:14&lt;26:15,  1.59s/it]
+Bootstrapping:   1%|          | 9/1000 [00:17&lt;31:51,  1.93s/it]
+Bootstrapping:   1%|          | 10/1000 [00:19&lt;34:26,  2.09s/it]
+Bootstrapping:   1%|          | 11/1000 [00:21&lt;34:55,  2.12s/it]
+Bootstrapping:   1%|          | 12/1000 [00:23&lt;33:31,  2.04s/it]
+Bootstrapping:   1%|▏         | 13/1000 [00:25&lt;30:13,  1.84s/it]
+Bootstrapping:   1%|▏         | 14/1000 [00:26&lt;28:11,  1.72s/it]
+Bootstrapping:   2%|▏         | 15/1000 [00:27&lt;26:29,  1.61s/it]
+Bootstrapping:   2%|▏         | 16/1000 [00:28&lt;22:50,  1.39s/it]
+Bootstrapping:   2%|▏         | 17/1000 [00:30&lt;24:06,  1.47s/it]
+Bootstrapping:   2%|▏         | 18/1000 [00:31&lt;22:56,  1.40s/it]
+Bootstrapping:   2%|▏         | 19/1000 [00:32&lt;22:22,  1.37s/it]
+Bootstrapping:   2%|▏         | 20/1000 [00:33&lt;20:13,  1.24s/it]
+Bootstrapping:   2%|▏         | 21/1000 [00:35&lt;21:49,  1.34s/it]
+Bootstrapping:   2%|▏         | 22/1000 [00:36&lt;21:23,  1.31s/it]
+Bootstrapping:   2%|▏         | 23/1000 [00:38&lt;23:26,  1.44s/it]
+Bootstrapping:   2%|▏         | 24/1000 [00:39&lt;21:35,  1.33s/it]
+Bootstrapping:   2%|▎         | 25/1000 [00:40&lt;21:14,  1.31s/it]
+Bootstrapping:   3%|▎         | 26/1000 [00:42&lt;21:10,  1.30s/it]
+Bootstrapping:   3%|▎         | 27/1000 [00:43&lt;21:17,  1.31s/it]
+Bootstrapping:   3%|▎         | 28/1000 [00:44&lt;20:39,  1.28s/it]
+Bootstrapping:   3%|▎         | 29/1000 [00:45&lt;19:44,  1.22s/it]
+Bootstrapping:   3%|▎         | 30/1000 [00:46&lt;18:50,  1.17s/it]
+Bootstrapping:   3%|▎         | 31/1000 [00:47&lt;19:02,  1.18s/it]
+Bootstrapping:   3%|▎         | 32/1000 [00:49&lt;19:20,  1.20s/it]
+Bootstrapping:   3%|▎         | 33/1000 [00:50&lt;20:35,  1.28s/it]
+Bootstrapping:   3%|▎         | 34/1000 [00:52&lt;21:27,  1.33s/it]
+Bootstrapping:   4%|▎         | 35/1000 [00:54&lt;25:44,  1.60s/it]
+Bootstrapping:   4%|▎         | 36/1000 [00:56&lt;28:07,  1.75s/it]
+Bootstrapping:   4%|▎         | 37/1000 [00:58&lt;28:02,  1.75s/it]
+Bootstrapping:   4%|▍         | 38/1000 [00:59&lt;26:45,  1.67s/it]
+Bootstrapping:   4%|▍         | 39/1000 [01:01&lt;28:45,  1.80s/it]
+Bootstrapping:   4%|▍         | 40/1000 [01:03&lt;28:39,  1.79s/it]
+Bootstrapping:   4%|▍         | 41/1000 [01:05&lt;28:37,  1.79s/it]
+Bootstrapping:   4%|▍         | 42/1000 [01:07&lt;31:10,  1.95s/it]
+Bootstrapping:   4%|▍         | 43/1000 [01:09&lt;31:02,  1.95s/it]
+Bootstrapping:   4%|▍         | 44/1000 [01:11&lt;30:45,  1.93s/it]
+Bootstrapping:   4%|▍         | 45/1000 [01:13&lt;29:35,  1.86s/it]
+Bootstrapping:   5%|▍         | 46/1000 [01:15&lt;31:22,  1.97s/it]
+Bootstrapping:   5%|▍         | 47/1000 [01:17&lt;33:20,  2.10s/it]
+Bootstrapping:   5%|▍         | 48/1000 [01:20&lt;33:50,  2.13s/it]
+Bootstrapping:   5%|▍         | 49/1000 [01:22&lt;33:38,  2.12s/it]
+Bootstrapping:   5%|▌         | 50/1000 [01:24&lt;34:02,  2.15s/it]
+Bootstrapping:   5%|▌         | 51/1000 [01:26&lt;36:21,  2.30s/it]
+Bootstrapping:   5%|▌         | 52/1000 [01:28&lt;33:35,  2.13s/it]
+Bootstrapping:   5%|▌         | 53/1000 [01:31&lt;38:14,  2.42s/it]
+Bootstrapping:   5%|▌         | 54/1000 [01:33&lt;32:31,  2.06s/it]
+Bootstrapping:   6%|▌         | 55/1000 [01:34&lt;29:10,  1.85s/it]
+Bootstrapping:   6%|▌         | 56/1000 [01:36&lt;28:51,  1.83s/it]
+Bootstrapping:   6%|▌         | 57/1000 [01:37&lt;26:34,  1.69s/it]
+Bootstrapping:   6%|▌         | 58/1000 [01:39&lt;25:42,  1.64s/it]
+Bootstrapping:   6%|▌         | 59/1000 [01:41&lt;28:54,  1.84s/it]
+Bootstrapping:   6%|▌         | 60/1000 [01:42&lt;26:34,  1.70s/it]
+Bootstrapping:   6%|▌         | 61/1000 [01:44&lt;25:16,  1.61s/it]
+Bootstrapping:   6%|▌         | 62/1000 [01:45&lt;22:12,  1.42s/it]
+Bootstrapping:   6%|▋         | 63/1000 [01:46&lt;21:36,  1.38s/it]
+Bootstrapping:   6%|▋         | 64/1000 [01:47&lt;21:13,  1.36s/it]
+Bootstrapping:   6%|▋         | 65/1000 [01:48&lt;19:01,  1.22s/it]
+Bootstrapping:   7%|▋         | 66/1000 [01:49&lt;17:59,  1.16s/it]
+Bootstrapping:   7%|▋         | 67/1000 [01:50&lt;18:26,  1.19s/it]
+Bootstrapping:   7%|▋         | 68/1000 [01:52&lt;18:21,  1.18s/it]
+Bootstrapping:   7%|▋         | 69/1000 [01:53&lt;18:37,  1.20s/it]
+Bootstrapping:   7%|▋         | 70/1000 [01:54&lt;16:44,  1.08s/it]
+Bootstrapping:   7%|▋         | 71/1000 [01:55&lt;17:02,  1.10s/it]
+Bootstrapping:   7%|▋         | 71/1000 [01:56&lt;25:21,  1.64s/it]
+------------------------------ Captured log call -------------------------------
+INFO     PyLongslit:logger.py:73 Logger initialized. Log will be saved in /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-pylongslit-9ttfx3o0/venv/lib/python3.12/site-packages/pylongslit/tests/GQ1218+0832.log.
+INFO     PyLongslit:parser.py:27 Config file found. Loading user parameters...
+INFO     PyLongslit:parser.py:64 User parameters loaded successfully.
+INFO     PyLongslit:parser.py:77 Output directory ./PyLongslit_dev-main/GQ1218+0832/output found.
+INFO     PyLongslit:mkspecbias.py:29 Bias procedure running...
+INFO     PyLongslit:mkspecbias.py:30 Using the following parameters:
+INFO     PyLongslit:mkspecbias.py:31 xsize = 2073
+INFO     PyLongslit:mkspecbias.py:32 ysize = 2056
+INFO     PyLongslit:mkspecbias.py:37 Found 11 bias frames.
+INFO     PyLongslit:mkspecbias.py:38 Files used for bias processing:
+INFO     PyLongslit:utils.py:475 All files have the correct dimensions.
+INFO     PyLongslit:overscan.py:156 Overscan subtraction is disabled.
+INFO     PyLongslit:overscan.py:157 Skipping overscan subtraction...
+INFO     PyLongslit:mkspecbias.py:55 Processing file: 0003881201-20230707-OSIRIS-OsirisBias.fits
+INFO     PyLongslit:mkspecbias.py:69 File 0003881201-20230707-OSIRIS-OsirisBias.fits processed.
+
+INFO     PyLongslit:mkspecbias.py:55 Processing file: 0003881202-20230707-OSIRIS-OsirisBias.fits
+INFO     PyLongslit:mkspecbias.py:69 File 0003881202-20230707-OSIRIS-OsirisBias.fits processed.
+
+INFO     PyLongslit:mkspecbias.py:55 Processing file: 0003881203-20230707-OSIRIS-OsirisBias.fits
+INFO     PyLongslit:mkspecbias.py:69 File 0003881203-20230707-OSIRIS-OsirisBias.fits processed.
+
+INFO     PyLongslit:mkspecbias.py:55 Processing file: 0003881204-20230707-OSIRIS-OsirisBias.fits
+INFO     PyLongslit:mkspecbias.py:69 File 0003881204-20230707-OSIRIS-OsirisBias.fits processed.
+
+INFO     PyLongslit:mkspecbias.py:55 Processing file: 0003881205-20230707-OSIRIS-OsirisBias.fits
+INFO     PyLongslit:mkspecbias.py:69 File 0003881205-20230707-OSIRIS-OsirisBias.fits processed.
+
+INFO     PyLongslit:mkspecbias.py:55 Processing file: 0003881206-20230707-OSIRIS-OsirisBias.fits
+INFO     PyLongslit:mkspecbias.py:69 File 0003881206-20230707-OSIRIS-OsirisBias.fits processed.
+
+INFO     PyLongslit:mkspecbias.py:55 Processing file: 0003881207-20230707-OSIRIS-OsirisBias.fits
+INFO     PyLongslit:mkspecbias.py:69 File 0003881207-20230707-OSIRIS-OsirisBias.fits processed.
+
+INFO     PyLongslit:mkspecbias.py:55 Processing file: 0003881208-20230707-OSIRIS-OsirisBias.fits
+INFO     PyLongslit:mkspecbias.py:69 File 0003881208-20230707-OSIRIS-OsirisBias.fits processed.
+
+INFO     PyLongslit:mkspecbias.py:55 Processing file: 0003881209-20230707-OSIRIS-OsirisBias.fits
+INFO     PyLongslit:mkspecbias.py:69 File 0003881209-20230707-OSIRIS-OsirisBias.fits processed.
+
+INFO     PyLongslit:mkspecbias.py:55 Processing file: 0003881210-20230707-OSIRIS-OsirisBias.fits
+INFO     PyLongslit:mkspecbias.py:69 File 0003881210-20230707-OSIRIS-OsirisBias.fits processed.
+
+INFO     PyLongslit:mkspecbias.py:55 Processing file: 0003881211-20230707-OSIRIS-OsirisBias.fits
+INFO     PyLongslit:mkspecbias.py:69 File 0003881211-20230707-OSIRIS-OsirisBias.fits processed.
+
+INFO     PyLongslit:stats.py:41 Bootstrapping errors. This will take a while...
+INFO     PyLongslit:stats.py:42 You can turn off bootstrapping in the config file if you want to speed up the process.
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-pylongslit-9ttfx3o0/venv/lib/python3.12/site-packages/numpy/core/fromnumeric.py:771: Failed: Timeout (&gt;120.0s) from pytest-timeout.
+=========================== short test summary info ============================
+FAILED venv/lib/python3.12/site-packages/pylongslit/tests/test_bias.py::test_bias_GQ
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 4 passed in 186.81s (0:03:06)
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (69)</strong></summary>
+<table class="meta-table">
+
+<tr><td>alabaster</td><td>1.0.0</td></tr>
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>astroscrappy</td><td>1.3.0</td></tr>
+
+<tr><td>babel</td><td>2.18.0</td></tr>
+
+<tr><td>bidict</td><td>0.23.1</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>colorama</td><td>0.4.6</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>docutils</td><td>0.22.4</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>imageio</td><td>2.37.3</td></tr>
+
+<tr><td>imagesize</td><td>2.0.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>joblib</td><td>1.5.3</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>lazy-loader</td><td>0.5</td></tr>
+
+<tr><td>markdown-it-py</td><td>4.2.0</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>mdit-py-plugins</td><td>0.6.0</td></tr>
+
+<tr><td>mdurl</td><td>0.1.2</td></tr>
+
+<tr><td>myst-parser</td><td>5.0.0</td></tr>
+
+<tr><td>networkx</td><td>3.6.1</td></tr>
+
+<tr><td>numpy</td><td>1.26.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>photutils</td><td>2.3.0</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pyastronomy</td><td>0.25.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pylongslit</td><td>1.1.5</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pyqt5</td><td>5.15.11</td></tr>
+
+<tr><td>pyqt5-qt5</td><td>5.15.18</td></tr>
+
+<tr><td>pyqt5-sip</td><td>12.18.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-order</td><td>1.4.0</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>quantities</td><td>0.16.4</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>roman-numerals</td><td>4.1.0</td></tr>
+
+<tr><td>scikit-image</td><td>0.26.0</td></tr>
+
+<tr><td>scikit-learn</td><td>1.8.0</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>setuptools</td><td>82.0.1</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>snowballstemmer</td><td>3.0.1</td></tr>
+
+<tr><td>sphinx</td><td>9.1.0</td></tr>
+
+<tr><td>sphinx-autodoc-typehints</td><td>3.10.2</td></tr>
+
+<tr><td>sphinx-rtd-theme</td><td>3.1.0</td></tr>
+
+<tr><td>sphinxcontrib-applehelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-devhelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-htmlhelp</td><td>2.1.0</td></tr>
+
+<tr><td>sphinxcontrib-jquery</td><td>4.1</td></tr>
+
+<tr><td>sphinxcontrib-jsmath</td><td>1.0.1</td></tr>
+
+<tr><td>sphinxcontrib-qthelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-serializinghtml</td><td>2.0.0</td></tr>
+
+<tr><td>threadpoolctl</td><td>3.6.0</td></tr>
+
+<tr><td>tifffile</td><td>2026.3.3</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

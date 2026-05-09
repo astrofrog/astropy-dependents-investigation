@@ -1,0 +1,356 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>QETpy - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>QETpy</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>1.8.6</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>20.6s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>qetpy</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>
+==================================== ERRORS ====================================
+____________________ ERROR collecting test/test_fitting.py _____________________
+ImportError while importing test module &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/artifact/qetpy-1.8.6/test/test_fitting.py&#39;.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+artifact/qetpy-1.8.6/test/test_fitting.py:4: in &lt;module&gt;
+    from helpers import isclose, create_example_data, create_example_muontail
+E   ModuleNotFoundError: No module named &#39;helpers&#39;
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:79
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:79: SyntaxWarning: invalid escape sequence &#39;\s&#39;
+    axes[0][0].set_ylabel(&#39;Amplitude [A/$\sqrt{\mathrm{Hz}}$]&#39;)
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:96
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:96: SyntaxWarning: invalid escape sequence &#39;\s&#39;
+    axes[0][0].loglog(f, error, c=&#39;b&#39;, label=&#39;$\sqrt{PSD}$&#39;, alpha=0.75)
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:172
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:172: SyntaxWarning: invalid escape sequence &#39;\s&#39;
+    axes[1][1].plot([], [], c=&#39;b&#39;, label=&#39;$\sqrt{PSD}$&#39;)
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:179
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:179: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;A: ({A * 1e6:.4f} +\- {A_err * 1e6:.4f}) [$\mu$A]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:179
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:179: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    f&#39;A: ({A * 1e6:.4f} +\- {A_err * 1e6:.4f}) [$\mu$A]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:180
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:180: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;B: ({B * 1e6:.4f} +\- {B_err * 1e6:.4f}) [$\mu$A]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:180
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:180: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    f&#39;B: ({B * 1e6:.4f} +\- {B_err * 1e6:.4f}) [$\mu$A]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:181
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:181: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;C: ({C * 1e6:.4f} +\- {C_err * 1e6:.4f}) [$\mu$A]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:181
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:181: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    f&#39;C: ({C * 1e6:.4f} +\- {C_err * 1e6:.4f}) [$\mu$A]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:182
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:182: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;τ, f1: ({tau_f1 * 1e6:.4f} +\- {tau_f1_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:182
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:182: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    f&#39;τ, f1: ({tau_f1 * 1e6:.4f} +\- {tau_f1_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:183
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:183: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;τ, f2: ({tau_f2 * 1e6:.4f} +\- {tau_f2_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:183
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:183: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    f&#39;τ, f2: ({tau_f2 * 1e6:.4f} +\- {tau_f2_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:184
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:184: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;τ, f3: ({tau_f3 * 1e6:.4f} +\- {tau_f3_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:184
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:184: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    f&#39;τ, f3: ({tau_f3 * 1e6:.4f} +\- {tau_f3_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:185
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:185: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;$t_0$: ({t0 * 1e3:.4f} +\- {t0_err * 1e3:.4f}) [ms]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:186
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:186: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;τ$_r$: ({tau_r * 1e6:.4f} +\- {tau_r_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:186
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:186: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    f&#39;τ$_r$: ({tau_r * 1e6:.4f} +\- {tau_r_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:190
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:190: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;A: ({A * 1e6:.4f} +\- {A_err * 1e6:.4f}) [$\mu$A]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:190
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:190: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    f&#39;A: ({A * 1e6:.4f} +\- {A_err * 1e6:.4f}) [$\mu$A]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:191
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:191: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;B: ({B * 1e6:.4f} +\- {B_err * 1e6:.4f}) [$\mu$A]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:191
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:191: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    f&#39;B: ({B * 1e6:.4f} +\- {B_err * 1e6:.4f}) [$\mu$A]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:192
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:192: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;τ, f1: ({tau_f1 * 1e6:.4f} +\- {tau_f1_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:192
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:192: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    f&#39;τ, f1: ({tau_f1 * 1e6:.4f} +\- {tau_f1_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:193
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:193: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;τ, f2: ({tau_f2 * 1e6:.4f} +\- {tau_f2_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:193
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:193: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    f&#39;τ, f2: ({tau_f2 * 1e6:.4f} +\- {tau_f2_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:194
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:194: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;$t_0$: ({t0 * 1e3:.4f} +\- {t0_err * 1e3:.4f}) [ms]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:195
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:195: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;τ$_r$: ({tau_r * 1e6:.4f} +\- {tau_r_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:195
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:195: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    f&#39;τ$_r$: ({tau_r * 1e6:.4f} +\- {tau_r_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:199
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:199: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;A: ({A * 1e6:.4f} +\- {A_err * 1e6:.4f}) [$\mu$A]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:199
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:199: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    f&#39;A: ({A * 1e6:.4f} +\- {A_err * 1e6:.4f}) [$\mu$A]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:200
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:200: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;τ$_f$: ({tau_f * 1e6:.4f} +\- {tau_f_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:200
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:200: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    f&#39;τ$_f$: ({tau_f * 1e6:.4f} +\- {tau_f_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:201
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:201: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;$t_0$: ({t0 * 1e3:.4f} +\- {t0_err * 1e3:.4f}) [ms]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:202
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:202: SyntaxWarning: invalid escape sequence &#39;\-&#39;
+    f&#39;τ$_r$: ({tau_r * 1e6:.4f} +\- {tau_r_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:202
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:202: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    f&#39;τ$_r$: ({tau_r * 1e6:.4f} +\- {tau_r_err * 1e6:.4f}) [$\mu$s]&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:212
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_fitting_plotting.py:212: SyntaxWarning: invalid escape sequence &#39;\s&#39;
+    [&#39;Best Fit&#39;, &#39;Raw Data&#39;, &#39;$\sqrt{PSD}$&#39;],
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_noise_plotting.py:783
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_noise_plotting.py:783: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+    ax.set_title(f&#34;Current Noise For $R_0$ : {noise_sim.r0*1e3:.2f} $m\Omega$&#34;)
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_noise_plotting.py:822
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_noise_plotting.py:822: SyntaxWarning: invalid escape sequence &#39;\s&#39;
+    ax.set_ylabel(&#39;TES Current Noise $[A/\sqrt{\mathrm{Hz}}]$&#39;)
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_noise_plotting.py:871
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_noise_plotting.py:871: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+    ax.set_title(f&#34;Power Noise For $R_0$ : {noise_sim.r0*1e3:.2f} $m\Omega$&#34;)
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_noise_plotting.py:973
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_noise_plotting.py:973: SyntaxWarning: invalid escape sequence &#39;\s&#39;
+    ax.set_ylabel(&#39;Input Referenced Current Noise [A/$\sqrt{\mathrm{Hz}}$]&#39;)
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_noise_plotting.py:974
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_noise_plotting.py:974: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    ax.set_title(f&#39;Superconducting State noise for QETbias: {qetbias*1e6} $\mu$A&#39;)
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_noise_plotting.py:1034
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_noise_plotting.py:1034: SyntaxWarning: invalid escape sequence &#39;\s&#39;
+    ax.set_ylabel(&#39;Input Referenced Current Noise [A/$\sqrt{\mathrm{Hz}}$]&#39;)
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_noise_plotting.py:1035
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_noise_plotting.py:1035: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    ax.set_title(f&#39;Normal State noise for QETbias: {qetbias*1e6} $\mu$A&#39;)
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_of_nsmb_plotting.py:100
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_of_nsmb_plotting.py:100: SyntaxWarning: invalid escape sequence &#39;\c&#39;
+    plt.plot(bins.T, fittott.T, &#39;-g&#39;, label=f&#39;Total Fit. $\chi^2$={chi2TFloat:.1f}&#39;, linewidth=5)
+
+venv/lib/python3.12/site-packages/qetpy/plotting/_of_nsmb_plotting.py:151
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/plotting/_of_nsmb_plotting.py:151: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.xlabel(f&#39;bins (1 bin = {(dt * 1e6):.2f} $\mu$s)&#39;);
+
+venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:251
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:251: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    ax.set_xlabel(&#39;Time ($\mu$s)&#39;)
+
+venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:252
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:252: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    ax.set_ylabel(&#39;Amplitude ($\mu$A)&#39;)
+
+venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:546
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:546: SyntaxWarning: invalid escape sequence &#39;\s&#39;
+    label=&#39;1-$\sigma$ Bounds&#39;,
+
+venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:661
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:661: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+    ax.set_ylabel(&#39;Re($dI/dV$) ($\Omega^{-1}$)&#39;)
+
+venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:676
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:676: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+    ax.set_ylabel(&#39;Im($dI/dV$) ($\Omega^{-1}$)&#39;)
+
+venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:715
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:715: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+    ax.set_ylabel(&#39;Abs($dI/dV$) ($\Omega^{-1}$)&#39;)
+
+venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:842
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:842: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+    ax.set_xlabel(&#39;Re($dV/dI$) ($\Omega$)&#39;)
+
+venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:843
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-QETpy-ps9u_ixb/venv/lib/python3.12/site-packages/qetpy/core/didv/_plot_didv.py:843: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+    ax.set_ylabel(&#39;Im($dV/dI$) ($\Omega$)&#39;)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR artifact/qetpy-1.8.6/test/test_fitting.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+54 warnings, 1 error in 16.05s
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (25)</strong></summary>
+<table class="meta-table">
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>iminuit</td><td>2.32.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>mpmath</td><td>1.3.0</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>qetpy</td><td>1.8.6</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>sympy</td><td>1.14.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

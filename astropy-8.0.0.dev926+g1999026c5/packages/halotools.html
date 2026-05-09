@@ -1,0 +1,525 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>halotools - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>halotools</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.9.4</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="pass">PASS</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>210.7s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>halotools</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>........................................................................ [  5%]
+....................s....................ss............................. [ 11%]
+........................................................................ [ 17%]
+......................................................sss............... [ 23%]
+..................................................s.......s............. [ 28%]
+........................................................................ [ 34%]
+........................................................................ [ 40%]
+.......s..............s................................s................ [ 46%]
+........................................................................ [ 52%]
+........................................................................ [ 57%]
+........................................................................ [ 63%]
+............................................................xx.......... [ 69%]
+.....s.............................s.................................... [ 75%]
+.sssssss.s.sssssssss..ss.ssssssssssssssss..ssssss....................... [ 80%]
+.....ss.................................ss.............................. [ 86%]
+........................................................................ [ 92%]
+........................................................................ [ 98%]
+.....................                                                    [100%]
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/halotools/utils/inverse_transformation_sampling.py:120
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/utils/inverse_transformation_sampling.py:120: SyntaxWarning: &#34;is&#34; with &#39;str&#39; literal. Did you mean &#34;==&#34;?
+    if mc_input is &#39;random&#39;:
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/npairs_3d.py:157
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/npairs_3d.py:157: SyntaxWarning: &#34;is not&#34; with &#39;int&#39; literal. Did you mean &#34;!=&#34;?
+    if num_threads is not 1:
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/npairs_projected.py:164
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/npairs_projected.py:164: SyntaxWarning: &#34;is not&#34; with &#39;int&#39; literal. Did you mean &#34;!=&#34;?
+    if num_threads is not 1:
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/npairs_xy_z.py:170
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/npairs_xy_z.py:170: SyntaxWarning: &#34;is not&#34; with &#39;int&#39; literal. Did you mean &#34;!=&#34;?
+    if num_threads is not 1:
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/pairwise_distance_3d.py:172
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/pairwise_distance_3d.py:172: SyntaxWarning: &#34;is not&#34; with &#39;int&#39; literal. Did you mean &#34;!=&#34;?
+    if num_threads is not 1:
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/pairwise_distance_xy_z.py:183
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/pairwise_distance_xy_z.py:183: SyntaxWarning: &#34;is not&#34; with &#39;int&#39; literal. Did you mean &#34;!=&#34;?
+    if num_threads is not 1:
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/download_manager.py:871
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/download_manager.py:871: SyntaxWarning: &#34;is&#34; with &#39;str&#39; literal. Did you mean &#34;==&#34;?
+    if catalog_type is &#34;halos&#34;:
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/download_manager.py:899
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/download_manager.py:899: SyntaxWarning: &#34;is&#34; with &#39;str&#39; literal. Did you mean &#34;==&#34;?
+    if catalog_type is &#34;particles&#34;:
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/download_manager.py:903
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/download_manager.py:903: SyntaxWarning: &#34;is&#34; with &#39;str&#39; literal. Did you mean &#34;==&#34;?
+    elif catalog_type is &#34;halos&#34;:
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/surface_density/weighted_npairs_xy.py:158
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/surface_density/weighted_npairs_xy.py:158: SyntaxWarning: &#34;is not&#34; with &#39;int&#39; literal. Did you mean &#34;!=&#34;?
+    if num_threads is not 1:
+
+venv/lib/python3.12/site-packages/halotools/empirical_models/composite_models/tests/test_preloaded_models.py:47
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/empirical_models/composite_models/tests/test_preloaded_models.py:47: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/empirical_models/occupation_models/tests/test_cacciato09_clf.py:17
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/empirical_models/occupation_models/tests/test_cacciato09_clf.py:17: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/empirical_models/occupation_models/tests/test_cacciato09_clf.py:188
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/empirical_models/occupation_models/tests/test_cacciato09_clf.py:188: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/empirical_models/occupation_models/tests/test_leauthaud11_hod.py:12
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/empirical_models/occupation_models/tests/test_leauthaud11_hod.py:12: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/empirical_models/occupation_models/tests/test_leauthaud11_hod.py:49
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/empirical_models/occupation_models/tests/test_leauthaud11_hod.py:49: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/empirical_models/phase_space_models/analytic_models/satellites/nfw/tests/test_nfw_profile/test_nfw_profile.py:242
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/empirical_models/phase_space_models/analytic_models/satellites/nfw/tests/test_nfw_profile/test_nfw_profile.py:242: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/empirical_models/phase_space_models/analytic_models/satellites/nfw/tests/test_nfw_phase_space/test_nfw_phase_space.py:17
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/empirical_models/phase_space_models/analytic_models/satellites/nfw/tests/test_nfw_phase_space/test_nfw_phase_space.py:17: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/group_identification/test_groups/test_fof_groups.py:43
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/group_identification/test_groups/test_fof_groups.py:43: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ed_3d.py:16
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ed_3d.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ed_projected.py:16
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ed_projected.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ee_3d.py:16
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ee_3d.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ee_projected.py:16
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ee_projected.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_gi_minus_3d.py:16
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_gi_minus_3d.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_gi_minus_projected.py:16
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_gi_minus_projected.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_gi_plus_3d.py:16
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_gi_plus_3d.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_gi_plus_projected.py:16
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_gi_plus_projected.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ii_minus_3d.py:16
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ii_minus_3d.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ii_minus_projected.py:16
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ii_minus_projected.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ii_plus_3d.py:16
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ii_plus_3d.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ii_plus_projected.py:16
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ii_plus_projected.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/isolation_functions/tests/test_conditional_cylindrical_isolation.py:25
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/isolation_functions/tests/test_conditional_cylindrical_isolation.py:25: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_marked_npairs_3d.py:146
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_marked_npairs_3d.py:146: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_marked_npairs_xy_z.py:17
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_marked_npairs_xy_z.py:17: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_3d.py:32
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_3d.py:32: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_3d.py:225
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_3d.py:225: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_jackknife_3d.py:15
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_jackknife_3d.py:15: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_jackknife_xy_z.py:18
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_jackknife_xy_z.py:18: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_s_mu.py:18
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_s_mu.py:18: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_pairwise_distance_3d.py:180
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_pairwise_distance_3d.py:180: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_pairwise_distance_3d.py:256
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_pairwise_distance_3d.py:256: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/pairwise_velocities/tests/test_mean_radial_velocity_vs_r.py:183
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/pairwise_velocities/tests/test_mean_radial_velocity_vs_r.py:183: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/tests/test_mock_survey.py:24
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/tests/test_mock_survey.py:24: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/tests/test_occupation_stats.py:12
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/tests/test_occupation_stats.py:12: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/two_point_clustering/tests/test_angular_tpcf.py:14
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/two_point_clustering/tests/test_angular_tpcf.py:14: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/two_point_clustering/tests/test_marked_tpcf.py:14
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/two_point_clustering/tests/test_marked_tpcf.py:14: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/two_point_clustering/tests/test_rp_pi_tpcf_jackknife.py:14
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/two_point_clustering/tests/test_rp_pi_tpcf_jackknife.py:14: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/two_point_clustering/tests/test_tpcf.py:16
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/two_point_clustering/tests/test_tpcf.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/two_point_clustering/tests/test_tpcf_jackknife.py:12
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/two_point_clustering/tests/test_tpcf_jackknife.py:12: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/mock_observables/two_point_clustering/tests/test_wp_jackknife.py:13
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/mock_observables/two_point_clustering/tests/test_wp_jackknife.py:13: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_cached_halo_catalog.py:259
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_cached_halo_catalog.py:259: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_cached_halo_catalog.py:272
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_cached_halo_catalog.py:272: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_fake_sim.py:14
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_fake_sim.py:14: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_rockstar_hlist_reader.py:174
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_rockstar_hlist_reader.py:174: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_rockstar_hlist_reader.py:205
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_rockstar_hlist_reader.py:205: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_rockstar_hlist_reader.py:260
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_rockstar_hlist_reader.py:260: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_rockstar_hlist_reader.py:287
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_rockstar_hlist_reader.py:287: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_supported_sims.py:12
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_supported_sims.py:12: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    slow = pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_supported_sims.py:38
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_supported_sims.py:38: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_supported_sims.py:57
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_supported_sims.py:57: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_tabular_ascii_reader.py:172
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_tabular_ascii_reader.py:172: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_tabular_ascii_reader.py:185
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_tabular_ascii_reader.py:185: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_tabular_ascii_reader.py:199
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_tabular_ascii_reader.py:199: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_tabular_ascii_reader.py:228
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/sim_manager/tests/test_tabular_ascii_reader.py:228: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+venv/lib/python3.12/site-packages/halotools/utils/tests/test_array_indexing_manipulations.py:259
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/utils/tests/test_array_indexing_manipulations.py:259: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/utils/tests/test_crossmatch.py:14
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/utils/tests/test_crossmatch.py:14: PytestUnknownMarkWarning: Unknown pytest.mark.installation_test - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.installation_test
+
+venv/lib/python3.12/site-packages/halotools/empirical_models/factories/tests/test_prebuilt_subhalo_model_factory.py: 32 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/counts_in_cells/tests/test_counts_in_cylinders.py: 12 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ed_3d.py: 12 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ed_projected.py: 18 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ee_3d.py: 6 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ee_projected.py: 6 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_gi_minus_3d.py: 3 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_gi_minus_projected.py: 24 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_gi_plus_3d.py: 3 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_gi_plus_projected.py: 24 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ii_minus_3d.py: 3 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ii_minus_projected.py: 18 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ii_plus_3d.py: 3 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/ia_correlations/tests/test_ii_plus_projected.py: 18 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_3d.py: 16 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_jackknife_3d.py: 8 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_jackknife_xy_z.py: 10 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_per_object_3d.py: 3 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_projected.py: 9 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_s_mu.py: 14 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_npairs_xy_z.py: 9 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_pairwise_distance_3d.py: 19 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/pair_counters/test_pair_counters/test_weighted_npairs_s_mu.py: 5 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/pairwise_velocities/tests/test_mean_los_velocity_vs_rp.py: 6 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/pairwise_velocities/tests/test_mean_radial_velocity_vs_r.py: 6 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/radial_profiles/tests/test_radial_profile_3d.py: 2 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/surface_density/tests/test_mass_in_cylinders.py: 11 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/surface_density/tests/test_mean_delta_sigma.py: 8 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/surface_density/tests/test_weighted_npairs_per_object_xy.py: 5 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/surface_density/tests/test_weighted_npairs_xy.py: 9 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/tensor_calculations/tests/test_inertia_tensor.py: 2 warnings
+venv/lib/python3.12/site-packages/halotools/mock_observables/two_point_clustering/tests/test_rp_pi_tpcf_jackknife.py: 8 warnings
+  /home/tom/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=2455558) is multi-threaded, use of fork() may lead to deadlocks in the child.
+    self.pid = os.fork()
+
+venv/lib/python3.12/site-packages/halotools/empirical_models/ia_models/tests/test_ia_model_components.py::test_central_alignment_assign_central_orientation
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/empirical_models/ia_models/ia_model_components.py:190: UserWarning: `central_alignment_strength` not detected in the table, using value in self.param_dict.
+    warn(msg)
+
+venv/lib/python3.12/site-packages/halotools/empirical_models/ia_models/tests/test_ia_model_components.py::test_satellite_alignment_assign_satellite_orientation
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/empirical_models/ia_models/ia_model_components.py:341: UserWarning: `satellite_alignment_strength` not detected in the table, using value in self.param_dict.
+    warn(msg)
+
+venv/lib/python3.12/site-packages/halotools/empirical_models/ia_models/tests/test_ia_model_components.py::test_radial_satellite_alignment_assign_satellite_orientation
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/empirical_models/ia_models/ia_model_components.py:511: UserWarning: 1 galaxies have a radial distance equal to zero (or infinity) from their host. These galaxies will be re-assigned random alignment vectors.
+    warn(msg)
+
+venv/lib/python3.12/site-packages/halotools/empirical_models/ia_models/tests/test_ia_model_components.py::test_radial_satellite_alignment_assign_satellite_orientation
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/empirical_models/ia_models/ia_model_components.py:520: UserWarning: `satellite_alignment_strength` key not detected in `table`.The value set in self.param_dict of this class will be used instead.
+    warn(msg)
+
+venv/lib/python3.12/site-packages/halotools/empirical_models/ia_models/tests/test_ia_model_components.py::test_subhalo_alignment_assign_satellite_orientation
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-halotools-2_odqfkb/venv/lib/python3.12/site-packages/halotools/empirical_models/ia_models/ia_model_components.py:879: UserWarning: `satellite_alignment_strength` not detected in the table, using value in self.param_dict.
+    warn(msg)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+1185 passed, 58 skipped, 2 xfailed, 402 warnings in 203.55s (0:03:23)
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (57)</strong></summary>
+<table class="meta-table">
+
+<tr><td>accessible-pygments</td><td>0.0.5</td></tr>
+
+<tr><td>alabaster</td><td>1.0.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>astropy-sphinx-theme</td><td>3.0</td></tr>
+
+<tr><td>babel</td><td>2.18.0</td></tr>
+
+<tr><td>beautifulsoup4</td><td>4.14.3</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>cython</td><td>3.2.4</td></tr>
+
+<tr><td>docutils</td><td>0.22.4</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>h5py</td><td>3.16.0</td></tr>
+
+<tr><td>halotools</td><td>0.9.4</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>imagesize</td><td>2.0.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>numpydoc</td><td>1.10.0</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pydata-sphinx-theme</td><td>0.17.1</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-doctestplus</td><td>1.7.1</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>roman-numerals</td><td>4.1.0</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>setuptools</td><td>82.0.1</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>snowballstemmer</td><td>3.0.1</td></tr>
+
+<tr><td>soupsieve</td><td>2.8.3</td></tr>
+
+<tr><td>sphinx</td><td>9.1.0</td></tr>
+
+<tr><td>sphinx-astropy</td><td>1.10</td></tr>
+
+<tr><td>sphinx-automodapi</td><td>0.22.0</td></tr>
+
+<tr><td>sphinx-gallery</td><td>0.21.0</td></tr>
+
+<tr><td>sphinxcontrib-applehelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-devhelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-htmlhelp</td><td>2.1.0</td></tr>
+
+<tr><td>sphinxcontrib-jquery</td><td>4.1</td></tr>
+
+<tr><td>sphinxcontrib-jsmath</td><td>1.0.1</td></tr>
+
+<tr><td>sphinxcontrib-qthelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-serializinghtml</td><td>2.0.0</td></tr>
+
+<tr><td>sunpy-sphinx-theme</td><td>2.1.1</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

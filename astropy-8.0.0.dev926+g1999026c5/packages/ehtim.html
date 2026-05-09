@@ -1,0 +1,350 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>ehtim - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>ehtim</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>1.2.10</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>34.4s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>ehtim</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>
+==================================== ERRORS ====================================
+________________ ERROR collecting tests/test_fft_chisquared.py _________________
+E   FileNotFoundError: [Errno 2] No such file or directory: &#39;../../models/avery_sgra_eofn.txt&#39;
+------------------------------- Captured stdout --------------------------------
+Loading text image:  ../../models/avery_sgra_eofn.txt
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/ehtim/image.py:3050
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/image.py:3050: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    &#39;Jy&#39;, &#39;m-Jy&#39;, &#39;$\mu$Jy&#39;
+
+venv/lib/python3.12/site-packages/ehtim/image.py:3208
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/image.py:3208: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    (&#39;Jy&#39;,&#39;pixel&#39;),(&#39;m-Jy&#39;,&#39;$\mu$as$^2$&#39;),[&#39;Tb&#39;]
+
+venv/lib/python3.12/site-packages/ehtim/image.py:30
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/image.py:30: PendingDeprecationWarning: Importing from numpy.matlib is deprecated since 1.19.0. The matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray. 
+    import numpy.matlib as matlib
+
+venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:186
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:186: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.xlabel(&#39;Relative RA ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:187
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:187: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.ylabel(&#39;Relative Dec ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:262
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:262: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.xlabel(&#39;Relative RA ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:263
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:263: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.ylabel(&#39;Relative Dec ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:2167
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:2167: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.xlabel(&#39;Relative RA ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:2168
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:2168: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.ylabel(&#39;Relative Dec ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:2194
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:2194: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.xlabel(&#39;Relative RA ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:2195
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:2195: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.ylabel(&#39;Relative Dec ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:2217
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:2217: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.xlabel(&#39;Relative RA ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:2218
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:2218: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.ylabel(&#39;Relative Dec ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:2219
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/dynamical_imaging.py:2219: SyntaxWarning: invalid escape sequence &#39;\c&#39;
+    plt.title(&#34;step: %i  $\chi^2$: %f  $s$: %f  $s_{t}$: %f&#34; % (nit, chi2, s, s_dynamic), fontsize=20)
+
+venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:770
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:770: SyntaxWarning: invalid escape sequence &#39;\c&#39;
+    plt.suptitle(&#34;step: %i  $\chi^2$: %f &#34; % (nit, chi2), fontsize=20)
+
+venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:779
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:779: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.xlabel(&#39;Relative RA ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:780
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:780: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.ylabel(&#39;Relative Dec ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:790
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:790: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.xlabel(&#39;Relative RA ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:791
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:791: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.ylabel(&#39;Relative Dec ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:801
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:801: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.xlabel(&#39;Relative RA ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:802
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:802: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.ylabel(&#39;Relative Dec ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:812
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:812: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.xlabel(&#39;Relative RA ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:813
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/scattering/stochastic_optics.py:813: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.ylabel(&#39;Relative Dec ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:242
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:242: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    ax.text(.23, .3, &#34;%0.1f $\mu$as&#34; % (im_display.fovx()/ehc.RADPERUAS), fontsize=fs,
+
+venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:247
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:247: SyntaxWarning: invalid escape sequence &#39;\c&#39;
+    ax.text(.5, .9, &#34;$\chi^2_{vis}$&#34;, fontsize=fs,
+
+venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:249
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:249: SyntaxWarning: invalid escape sequence &#39;\c&#39;
+    ax.text(.5, .7, &#34;$\chi^2_{amp}$&#34;, fontsize=fs,
+
+venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:251
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:251: SyntaxWarning: invalid escape sequence &#39;\c&#39;
+    ax.text(.5, .5, &#34;$\chi^2_{cphase}$&#34;, fontsize=fs,
+
+venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:253
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:253: SyntaxWarning: invalid escape sequence &#39;\c&#39;
+    ax.text(.5, .3, &#34;$\chi^2_{log camp}$&#34;, fontsize=fs,
+
+venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:255
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:255: SyntaxWarning: invalid escape sequence &#39;\c&#39;
+    ax.text(.5, .1, &#34;$\chi^2_{camp}$&#34;, fontsize=fs,
+
+venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:473
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:473: SyntaxWarning: invalid escape sequence &#39;\l&#39;
+    ax.set_xlabel(&#39;u-v distance (G$\lambda$)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1028
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1028: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    ax.text(.23, .3, &#34;%0.1f $\mu$as&#34; % (im.fovx()/ehc.RADPERUAS), fontsize=fs,
+
+venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1033
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1033: SyntaxWarning: invalid escape sequence &#39;\c&#39;
+    ax.text(.5, .9, &#34;$\chi^2_{m}$&#34;, fontsize=fs,
+
+venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1035
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1035: SyntaxWarning: invalid escape sequence &#39;\c&#39;
+    ax.text(.5, .7, &#34;$\chi^2_{P}$&#34;, fontsize=fs,
+
+venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1037
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1037: SyntaxWarning: invalid escape sequence &#39;\c&#39;
+    ax.text(.5, .5, &#34;$\chi^2_{Q}$&#34;, fontsize=fs,
+
+venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1039
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1039: SyntaxWarning: invalid escape sequence &#39;\c&#39;
+    ax.text(.5, .3, &#34;$\chi^2_{U}$&#34;, fontsize=fs,
+
+venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1513
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1513: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    unit = &#39;mJy/$\mu$ as$^2$&#39;
+
+venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1564
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1564: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.text(x=(start+end)/2.0, y=im.ydim-start-im.ydim/20, s=str(fov_scale) + &#34; $\mu$as&#34;,
+
+venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1722
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/plotting/summary_plots.py:1722: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.text(x=(start+end)/2.0, y=im.ydim-start-im.ydim/20, s=str(fov_scale) + &#34; $\mu$as&#34;,
+
+venv/lib/python3.12/site-packages/ehtim/calibrating/pol_cal.py:388
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/calibrating/pol_cal.py:388: SyntaxWarning: invalid escape sequence &#39;\%&#39;
+    x.set_xlabel(&#39;Re[$D$] (\%)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/calibrating/pol_cal.py:389
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/calibrating/pol_cal.py:389: SyntaxWarning: invalid escape sequence &#39;\%&#39;
+    x.set_ylabel(&#39;Im[$D$] (\%)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/calibrating/pol_cal.py:392
+venv/lib/python3.12/site-packages/ehtim/calibrating/pol_cal.py:392
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/calibrating/pol_cal.py:392: SyntaxWarning: invalid escape sequence &#39;\%&#39;
+    plt.legend(plot_points[0], [&#39;$D_R$ (\%)&#39;, &#39;$D_L$ (\%)&#39;], loc=4)
+
+venv/lib/python3.12/site-packages/ehtim/imaging/pol_imager_utils.py:2072
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/pol_imager_utils.py:2072: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.xlabel(&#39;Relative RA ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/imaging/pol_imager_utils.py:2073
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/pol_imager_utils.py:2073: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.ylabel(&#39;Relative Dec ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/imaging/pol_imager_utils.py:2088
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/pol_imager_utils.py:2088: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.xlabel(&#39;Relative RA ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/imaging/pol_imager_utils.py:2089
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/pol_imager_utils.py:2089: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    plt.ylabel(&#39;Relative Dec ($\mu$as)&#39;)
+
+venv/lib/python3.12/site-packages/ehtim/imaging/pol_imager_utils.py:2095
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ehtim-8zlx8cdy/venv/lib/python3.12/site-packages/ehtim/imaging/pol_imager_utils.py:2095: SyntaxWarning: invalid escape sequence &#39;\c&#39;
+    plotstr += &#34;$\chi^2_{%s}$: %0.2f  &#34; % (key, chi2_dict[key])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR artifact/ehtim-1.2.10/tests/test_fft_chisquared.py - FileNotFoundError:...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+47 warnings, 1 error in 24.74s
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (39)</strong></summary>
+<table class="meta-table">
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>ehtim</td><td>1.2.10</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>future</td><td>1.0.0</td></tr>
+
+<tr><td>h5py</td><td>3.16.0</td></tr>
+
+<tr><td>hdrhistogram</td><td>0.10.3</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>jplephem</td><td>2.24</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>networkx</td><td>3.6.1</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pandas-appender</td><td>0.9.9</td></tr>
+
+<tr><td>paramsurvey</td><td>0.4.21</td></tr>
+
+<tr><td>pbr</td><td>7.0.3</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>psutil</td><td>7.2.2</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>setuptools</td><td>82.0.1</td></tr>
+
+<tr><td>sgp4</td><td>2.25</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>skyfield</td><td>1.54</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

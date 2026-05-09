@@ -1,0 +1,605 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>gwpy - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>gwpy</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>4.0.1</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>21.4s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>gwpy</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>py/io/tests/test_pelican.py:76
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/io/tests/test_pelican.py:76: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;requests_pelican&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/io/tests/test_remote.py:65
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/io/tests/test_remote.py:65: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;requests_pelican&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/io/tests/test_remote.py:77
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/io/tests/test_remote.py:77: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;requests_pelican&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:32
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:32: PytestUnknownMarkWarning: Unknown pytest.mark.flaky - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    rerun_invalid_token = pytest.mark.flaky(
+
+venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:101
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:101: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_auth_utils&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:115
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:115: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_auth_utils&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:139
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:139: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;htgettoken&#34;, &#34;scitokens&#34;, exc_type=(ImportError, OSError))
+
+venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:155
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:155: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;htgettoken&#34;, &#34;scitokens&#34;, exc_type=(ImportError, OSError))
+
+venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:169
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:169: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;requests_scitokens&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:191
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:191: PytestUnknownMarkWarning: Unknown pytest.mark.flaky - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.flaky(
+
+venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:196
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:196: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_auth_utils&#34;, &#34;requests_scitokens&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:211
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:211: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(
+
+venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:231
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/io/tests/test_scitokens.py:231: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;requests_scitokens&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:561
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:561: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:581
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:581: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:652
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:652: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:664
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:664: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:677
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:677: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:939
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:939: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:1004
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:1004: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:1061
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/segments/tests/test_flag.py:1061: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/signal/tests/test_spectral_median_mean.py:28
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/signal/tests/test_spectral_median_mean.py:28: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;lal&#34;, &#34;pycbc.psd&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/signal/tests/test_spectral_ui.py:78
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/signal/tests/test_spectral_ui.py:78: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;lal&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_table.py:249
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_table.py:249: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;lal&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_cwb.py:119
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_cwb.py:119: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;uproot&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:120
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:120: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:131
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:131: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:138
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:138: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:149
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:149: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:160
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:160: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:170
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:170: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:181
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:181: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:195
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:195: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:209
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:209: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:223
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gstlal.py:223: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gwf.py:60
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gwf.py:60: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;LDAStools.frameCPP&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gwf.py:79
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_gwf.py:79: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;LDAStools.frameCPP&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_hacr.py:34
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_hacr.py:34: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    requires_db_libraries = pytest.mark.requires(
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:75
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:75: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:83
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:83: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:94
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:94: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:111
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:111: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:131
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:131: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:148
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:148: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:162
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:162: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:192
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:192: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:208
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:208: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:240
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:240: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:295
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:295: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:331
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:331: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:346
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_ligolw.py:346: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;igwn_ligolw.lsctables&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_omicron.py:59
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_omicron.py:59: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;uproot&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_root.py:65
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_root.py:65: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;uproot&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_root.py:81
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_root.py:81: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;uproot&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_root.py:104
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_root.py:104: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;uproot&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_root.py:118
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_root.py:118: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;uproot&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_root.py:140
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_root.py:140: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;uproot&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_root.py:148
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_root.py:148: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;uproot&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_sql.py:75
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/table/tests/test_io_sql.py:75: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;sqlalchemy&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/time/tests/test_time.py:54
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/time/tests/test_time.py:54: PytestUnknownMarkWarning: Unknown pytest.mark.freeze_time - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.freeze_time(FREEZE)
+
+venv/lib/python3.12/site-packages/gwpy/time/tests/test_time.py:72
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/time/tests/test_time.py:72: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    marks=pytest.mark.requires(&#34;glue&#34;),
+
+venv/lib/python3.12/site-packages/gwpy/time/tests/test_time.py:103
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/time/tests/test_time.py:103: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    marks=pytest.mark.requires(&#34;glue&#34;),
+
+venv/lib/python3.12/site-packages/gwpy/time/tests/test_time.py:121
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/time/tests/test_time.py:121: PytestUnknownMarkWarning: Unknown pytest.mark.freeze_time - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.freeze_time(FREEZE)
+
+venv/lib/python3.12/site-packages/gwpy/time/tests/test_time.py:129
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/time/tests/test_time.py:129: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    marks=pytest.mark.requires(&#34;glue&#34;),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:186
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:186: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;arrakis&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:231
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:231: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;nds2&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:274
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:274: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;lal&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:282
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:282: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;lal&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:290
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:290: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;lal&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:320
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:320: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;lal&#34;, &#34;pycbc&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:524
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:524: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;arrakis&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:582
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_core.py:582: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;nds2&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_io_pelican.py:39
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_io_pelican.py:39: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;requests_pelican&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:97
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:97: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytest.param(&#34;lalframe&#34;, marks=pytest.mark.requires(&#34;lalframe&#34;)),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:98
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:98: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytest.param(&#34;framecpp&#34;, marks=pytest.mark.requires(&#34;LDAStools.frameCPP&#34;)),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:99
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:99: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytest.param(&#34;framel&#34;, marks=pytest.mark.requires(&#34;framel&#34;)),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:532
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:532: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;lalframe&#34;)  # for get_channel_type
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:701
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:701: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;nds2&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:734
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:734: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytest.param(&#34;gwf&#34;, marks=pytest.mark.requires(&#34;lalframe&#34;)),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:776
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:776: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;nds2&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:797
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:797: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;nds2&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:809
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:809: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;nds2&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:854
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:854: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;nds2&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:200
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:200
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:200
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:200
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:200: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytest.mark.requires(&#34;lalframe&#34;),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:201
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:201
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:201
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:201
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:201: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytest.mark.requires(&#34;requests_pelican&#34;),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:997
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:997: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;nds2&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1070
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1070: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;lal&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1185
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1185: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytest.param(&#34;lal-welch&#34;, marks=pytest.mark.requires(&#34;lal&#34;)),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1186
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1186: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytest.param(&#34;lal-bartlett&#34;, marks=pytest.mark.requires(&#34;lal&#34;)),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1187
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1187: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytest.param(&#34;lal-median&#34;, marks=pytest.mark.requires(&#34;lal&#34;)),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1188
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1188: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytest.param(&#34;pycbc-welch&#34;, marks=pytest.mark.requires(&#34;pycbc.psd&#34;)),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1191
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1191: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    marks=pytest.mark.requires(&#34;pycbc.psd&#34;),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1193
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1193: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytest.param(&#34;pycbc-median&#34;, marks=pytest.mark.requires(&#34;pycbc.psd&#34;)),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1270
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1270: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytest.param(&#34;lal&#34;, marks=pytest.mark.requires(&#34;lal&#34;)),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1271
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:1271: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytest.param(&#34;pycbc&#34;, marks=pytest.mark.requires(&#34;pycbc.psd&#34;)),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:2033
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_timeseries.py:2033: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;framel&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:128
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:128: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;arrakis&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:138
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:138: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;nds2&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:200
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:200: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;lal&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:205
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:205: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;lal&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:210
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:210: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;lal&#34;)
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:398
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:398: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    marks=pytest.mark.requires(&#34;LDAStools.frameCPP&#34;),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:425
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:425: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    marks=pytest.mark.requires(&#34;LDAStools.frameCPP&#34;),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:453
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:453: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    marks=pytest.mark.requires(&#34;LDAStools.frameCPP&#34;),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:488
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:488: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    marks=pytest.mark.requires(&#34;LDAStools.frameCPP&#34;),
+
+venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:521
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-gwpy-e7g0pglz/venv/lib/python3.12/site-packages/gwpy/timeseries/tests/test_statevector.py:521: PytestUnknownMarkWarning: Unknown pytest.mark.requires - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.requires(&#34;nds2&#34;)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED venv/lib/python3.12/site-packages/gwpy/astro/tests/test_range.py::test_inspiral_range_psd
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 3 passed, 6 skipped, 193 warnings in 16.11s
+
+--- stderr ---
+WARNING: AstropyPendingDeprecationWarning: COPY_IF_NEEDED is no longer needed now that astropy only supports numpy &gt;= 2. It can be safely replaced with &#39;None&#39;.  [astropy.utils.compat.numpycompat]
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (46)</strong></summary>
+<table class="meta-table">
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>cffi</td><td>2.0.0</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>click</td><td>8.3.3</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>cryptography</td><td>48.0.0</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>dateparser</td><td>1.4.0</td></tr>
+
+<tr><td>dqsegdb2</td><td>1.3.0</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>gwdatafind</td><td>2.1.1</td></tr>
+
+<tr><td>gwosc</td><td>0.8.2</td></tr>
+
+<tr><td>gwpy</td><td>4.0.1</td></tr>
+
+<tr><td>h5py</td><td>3.16.0</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>igwn-auth-utils</td><td>1.4.0</td></tr>
+
+<tr><td>igwn-segments</td><td>2.1.1</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>ligotimegps</td><td>2.1.0</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pycparser</td><td>3.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyjwt</td><td>2.12.1</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pytz</td><td>2026.2</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>regex</td><td>2026.4.4</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>safe-netrc</td><td>1.0.1</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>scitokens</td><td>1.9.7</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>tenacity</td><td>9.1.4</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>tzlocal</td><td>5.3.1</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

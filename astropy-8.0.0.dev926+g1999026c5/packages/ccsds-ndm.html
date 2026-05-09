@@ -1,0 +1,146 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>ccsds-ndm - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>ccsds-ndm</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>3.1.1</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>82.6s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>ccsds_ndm</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>============================= test session starts ==============================
+collected 171 items
+
+artifact/ccsds_ndm-3.1.1/tests/test_benchmark.py ...............
+artifact/ccsds_ndm-3.1.1/tests/test_model_quantity.py ............ssssssss...ss..s.sss...s.sssss.sss......
+artifact/ccsds_ndm-3.1.1/tests/test_model_validate.py ............ss.
+artifact/ccsds_ndm-3.1.1/tests/test_ndm_io.py F
+File                                      Lines          Mean        StdDev     Tokenize (Mean)    ParseBlks (Mean)     BuildObj (Mean)
+---------------------------------------- ------  ------------  ------------  ------------------  ------------------  ------------------
+502x0b2c1e2_fig3_2_opm.kvn                   59       8.857ms       2.821ms             0.121ms             0.188ms             8.525ms
+502x0b2c1e2_fig3_4_opm.kvn                   63       7.046ms       0.692ms             0.143ms             0.190ms             7.556ms
+502x0b2c1e2_fig5_1_oem.kvn                   43       6.558ms       0.593ms             0.096ms             0.168ms             4.726ms
+504x0b1c1_fig3_6_apm.kvn                     36       5.618ms       1.580ms             0.067ms             0.108ms             4.808ms
+504x0b1c1_fig3_8_apm.kvn                     65       8.641ms       1.983ms             0.132ms             0.199ms             6.193ms
+508x1b1_figc_2_rdm.kvn                       79       8.891ms       1.713ms             0.180ms             0.257ms            15.701ms
+adm-testcase04a_abbrev.kvn                  122     103.533ms      28.673ms             0.263ms             0.434ms           118.081ms
+adm-testcase04a_multi.kvn                   148      76.385ms      27.515ms             0.306ms             0.500ms            90.698ms
+cdm_example_section4.kvn                    183      18.085ms       0.356ms             0.209ms             0.588ms            19.402ms
+odmv2-testcase6_abbrev.kvn                   75      18.194ms       3.617ms             0.134ms             0.236ms            27.786ms
+odmv2-testcase7a_xxx.kvn                     81      51.065ms      18.563ms             0.187ms             0.287ms            47.256ms
+omm1_ct.kvn                                  28       8.722ms       1.820ms             0.057ms             0.085ms             9.349ms
+omm1_st.kvn                                  39       8.633ms       3.466ms             0.052ms             0.078ms            10.363ms
+tdm-testcase01b.kvn                         352     418.976ms      88.919ms             0.816ms             1.081ms           375.316ms
+tdm_opt_data.kvn                            352     552.738ms     153.774ms             1.373ms             2.884ms           421.509ms
+
+
+=================================== FAILURES ===================================
+E   FileNotFoundError: [Errno 2] No such file or directory: &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ccsds-ndm-xh0rxejw/tests/data/kvn/502x0b2c1e2_fig3_2_opm.xml&#39;
+/home/tom/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ccsds-ndm-xh0rxejw/tests/data/kvn/502x0b2c1e2_fig3_2_opm.xml&#39;
+=========================== short test summary info ============================
+FAILED artifact/ccsds_ndm-3.1.1/tests/test_ndm_io.py::test_compare_files[OPM_1-path0]
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+============= 1 failed, 57 passed, 25 skipped in 78.87s (0:01:18) ==============
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (19)</strong></summary>
+<table class="meta-table">
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>ccsds-ndm</td><td>3.1.1</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>execnet</td><td>2.1.2</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>lxml</td><td>6.1.0</td></tr>
+
+<tr><td>lxml-stubs</td><td>0.5.1</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>pytest-xdist</td><td>3.8.0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>xsdata</td><td>26.2</td></tr>
+
+</table>
+</details>
+
+</body></html>

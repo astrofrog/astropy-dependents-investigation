@@ -1,0 +1,777 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>exoatlas - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>exoatlas</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.7.5</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>228.5s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>exoatlas</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>.........F
+=================================== FAILURES ===================================
+E   AttributeError: 
+                Alas, there seems to be no way to find `.individual_references`
+                as a table column, attribute, method, or property of ✨ Exoplanets | 6286 elements ✨.
+                . Did you mean: &#39;load_individual_references&#39;?
+
+During handling of the above exception, another exception occurred:
+E   KeyError: &#39;11comb&#39;
+
+During handling of the above exception, another exception occurred:
+E   Failed: Timeout (&gt;120.0s) from pytest-timeout.
+----------------------------- Captured stdout call -----------------------------
+(loading individual references may take up to a few minutes)
+
+        Attempting to freshly download data from
+        https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+ps+&amp;format=csv
+        
+        This may take a long time, and we&#39;re dreadfully 
+        sorry that we haven&#39;t coded in a clever way to 
+        tell you how long. Archive tables might be up to
+        a few 100MB, so however long it takes your computer
+        to download that is probably a reasonable-ish amount 
+        of time to wait before getting stressed out. 
+        
+Download successful! Saved file to /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-exoatlas-pyi46sm0/downloads-for-exoatlas/data/nasa-exoplanet-archive-from+ps.txt
+📕 populated pl_name &gt; name
+📕 populated hostname &gt; hostname
+📕 populated pl_letter &gt; letter
+📕 populated sy_snum &gt; number_of_stars
+📕 populated sy_pnum &gt; number_of_planets
+📕 populated discoverymethod &gt; discovery_method
+📕 populated disc_year &gt; discovery_year
+📕 populated disc_refname &gt; discovery_publication
+📕 populated disc_facility &gt; discovery_facility
+📕 populated ra &gt; ra
+📕 populated dec &gt; dec
+📕 populated sy_pmra &gt; pmra
+📕 populated sy_pmdec &gt; pmdec
+👇 populated st_radv &gt; systemic_rv and errors and limits 
+⚠️ ingested reference information for st_radv &gt; systemic_rv
+📏 populated distance and errors with sy_dist
+⚠️ ingested reference information for sy_dist &gt; distance
+📕 populated rv_flag &gt; detected_in_rv
+📕 populated pul_flag &gt; detected_in_pulsar
+📕 populated ptv_flag &gt; detected_in_pulsation_timing
+📕 populated tran_flag &gt; detected_in_transit
+📕 populated ast_flag &gt; detected_in_astrometry
+📕 populated obm_flag &gt; detected_in_orbital_brightness_modulations
+📕 populated micro_flag &gt; detected_in_microlensing
+📕 populated etv_flag &gt; detected_in_eclipse_timing_variations
+📕 populated ima_flag &gt; detected_in_imaging
+📕 populated dkin_flag &gt; detected_in_disk_kinematics
+📕 populated pl_controv_flag &gt; is_controversial
+📕 populated ttv_flag &gt; shows_ttv
+📕 populated st_spectype &gt; stellar_spectral_type
+👇 populated st_teff &gt; stellar_teff and errors and limits 
+⚠️ ingested reference information for st_teff &gt; stellar_teff
+👇 populated st_rad &gt; stellar_radius and errors and limits 
+⚠️ ingested reference information for st_rad &gt; stellar_radius
+👇 populated st_mass &gt; stellar_mass and errors and limits 
+⚠️ ingested reference information for st_mass &gt; stellar_mass
+👇 populated st_age &gt; stellar_age and errors and limits 
+⚠️ ingested reference information for st_age &gt; stellar_age
+👇 populated st_met &gt; stellar_metallicity and errors and limits 
+⚠️ ingested reference information for st_met &gt; stellar_metallicity
+👇 populated st_lum &gt; stellar_luminosity and errors and limits 
+⚠️ ingested reference information for st_lum &gt; stellar_luminosity
+👇 populated st_logg &gt; stellar_logg and errors and limits 
+⚠️ ingested reference information for st_logg &gt; stellar_logg
+👇 populated st_dens &gt; stellar_density and errors and limits 
+⚠️ ingested reference information for st_dens &gt; stellar_density
+👇 populated st_vsin &gt; stellar_vsini and errors and limits 
+⚠️ ingested reference information for st_vsin &gt; stellar_vsini
+👇 populated st_rotp &gt; stellar_rotation_period and errors and limits 
+⚠️ ingested reference information for st_rotp &gt; stellar_rotation_period
+📏 populated magnitude_u and errors with sy_umag
+⚠️ ingested reference information for sy_umag &gt; magnitude_u
+📏 populated magnitude_g and errors with sy_gmag
+⚠️ ingested reference information for sy_gmag &gt; magnitude_g
+📏 populated magnitude_r and errors with sy_rmag
+⚠️ ingested reference information for sy_rmag &gt; magnitude_r
+📏 populated magnitude_i and errors with sy_imag
+⚠️ ingested reference information for sy_imag &gt; magnitude_i
+📏 populated magnitude_z and errors with sy_zmag
+⚠️ ingested reference information for sy_zmag &gt; magnitude_z
+📏 populated magnitude_V and errors with sy_vmag
+⚠️ ingested reference information for sy_vmag &gt; magnitude_V
+📏 populated magnitude_B and errors with sy_bmag
+⚠️ ingested reference information for sy_bmag &gt; magnitude_B
+📏 populated magnitude_IC and errors with sy_icmag
+⚠️ ingested reference information for sy_icmag &gt; magnitude_IC
+📏 populated magnitude_J and errors with sy_jmag
+⚠️ ingested reference information for sy_jmag &gt; magnitude_J
+📏 populated magnitude_H and errors with sy_hmag
+⚠️ ingested reference information for sy_hmag &gt; magnitude_H
+📏 populated magnitude_K and errors with sy_kmag
+⚠️ ingested reference information for sy_kmag &gt; magnitude_K
+📏 populated magnitude_W1 and errors with sy_w1mag
+⚠️ ingested reference information for sy_w1mag &gt; magnitude_W1
+📏 populated magnitude_W2 and errors with sy_w2mag
+⚠️ ingested reference information for sy_w2mag &gt; magnitude_W2
+📏 populated magnitude_W3 and errors with sy_w3mag
+⚠️ ingested reference information for sy_w3mag &gt; magnitude_W3
+📏 populated magnitude_W4 and errors with sy_w4mag
+⚠️ ingested reference information for sy_w4mag &gt; magnitude_W4
+📏 populated magnitude_gaia and errors with sy_gaiamag
+⚠️ ingested reference information for sy_gaiamag &gt; magnitude_gaia
+📏 populated magnitude_T and errors with sy_tmag
+⚠️ ingested reference information for sy_tmag &gt; magnitude_T
+📏 populated magnitude_kep and errors with sy_kepmag
+⚠️ ingested reference information for sy_kepmag &gt; magnitude_kep
+👇 populated pl_orbper &gt; period and errors and limits 
+⚠️ ingested reference information for pl_orbper &gt; period
+👇 populated pl_orbsmax &gt; semimajoraxis and errors and limits 
+⚠️ ingested reference information for pl_orbsmax &gt; semimajoraxis
+👇 populated pl_orbeccen &gt; eccentricity and errors and limits 
+⚠️ ingested reference information for pl_orbeccen &gt; eccentricity
+👇 populated pl_orblper &gt; argument_of_periastron and errors and limits 
+⚠️ ingested reference information for pl_orblper &gt; argument_of_periastron
+👇 populated pl_orbincl &gt; inclination and errors and limits 
+⚠️ ingested reference information for pl_orbincl &gt; inclination
+👇 populated pl_rade &gt; radius and errors and limits 
+⚠️ ingested reference information for pl_rade &gt; radius
+👇 populated pl_bmasse &gt; mass and errors and limits 
+⚠️ ingested reference information for pl_bmasse &gt; mass
+👇 populated pl_dens &gt; density and errors and limits 
+⚠️ ingested reference information for pl_dens &gt; density
+📕 populated pl_ntranspec &gt; number_of_transmission_measurements
+📕 populated pl_nespec &gt; number_of_emission_measurements
+👇 populated pl_tranmid &gt; transit_midpoint and errors and limits 
+⚠️ ingested reference information for pl_tranmid &gt; transit_midpoint
+👇 populated pl_trandur &gt; transit_duration and errors and limits 
+⚠️ ingested reference information for pl_trandur &gt; transit_duration
+👇 populated pl_ratror &gt; transit_scaled_radius and errors and limits 
+⚠️ ingested reference information for pl_ratror &gt; transit_scaled_radius
+👇 populated pl_trandep &gt; transit_depth and errors and limits 
+⚠️ ingested reference information for pl_trandep &gt; transit_depth
+👇 populated pl_ratdor &gt; transit_scaled_semimajoraxis and errors and limits 
+⚠️ ingested reference information for pl_ratdor &gt; transit_scaled_semimajoraxis
+👇 populated pl_imppar &gt; transit_impact_parameter and errors and limits 
+⚠️ ingested reference information for pl_imppar &gt; transit_impact_parameter
+👇 populated pl_rvamp &gt; rv_semiamplitude and errors and limits 
+⚠️ ingested reference information for pl_rvamp &gt; rv_semiamplitude
+👇 populated pl_msinie &gt; msini and errors and limits 
+⚠️ ingested reference information for pl_msinie &gt; msini
+👇 populated pl_projobliq &gt; projected_obliquity and errors and limits 
+⚠️ ingested reference information for pl_projobliq &gt; projected_obliquity
+👇 populated pl_trueobliq &gt; obliquity and errors and limits 
+⚠️ ingested reference information for pl_trueobliq &gt; obliquity
+📕 populated default_flag &gt; default_parameter_set
+✂️ trimming weird data
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for argument_of_periastron 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for argument_of_periastron 🚨😳🔔‼️🚨😳🔔‼️
+argument_of_periastron: 3702 values and 3256 with uncertainties ( 88.0%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for density 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for density 🚨😳🔔‼️🚨😳🔔‼️
+             density: 2722 values and 2698 with uncertainties ( 99.1%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for distance 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for distance 🚨😳🔔‼️🚨😳🔔‼️
+            distance: 38998 values and 38139 with uncertainties ( 97.8%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for eccentricity 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for eccentricity 🚨😳🔔‼️🚨😳🔔‼️
+        eccentricity: 18283 values and 3879 with uncertainties ( 21.2%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for inclination 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for inclination 🚨😳🔔‼️🚨😳🔔‼️
+         inclination: 17590 values and 4375 with uncertainties ( 24.9%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_B 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_B 🚨😳🔔‼️🚨😳🔔‼️
+         magnitude_B: 38343 values and 38338 with uncertainties (100.0%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_H 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_H 🚨😳🔔‼️🚨😳🔔‼️
+         magnitude_H: 39008 values and 38870 with uncertainties ( 99.6%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_IC 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_IC 🚨😳🔔‼️🚨😳🔔‼️
+        magnitude_IC:   45 values and   40 with uncertainties ( 88.9%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_J 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_J 🚨😳🔔‼️🚨😳🔔‼️
+         magnitude_J: 38979 values and 38881 with uncertainties ( 99.7%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_K 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_K 🚨😳🔔‼️🚨😳🔔‼️
+         magnitude_K: 39006 values and 38764 with uncertainties ( 99.4%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_T 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_T 🚨😳🔔‼️🚨😳🔔‼️
+         magnitude_T: 39018 values and 39007 with uncertainties (100.0%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_V 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_V 🚨😳🔔‼️🚨😳🔔‼️
+         magnitude_V: 39011 values and 38997 with uncertainties (100.0%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_W1 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_W1 🚨😳🔔‼️🚨😳🔔‼️
+        magnitude_W1: 36867 values and 36770 with uncertainties ( 99.7%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_W2 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_W2 🚨😳🔔‼️🚨😳🔔‼️
+        magnitude_W2: 36868 values and 36787 with uncertainties ( 99.8%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_W3 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_W3 🚨😳🔔‼️🚨😳🔔‼️
+        magnitude_W3: 36866 values and 27313 with uncertainties ( 74.1%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_W4 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_W4 🚨😳🔔‼️🚨😳🔔‼️
+        magnitude_W4: 36863 values and 6003 with uncertainties ( 16.3%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_g 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_g 🚨😳🔔‼️🚨😳🔔‼️
+         magnitude_g: 4090 values and 4090 with uncertainties (100.0%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_gaia 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_gaia 🚨😳🔔‼️🚨😳🔔‼️
+      magnitude_gaia: 38713 values and 38713 with uncertainties (100.0%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_i 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_i 🚨😳🔔‼️🚨😳🔔‼️
+         magnitude_i: 4090 values and 4090 with uncertainties (100.0%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_kep 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_kep 🚨😳🔔‼️🚨😳🔔‼️
+       magnitude_kep: 31219 values and    0 with uncertainties (  0.0%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_r 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_r 🚨😳🔔‼️🚨😳🔔‼️
+         magnitude_r: 4090 values and 4090 with uncertainties (100.0%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_u 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_u 🚨😳🔔‼️🚨😳🔔‼️
+         magnitude_u: 4090 values and 4090 with uncertainties (100.0%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_z 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for magnitude_z 🚨😳🔔‼️🚨😳🔔‼️
+         magnitude_z: 4090 values and 4090 with uncertainties (100.0%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for mass 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for mass 🚨😳🔔‼️🚨😳🔔‼️
+                mass: 7018 values and 6724 with uncertainties ( 95.8%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for msini 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for msini 🚨😳🔔‼️🚨😳🔔‼️
+               msini: 2684 values and 2424 with uncertainties ( 90.3%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for obliquity 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for obliquity 🚨😳🔔‼️🚨😳🔔‼️
+           obliquity:   64 values and   64 with uncertainties (100.0%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for period 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for period 🚨😳🔔‼️🚨😳🔔‼️
+              period: 36490 values and 34793 with uncertainties ( 95.3%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for projected_obliquity 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for projected_obliquity 🚨😳🔔‼️🚨😳🔔‼️
+ projected_obliquity:  271 values and  270 with uncertainties ( 99.6%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for radius 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for radius 🚨😳🔔‼️🚨😳🔔‼️
+              radius: 27493 values and 26751 with uncertainties ( 97.3%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for rv_semiamplitude 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for rv_semiamplitude 🚨😳🔔‼️🚨😳🔔‼️
+    rv_semiamplitude: 4815 values and 4790 with uncertainties ( 99.5%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for semimajoraxis 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for semimajoraxis 🚨😳🔔‼️🚨😳🔔‼️
+       semimajoraxis: 22241 values and 7766 with uncertainties ( 34.9%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_age 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_age 🚨😳🔔‼️🚨😳🔔‼️
+         stellar_age: 9574 values and 9321 with uncertainties ( 97.4%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_density 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_density 🚨😳🔔‼️🚨😳🔔‼️
+     stellar_density: 22573 values and 17866 with uncertainties ( 79.1%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_logg 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_logg 🚨😳🔔‼️🚨😳🔔‼️
+        stellar_logg: 30912 values and 25462 with uncertainties ( 82.4%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_luminosity 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_luminosity 🚨😳🔔‼️🚨😳🔔‼️
+  stellar_luminosity: 39852 values and 4813 with uncertainties ( 12.1%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_mass 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_mass 🚨😳🔔‼️🚨😳🔔‼️
+        stellar_mass: 33394 values and 27818 with uncertainties ( 83.3%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_metallicity 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_metallicity 🚨😳🔔‼️🚨😳🔔‼️
+ stellar_metallicity: 24962 values and 24298 with uncertainties ( 97.3%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_radius 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_radius 🚨😳🔔‼️🚨😳🔔‼️
+      stellar_radius: 36463 values and 30609 with uncertainties ( 83.9%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_rotation_period 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_rotation_period 🚨😳🔔‼️🚨😳🔔‼️
+stellar_rotation_period: 1088 values and  925 with uncertainties ( 85.0%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_teff 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_teff 🚨😳🔔‼️🚨😳🔔‼️
+        stellar_teff: 36263 values and 35048 with uncertainties ( 96.6%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_vsini 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for stellar_vsini 🚨😳🔔‼️🚨😳🔔‼️
+       stellar_vsini: 3015 values and 2476 with uncertainties ( 82.1%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for systemic_rv 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for systemic_rv 🚨😳🔔‼️🚨😳🔔‼️
+         systemic_rv: 1821 values and 1642 with uncertainties ( 90.2%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for transit_depth 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for transit_depth 🚨😳🔔‼️🚨😳🔔‼️
+       transit_depth: 18232 values and 13653 with uncertainties ( 74.9%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for transit_duration 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for transit_duration 🚨😳🔔‼️🚨😳🔔‼️
+    transit_duration: 22584 values and 17995 with uncertainties ( 79.7%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for transit_impact_parameter 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for transit_impact_parameter 🚨😳🔔‼️🚨😳🔔‼️
+transit_impact_parameter: 17428 values and 17179 with uncertainties ( 98.6%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for transit_midpoint 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for transit_midpoint 🚨😳🔔‼️🚨😳🔔‼️
+    transit_midpoint: 31016 values and 30528 with uncertainties ( 98.4%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for transit_scaled_radius 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for transit_scaled_radius 🚨😳🔔‼️🚨😳🔔‼️
+transit_scaled_radius: 21746 values and 21428 with uncertainties ( 98.5%)
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for transit_scaled_semimajoraxis 🚨😳🔔‼️🚨😳🔔‼️
+🚨😳🔔‼️ some values with zero-uncertainty might have snuck through for transit_scaled_semimajoraxis 🚨😳🔔‼️🚨😳🔔‼️
+transit_scaled_semimajoraxis: 17433 values and 17346 with uncertainties ( 99.5%)
+values without reasonable uncertainties have been trimmed
+Saved a standardized text table to /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-exoatlas-pyi46sm0/downloads-for-exoatlas/data/standardized-ExoplanetsPS.txt
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-exoatlas-pyi46sm0/venv/lib/python3.12/site-packages/astropy/table/sorted_array.py:285: Failed: Timeout (&gt;120.0s) from pytest-timeout.
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/exoatlas/populations/exoplanets/exoplanet_downloaders.py:64
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-exoatlas-pyi46sm0/venv/lib/python3.12/site-packages/exoatlas/populations/exoplanets/exoplanet_downloaders.py:64: SyntaxWarning: &#34;is&#34; with &#39;str&#39; literal. Did you mean &#34;==&#34;?
+    if (self.planet is &#34;&#34;) or (self.planet is None):
+
+venv/lib/python3.12/site-packages/exoatlas/tests/test_buckets.py::test_buckets
+venv/lib/python3.12/site-packages/exoatlas/tests/test_curation.py::test_load_references
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-exoatlas-pyi46sm0/venv/lib/python3.12/site-packages/exoatlas/populations/exoplanets/exoplanets.py:246: UserWarning: ⚠️ No gaia_id found!
+    warnings.warn(f&#34;⚠️ No {k_original} found!&#34;)
+
+venv/lib/python3.12/site-packages/exoatlas/tests/test_buckets.py::test_buckets
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-exoatlas-pyi46sm0/venv/lib/python3.12/site-packages/exoatlas/populations/exoplanets/exoplanets.py:246: UserWarning: ⚠️ No default_flag found!
+    warnings.warn(f&#34;⚠️ No {k_original} found!&#34;)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED venv/lib/python3.12/site-packages/exoatlas/tests/test_curation.py::test_load_references
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 9 passed, 4 warnings in 217.27s (0:03:37)
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (192)</strong></summary>
+<table class="meta-table">
+
+<tr><td>adjusttext</td><td>1.3.0</td></tr>
+
+<tr><td>altair</td><td>6.1.0</td></tr>
+
+<tr><td>anyio</td><td>4.13.0</td></tr>
+
+<tr><td>argon2-cffi</td><td>25.1.0</td></tr>
+
+<tr><td>argon2-cffi-bindings</td><td>25.1.0</td></tr>
+
+<tr><td>arrow</td><td>1.4.0</td></tr>
+
+<tr><td>arviz</td><td>1.1.0</td></tr>
+
+<tr><td>arviz-base</td><td>1.1.0</td></tr>
+
+<tr><td>arviz-plots</td><td>1.1.0</td></tr>
+
+<tr><td>arviz-stats</td><td>1.1.0</td></tr>
+
+<tr><td>astroplan</td><td>0.10.1</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>astroquery</td><td>0.4.11</td></tr>
+
+<tr><td>asttokens</td><td>3.0.1</td></tr>
+
+<tr><td>async-lru</td><td>2.3.0</td></tr>
+
+<tr><td>attrs</td><td>26.1.0</td></tr>
+
+<tr><td>babel</td><td>2.18.0</td></tr>
+
+<tr><td>backrefs</td><td>7.0</td></tr>
+
+<tr><td>beautifulsoup4</td><td>4.14.3</td></tr>
+
+<tr><td>black</td><td>26.3.1</td></tr>
+
+<tr><td>bleach</td><td>6.3.0</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>cffi</td><td>2.0.0</td></tr>
+
+<tr><td>cfgv</td><td>3.5.0</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>chromatic-lightcurves</td><td>0.5.1</td></tr>
+
+<tr><td>click</td><td>8.3.3</td></tr>
+
+<tr><td>colorama</td><td>0.4.6</td></tr>
+
+<tr><td>colour-science</td><td>0.4.7</td></tr>
+
+<tr><td>comm</td><td>0.2.3</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>cryptography</td><td>48.0.0</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>debugpy</td><td>1.8.20</td></tr>
+
+<tr><td>decorator</td><td>5.2.1</td></tr>
+
+<tr><td>defusedxml</td><td>0.7.1</td></tr>
+
+<tr><td>distlib</td><td>0.4.0</td></tr>
+
+<tr><td>docstring-parser</td><td>0.18.0</td></tr>
+
+<tr><td>docutils</td><td>0.22.4</td></tr>
+
+<tr><td>executing</td><td>2.2.1</td></tr>
+
+<tr><td>exoatlas</td><td>0.7.5</td></tr>
+
+<tr><td>exoplanet-core</td><td>0.3.1</td></tr>
+
+<tr><td>fastjsonschema</td><td>2.21.2</td></tr>
+
+<tr><td>filelock</td><td>3.29.0</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>fqdn</td><td>1.5.1</td></tr>
+
+<tr><td>ghp-import</td><td>2.1.0</td></tr>
+
+<tr><td>griffelib</td><td>2.0.2</td></tr>
+
+<tr><td>h11</td><td>0.16.0</td></tr>
+
+<tr><td>h5netcdf</td><td>1.8.1</td></tr>
+
+<tr><td>h5py</td><td>3.16.0</td></tr>
+
+<tr><td>html5lib</td><td>1.1</td></tr>
+
+<tr><td>httpcore</td><td>1.0.9</td></tr>
+
+<tr><td>httpx</td><td>0.28.1</td></tr>
+
+<tr><td>id</td><td>1.6.1</td></tr>
+
+<tr><td>identify</td><td>2.6.19</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>ipykernel</td><td>7.2.0</td></tr>
+
+<tr><td>ipython</td><td>9.13.0</td></tr>
+
+<tr><td>ipython-pygments-lexers</td><td>1.1.1</td></tr>
+
+<tr><td>ipywidgets</td><td>8.1.8</td></tr>
+
+<tr><td>isoduration</td><td>20.11.0</td></tr>
+
+<tr><td>jaraco-classes</td><td>3.4.0</td></tr>
+
+<tr><td>jaraco-context</td><td>6.1.2</td></tr>
+
+<tr><td>jaraco-functools</td><td>4.4.0</td></tr>
+
+<tr><td>jedi</td><td>0.20.0</td></tr>
+
+<tr><td>jeepney</td><td>0.9.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>json5</td><td>0.14.0</td></tr>
+
+<tr><td>jsonpointer</td><td>3.1.1</td></tr>
+
+<tr><td>jsonschema</td><td>4.26.0</td></tr>
+
+<tr><td>jsonschema-specifications</td><td>2025.9.1</td></tr>
+
+<tr><td>jupyter</td><td>1.1.1</td></tr>
+
+<tr><td>jupyter-client</td><td>8.8.0</td></tr>
+
+<tr><td>jupyter-console</td><td>6.6.3</td></tr>
+
+<tr><td>jupyter-core</td><td>5.9.1</td></tr>
+
+<tr><td>jupyter-events</td><td>0.12.1</td></tr>
+
+<tr><td>jupyter-lsp</td><td>2.3.1</td></tr>
+
+<tr><td>jupyter-server</td><td>2.18.2</td></tr>
+
+<tr><td>jupyter-server-terminals</td><td>0.5.4</td></tr>
+
+<tr><td>jupyterlab</td><td>4.5.7</td></tr>
+
+<tr><td>jupyterlab-pygments</td><td>0.3.0</td></tr>
+
+<tr><td>jupyterlab-server</td><td>2.28.0</td></tr>
+
+<tr><td>jupyterlab-widgets</td><td>3.0.16</td></tr>
+
+<tr><td>jupytext</td><td>1.19.1</td></tr>
+
+<tr><td>keyring</td><td>25.7.0</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>lark</td><td>1.3.1</td></tr>
+
+<tr><td>lazy-loader</td><td>0.5</td></tr>
+
+<tr><td>markdown</td><td>3.10.2</td></tr>
+
+<tr><td>markdown-it-py</td><td>4.2.0</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>matplotlib-inline</td><td>0.2.2</td></tr>
+
+<tr><td>mdit-py-plugins</td><td>0.6.0</td></tr>
+
+<tr><td>mdurl</td><td>0.1.2</td></tr>
+
+<tr><td>mergedeep</td><td>1.3.4</td></tr>
+
+<tr><td>mistune</td><td>3.2.1</td></tr>
+
+<tr><td>mkdocs</td><td>1.6.1</td></tr>
+
+<tr><td>mkdocs-autorefs</td><td>1.4.4</td></tr>
+
+<tr><td>mkdocs-exclude</td><td>1.0.2</td></tr>
+
+<tr><td>mkdocs-get-deps</td><td>0.2.2</td></tr>
+
+<tr><td>mkdocs-jupyter</td><td>0.26.3</td></tr>
+
+<tr><td>mkdocs-material</td><td>9.7.6</td></tr>
+
+<tr><td>mkdocs-material-extensions</td><td>1.3.1</td></tr>
+
+<tr><td>mkdocstrings</td><td>1.0.4</td></tr>
+
+<tr><td>mkdocstrings-python</td><td>2.0.3</td></tr>
+
+<tr><td>more-itertools</td><td>11.0.2</td></tr>
+
+<tr><td>mypy-extensions</td><td>1.1.0</td></tr>
+
+<tr><td>narwhals</td><td>2.21.0</td></tr>
+
+<tr><td>nbclient</td><td>0.10.4</td></tr>
+
+<tr><td>nbconvert</td><td>7.17.1</td></tr>
+
+<tr><td>nbformat</td><td>5.10.4</td></tr>
+
+<tr><td>nest-asyncio</td><td>1.6.0</td></tr>
+
+<tr><td>nh3</td><td>0.3.5</td></tr>
+
+<tr><td>nodeenv</td><td>1.10.0</td></tr>
+
+<tr><td>notebook</td><td>7.5.6</td></tr>
+
+<tr><td>notebook-shim</td><td>0.2.4</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>paginate</td><td>0.5.7</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pandocfilters</td><td>1.5.1</td></tr>
+
+<tr><td>parso</td><td>0.8.7</td></tr>
+
+<tr><td>pathspec</td><td>1.1.1</td></tr>
+
+<tr><td>pexpect</td><td>4.9.0</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pre-commit</td><td>4.6.0</td></tr>
+
+<tr><td>prometheus-client</td><td>0.25.0</td></tr>
+
+<tr><td>prompt-toolkit</td><td>3.0.52</td></tr>
+
+<tr><td>psutil</td><td>7.2.2</td></tr>
+
+<tr><td>ptyprocess</td><td>0.7.0</td></tr>
+
+<tr><td>pure-eval</td><td>0.2.3</td></tr>
+
+<tr><td>pycparser</td><td>3.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pymdown-extensions</td><td>10.21.2</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>python-discovery</td><td>1.3.0</td></tr>
+
+<tr><td>python-json-logger</td><td>4.1.0</td></tr>
+
+<tr><td>pytkdocs</td><td>0.16.5</td></tr>
+
+<tr><td>pytokens</td><td>0.4.1</td></tr>
+
+<tr><td>pytz</td><td>2026.2</td></tr>
+
+<tr><td>pyvo</td><td>1.8.1</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>pyyaml-env-tag</td><td>1.1</td></tr>
+
+<tr><td>pyzmq</td><td>27.1.0</td></tr>
+
+<tr><td>rainbow-connection</td><td>0.0.16</td></tr>
+
+<tr><td>readme-renderer</td><td>44.0</td></tr>
+
+<tr><td>referencing</td><td>0.37.0</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>requests-toolbelt</td><td>1.0.0</td></tr>
+
+<tr><td>rfc3339-validator</td><td>0.1.4</td></tr>
+
+<tr><td>rfc3986</td><td>2.0.0</td></tr>
+
+<tr><td>rfc3986-validator</td><td>0.1.1</td></tr>
+
+<tr><td>rfc3987-syntax</td><td>1.1.0</td></tr>
+
+<tr><td>rich</td><td>15.0.0</td></tr>
+
+<tr><td>rpds-py</td><td>0.30.0</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>secretstorage</td><td>3.5.0</td></tr>
+
+<tr><td>send2trash</td><td>2.1.0</td></tr>
+
+<tr><td>setuptools</td><td>82.0.1</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>soupsieve</td><td>2.8.3</td></tr>
+
+<tr><td>stack-data</td><td>0.6.3</td></tr>
+
+<tr><td>terminado</td><td>0.18.1</td></tr>
+
+<tr><td>tess-point</td><td>0.9.3</td></tr>
+
+<tr><td>tinycss2</td><td>1.4.0</td></tr>
+
+<tr><td>tokenize-rt</td><td>6.2.0</td></tr>
+
+<tr><td>tornado</td><td>6.5.5</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>traitlets</td><td>5.15.0</td></tr>
+
+<tr><td>twine</td><td>6.2.0</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>tzdata</td><td>2026.2</td></tr>
+
+<tr><td>uri-template</td><td>1.3.0</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>virtualenv</td><td>21.3.1</td></tr>
+
+<tr><td>watchdog</td><td>6.0.0</td></tr>
+
+<tr><td>wcwidth</td><td>0.7.0</td></tr>
+
+<tr><td>webcolors</td><td>25.10.0</td></tr>
+
+<tr><td>webencodings</td><td>0.5.1</td></tr>
+
+<tr><td>websocket-client</td><td>1.9.0</td></tr>
+
+<tr><td>widgetsnbextension</td><td>4.0.15</td></tr>
+
+<tr><td>xarray</td><td>2026.4.0</td></tr>
+
+<tr><td>xarray-einstats</td><td>0.10.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

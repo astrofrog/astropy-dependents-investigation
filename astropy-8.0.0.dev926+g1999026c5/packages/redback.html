@@ -1,0 +1,276 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>redback - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>redback</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>1.15.3</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>21.6s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>redback</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>
+==================================== ERRORS ====================================
+_________________ ERROR collecting test/test_on_ref_results.py _________________
+ImportError while importing test module &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/artifact/redback-1.15.3/test/test_on_ref_results.py&#39;.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+artifact/redback-1.15.3/test/test_on_ref_results.py:10: in &lt;module&gt;
+    from redback.test_utils.ref_data_utils import assert_matches_ref_data
+E   ModuleNotFoundError: No module named &#39;redback.test_utils&#39;
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:894
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:894: SyntaxWarning: invalid escape sequence &#39;\l&#39;
+    :param loge0: jet energy in \log_{10} ergs
+
+venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:957
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:957: SyntaxWarning: invalid escape sequence &#39;\l&#39;
+    :param loge0: jet energy in \log_{10} ergs
+
+venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1022
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1022: SyntaxWarning: invalid escape sequence &#39;\l&#39;
+    :param loge0: jet energy in \log_{10} ergs
+
+venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1091
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1091: SyntaxWarning: invalid escape sequence &#39;\l&#39;
+    :param loge0: jet energy in \log_{10} ergs
+
+venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1159
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1159: SyntaxWarning: invalid escape sequence &#39;\l&#39;
+    :param loge0: jet energy in \log_{10} ergs
+
+venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1227
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1227: SyntaxWarning: invalid escape sequence &#39;\l&#39;
+    :param loge0: jet energy in \log_{10} ergs
+
+venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1295
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1295: SyntaxWarning: invalid escape sequence &#39;\l&#39;
+    :param loge0: jet energy in \log_{10} ergs
+
+venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1364
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1364: SyntaxWarning: invalid escape sequence &#39;\l&#39;
+    :param loge0: jet energy in \log_{10} ergs
+
+venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1435
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1435: SyntaxWarning: invalid escape sequence &#39;\l&#39;
+    :param loge0: jet energy in \log_{10} ergs
+
+venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1509
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1509: SyntaxWarning: invalid escape sequence &#39;\l&#39;
+    :param loge0: jet energy in \log_{10} ergs
+
+venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1583
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1583: SyntaxWarning: invalid escape sequence &#39;\l&#39;
+    :param loge0: jet energy in \log_{10} ergs
+
+venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1657
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/venv/lib/python3.12/site-packages/redback/transient_models/afterglow_models/base_models.py:1657: SyntaxWarning: invalid escape sequence &#39;\l&#39;
+    :param loge0: jet energy in \log_{10} ergs
+
+venv/lib/python3.12/site-packages/redback/transient_models/shock_powered_models.py:23
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/venv/lib/python3.12/site-packages/redback/transient_models/shock_powered_models.py:23: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    t_{\mathrm{br}} = t_{\mathrm{br,0}}\, R^{1.26}\, v_s^{-1.13}\, (f_\rho M)^{-0.13}\,,
+
+venv/lib/python3.12/site-packages/redback/transient_models/shock_powered_models.py:238
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/venv/lib/python3.12/site-packages/redback/transient_models/shock_powered_models.py:238: SyntaxWarning: invalid escape sequence &#39;\l&#39;
+    L_{RW} = L_0 \left[ \frac{t^2 \, v_{\mathrm{dim}}}{f_{\rho} \, \kappa_{\mathrm{dim}}}\right]^{-\epsilon_2}
+
+venv/lib/python3.12/site-packages/redback/transient/afterglow.py:392
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-redback-jg6ejyty/venv/lib/python3.12/site-packages/redback/transient/afterglow.py:392: SyntaxWarning: invalid escape sequence &#39;\d&#39;
+    new_float = float(re.findall(&#34;\d+\.\d+&#34;, string)[0])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR artifact/redback-1.15.3/test/test_on_ref_results.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+15 warnings, 1 error in 15.22s
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (63)</strong></summary>
+<table class="meta-table">
+
+<tr><td>afterglowpy</td><td>0.8.1</td></tr>
+
+<tr><td>alabaster</td><td>1.0.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>attrs</td><td>26.1.0</td></tr>
+
+<tr><td>babel</td><td>2.18.0</td></tr>
+
+<tr><td>bilby</td><td>2.8.0</td></tr>
+
+<tr><td>bilby-cython</td><td>0.5.4</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>corner</td><td>2.2.3</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>dill</td><td>0.4.1</td></tr>
+
+<tr><td>docutils</td><td>0.22.4</td></tr>
+
+<tr><td>dynesty</td><td>3.0.0</td></tr>
+
+<tr><td>emcee</td><td>3.1.6</td></tr>
+
+<tr><td>extinction</td><td>0.4.8</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>h5py</td><td>3.16.0</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>imagesize</td><td>2.0.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>llvmlite</td><td>0.47.0</td></tr>
+
+<tr><td>looseversion</td><td>1.3.0</td></tr>
+
+<tr><td>lxml</td><td>6.1.0</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>numba</td><td>0.65.1</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>redback</td><td>1.15.3</td></tr>
+
+<tr><td>regex</td><td>2026.4.4</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>roman-numerals</td><td>4.1.0</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>setuptools</td><td>82.0.1</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>sncosmo</td><td>2.12.1</td></tr>
+
+<tr><td>snowballstemmer</td><td>3.0.1</td></tr>
+
+<tr><td>sphinx</td><td>9.1.0</td></tr>
+
+<tr><td>sphinx-rtd-theme</td><td>3.1.0</td></tr>
+
+<tr><td>sphinx-tabs</td><td>3.5.0</td></tr>
+
+<tr><td>sphinxcontrib-applehelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-devhelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-htmlhelp</td><td>2.1.0</td></tr>
+
+<tr><td>sphinxcontrib-jquery</td><td>4.1</td></tr>
+
+<tr><td>sphinxcontrib-jsmath</td><td>1.0.1</td></tr>
+
+<tr><td>sphinxcontrib-qthelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-serializinghtml</td><td>2.0.0</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

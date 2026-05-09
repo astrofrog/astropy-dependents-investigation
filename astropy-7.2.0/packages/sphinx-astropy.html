@@ -1,0 +1,219 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>sphinx-astropy - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>sphinx-astropy</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>1.10</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>9.3s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>sphinx_astropy</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>..F
+=================================== FAILURES ===================================
+E   assert 2 == 0
+----------------------------- Captured stdout call -----------------------------
+Running Sphinx v9.1.0
+loading translations [en]... done
+----------------------------- Captured stderr call -----------------------------
+
+Extension error!
+
+Versions
+========
+
+* Platform:         linux; (Linux-6.1.0-43-amd64-x86_64-with-glibc2.36)
+* Python version:   3.12.10 (CPython)
+* Sphinx version:   9.1.0
+* Docutils version: 0.22.4
+* Jinja2 version:   3.1.6
+* Pygments version: 2.20.0
+
+Last Messages
+=============
+
+None.
+
+Loaded Extensions
+=================
+
+None.
+
+Traceback
+=========
+
+      File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sphinx-astropy-seh7uar3/venv/lib/python3.12/site-packages/sphinx/registry.py&#34;, line 553, in load_extension
+        raise ExtensionError(
+    sphinx.errors.ExtensionError: Could not import extension sphinx_copybutton (exception: No module named &#39;sphinx_copybutton&#39;)
+
+
+The full traceback has been saved in:
+/tmp/sphinx-err-gm9bxzu_.log
+
+To report this error to the developers, please open an issue at &lt;https://github.com/sphinx-doc/sphinx/issues/&gt;. Thanks!
+Please also report this if it was a user error, so that a better error message can be provided next time.
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sphinx-astropy-seh7uar3/venv/lib/python3.12/site-packages/sphinx_astropy/tests/test_conf_v2.py:39: assert 2 == 0
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/sphinx_astropy/tests/test_conf_v1.py::test_conf
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sphinx-astropy-seh7uar3/venv/lib/python3.12/site-packages/sphinx_astropy/conf/v1.py:274: DeprecationWarning: astropy_sphinx_theme.get_html_theme_path is deprecated, you shouldn&#39;t need to manually specify the theme path as the theme is registered with sphinx
+    html_theme_path = astropy_sphinx_theme.get_html_theme_path()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED venv/lib/python3.12/site-packages/sphinx_astropy/tests/test_conf_v2.py::test_conf
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 2 passed, 1 warning in 5.70s
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (45)</strong></summary>
+<table class="meta-table">
+
+<tr><td>accessible-pygments</td><td>0.0.5</td></tr>
+
+<tr><td>alabaster</td><td>1.0.0</td></tr>
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>astropy-sphinx-theme</td><td>3.0</td></tr>
+
+<tr><td>babel</td><td>2.18.0</td></tr>
+
+<tr><td>beautifulsoup4</td><td>4.14.3</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>docutils</td><td>0.22.4</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>imagesize</td><td>2.0.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>numpydoc</td><td>1.10.0</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pydata-sphinx-theme</td><td>0.17.1</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-doctestplus</td><td>1.7.1</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>roman-numerals</td><td>4.1.0</td></tr>
+
+<tr><td>snowballstemmer</td><td>3.0.1</td></tr>
+
+<tr><td>soupsieve</td><td>2.8.3</td></tr>
+
+<tr><td>sphinx</td><td>9.1.0</td></tr>
+
+<tr><td>sphinx-astropy</td><td>1.10</td></tr>
+
+<tr><td>sphinx-automodapi</td><td>0.22.0</td></tr>
+
+<tr><td>sphinx-gallery</td><td>0.21.0</td></tr>
+
+<tr><td>sphinxcontrib-applehelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-devhelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-htmlhelp</td><td>2.1.0</td></tr>
+
+<tr><td>sphinxcontrib-jquery</td><td>4.1</td></tr>
+
+<tr><td>sphinxcontrib-jsmath</td><td>1.0.1</td></tr>
+
+<tr><td>sphinxcontrib-qthelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-serializinghtml</td><td>2.0.0</td></tr>
+
+<tr><td>sunpy-sphinx-theme</td><td>2.1.1</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

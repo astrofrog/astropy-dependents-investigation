@@ -1,0 +1,328 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>rv-data-standard - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>rv-data-standard</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.3.2</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="pass">PASS</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>249.8s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>rvdata</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>........                                                                 [100%]
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_espresso.py::test_espresso
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-rv-data-standard-vd38vw65/venv/lib/python3.12/site-packages/urllib3/connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host &#39;dace.unige.ch&#39;. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_espresso.py: 16 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-rv-data-standard-vd38vw65/venv/lib/python3.12/site-packages/rvdata/instruments/espresso/utils/create_PRIMARY.py:577: DeprecationWarning: &#39;plx&#39; has been renamed &#39;plx_value&#39;. You&#39;ll see it appearing with its new name in the output table
+    custom_simbad.add_votable_fields(&#34;ids&#34;, &#34;plx&#34;)
+
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_espresso.py: 32 warnings
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_kpf.py: 24 warnings
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_neid.py: 32 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-rv-data-standard-vd38vw65/venv/lib/python3.12/site-packages/rvdata/core/models/base.py:213: UserWarning: Cannot convert value False for keyword ISSOLAR to type Boolean
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_espresso.py: 32 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-rv-data-standard-vd38vw65/venv/lib/python3.12/site-packages/rvdata/core/models/base.py:213: UserWarning: Cannot convert value UNDEFINED for keyword DQLVL0 to type UInt
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_espresso.py: 32 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-rv-data-standard-vd38vw65/venv/lib/python3.12/site-packages/rvdata/core/models/base.py:213: UserWarning: Cannot convert value UNDEFINED for keyword DQLVL1 to type UInt
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_espresso.py: 32 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-rv-data-standard-vd38vw65/venv/lib/python3.12/site-packages/rvdata/core/models/base.py:213: UserWarning: Cannot convert value UNDEFINED for keyword DQLVL2 to type UInt
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_espresso.py: 14 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-rv-data-standard-vd38vw65/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:1036: VerifyWarning: Card is too long, comment will be truncated.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_kpf.py::test_kpf
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_kpf.py::test_kpf_benchmark
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_kpf.py::test_kpf_benchmark
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_kpf.py::test_kpf_benchmark
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_kpf.py::test_kpf_benchmark
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_kpf.py::test_kpf_benchmark
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_kpf.py::test_kpf_benchmark
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_kpf.py::test_kpf_benchmark
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-rv-data-standard-vd38vw65/venv/lib/python3.12/site-packages/rvdata/instruments/kpf/level2.py:110: UserWarning: Blaze extensions not found in KPF L1 file, using default.
+    warnings.warn(&#34;Blaze extensions not found in KPF L1 file, using default.&#34;)
+
+venv/lib/python3.12/site-packages/rvdata/tests/regression/test_neid.py: 32 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-rv-data-standard-vd38vw65/venv/lib/python3.12/site-packages/rvdata/core/models/base.py:213: UserWarning: Cannot convert value  for keyword DQLVL0 to type UInt
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+----------------------------------------------------------------------------------- benchmark: 3 tests ----------------------------------------------------------------------------------
+Name (time in s)               Min                Max               Mean            StdDev             Median               IQR            Outliers     OPS            Rounds  Iterations
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+test_neid_benchmark         2.4314 (1.0)       3.1683 (1.0)       2.7701 (1.0)      0.3685 (1.0)       2.6280 (1.0)      0.7106 (1.0)           2;0  0.3610 (1.0)           5           1
+test_kpf_benchmark          2.6258 (1.08)      3.8035 (1.20)      3.1292 (1.13)     0.5425 (1.47)      2.8224 (1.07)     0.9358 (1.32)          1;0  0.3196 (0.89)          5           1
+test_espresso_benchmark     9.9210 (4.08)     12.4246 (3.92)     11.7968 (4.26)     1.0580 (2.87)     12.1656 (4.63)     0.8440 (1.19)          1;1  0.0848 (0.23)          5           1
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Legend:
+  Outliers: 1 Standard Deviation from Mean; 1.5 IQR (InterQuartile Range) from 1st Quartile and 3rd Quartile.
+  OPS: Operations Per Second, computed as 1 / Mean
+8 passed, 255 warnings in 223.50s (0:03:43)
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (96)</strong></summary>
+<table class="meta-table">
+
+<tr><td>alabaster</td><td>1.0.0</td></tr>
+
+<tr><td>asdf</td><td>5.3.0</td></tr>
+
+<tr><td>asdf-astropy</td><td>0.11.0</td></tr>
+
+<tr><td>asdf-coordinates-schemas</td><td>0.5.1</td></tr>
+
+<tr><td>asdf-standard</td><td>1.5.0</td></tr>
+
+<tr><td>asdf-transform-schemas</td><td>0.6.0</td></tr>
+
+<tr><td>asdf-wcs-schemas</td><td>0.5.0</td></tr>
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>astroquery</td><td>0.4.11</td></tr>
+
+<tr><td>attrs</td><td>26.1.0</td></tr>
+
+<tr><td>babel</td><td>2.18.0</td></tr>
+
+<tr><td>beautifulsoup4</td><td>4.14.3</td></tr>
+
+<tr><td>black</td><td>26.3.1</td></tr>
+
+<tr><td>cachetools</td><td>7.1.1</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>cffi</td><td>2.0.0</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>click</td><td>8.3.3</td></tr>
+
+<tr><td>colorama</td><td>0.4.6</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>cryptography</td><td>48.0.0</td></tr>
+
+<tr><td>distlib</td><td>0.4.0</td></tr>
+
+<tr><td>docutils</td><td>0.22.4</td></tr>
+
+<tr><td>filelock</td><td>3.29.0</td></tr>
+
+<tr><td>flake8</td><td>7.3.0</td></tr>
+
+<tr><td>gitdb</td><td>4.0.12</td></tr>
+
+<tr><td>gitpython</td><td>3.1.50</td></tr>
+
+<tr><td>gwcs</td><td>1.0.3</td></tr>
+
+<tr><td>html5lib</td><td>1.1</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>imagesize</td><td>2.0.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>jaraco-classes</td><td>3.4.0</td></tr>
+
+<tr><td>jaraco-context</td><td>6.1.2</td></tr>
+
+<tr><td>jaraco-functools</td><td>4.4.0</td></tr>
+
+<tr><td>jeepney</td><td>0.9.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>jmespath</td><td>1.1.0</td></tr>
+
+<tr><td>jplephem</td><td>2.24</td></tr>
+
+<tr><td>keyring</td><td>25.7.0</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>mccabe</td><td>0.7.0</td></tr>
+
+<tr><td>more-itertools</td><td>11.0.2</td></tr>
+
+<tr><td>mypy-extensions</td><td>1.1.0</td></tr>
+
+<tr><td>ndcube</td><td>2.4.0</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pathspec</td><td>1.1.1</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pockets</td><td>0.9.1</td></tr>
+
+<tr><td>py-cpuinfo</td><td>9.0.0</td></tr>
+
+<tr><td>pycodestyle</td><td>2.14.0</td></tr>
+
+<tr><td>pycparser</td><td>3.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pyflakes</td><td>3.4.0</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyproject-api</td><td>1.10.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-benchmark</td><td>5.2.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>python-discovery</td><td>1.3.0</td></tr>
+
+<tr><td>pytokens</td><td>0.4.1</td></tr>
+
+<tr><td>pyvo</td><td>1.8.1</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>roman-numerals</td><td>4.1.0</td></tr>
+
+<tr><td>rv-data-standard</td><td>0.3.2</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>secretstorage</td><td>3.5.0</td></tr>
+
+<tr><td>semantic-version</td><td>2.10.0</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>smmap</td><td>5.0.3</td></tr>
+
+<tr><td>snowballstemmer</td><td>3.0.1</td></tr>
+
+<tr><td>soupsieve</td><td>2.8.3</td></tr>
+
+<tr><td>specutils</td><td>2.3.0</td></tr>
+
+<tr><td>sphinx</td><td>9.1.0</td></tr>
+
+<tr><td>sphinx-autodoc-typehints</td><td>3.10.2</td></tr>
+
+<tr><td>sphinx-rtd-theme</td><td>3.1.0</td></tr>
+
+<tr><td>sphinxcontrib-applehelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-devhelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-htmlhelp</td><td>2.1.0</td></tr>
+
+<tr><td>sphinxcontrib-jquery</td><td>4.1</td></tr>
+
+<tr><td>sphinxcontrib-jsmath</td><td>1.0.1</td></tr>
+
+<tr><td>sphinxcontrib-napoleon</td><td>0.7</td></tr>
+
+<tr><td>sphinxcontrib-qthelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-serializinghtml</td><td>2.0.0</td></tr>
+
+<tr><td>tomli-w</td><td>1.2.0</td></tr>
+
+<tr><td>tox</td><td>4.53.1</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>virtualenv</td><td>21.3.1</td></tr>
+
+<tr><td>webencodings</td><td>0.5.1</td></tr>
+
+</table>
+</details>
+
+</body></html>

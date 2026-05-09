@@ -1,0 +1,571 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>ullyses - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>ullyses</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>4.1.0</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>48.9s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>ullyses</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>F
+=================================== FAILURES ===================================
+E   AssertionError: 
+    
+     fitsdiff: 8.0.0.dev926+g1999026c5
+     a: av-456/dr7/input/hlsp_ullyses_hst_stis_av-456_e140h-e230h_dr7_aspec.fits
+     b: av-456/dr7/truth/hlsp_ullyses_hst_stis_av-456_e140h-e230h_dr7_aspec.fits
+     HDU(s) not to be compared:
+      PROVENANCE
+     Keyword(s) not to be compared:
+      DATE FILENAME FITS_SW HLSP_VER S_REGION
+     Maximum number of different data values to be reported: 10
+     Relative tolerance: 1e-07, Absolute tolerance: 0.0
+    
+    Extension HDU 1 (SCIENCE, 1):
+    
+       Headers contain differences:
+         Keyword COMMENT [2] has different values:
+            a&gt; [o8ew06010] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew06040] Flux discrepancy
+             ?         ^
+         Keyword COMMENT [3] has different values:
+            a&gt; [o8ew07020] Flux discrepancy
+             ?       ^ ^
+            b&gt; [o8ew06030] Flux discrepancy
+             ?       ^ ^
+         Keyword COMMENT [4] has different values:
+            a&gt; [o8ew06030] Flux discrepancy
+             ?       ^ ^
+            b&gt; [o8ew07010] Flux discrepancy
+             ?       ^ ^
+         Keyword COMMENT [5] has different values:
+            a&gt; [o8ew07010] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew07020] Flux discrepancy
+             ?         ^
+         Keyword COMMENT [6] has different values:
+            a&gt; [o8ew06040] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew06010] Flux discrepancy
+             ?         ^
+         Keyword COMMENT [7] has different values:
+            a&gt; [o8ew09010] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew09030] Flux discrepancy
+             ?         ^
+         Keyword COMMENT [8] has different values:
+            a&gt; [o8ew10010] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew10030] Flux discrepancy
+             ?         ^
+         Keyword COMMENT [9] has different values:
+            a&gt; [o8ew10020] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew10040] Flux discrepancy
+             ?         ^
+         Keyword COMMENT [10] has different values:
+            a&gt; [o8ew10030] Flux discrepancy
+             ?      -  ^
+            b&gt; [o8ew09020] Flux discrepancy
+             ?       + ^
+         Keyword COMMENT [11] has different values:
+            a&gt; [o8ew10040] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew10020] Flux discrepancy
+             ?         ^
+         Keyword COMMENT [13] has different values:
+            a&gt; [o8ew09020] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew09010] Flux discrepancy
+             ?         ^
+         Keyword COMMENT [14] has different values:
+            a&gt; [o8ew09030] Flux discrepancy
+             ?       - ^
+            b&gt; [o8ew10010] Flux discrepancy
+             ?      +  ^
+    
+     fitsdiff: 8.0.0.dev926+g1999026c5
+     a: av-456/dr7/input/hlsp_ullyses_hst_cos_av-456_g130m-g160m_dr7_aspec.fits
+     b: av-456/dr7/truth/hlsp_ullyses_hst_cos_av-456_g130m-g160m_dr7_aspec.fits
+     HDU(s) not to be compared:
+      PROVENANCE
+     Keyword(s) not to be compared:
+      DATE FILENAME FITS_SW HLSP_VER S_REGION
+     Maximum number of different data values to be reported: 10
+     Relative tolerance: 1e-07, Absolute tolerance: 0.0
+    
+    No differences found.
+    
+     fitsdiff: 8.0.0.dev926+g1999026c5
+     a: av-456/dr7/input/hlsp_ullyses_hst_stis_av-456_e140h_dr7_cspec.fits
+     b: av-456/dr7/truth/hlsp_ullyses_hst_stis_av-456_e140h_dr7_cspec.fits
+     HDU(s) not to be compared:
+      PROVENANCE
+     Keyword(s) not to be compared:
+      DATE FILENAME FITS_SW HLSP_VER S_REGION
+     Maximum number of different data values to be reported: 10
+     Relative tolerance: 1e-07, Absolute tolerance: 0.0
+    
+    Extension HDU 1 (SCIENCE, 1):
+    
+       Headers contain differences:
+         Keyword COMMENT [2] has different values:
+            a&gt; [o8ew06010] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew06040] Flux discrepancy
+             ?         ^
+         Keyword COMMENT [3] has different values:
+            a&gt; [o8ew07020] Flux discrepancy
+             ?       ^ ^
+            b&gt; [o8ew06030] Flux discrepancy
+             ?       ^ ^
+         Keyword COMMENT [4] has different values:
+            a&gt; [o8ew06030] Flux discrepancy
+             ?       ^ ^
+            b&gt; [o8ew07010] Flux discrepancy
+             ?       ^ ^
+         Keyword COMMENT [5] has different values:
+            a&gt; [o8ew07010] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew07020] Flux discrepancy
+             ?         ^
+         Keyword COMMENT [6] has different values:
+            a&gt; [o8ew06040] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew06010] Flux discrepancy
+             ?         ^
+    
+     fitsdiff: 8.0.0.dev926+g1999026c5
+     a: av-456/dr7/input/hlsp_ullyses_hst_stis_av-456_e230h_dr7_cspec.fits
+     b: av-456/dr7/truth/hlsp_ullyses_hst_stis_av-456_e230h_dr7_cspec.fits
+     HDU(s) not to be compared:
+      PROVENANCE
+     Keyword(s) not to be compared:
+      DATE FILENAME FITS_SW HLSP_VER S_REGION
+     Maximum number of different data values to be reported: 10
+     Relative tolerance: 1e-07, Absolute tolerance: 0.0
+    
+    Extension HDU 1 (SCIENCE, 1):
+    
+       Headers contain differences:
+         Keyword COMMENT  has different values:
+            a&gt; [o8ew09010] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew09030] Flux discrepancy
+             ?         ^
+         Keyword COMMENT [2] has different values:
+            a&gt; [o8ew10010] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew10030] Flux discrepancy
+             ?         ^
+         Keyword COMMENT [3] has different values:
+            a&gt; [o8ew10020] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew10040] Flux discrepancy
+             ?         ^
+         Keyword COMMENT [4] has different values:
+            a&gt; [o8ew10030] Flux discrepancy
+             ?      -  ^
+            b&gt; [o8ew09020] Flux discrepancy
+             ?       + ^
+         Keyword COMMENT [5] has different values:
+            a&gt; [o8ew10040] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew10020] Flux discrepancy
+             ?         ^
+         Keyword COMMENT [7] has different values:
+            a&gt; [o8ew09020] Flux discrepancy
+             ?         ^
+            b&gt; [o8ew09010] Flux discrepancy
+             ?         ^
+         Keyword COMMENT [8] has different values:
+            a&gt; [o8ew09030] Flux discrepancy
+             ?       - ^
+            b&gt; [o8ew10010] Flux discrepancy
+             ?      +  ^
+    
+     fitsdiff: 8.0.0.dev926+g1999026c5
+     a: av-456/dr7/input/hlsp_ullyses_hst_cos_av-456_g160m_dr7_cspec.fits
+     b: av-456/dr7/truth/hlsp_ullyses_hst_cos_av-456_g160m_dr7_cspec.fits
+     HDU(s) not to be compared:
+      PROVENANCE
+     Keyword(s) not to be compared:
+      DATE FILENAME FITS_SW HLSP_VER S_REGION
+     Maximum number of different data values to be reported: 10
+     Relative tolerance: 1e-07, Absolute tolerance: 0.0
+    
+    No differences found.
+    
+     fitsdiff: 8.0.0.dev926+g1999026c5
+     a: av-456/dr7/input/hlsp_ullyses_hst-fuse_fuse-cos-stis_av-456_uv_dr7_preview-spec.fits
+     b: av-456/dr7/truth/hlsp_ullyses_hst-fuse_fuse-cos-stis_av-456_uv_dr7_preview-spec.fits
+     HDU(s) not to be compared:
+      PROVENANCE
+     Keyword(s) not to be compared:
+      DATE FILENAME FITS_SW HLSP_VER S_REGION
+     Maximum number of different data values to be reported: 10
+     Relative tolerance: 1e-07, Absolute tolerance: 0.0
+    
+    No differences found.
+    
+     fitsdiff: 8.0.0.dev926+g1999026c5
+     a: av-456/dr7/input/hlsp_ullyses_fuse_fuv_av-456_lwrs_dr7_aspec.fits
+     b: av-456/dr7/truth/hlsp_ullyses_fuse_fuv_av-456_lwrs_dr7_aspec.fits
+     HDU(s) not to be compared:
+      PROVENANCE
+     Keyword(s) not to be compared:
+      DATE FILENAME FITS_SW HLSP_VER S_REGION
+     Maximum number of different data values to be reported: 10
+     Relative tolerance: 1e-07, Absolute tolerance: 0.0
+    
+    No differences found.
+    
+     fitsdiff: 8.0.0.dev926+g1999026c5
+     a: av-456/dr7/input/hlsp_ullyses_hst_stis_av-456_e230m_dr7_cspec.fits
+     b: av-456/dr7/truth/hlsp_ullyses_hst_stis_av-456_e230m_dr7_cspec.fits
+     HDU(s) not to be compared:
+      PROVENANCE
+     Keyword(s) not to be compared:
+      DATE FILENAME FITS_SW HLSP_VER S_REGION
+     Maximum number of different data values to be reported: 10
+     Relative tolerance: 1e-07, Absolute tolerance: 0.0
+    
+    No differences found.
+    
+     fitsdiff: 8.0.0.dev926+g1999026c5
+     a: av-456/dr7/input/hlsp_ullyses_hst_cos_av-456_g130m_dr7_cspec.fits
+     b: av-456/dr7/truth/hlsp_ullyses_hst_cos_av-456_g130m_dr7_cspec.fits
+     HDU(s) not to be compared:
+      PROVENANCE
+     Keyword(s) not to be compared:
+      DATE FILENAME FITS_SW HLSP_VER S_REGION
+     Maximum number of different data values to be reported: 10
+     Relative tolerance: 1e-07, Absolute tolerance: 0.0
+    
+    No differences found.
+----------------------------- Captured stdout call -----------------------------
+av-456/dr7/input/
+   
+av-456/dr7/input/o8ew09010_x1d.fits added to file list for instrument/grating STIS/E230H
+av-456/dr7/input/o8ew10010_x1d.fits added to file list for instrument/grating STIS/E230H
+Extension 2 with expname o8ew10xvq included for file av-456/dr7/input/o8ew10020_x1d.fits
+Extension 3 with expname o8ew10y9q included for file av-456/dr7/input/o8ew10020_x1d.fits
+av-456/dr7/input/o8ew10020_x1d.fits added to file list for instrument/grating STIS/E230H
+av-456/dr7/input/o8ew10030_x1d.fits added to file list for instrument/grating STIS/E230H
+Extension 2 with expname o8ew10yuq included for file av-456/dr7/input/o8ew10040_x1d.fits
+Extension 3 with expname o8ew10z9q included for file av-456/dr7/input/o8ew10040_x1d.fits
+Extension 4 with expname o8ew10zcq included for file av-456/dr7/input/o8ew10040_x1d.fits
+av-456/dr7/input/o8ew10040_x1d.fits added to file list for instrument/grating STIS/E230H
+Extension 2 with expname o8ew09coq included for file av-456/dr7/input/o8ew09040_x1d.fits
+av-456/dr7/input/o8ew09040_x1d.fits added to file list for instrument/grating STIS/E230H
+Extension 2 with expname o8ew09bjq included for file av-456/dr7/input/o8ew09020_x1d.fits
+Extension 3 with expname o8ew09bxq included for file av-456/dr7/input/o8ew09020_x1d.fits
+av-456/dr7/input/o8ew09020_x1d.fits added to file list for instrument/grating STIS/E230H
+av-456/dr7/input/o8ew09030_x1d.fits added to file list for instrument/grating STIS/E230H
+   Wrote av-456/dr7/input/hlsp_ullyses_hst_stis_av-456_e230h_dr7_cspec.fits
+Extension 2 with expname o8ew06bcq included for file av-456/dr7/input/o8ew06020_x1d.fits
+Extension 3 with expname o8ew06cbq included for file av-456/dr7/input/o8ew06020_x1d.fits
+av-456/dr7/input/o8ew06020_x1d.fits added to file list for instrument/grating STIS/E140H
+av-456/dr7/input/o8ew06010_x1d.fits added to file list for instrument/grating STIS/E140H
+Extension 2 with expname o8ew07ayq included for file av-456/dr7/input/o8ew07020_x1d.fits
+av-456/dr7/input/o8ew07020_x1d.fits added to file list for instrument/grating STIS/E140H
+av-456/dr7/input/o8ew06030_x1d.fits added to file list for instrument/grating STIS/E140H
+av-456/dr7/input/o8ew07010_x1d.fits added to file list for instrument/grating STIS/E140H
+Extension 2 with expname o8ew06dhq included for file av-456/dr7/input/o8ew06040_x1d.fits
+Extension 3 with expname o8ew06e7q included for file av-456/dr7/input/o8ew06040_x1d.fits
+Extension 4 with expname o8ew06eaq included for file av-456/dr7/input/o8ew06040_x1d.fits
+av-456/dr7/input/o8ew06040_x1d.fits added to file list for instrument/grating STIS/E140H
+   Wrote av-456/dr7/input/hlsp_ullyses_hst_stis_av-456_e140h_dr7_cspec.fits
+av-456/dr7/input/lbp507prq_x1d.fits added to file list for instrument/grating COS/G160M
+av-456/dr7/input/lbp507pmq_x1d.fits added to file list for instrument/grating COS/G160M
+av-456/dr7/input/lbp507ryq_x1d.fits added to file list for instrument/grating COS/G160M
+av-456/dr7/input/lbp507riq_x1d.fits added to file list for instrument/grating COS/G160M
+av-456/dr7/input/lbp507r0q_x1d.fits added to file list for instrument/grating COS/G160M
+av-456/dr7/input/lbp507qvq_x1d.fits added to file list for instrument/grating COS/G160M
+av-456/dr7/input/lbp507rnq_x1d.fits added to file list for instrument/grating COS/G160M
+av-456/dr7/input/lbp507rtq_x1d.fits added to file list for instrument/grating COS/G160M
+av-456/dr7/input/lbp507rcq_x1d.fits added to file list for instrument/grating COS/G160M
+av-456/dr7/input/lbp507qkq_x1d.fits added to file list for instrument/grating COS/G160M
+av-456/dr7/input/lbp507r6q_x1d.fits added to file list for instrument/grating COS/G160M
+av-456/dr7/input/lbp507qpq_x1d.fits added to file list for instrument/grating COS/G160M
+   Wrote av-456/dr7/input/hlsp_ullyses_hst_cos_av-456_g160m_dr7_cspec.fits
+Extension 2 with expname ockp13jgq included for file av-456/dr7/input/ockp13020_x1d.fits
+Extension 3 with expname ockp13jqq included for file av-456/dr7/input/ockp13020_x1d.fits
+av-456/dr7/input/ockp13020_x1d.fits added to file list for instrument/grating STIS/E230M
+Extension 2 with expname ockp13itq included for file av-456/dr7/input/ockp13010_x1d.fits
+av-456/dr7/input/ockp13010_x1d.fits added to file list for instrument/grating STIS/E230M
+   Wrote av-456/dr7/input/hlsp_ullyses_hst_stis_av-456_e230m_dr7_cspec.fits
+av-456/dr7/input/lbp507s2q_x1d.fits added to file list for instrument/grating COS/G130M
+   Wrote av-456/dr7/input/hlsp_ullyses_hst_cos_av-456_g130m_dr7_cspec.fits
+av-456/dr7/input/dqscreened_p221020100000nvo4ttagfcal_vo.fits added to file list for FUSE
+Making a product from these gratings
+COS/G130M 900-1470 (Actual: 1178.4-1472.2)
+COS/G160M 1342-1800 (Actual: 1384.0-1777.4)
+Minimum wavelength of COS/G130M tweaked to 1178.4066921053688
+Minimum wavelength of COS/G160M tweaked to 1384.0401991394529
+Maximum wavelength of COS/G160M tweaked to 1777.4200990813324
+Starting at the short wavelength end with grating COS/G130M
+Abutting COS/G160M product to current result
+With a transition wavelength of 1470
+Truncating current grating at 1777.4200990813324
+   Wrote av-456/dr7/input/hlsp_ullyses_hst_cos_av-456_g130m-g160m_dr7_aspec.fits
+Making a product from these gratings
+STIS/E140H 1141.1-1687.9 (Actual: 1141.1-1331.1)
+STIS/E230H 1629.0-3156.0 (Actual: 1776.1-2296.9)
+Minimum wavelength of STIS/E140H tweaked to 1141.1022170519743
+Maximum wavelength of STIS/E140H tweaked to 1331.1417549755272
+Minimum wavelength of STIS/E230H tweaked to 1776.0568397437328
+Maximum wavelength of STIS/E230H tweaked to 2296.881293264978
+Starting at the short wavelength end with grating STIS/E140H
+Truncating current grating at 1331.1417549755272
+Abutting STIS/E230H product to current result
+With a transition wavelength of 1776.0568397437328
+Truncating current grating at 2296.881293264978
+   Wrote av-456/dr7/input/hlsp_ullyses_hst_stis_av-456_e140h-e230h_dr7_aspec.fits
+Making a product from these gratings
+COS/G130M 900-1470 (Actual: 1178.4-1472.2)
+FUSE/FUSE 912-1179.9 (Actual: 912.0-1179.9)
+COS/G160M 1342-1800 (Actual: 1384.0-1777.4)
+STIS/E140H 1141.1-1687.9 (Actual: 1141.1-1331.1)
+STIS/E230M 1606.7-3119.2 (Actual: 1607.1-2673.5)
+STIS/E230H 1629.0-3156.0 (Actual: 1776.1-2296.9)
+Minimum wavelength of COS/G130M tweaked to 1178.4066921053688
+Minimum wavelength of FUSE/FUSE tweaked to 912.0120239257812
+Maximum wavelength of FUSE/FUSE tweaked to 1179.8900146484375
+Minimum wavelength of COS/G160M tweaked to 1384.0401991394529
+Maximum wavelength of COS/G160M tweaked to 1777.4200990813324
+Minimum wavelength of STIS/E140H tweaked to 1141.1022170519743
+Maximum wavelength of STIS/E140H tweaked to 1331.1417549755272
+Minimum wavelength of STIS/E230M tweaked to 1607.1220821727065
+Maximum wavelength of STIS/E230M tweaked to 2673.488559303704
+Minimum wavelength of STIS/E230H tweaked to 1776.0568397437328
+Maximum wavelength of STIS/E230H tweaked to 2296.881293264978
+Starting at the short wavelength end with grating FUSE/FUSE
+Abutting COS/G130M product to current result
+With a transition wavelength of 1178.4066921053688
+Abutting COS/G160M product to current result
+With a transition wavelength of 1470
+Abutting STIS/E230M product to current result
+With a transition wavelength of 1777.4200990813324
+Truncating current grating at 2673.488559303704
+   Wrote av-456/dr7/input/hlsp_ullyses_hst-fuse_fuse-cos-stis_av-456_uv_dr7_preview-spec.fits
+[&#39;av-456/dr7/input/hlsp_ullyses_hst_stis_av-456_e140h-e230h_dr7_aspec.fits&#39;, &#39;av-456/dr7/input/hlsp_ullyses_hst_cos_av-456_g130m-g160m_dr7_aspec.fits&#39;, &#39;av-456/dr7/input/hlsp_ullyses_hst_stis_av-456_e140h_dr7_cspec.fits&#39;, &#39;av-456/dr7/input/hlsp_ullyses_hst_stis_av-456_e230h_dr7_cspec.fits&#39;, &#39;av-456/dr7/input/hlsp_ullyses_hst_cos_av-456_g160m_dr7_cspec.fits&#39;, &#39;av-456/dr7/input/hlsp_ullyses_hst-fuse_fuse-cos-stis_av-456_uv_dr7_preview-spec.fits&#39;, &#39;av-456/dr7/input/hlsp_ullyses_fuse_fuv_av-456_lwrs_dr7_aspec.fits&#39;, &#39;av-456/dr7/input/hlsp_ullyses_hst_stis_av-456_e230m_dr7_cspec.fits&#39;, &#39;av-456/dr7/input/hlsp_ullyses_hst_cos_av-456_g130m_dr7_cspec.fits&#39;]
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ullyses-gf98w3dk/venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py:35: AssertionError:
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py::TestWrapper::test_av456
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ullyses-gf98w3dk/venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py:76: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+    data_tarfile.extractall()
+
+venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py::TestWrapper::test_av456
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ullyses-gf98w3dk/venv/lib/python3.12/site-packages/ullyses/coadd.py:550: RuntimeWarning: invalid value encountered in divide
+    weighted_gross = weight_function[self.weighting_method](gross, exptime, net/flux)
+
+venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py::TestWrapper::test_av456
+venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py::TestWrapper::test_av456
+venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py::TestWrapper::test_av456
+venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py::TestWrapper::test_av456
+venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py::TestWrapper::test_av456
+venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py::TestWrapper::test_av456
+venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py::TestWrapper::test_av456
+venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py::TestWrapper::test_av456
+venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py::TestWrapper::test_av456
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ullyses-gf98w3dk/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:1036: VerifyWarning: Card is too long, comment will be truncated.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py::TestWrapper::test_av456
+venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py::TestWrapper::test_av456
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ullyses-gf98w3dk/venv/lib/python3.12/site-packages/ullyses/coadd.py:563: RuntimeWarning: invalid value encountered in divide
+    thru_nans = segment.data[&#39;net&#39;] / segment.data[&#39;flux&#39;]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED venv/lib/python3.12/site-packages/ullyses/tests/test_wrapper.py::TestWrapper::test_av456
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 13 warnings in 44.67s
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (60)</strong></summary>
+<table class="meta-table">
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>astroquery</td><td>0.4.11</td></tr>
+
+<tr><td>beautifulsoup4</td><td>4.14.3</td></tr>
+
+<tr><td>calcos</td><td>3.6.2</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>cffi</td><td>2.0.0</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>costools</td><td>1.2.7</td></tr>
+
+<tr><td>cryptography</td><td>48.0.0</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>cython</td><td>3.2.4</td></tr>
+
+<tr><td>datetime</td><td>6.0</td></tr>
+
+<tr><td>et-xmlfile</td><td>2.0.0</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>hasp</td><td>1.2.5</td></tr>
+
+<tr><td>html5lib</td><td>1.1</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>jaraco-classes</td><td>3.4.0</td></tr>
+
+<tr><td>jaraco-context</td><td>6.1.2</td></tr>
+
+<tr><td>jaraco-functools</td><td>4.4.0</td></tr>
+
+<tr><td>jeepney</td><td>0.9.0</td></tr>
+
+<tr><td>keyring</td><td>25.7.0</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>lxml</td><td>6.1.0</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>more-itertools</td><td>11.0.2</td></tr>
+
+<tr><td>narwhals</td><td>2.21.0</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>openpyxl</td><td>3.1.5</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>plotly</td><td>6.7.0</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pycparser</td><td>3.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pysiaf</td><td>0.25.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pytz</td><td>2026.2</td></tr>
+
+<tr><td>pyvo</td><td>1.8.1</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>secretstorage</td><td>3.5.0</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>soupsieve</td><td>2.8.3</td></tr>
+
+<tr><td>stistools</td><td>1.4.7</td></tr>
+
+<tr><td>stsci-tools</td><td>4.3.0</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>ullyses</td><td>4.1.0</td></tr>
+
+<tr><td>ullyses-utils</td><td>3.1.0</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>webencodings</td><td>0.5.1</td></tr>
+
+<tr><td>zope-interface</td><td>8.4</td></tr>
+
+</table>
+</details>
+
+</body></html>

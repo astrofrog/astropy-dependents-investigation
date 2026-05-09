@@ -1,0 +1,520 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>citrascope - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>citrascope</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>1.0.0</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="pass">PASS</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>160.5s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>citrascope</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>pected [field_name=&#39;elset_health&#39;, input_value=&lt;MagicMock name=&#39;mock.els...)&#39; id=&#39;140249875944016&#39;&gt;, input_type=MagicMock])
+    return self.__pydantic_serializer__.to_python(
+
+tests/unit/test_web_self_tasking.py::test_toggle_self_tasking_enable_cascades_processing
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-citrascope-h1gb3iwq/venv/lib/python3.12/site-packages/pydantic/main.py:475: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `list[dict[str, Union[str, int, float]]]` - serialized value may not be as expected [field_name=&#39;autofocus_filter_results&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...s&#39; id=&#39;140249747038064&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `str` - serialized value may not be as expected [field_name=&#39;autofocus_last_result&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...t&#39; id=&#39;140249877919120&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;last_hfr_median&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...)&#39; id=&#39;140249882701664&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;hfr_increase_percent&#39;, input_value=&lt;MagicMock name=&#39;mock.set...t&#39; id=&#39;140249910454816&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;hfr_refocus_enabled&#39;, input_value=&lt;MagicMock name=&#39;mock.set...d&#39; id=&#39;140249878412944&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;hfr_sample_window&#39;, input_value=&lt;MagicMock name=&#39;mock.set...w&#39; id=&#39;140249910479760&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;supports_hardware_safety_monitor&#39;, input_value=&lt;MagicMock name=&#39;mock.har...r&#39; id=&#39;140249904837264&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;mount_homing&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...)&#39; id=&#39;140249877800112&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, any]` - serialized value may not be as expected [field_name=&#39;pointing_model&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249886700080&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;pointing_calibration_running&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...)&#39; id=&#39;140249910492864&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, int]` - serialized value may not be as expected [field_name=&#39;pointing_calibration_progress&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...s&#39; id=&#39;140249876473296&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;fov_short_deg&#39;, input_value=&lt;MagicMock name=&#39;mock.har...g&#39; id=&#39;140249880771952&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;camera_temperature&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249904840480&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;current_filter_position&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249904829536&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;focuser_position&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249882581936&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;focuser_max_position&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249877817888&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;focuser_temperature&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249877818224&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;focuser_moving&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249877801696&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, any]` - serialized value may not be as expected [field_name=&#39;safety_status&#39;, input_value=&lt;MagicMock name=&#39;mock.saf...)&#39; id=&#39;140249887351504&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, any]` - serialized value may not be as expected [field_name=&#39;elset_health&#39;, input_value=&lt;MagicMock name=&#39;mock.els...)&#39; id=&#39;140249876468736&#39;&gt;, input_type=MagicMock])
+    return self.__pydantic_serializer__.to_python(
+
+tests/unit/test_web_self_tasking.py::test_toggle_self_tasking_enable_skips_cascade_when_already_active
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-citrascope-h1gb3iwq/venv/lib/python3.12/site-packages/pydantic/main.py:475: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `list[dict[str, Union[str, int, float]]]` - serialized value may not be as expected [field_name=&#39;autofocus_filter_results&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...s&#39; id=&#39;140249876420304&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `str` - serialized value may not be as expected [field_name=&#39;autofocus_last_result&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...t&#39; id=&#39;140249876423664&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;last_hfr_median&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...)&#39; id=&#39;140249876731024&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;hfr_increase_percent&#39;, input_value=&lt;MagicMock name=&#39;mock.set...t&#39; id=&#39;140249913659744&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;hfr_refocus_enabled&#39;, input_value=&lt;MagicMock name=&#39;mock.set...d&#39; id=&#39;140249876729488&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;hfr_sample_window&#39;, input_value=&lt;MagicMock name=&#39;mock.set...w&#39; id=&#39;140249876643088&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;supports_hardware_safety_monitor&#39;, input_value=&lt;MagicMock name=&#39;mock.har...r&#39; id=&#39;140249877629072&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;mount_homing&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...)&#39; id=&#39;140249877058560&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, any]` - serialized value may not be as expected [field_name=&#39;pointing_model&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249877278032&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;pointing_calibration_running&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...)&#39; id=&#39;140249876634208&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, int]` - serialized value may not be as expected [field_name=&#39;pointing_calibration_progress&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...s&#39; id=&#39;140249876630368&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;fov_short_deg&#39;, input_value=&lt;MagicMock name=&#39;mock.har...g&#39; id=&#39;140249877281776&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;camera_temperature&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249877231184&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;current_filter_position&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249748551200&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;focuser_position&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249882690000&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;focuser_max_position&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249876502896&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;focuser_temperature&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249875914752&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;focuser_moving&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249875910048&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, any]` - serialized value may not be as expected [field_name=&#39;safety_status&#39;, input_value=&lt;MagicMock name=&#39;mock.saf...)&#39; id=&#39;140249881283280&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, any]` - serialized value may not be as expected [field_name=&#39;elset_health&#39;, input_value=&lt;MagicMock name=&#39;mock.els...)&#39; id=&#39;140249876825776&#39;&gt;, input_type=MagicMock])
+    return self.__pydantic_serializer__.to_python(
+
+tests/unit/test_web_self_tasking.py::test_toggle_self_tasking_enable_scheduling_failure_non_blocking
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-citrascope-h1gb3iwq/venv/lib/python3.12/site-packages/pydantic/main.py:475: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `list[dict[str, Union[str, int, float]]]` - serialized value may not be as expected [field_name=&#39;autofocus_filter_results&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...s&#39; id=&#39;140249877231568&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `str` - serialized value may not be as expected [field_name=&#39;autofocus_last_result&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...t&#39; id=&#39;140249907977952&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;last_hfr_median&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...)&#39; id=&#39;140249882989184&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;hfr_increase_percent&#39;, input_value=&lt;MagicMock name=&#39;mock.set...t&#39; id=&#39;140249876615952&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;hfr_refocus_enabled&#39;, input_value=&lt;MagicMock name=&#39;mock.set...d&#39; id=&#39;140249875781376&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;hfr_sample_window&#39;, input_value=&lt;MagicMock name=&#39;mock.set...w&#39; id=&#39;140249875779984&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;supports_hardware_safety_monitor&#39;, input_value=&lt;MagicMock name=&#39;mock.har...r&#39; id=&#39;140249747765392&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;mount_homing&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...)&#39; id=&#39;140249908260944&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, any]` - serialized value may not be as expected [field_name=&#39;pointing_model&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249882931184&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;pointing_calibration_running&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...)&#39; id=&#39;140249875782768&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, int]` - serialized value may not be as expected [field_name=&#39;pointing_calibration_progress&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...s&#39; id=&#39;140249884236096&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;fov_short_deg&#39;, input_value=&lt;MagicMock name=&#39;mock.har...g&#39; id=&#39;140249882933680&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;camera_temperature&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249878234272&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;current_filter_position&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249883093056&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;focuser_position&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249882049472&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;focuser_max_position&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249882035552&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;focuser_temperature&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249875477904&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;focuser_moving&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249875464944&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, any]` - serialized value may not be as expected [field_name=&#39;safety_status&#39;, input_value=&lt;MagicMock name=&#39;mock.saf...)&#39; id=&#39;140249877000752&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, any]` - serialized value may not be as expected [field_name=&#39;elset_health&#39;, input_value=&lt;MagicMock name=&#39;mock.els...)&#39; id=&#39;140249877029104&#39;&gt;, input_type=MagicMock])
+    return self.__pydantic_serializer__.to_python(
+
+tests/unit/test_web_self_tasking.py::test_toggle_self_tasking_disable_no_cascade
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-citrascope-h1gb3iwq/venv/lib/python3.12/site-packages/pydantic/main.py:475: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `list[dict[str, Union[str, int, float]]]` - serialized value may not be as expected [field_name=&#39;autofocus_filter_results&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...s&#39; id=&#39;140249883563872&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `str` - serialized value may not be as expected [field_name=&#39;autofocus_last_result&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...t&#39; id=&#39;140249886862288&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;last_hfr_median&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...)&#39; id=&#39;140249910305152&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;hfr_increase_percent&#39;, input_value=&lt;MagicMock name=&#39;mock.set...t&#39; id=&#39;140249875902160&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;hfr_refocus_enabled&#39;, input_value=&lt;MagicMock name=&#39;mock.set...d&#39; id=&#39;140249885989280&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;hfr_sample_window&#39;, input_value=&lt;MagicMock name=&#39;mock.set...w&#39; id=&#39;140249885994992&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;supports_hardware_safety_monitor&#39;, input_value=&lt;MagicMock name=&#39;mock.har...r&#39; id=&#39;140249927377568&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;mount_homing&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...)&#39; id=&#39;140249904678048&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, any]` - serialized value may not be as expected [field_name=&#39;pointing_model&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249878248864&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;pointing_calibration_running&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...)&#39; id=&#39;140249885997584&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, int]` - serialized value may not be as expected [field_name=&#39;pointing_calibration_progress&#39;, input_value=&lt;MagicMock name=&#39;mock.tas...s&#39; id=&#39;140249909912896&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;fov_short_deg&#39;, input_value=&lt;MagicMock name=&#39;mock.har...g&#39; id=&#39;140249876523792&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;camera_temperature&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249883469744&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;current_filter_position&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249883474976&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;focuser_position&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249909760640&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `int` - serialized value may not be as expected [field_name=&#39;focuser_max_position&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249909760832&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `float` - serialized value may not be as expected [field_name=&#39;focuser_temperature&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249910877632&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `bool` - serialized value may not be as expected [field_name=&#39;focuser_moving&#39;, input_value=&lt;MagicMock name=&#39;mock.har...)&#39; id=&#39;140249910884880&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, any]` - serialized value may not be as expected [field_name=&#39;safety_status&#39;, input_value=&lt;MagicMock name=&#39;mock.saf...)&#39; id=&#39;140249876494816&#39;&gt;, input_type=MagicMock])
+    PydanticSerializationUnexpectedValue(Expected `dict[str, any]` - serialized value may not be as expected [field_name=&#39;elset_health&#39;, input_value=&lt;MagicMock name=&#39;mock.els...)&#39; id=&#39;140249877404064&#39;&gt;, input_type=MagicMock])
+    return self.__pydantic_serializer__.to_python(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.10-final-0 _______________
+
+Name                                                                                          Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------------------------------------------------------------------------------
+artifact/citrascope-1.0.0/citrascope/__init__.py                                                  0      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/__main__.py                                                 16     16      2      0     0%   1-29
+artifact/citrascope-1.0.0/citrascope/analysis/__init__.py                                         0      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/analysis/retention.py                                       43      6     22      4    85%   31, 36-37, 38-&gt;44, 59, 64-65, 66-&gt;68
+artifact/citrascope-1.0.0/citrascope/analysis/task_index.py                                     292     18     92     11    92%   455, 464-465, 467-468, 470-471, 473-474, 476-477, 489-&gt;491, 496-&gt;499, 680, 797-798, 806-807, 822, 828
+artifact/citrascope-1.0.0/citrascope/api/abstract_api_client.py                                  53     16      0      0    70%   17, 21, 25, 29, 33, 42, 49, 56, 63, 70, 82, 90, 95, 117, 130, 154
+artifact/citrascope-1.0.0/citrascope/api/citra_api_client.py                                    250     74    104     21    65%   34, 42-&gt;44, 45-48, 65-&gt;67, 70-&gt;84, 86-&gt;88, 105-108, 114, 116, 131-133, 148-&gt;153, 166-&gt;173, 179, 183-191, 227-&gt;175, 235, 241-&gt;243, 245-&gt;251, 253-&gt;258, 260-&gt;262, 266-296, 303-&gt;305, 306-309, 316-&gt;318, 319-322, 330-339, 353-&gt;355, 356-359, 374-&gt;376, 377-380, 384, 411, 437-&gt;439, 440-443
+artifact/citrascope-1.0.0/citrascope/api/dummy_api_client.py                                    407    210    168     22    43%   60, 70-86, 93, 98-99, 101-103, 107-112, 117-125, 135-145, 161, 243-245, 249-260, 271-294, 299, 304-320, 343-344, 347-348, 357-&gt;368, 366, 369, 381-&gt;380, 384, 390, 393, 430, 461-&gt;458, 463-464, 479-480, 488-513, 541, 548, 565-577, 588-592, 596-598, 602-641, 645-647, 651-662, 678, 682-687, 697-699, 703-705, 721-&gt;727, 733-746, 751-767, 771-783
+artifact/citrascope-1.0.0/citrascope/autotune.py                                                294    294    102      0     0%   24-524
+artifact/citrascope-1.0.0/citrascope/calibration/__init__.py                                      5      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/calibration/calibration_library.py                         169     16     52      6    87%   26, 54, 77, 137, 212-&gt;203, 217-218, 258-263, 305-309, 325-&gt;324
+artifact/citrascope-1.0.0/citrascope/calibration/calibration_suites.py                           13      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/calibration/master_builder.py                              289     59     98     29    75%   73-74, 121-122, 185-&gt;188, 201-202, 221-222, 229, 293, 303-304, 316-317, 332, 335, 344, 357-358, 398-399, 412-413, 417-419, 425-426, 490, 528-563, 575, 579, 597-598, 643, 646, 652-669, 698, 713, 729
+artifact/citrascope-1.0.0/citrascope/catalogs/__init__.py                                         0      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/catalogs/apass_catalog.py                                  159     14     38      6    90%   61, 70-71, 94-96, 106-107, 135, 170-171, 210, 212, 250
+artifact/citrascope-1.0.0/citrascope/citra_scope_daemon.py                                      472    348    156     15    22%   42-96, 105-110, 114-127, 134-143, 157-306, 310, 314-322, 354-356, 360-362, 367-369, 373-&gt;377, 377-&gt;381, 383-385, 394-&gt;398, 419, 442-&gt;446, 450-455, 486-&gt;490, 490-&gt;493, 493-&gt;501, 502-&gt;508, 509-524, 532-535, 542, 547, 554-638, 660-670, 679-686, 694-705, 713-715, 723-725, 729-734, 738-745, 749-751, 754-778, 782-796, 801-858
+artifact/citrascope-1.0.0/citrascope/constants.py                                                 7      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/elset_cache.py                                             140     15     40      7    86%   53, 69, 92-&gt;107, 143-144, 150-152, 169, 184-187, 189-&gt;191, 198-&gt;211, 208-210, 214-&gt;220
+artifact/citrascope-1.0.0/citrascope/hardware/abstract_astro_hardware_adapter.py                369    113     68      4    67%   183, 187, 192, 197, 202, 218-224, 234, 243, 250, 255, 259-261, 282-283, 312-363, 375-377, 393-416, 429, 460, 465, 476, 481, 486, 491, 496, 501, 506, 511, 519, 524, 529, 534, 539, 547, 555, 568, 584, 622-625, 634-637, 641, 654, 665-669, 677, 685, 693, 701, 759, 763, 770, 782, 837, 845, 853, 991
+artifact/citrascope-1.0.0/citrascope/hardware/adapter_registry.py                                16      0      2      0   100%
+artifact/citrascope-1.0.0/citrascope/hardware/config_health.py                                  138      4     36      1    96%   99, 108-110
+artifact/citrascope-1.0.0/citrascope/hardware/devices/__init__.py                                 5      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/hardware/devices/abstract_hardware_device.py                50      6      4      0    89%   43, 55, 65, 140, 145, 154
+artifact/citrascope-1.0.0/citrascope/hardware/devices/camera/__init__.py                          5      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/hardware/devices/camera/abstract_camera.py                  61     13      0      0    79%   105, 114, 126, 135, 144, 153, 157, 168, 187, 207-208, 215, 227
+artifact/citrascope-1.0.0/citrascope/hardware/devices/camera/moravian_camera.py                 415    184     84     18    52%   35-69, 103, 108-111, 257-259, 264-265, 307-&gt;309, 309-&gt;313, 315-&gt;325, 321-322, 326-332, 342, 344, 346, 358-&gt;365, 368-381, 393-&gt;396, 404-413, 431-481, 484-502, 542-562, 597-&gt;600, 602, 607-612, 619-625, 628-639, 644, 648-&gt;652, 652-&gt;656, 665-667, 671-693, 696, 699, 703-714, 717-722, 763, 767, 771, 785-788, 794, 803-805, 811
+artifact/citrascope-1.0.0/citrascope/hardware/devices/camera/rpi_hq_camera.py                   152    122     26      0    17%   55-89, 98-115, 123-156, 160-169, 177, 187-211, 222-238, 245, 255, 268-285, 289-308, 312-320, 324-332, 336-343
+artifact/citrascope-1.0.0/citrascope/hardware/devices/camera/usb_camera.py                      171    133     30      0    19%   21-60, 115-139, 165-177, 185-214, 218-226, 234, 244-267, 278-296, 303, 311, 322-323, 331-332, 340-341, 349-363, 372-389
+artifact/citrascope-1.0.0/citrascope/hardware/devices/camera/ximea_camera.py                    324    288     72      0     9%   61-146, 155-187, 195-265, 269-278, 286, 296-345, 356-364, 368-373, 381-392, 405-406, 414-415, 423, 431, 441, 449, 455-493, 497-523, 532-591, 600-664, 681-718
+artifact/citrascope-1.0.0/citrascope/hardware/devices/device_registry.py                         94     39     32      5    51%   92-93, 116-117, 140-141, 164-165, 183-219, 236-247, 285-287
+artifact/citrascope-1.0.0/citrascope/hardware/devices/filter_wheel/__init__.py                    2      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/hardware/devices/filter_wheel/abstract_filter_wheel.py      21      6      0      0    71%   24, 33, 42, 51, 60, 72
+artifact/citrascope-1.0.0/citrascope/hardware/devices/filter_wheel/moravian_filter_wheel.py      83     41     12      1    45%   25, 33, 99-101, 106, 110-126, 134-137, 140, 145-154, 157-159, 162, 165, 168, 171-174
+artifact/citrascope-1.0.0/citrascope/hardware/devices/focuser/__init__.py                         3      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/hardware/devices/focuser/abstract_focuser.py                24      7      0      0    71%   24, 36, 45, 54, 59, 68, 77
+artifact/citrascope-1.0.0/citrascope/hardware/devices/focuser/zwo_eaf.py                        213     59     30      4    73%   26-43, 167, 179-180, 186-187, 193-194, 199-200, 205-206, 212-214, 220-221, 225-&gt;230, 227-228, 235-237, 241-&gt;248, 244-245, 267-269, 279-281, 291-293, 301-303, 312-313, 318, 321-322, 330-331
+artifact/citrascope-1.0.0/citrascope/hardware/devices/focuser/zwo_eaf_bindings.py               206    134     16      4    35%   118, 125-126, 131-132, 138-139, 154-230, 235-237, 246-247, 271-272, 276, 282, 286-288, 292-294, 298-299, 303-305, 308-309, 315-316, 320-321, 325-329, 333-336, 340-341, 347-350, 354-355, 359-362, 366-369, 373-374, 378-381, 385-386, 390-391, 395-398, 404-407, 411-419, 423-428
+artifact/citrascope-1.0.0/citrascope/hardware/devices/moravian_bindings.py                      321    217     36      4    31%   118, 125-126, 131-132, 138-139, 152-200, 218-234, 239-242, 251-253, 268-269, 273, 276-277, 282-285, 288-291, 294, 297, 300-302, 305-307, 310-312, 317-320, 323-326, 329-332, 335-338, 343-344, 347-348, 351-352, 355-356, 361-362, 365-366, 369-370, 373-374, 377-378, 381-384, 387-388, 394-404, 410-424, 427-428, 441-456, 467-490, 514-515, 519, 522-523, 528-531, 534-537, 540-542, 545-547, 550-552, 557-560, 563-566, 572-584, 587-588, 592-595
+artifact/citrascope-1.0.0/citrascope/hardware/devices/mount/__init__.py                           3      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/hardware/devices/mount/abstract_mount.py                   110     39      2      0    65%   67, 76, 81, 90, 102, 111, 120, 129, 138, 147, 156, 176, 188, 195, 207, 220, 228, 239, 259, 270, 278, 286, 297, 305, 313, 317, 329, 337, 354, 362, 368, 383, 394, 403-404, 409-410, 415-416
+artifact/citrascope-1.0.0/citrascope/hardware/devices/mount/altaz_pointing_model.py             438     31    108     16    91%   68-72, 94, 143, 183, 242, 253, 273, 290-291, 366, 454-455, 463, 478-&gt;557, 533, 703, 748-&gt;754, 788, 819, 859, 909-914, 1017-1018, 1034-1035
+artifact/citrascope-1.0.0/citrascope/hardware/devices/mount/mount_state_cache.py                128     16      6      0    88%   119-120, 172-173, 202-203, 207-208, 212-213, 217-218, 222-223, 227-228
+artifact/citrascope-1.0.0/citrascope/hardware/devices/mount/zwo_am_mount.py                     407    298     66      2    24%   75-117, 128-130, 145, 156-230, 233-276, 279-280, 283, 290-310, 313-314, 317-318, 321-334, 340-341, 349-351, 354-355, 358-360, 363-365, 368-369, 372-375, 378-379, 422-467, 470-477, 480-483, 487-488, 492-499, 503-509, 513-515, 521-522, 525-526, 529-534, 537-542, 552-579, 582-584, 587-588, 591-600, 603-613, 616-625, 628-635, 638-669, 692-693, 703-720
+artifact/citrascope-1.0.0/citrascope/hardware/devices/mount/zwo_am_protocol.py                  361     21     32      3    94%   160, 165, 210, 214, 218, 223, 233, 417, 503, 538-539, 571-572, 581-582, 592, 599-600, 681, 713-714
+artifact/citrascope-1.0.0/citrascope/hardware/devices/mount/zwo_am_transport.py                 237    169     58      1    23%   72-85, 89-92, 101-119, 127-132, 135-148, 157-185, 213-225, 230, 237, 240-242, 245-257, 260-261, 264-269, 287-290, 293-297, 300-307, 310, 313, 316-317, 320-333, 336-347, 350-360
+artifact/citrascope-1.0.0/citrascope/hardware/direct/__init__.py                                  2      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/hardware/direct/autofocus.py                               248    121     80     13    49%   52, 74, 88, 95, 109-114, 149-&gt;170, 153, 165, 207, 222-&gt;258, 226, 237-238, 243, 253, 260, 291-306, 329-381, 428-517
+artifact/citrascope-1.0.0/citrascope/hardware/direct/direct_adapter.py                          614    437    254     21    25%   81, 96-100, 115-134, 139-158, 163-182, 197, 201, 203, 220-371, 375, 379, 383, 386-388, 394, 403-&gt;409, 405-&gt;409, 408, 411-412, 420, 431, 448-458, 464-465, 467-468, 472-473, 476-&gt;486, 478-&gt;486, 483, 486-&gt;489, 490, 492-&gt;496, 510-511, 559-605, 609, 613-631, 639-641, 649-651, 662-668, 676-700, 703-710, 723-779, 782-784, 787-789, 792-797, 800-805, 813-816, 827-831, 834, 837-851, 873-901, 912-942, 950-952, 963-985, 993-995, 999, 1021-1105, 1113-1115, 1123-1125, 1133, 1137-1149, 1159-1177, 1190-1193, 1201, 1209-1211, 1224-1226, 1238-1247, 1277-1279, 1284-1291, 1299-1303, 1321-1366, 1370
+artifact/citrascope-1.0.0/citrascope/hardware/dummy_adapter.py                                  939    680    178      9    24%   71, 76-92, 140, 144, 148, 151, 154, 157, 170-194, 199-209, 215-216, 220-223, 227-229, 232-234, 240-244, 247-248, 273-281, 294-295, 298, 303-304, 319-331, 335-336, 339-344, 347-354, 360-365, 366-&gt;368, 383, 387, 391, 394-395, 398, 401, 404, 407, 410, 413-417, 420-425, 428, 431, 478-481, 490-499, 508-520, 570, 574, 586-602, 607, 665, 669, 682, 692-&gt;705, 718-725, 729, 733, 737, 741-743, 747-753, 757, 760, 764, 767-779, 782-791, 794, 798-800, 804-832, 863-958, 974-995, 1013-1097, 1122-1285, 1289-1290, 1294, 1298-1304, 1316-1358, 1366, 1370, 1373, 1381-1384, 1409-1541, 1545, 1548, 1552-1561, 1565, 1569-1586, 1590-1593, 1597-1599, 1603, 1607-1618, 1622, 1627-1628
+artifact/citrascope-1.0.0/citrascope/hardware/filter_sync.py                                     47      0     22      0   100%
+artifact/citrascope-1.0.0/citrascope/hardware/indi/__init__.py                                    2      1      0      0    50%   3
+artifact/citrascope-1.0.0/citrascope/hardware/indi/indi_adapter.py                              383    379    154      0     1%   7-692
+artifact/citrascope-1.0.0/citrascope/hardware/nina/__init__.py                                    4      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/hardware/nina/nina_adapter.py                              615    363    196     24    37%   158-222, 227, 230-232, 253, 255, 261, 267, 273-278, 292, 300-301, 304-305, 307-&gt;315, 330-332, 339, 344-354, 357-376, 386-387, 393, 402, 431-432, 439-440, 448-449, 461-463, 489-490, 498-500, 516-&gt;exit, 524, 547-549, 561-&gt;569, 563-&gt;569, 566-567, 573, 577, 585, 589-604, 608-614, 618-622, 625, 628, 631-638, 641-646, 649-658, 661-670, 673, 682-700, 708-713, 716, 747, 758-767, 770, 773, 776, 784-786, 789, 801-813, 824-836, 848-856, 868-1049
+artifact/citrascope-1.0.0/citrascope/hardware/nina/nina_event_listener.py                       146     20     38      2    86%   90-91, 95-96, 134-145, 147-148, 198-&gt;exit, 201-202
+artifact/citrascope-1.0.0/citrascope/hardware/nina/nina_focuser.py                              105     13     22      3    87%   47, 51, 55, 79-80, 83-85, 96-98, 143, 150
+artifact/citrascope-1.0.0/citrascope/hardware/probe_runner.py                                    42      8      6      0    83%   43-49, 99-100
+artifact/citrascope-1.0.0/citrascope/jobs.py                                                     67     36      6      0    42%   36-37, 40-41, 72-90, 102-107, 110-111, 114-115, 119-124
+artifact/citrascope-1.0.0/citrascope/location/__init__.py                                         5      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/location/gps_fix.py                                         18      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/location/gps_monitor.py                                    165     47     74     12    70%   81-82, 86-99, 103-110, 138-146, 151-161, 179-&gt;185, 188-194, 216, 232-234, 246, 257-&gt;244, 263-&gt;265, 276-&gt;244, 279-&gt;244, 282-283, 305-&gt;308, 313, 317, 321
+artifact/citrascope-1.0.0/citrascope/location/location_service.py                               157     14     62      8    88%   94, 106, 127-&gt;exit, 183, 207-210, 243, 254-&gt;258, 258-&gt;exit, 280-&gt;exit, 288-&gt;exit, 311-322
+artifact/citrascope-1.0.0/citrascope/location/twilight.py                                       123     63     36      2    44%   49-51, 57-62, 75-99, 117-180, 254-&gt;253, 272-&gt;267
+artifact/citrascope-1.0.0/citrascope/logging/__init__.py                                          3      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/logging/_citrascope_logger.py                               65     11     14      0    84%   99-121, 130
+artifact/citrascope-1.0.0/citrascope/logging/web_log_handler.py                                  39      7     10      1    80%   57-65
+artifact/citrascope-1.0.0/citrascope/preview_bus.py                                              63      0     14      1    99%   137-&gt;exit
+artifact/citrascope-1.0.0/citrascope/processors/__init__.py                                       4      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/processors/abstract_processor.py                             9      1      0      0    89%   37
+artifact/citrascope-1.0.0/citrascope/processors/artifact_writer.py                              109     11     42      5    89%   191, 198, 202, 206, 259, 293-294, 301-302, 314-315
+artifact/citrascope-1.0.0/citrascope/processors/builtin/__init__.py                               1      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/processors/builtin/annotated_image_processor.py            340     55     78     10    82%   101-109, 131-135, 194-201, 210-211, 238, 241, 259, 262, 293, 324, 399-400, 423-424, 450-&gt;452, 466-467, 477-478, 514-515, 523, 528-529, 537, 557-577, 606-607
+artifact/citrascope-1.0.0/citrascope/processors/builtin/calibration_processor.py                134     25     60     14    76%   36, 40, 56-59, 62, 97, 100, 107, 129-139, 152, 163-174, 182-192, 193-&gt;200, 198, 207
+artifact/citrascope-1.0.0/citrascope/processors/builtin/photometry_processor.py                  94     13     16      5    82%   46, 111, 117, 130, 151, 232, 236-242
+artifact/citrascope-1.0.0/citrascope/processors/builtin/plate_solver_processor.py               197    117     60      3    34%   48-83, 109-131, 150-261, 274-&gt;279, 280-281, 283-289, 323-324, 343-&gt;346, 361-362
+artifact/citrascope-1.0.0/citrascope/processors/builtin/processor_dependencies.py                26      1      8      0    97%   53
+artifact/citrascope-1.0.0/citrascope/processors/builtin/satellite_matcher_processor.py          255     43     62     21    78%   73, 76, 108-&gt;110, 132-133, 147-148, 151-152, 157, 160-161, 170, 177-&gt;183, 207-215, 224-226, 238-239, 249, 262, 277-278, 299-302, 309-310, 335-&gt;338, 358-&gt;364, 375, 378, 413, 457-467
+artifact/citrascope-1.0.0/citrascope/processors/builtin/source_extractor_processor.py           123     54     44      8    57%   55-67, 102-104, 128, 135-&gt;132, 165-173, 176, 180-&gt;182, 184-&gt;182, 200-307
+artifact/citrascope-1.0.0/citrascope/processors/context_loader.py                                76      7     26      4    89%   68-70, 164, 170, 188, 192
+artifact/citrascope-1.0.0/citrascope/processors/processor_registry.py                            82     11     22      4    84%   57-58, 66, 89, 103, 108-&gt;111, 125-128, 203-204
+artifact/citrascope-1.0.0/citrascope/processors/processor_result.py                              40      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/processors/report_generator.py                             224     19     70     13    89%   35-36, 65, 77-78, 162, 173, 202, 216-&gt;227, 250, 292, 338-&gt;348, 353-354, 365, 374, 391, 470, 550-552
+artifact/citrascope-1.0.0/citrascope/reprocess.py                                                73     73     20      0     0%   49-191
+artifact/citrascope-1.0.0/citrascope/safety/__init__.py                                           2      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/safety/cable_wrap_check.py                                 336     51    106     15    85%   126, 136-137, 152, 158-161, 178, 201-209, 246, 253-&gt;260, 276, 313-316, 348-349, 353-354, 358-359, 364-365, 369-370, 392, 425-426, 460, 498-499, 512-514, 517-522, 534-541, 547, 571-577, 604-605, 620-621
+artifact/citrascope-1.0.0/citrascope/safety/disk_space_check.py                                  38      0      8      0   100%
+artifact/citrascope-1.0.0/citrascope/safety/hardware_safety_check.py                             35      0      8      0   100%
+artifact/citrascope-1.0.0/citrascope/safety/operator_stop_check.py                               36      0      4      0   100%
+artifact/citrascope-1.0.0/citrascope/safety/safety_monitor.py                                   144     11     38      4    92%   180, 189, 195, 218-&gt;223, 221-222, 226-227, 241-242, 276-277
+artifact/citrascope-1.0.0/citrascope/safety/time_health_check.py                                 33      5      8      0    83%   40-44
+artifact/citrascope-1.0.0/citrascope/settings/__init__.py                                         0      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/settings/citrascope_settings.py                            409    121     66     12    68%   170-172, 176, 184-186, 190, 195-198, 203-215, 222-224, 228, 233-244, 249-258, 273-282, 287-296, 301-312, 319-321, 335-337, 339-343, 367-376, 381-390, 405, 449-462, 472-473, 506-507, 524, 529, 550-&gt;553, 569-&gt;572, 573-&gt;577
+artifact/citrascope-1.0.0/citrascope/settings/directory_manager.py                               40      2      0      0    95%   42, 46
+artifact/citrascope-1.0.0/citrascope/settings/settings_file_manager.py                           44      4      8      0    88%   67-71
+artifact/citrascope-1.0.0/citrascope/startup_checks.py                                           26      0     14      0   100%
+artifact/citrascope-1.0.0/citrascope/tasks/alignment_manager.py                                 414    252    132     17    36%   87-90, 98-103, 106-107, 110-111, 115-116, 129-158, 161-163, 167-264, 272-279, 283-286, 289-290, 295-298, 312-&gt;316, 318-319, 338-339, 343-344, 348-349, 352-353, 357-358, 399-400, 412, 427-428, 439-440, 461-462, 467-474, 477-480, 488-489, 512-&gt;exit, 518, 551-616, 629-640, 650, 657-685, 698-721, 732-734
+artifact/citrascope-1.0.0/citrascope/tasks/autofocus_manager.py                                 333     96    114     16    69%   85-87, 110-111, 115-116, 125-127, 136-140, 160-172, 182-187, 191-192, 197-198, 203-204, 208-209, 214-215, 220-221, 231, 235-260, 277, 294, 351-362, 372, 394, 400-&gt;402, 437-445, 478-&gt;484, 481-482, 487-488, 492, 498, 503-&gt;exit
+artifact/citrascope-1.0.0/citrascope/tasks/base_work_queue.py                                   180     14     36      8    90%   58, 69, 79, 103-&gt;exit, 122, 127-&gt;exit, 133-&gt;exit, 141-&gt;exit, 178-&gt;180, 192-&gt;exit, 239-242, 248-251, 291-292
+artifact/citrascope-1.0.0/citrascope/tasks/calibration_manager.py                               235    208     76      0     9%   39-53, 66-73, 80-91, 95-108, 111-112, 115-116, 119-120, 132-152, 159-170, 175-189, 203-236, 240-276, 280-298, 302-396
+artifact/citrascope-1.0.0/citrascope/tasks/fits_enrichment.py                                    56      5     28      0    94%   56-58, 99-100
+artifact/citrascope-1.0.0/citrascope/tasks/homing_manager.py                                     99     73     22      0    21%   48-54, 57-62, 65-66, 69-70, 74-75, 83-98, 108-157
+artifact/citrascope-1.0.0/citrascope/tasks/imaging_queue.py                                      54      2      8      4    90%   52-&gt;exit, 65-&gt;68, 96-&gt;99, 110-&gt;113, 115-116
+artifact/citrascope-1.0.0/citrascope/tasks/observing_session.py                                 177     26     72     15    82%   101-102, 129-&gt;138, 135-&gt;138, 145-151, 157-&gt;166, 175-181, 188, 195-196, 216-&gt;222, 225-&gt;241, 226-&gt;239, 238, 265-268, 274, 280
+artifact/citrascope-1.0.0/citrascope/tasks/processing_queue.py                                   76      9     20      7    83%   54-&gt;exit, 57-58, 67, 97, 101, 108-111, 130-&gt;133, 147-&gt;150
+artifact/citrascope-1.0.0/citrascope/tasks/runner.py                                            414    253    112      5    34%   146-147, 151, 155, 159, 163, 167, 171-183, 187-194, 224-225, 228-229, 232-233, 237-238, 251-261, 267-284, 295-392, 399, 406-502, 508, 512-514, 517-530, 540-&gt;542, 591-592, 600-601, 610-611, 615-616, 619-634, 654-657, 661-664, 668-669, 672-684, 687-697
+artifact/citrascope-1.0.0/citrascope/tasks/scope/base_telescope_task.py                         482     98    152     21    77%   178, 256-&gt;271, 277-282, 290, 372-375, 391-&gt;394, 394-&gt;exit, 405-414, 418-439, 475, 480-483, 487, 500-510, 514, 521-541, 552-563, 609-&gt;731, 662-&gt;675, 727-&gt;609, 734-&gt;739, 739-&gt;742, 775, 782-808, 827-828, 942-&gt;948, 947
+artifact/citrascope-1.0.0/citrascope/tasks/scope/sidereal_telescope_task.py                     100     89     36      0    10%   19-48, 59-190
+artifact/citrascope-1.0.0/citrascope/tasks/scope/tracking_telescope_task.py                      44     10      8      2    77%   19-21, 27-29, 32, 47, 60-61
+artifact/citrascope-1.0.0/citrascope/tasks/self_tasking_manager.py                               60      0     12      0   100%
+artifact/citrascope-1.0.0/citrascope/tasks/task.py                                               50      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/tasks/upload_queue.py                                       94     18     34      8    77%   41-46, 74-75, 130-&gt;132, 139, 143-&gt;145, 162-168, 171-&gt;177, 178-&gt;180, 196-&gt;199, 218-&gt;217, 222-223
+artifact/citrascope-1.0.0/citrascope/time/__init__.py                                             4      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/time/time_health.py                                         34      0      4      0   100%
+artifact/citrascope-1.0.0/citrascope/time/time_monitor.py                                        77     28     22      5    57%   55-62, 66-73, 92-93, 102-112, 123-125, 134, 166-167, 173-&gt;exit
+artifact/citrascope-1.0.0/citrascope/time/time_sources.py                                        48      4      2      1    90%   20, 25, 99, 127
+artifact/citrascope-1.0.0/citrascope/version.py                                                  69      1     22      2    97%   26, 39-&gt;43
+artifact/citrascope-1.0.0/citrascope/web/__init__.py                                              0      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/web/app.py                                                  86     21     26      7    68%   63-&gt;74, 70, 77, 93-94, 99, 114, 119-&gt;121, 133, 139-151, 155, 159
+artifact/citrascope-1.0.0/citrascope/web/connection_manager.py                                   57     30      8      3    46%   22-25, 29, 35-39, 43, 47-52, 58-62, 65, 72, 75-76, 79, 82-84
+artifact/citrascope-1.0.0/citrascope/web/helpers.py                                              22      1      8      0    97%   21
+artifact/citrascope-1.0.0/citrascope/web/models.py                                              103      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/web/routes/__init__.py                                      21      0      0      0   100%
+artifact/citrascope-1.0.0/citrascope/web/routes/alignment.py                                    102     82     38      0    14%   23-33, 38-48, 53-69, 74-83, 88-98, 103-134
+artifact/citrascope-1.0.0/citrascope/web/routes/analysis.py                                     228    193     78      0    11%   44-46, 65-97, 102-119, 132-142, 147-176, 185-191, 196-243, 248-291, 296-359, 368-420
+artifact/citrascope-1.0.0/citrascope/web/routes/autofocus.py                                     37      9      8      3    73%   28, 34-37, 43, 48-50
+artifact/citrascope-1.0.0/citrascope/web/routes/calibration.py                                  129    108     56      0    11%   24-51, 77-97, 102-109, 114-161, 166-185, 190-203
+artifact/citrascope-1.0.0/citrascope/web/routes/camera.py                                        72     47     30      4    32%   26, 28, 31, 44-63, 68-103
+artifact/citrascope-1.0.0/citrascope/web/routes/core.py                                          85     30     24      1    59%   27, 39-43, 90, 105-113, 128-144
+artifact/citrascope-1.0.0/citrascope/web/routes/filters.py                                      124     44     70     11    63%   28, 34-&gt;36, 37-39, 45, 56, 75, 95-100, 108, 125, 131, 136-137, 143-145, 151, 156-158, 163-187
+artifact/citrascope-1.0.0/citrascope/web/routes/focuser.py                                       55     42     24      0    16%   30-67, 72-84
+artifact/citrascope-1.0.0/citrascope/web/routes/hardware.py                                     140     36     44      8    75%   27-30, 38-42, 48-50, 109-110, 115-116, 123-124, 130-132, 152-&gt;204, 155, 164, 184, 188-&gt;159, 195-199, 207-216, 239-241
+artifact/citrascope-1.0.0/citrascope/web/routes/jobs.py                                          19      8      4      0    48%   21-24, 29-32
+artifact/citrascope-1.0.0/citrascope/web/routes/mount.py                                        136    113     62      0    12%   24-36, 41-47, 52-66, 71-84, 92-124, 129-154, 159-180
+artifact/citrascope-1.0.0/citrascope/web/routes/safety.py                                        69     22     24      4    63%   23-29, 34-46, 56-&gt;59, 64-&gt;71, 76, 82-83, 108
+artifact/citrascope-1.0.0/citrascope/web/routes/tasks.py                                        157     42     52      8    72%   38, 44-45, 72, 82-84, 114, 127, 130, 145-149, 206, 217-269
+artifact/citrascope-1.0.0/citrascope/web/routes/websocket.py                                     24     15      4      0    32%   21-38
+artifact/citrascope-1.0.0/citrascope/web/server.py                                               99     79     14      0    18%   21-22, 29-38, 42-49, 53-55, 59-73, 78-92, 96-133, 137-138, 145-161
+artifact/citrascope-1.0.0/citrascope/web/sky_enrichment.py                                      189     31     66     16    82%   144, 147-148, 158-159, 172-174, 179-&gt;177, 216-218, 221, 226, 230-232, 284, 287-289, 317, 333-&gt;344, 336-338, 340-&gt;344, 350, 363, 402, 406, 415-417, 421, 426-&gt;399
+artifact/citrascope-1.0.0/citrascope/web/status_collector.py                                    332    118     98     36    60%   26, 41-&gt;147, 51-56, 64-65, 79-82, 88-89, 101, 104-106, 115-116, 119-120, 123-124, 127-134, 140-144, 147-&gt;192, 164-&gt;169, 180, 182, 184, 185-&gt;187, 187-&gt;189, 195-&gt;222, 210-220, 235-239, 265, 268-271, 273-276, 286-&gt;307, 316-&gt;321, 319-320, 327, 333, 345, 346-&gt;351, 348, 357-360, 366, 373-374, 397-&gt;406, 400-403, 421-429, 437, 443-489
+-----------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                         19134   8107   5178    610    55%
+Coverage XML written to file coverage.xml
+1624 passed, 2 skipped, 15 deselected, 20 warnings in 150.52s (0:02:30)
+
+--- stderr ---
+2026-05-09 17:57:03 [92mINFO[0m [LocationService] Updated ground station location from hardware_adapter_gps: lat=38.820000, lon=-104.870000, alt=1660.0m
+2026-05-09 17:57:13 [92mINFO[0m [LocationService] Updated ground station location from hardware_adapter_gps: lat=38.820000, lon=-104.870000, alt=1660.0m
+2026-05-09 17:57:23 [92mINFO[0m [LocationService] Updated ground station location from hardware_adapter_gps: lat=38.820000, lon=-104.870000, alt=1660.0m
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (96)</strong></summary>
+<table class="meta-table">
+
+<tr><td>annotated-doc</td><td>0.0.4</td></tr>
+
+<tr><td>annotated-types</td><td>0.7.0</td></tr>
+
+<tr><td>anyio</td><td>4.13.0</td></tr>
+
+<tr><td>astropy-healpix</td><td>1.1.3</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>astroquery</td><td>0.4.11</td></tr>
+
+<tr><td>beautifulsoup4</td><td>4.14.3</td></tr>
+
+<tr><td>black</td><td>26.3.1</td></tr>
+
+<tr><td>bracex</td><td>2.6</td></tr>
+
+<tr><td>bump-my-version</td><td>1.3.0</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>cffi</td><td>2.0.0</td></tr>
+
+<tr><td>cfgv</td><td>3.5.0</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>citrascope</td><td>1.0.0</td></tr>
+
+<tr><td>click</td><td>8.3.3</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>cryptography</td><td>48.0.0</td></tr>
+
+<tr><td>distlib</td><td>0.4.0</td></tr>
+
+<tr><td>fastapi</td><td>0.136.1</td></tr>
+
+<tr><td>filelock</td><td>3.29.0</td></tr>
+
+<tr><td>h11</td><td>0.16.0</td></tr>
+
+<tr><td>html5lib</td><td>1.1</td></tr>
+
+<tr><td>httpcore</td><td>1.0.9</td></tr>
+
+<tr><td>httptools</td><td>0.7.1</td></tr>
+
+<tr><td>httpx</td><td>0.28.1</td></tr>
+
+<tr><td>identify</td><td>2.6.19</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>jaraco-classes</td><td>3.4.0</td></tr>
+
+<tr><td>jaraco-context</td><td>6.1.2</td></tr>
+
+<tr><td>jaraco-functools</td><td>4.4.0</td></tr>
+
+<tr><td>jeepney</td><td>0.9.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>jplephem</td><td>2.24</td></tr>
+
+<tr><td>keplemon</td><td>3.7.0</td></tr>
+
+<tr><td>keyring</td><td>25.7.0</td></tr>
+
+<tr><td>markdown-it-py</td><td>4.2.0</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>mdurl</td><td>0.1.2</td></tr>
+
+<tr><td>mockito</td><td>2.0.4</td></tr>
+
+<tr><td>more-itertools</td><td>11.0.2</td></tr>
+
+<tr><td>mypy-extensions</td><td>1.1.0</td></tr>
+
+<tr><td>nodeenv</td><td>1.10.0</td></tr>
+
+<tr><td>ntplib</td><td>0.4.0</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pathspec</td><td>1.1.1</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pre-commit</td><td>4.6.0</td></tr>
+
+<tr><td>prompt-toolkit</td><td>3.0.52</td></tr>
+
+<tr><td>pycparser</td><td>3.0</td></tr>
+
+<tr><td>pydantic</td><td>2.13.4</td></tr>
+
+<tr><td>pydantic-core</td><td>2.46.4</td></tr>
+
+<tr><td>pydantic-settings</td><td>2.14.1</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyright</td><td>1.1.409</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>python-discovery</td><td>1.3.0</td></tr>
+
+<tr><td>python-dotenv</td><td>1.2.2</td></tr>
+
+<tr><td>pytokens</td><td>0.4.1</td></tr>
+
+<tr><td>pyvo</td><td>1.8.1</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>questionary</td><td>2.1.1</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>rich</td><td>15.0.0</td></tr>
+
+<tr><td>rich-click</td><td>1.9.7</td></tr>
+
+<tr><td>ruff</td><td>0.15.12</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>secretstorage</td><td>3.5.0</td></tr>
+
+<tr><td>sep</td><td>1.4.1</td></tr>
+
+<tr><td>sgp4</td><td>2.25</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>skyfield</td><td>1.54</td></tr>
+
+<tr><td>soupsieve</td><td>2.8.3</td></tr>
+
+<tr><td>starlette</td><td>1.0.0</td></tr>
+
+<tr><td>tomlkit</td><td>0.14.0</td></tr>
+
+<tr><td>types-requests</td><td>2.33.0.20260508</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>typing-inspection</td><td>0.4.2</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>uvicorn</td><td>0.46.0</td></tr>
+
+<tr><td>uvloop</td><td>0.22.1</td></tr>
+
+<tr><td>virtualenv</td><td>21.3.1</td></tr>
+
+<tr><td>watchfiles</td><td>1.1.1</td></tr>
+
+<tr><td>wcmatch</td><td>10.1</td></tr>
+
+<tr><td>wcwidth</td><td>0.7.0</td></tr>
+
+<tr><td>webencodings</td><td>0.5.1</td></tr>
+
+<tr><td>websockets</td><td>16.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

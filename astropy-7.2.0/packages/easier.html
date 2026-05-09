@@ -1,0 +1,515 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>easier - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>easier</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>1.9.11</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>14.0s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>easier</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>......F
+=================================== FAILURES ===================================
+E   AttributeError: &#39;Duckmirror&#39; has no attribute &#39;TestData_df1&#39;
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-easier-ajqa8ut3/venv/lib/python3.12/site-packages/easier/experimental/duckmirror.py:227: AttributeError: &#39;Duckmirror&#39; has no attribute &#39;TestData_df1&#39;
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/easier/tests/test_agent_runner.py:1360
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-easier-ajqa8ut3/venv/lib/python3.12/site-packages/easier/tests/test_agent_runner.py:1360: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+venv/lib/python3.12/site-packages/easier/tests/test_agent_runner.py:1853
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-easier-ajqa8ut3/venv/lib/python3.12/site-packages/easier/tests/test_agent_runner.py:1853: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+venv/lib/python3.12/site-packages/easier/tests/test_ez_agent_integration.py:33
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-easier-ajqa8ut3/venv/lib/python3.12/site-packages/easier/tests/test_ez_agent_integration.py:33: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+venv/lib/python3.12/site-packages/easier/tests/test_ez_agent_integration.py:51
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-easier-ajqa8ut3/venv/lib/python3.12/site-packages/easier/tests/test_ez_agent_integration.py:51: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+venv/lib/python3.12/site-packages/easier/tests/test_ez_agent_integration.py:113
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-easier-ajqa8ut3/venv/lib/python3.12/site-packages/easier/tests/test_ez_agent_integration.py:113: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+venv/lib/python3.12/site-packages/easier/tests/test_ez_agent_integration.py:191
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-easier-ajqa8ut3/venv/lib/python3.12/site-packages/easier/tests/test_ez_agent_integration.py:191: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+venv/lib/python3.12/site-packages/easier/tests/test_ez_agent_integration.py:323
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-easier-ajqa8ut3/venv/lib/python3.12/site-packages/easier/tests/test_ez_agent_integration.py:323: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+venv/lib/python3.12/site-packages/easier/tests/test_ez_agent_integration.py:394
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-easier-ajqa8ut3/venv/lib/python3.12/site-packages/easier/tests/test_ez_agent_integration.py:394: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED venv/lib/python3.12/site-packages/easier/experimental/test_duckmirror.py::test_class_methods_memory_duckmirror
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 6 passed, 8 warnings in 7.69s
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (199)</strong></summary>
+<table class="meta-table">
+
+<tr><td>alembic</td><td>1.18.4</td></tr>
+
+<tr><td>annotated-doc</td><td>0.0.4</td></tr>
+
+<tr><td>annotated-types</td><td>0.7.0</td></tr>
+
+<tr><td>anthropic</td><td>0.100.0</td></tr>
+
+<tr><td>anyio</td><td>4.13.0</td></tr>
+
+<tr><td>asgiref</td><td>3.11.1</td></tr>
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>asttokens</td><td>3.0.1</td></tr>
+
+<tr><td>atpublic</td><td>7.0.0</td></tr>
+
+<tr><td>attrs</td><td>26.1.0</td></tr>
+
+<tr><td>bleach</td><td>6.3.0</td></tr>
+
+<tr><td>bokeh</td><td>3.9.0</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>cffi</td><td>2.0.0</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>clarabel</td><td>0.11.1</td></tr>
+
+<tr><td>click</td><td>8.3.3</td></tr>
+
+<tr><td>cog</td><td>0.19.3</td></tr>
+
+<tr><td>coglet</td><td>0.19.3</td></tr>
+
+<tr><td>cohere</td><td>5.21.1</td></tr>
+
+<tr><td>colorama</td><td>0.4.6</td></tr>
+
+<tr><td>colorcet</td><td>3.2.1</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>cryptography</td><td>48.0.0</td></tr>
+
+<tr><td>cvxpy</td><td>1.8.2</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>daiquiri</td><td>3.4.0</td></tr>
+
+<tr><td>dataset</td><td>2.0.0</td></tr>
+
+<tr><td>db-dtypes</td><td>1.4.4</td></tr>
+
+<tr><td>decorator</td><td>5.2.1</td></tr>
+
+<tr><td>distro</td><td>1.9.0</td></tr>
+
+<tr><td>django</td><td>6.0.5</td></tr>
+
+<tr><td>docstring-parser</td><td>0.18.0</td></tr>
+
+<tr><td>duckdb</td><td>1.5.2</td></tr>
+
+<tr><td>easier</td><td>1.9.11</td></tr>
+
+<tr><td>eval-type-backport</td><td>0.3.1</td></tr>
+
+<tr><td>execnet</td><td>2.1.2</td></tr>
+
+<tr><td>executing</td><td>2.2.1</td></tr>
+
+<tr><td>fastavro</td><td>1.12.2</td></tr>
+
+<tr><td>filelock</td><td>3.29.0</td></tr>
+
+<tr><td>flake8</td><td>7.3.0</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>fsspec</td><td>2026.4.0</td></tr>
+
+<tr><td>fuzzypicker</td><td>0.1.2</td></tr>
+
+<tr><td>fuzzywuzzy</td><td>0.18.0</td></tr>
+
+<tr><td>gatspy</td><td>0.3</td></tr>
+
+<tr><td>google-ai-generativelanguage</td><td>0.6.15</td></tr>
+
+<tr><td>google-api-core</td><td>2.30.3</td></tr>
+
+<tr><td>google-api-python-client</td><td>2.196.0</td></tr>
+
+<tr><td>google-auth</td><td>2.52.0</td></tr>
+
+<tr><td>google-auth-httplib2</td><td>0.4.0</td></tr>
+
+<tr><td>google-auth-oauthlib</td><td>1.4.0</td></tr>
+
+<tr><td>google-cloud-bigquery</td><td>3.41.0</td></tr>
+
+<tr><td>google-cloud-core</td><td>2.6.0</td></tr>
+
+<tr><td>google-crc32c</td><td>1.8.0</td></tr>
+
+<tr><td>google-generativeai</td><td>0.8.6</td></tr>
+
+<tr><td>google-resumable-media</td><td>2.9.0</td></tr>
+
+<tr><td>googleapis-common-protos</td><td>1.75.0</td></tr>
+
+<tr><td>greenlet</td><td>3.5.0</td></tr>
+
+<tr><td>griffe</td><td>2.0.2</td></tr>
+
+<tr><td>griffecli</td><td>2.0.2</td></tr>
+
+<tr><td>griffelib</td><td>2.0.2</td></tr>
+
+<tr><td>groq</td><td>1.2.0</td></tr>
+
+<tr><td>grpcio</td><td>1.80.0</td></tr>
+
+<tr><td>grpcio-status</td><td>1.71.2</td></tr>
+
+<tr><td>gspread</td><td>6.2.1</td></tr>
+
+<tr><td>h11</td><td>0.16.0</td></tr>
+
+<tr><td>hf-xet</td><td>1.5.0</td></tr>
+
+<tr><td>highspy</td><td>1.14.0</td></tr>
+
+<tr><td>holoviews</td><td>1.22.1</td></tr>
+
+<tr><td>httpcore</td><td>1.0.9</td></tr>
+
+<tr><td>httplib2</td><td>0.31.2</td></tr>
+
+<tr><td>httpx</td><td>0.28.1</td></tr>
+
+<tr><td>huggingface-hub</td><td>1.14.0</td></tr>
+
+<tr><td>ibis-framework</td><td>12.0.0</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>importlib-metadata</td><td>9.0.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>invoke</td><td>2.2.1</td></tr>
+
+<tr><td>ipython</td><td>9.13.0</td></tr>
+
+<tr><td>ipython-pygments-lexers</td><td>1.1.1</td></tr>
+
+<tr><td>isodate</td><td>0.7.2</td></tr>
+
+<tr><td>jedi</td><td>0.20.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>jiter</td><td>0.14.0</td></tr>
+
+<tr><td>joblib</td><td>1.5.3</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>levenshtein</td><td>0.27.3</td></tr>
+
+<tr><td>linkify-it-py</td><td>2.1.0</td></tr>
+
+<tr><td>logfire-api</td><td>4.32.1</td></tr>
+
+<tr><td>lxml</td><td>6.1.0</td></tr>
+
+<tr><td>mako</td><td>1.3.12</td></tr>
+
+<tr><td>markdown</td><td>3.10.2</td></tr>
+
+<tr><td>markdown-it-py</td><td>4.2.0</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>matplotlib-inline</td><td>0.2.2</td></tr>
+
+<tr><td>mccabe</td><td>0.7.0</td></tr>
+
+<tr><td>mdit-py-plugins</td><td>0.6.0</td></tr>
+
+<tr><td>mdurl</td><td>0.1.2</td></tr>
+
+<tr><td>mistralai</td><td>1.9.11</td></tr>
+
+<tr><td>more-itertools</td><td>11.0.2</td></tr>
+
+<tr><td>mypy-extensions</td><td>1.1.0</td></tr>
+
+<tr><td>narwhals</td><td>2.21.0</td></tr>
+
+<tr><td>nodeenv</td><td>1.10.0</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>oauthlib</td><td>3.3.1</td></tr>
+
+<tr><td>openai</td><td>2.36.0</td></tr>
+
+<tr><td>osqp</td><td>1.1.1</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pandas-gbq</td><td>0.35.0</td></tr>
+
+<tr><td>pandera</td><td>0.31.1</td></tr>
+
+<tr><td>panel</td><td>1.8.10</td></tr>
+
+<tr><td>param</td><td>2.3.3</td></tr>
+
+<tr><td>parso</td><td>0.8.7</td></tr>
+
+<tr><td>parsy</td><td>2.2</td></tr>
+
+<tr><td>pexpect</td><td>4.9.0</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>polars</td><td>1.40.1</td></tr>
+
+<tr><td>polars-runtime-32</td><td>1.40.1</td></tr>
+
+<tr><td>prompt-toolkit</td><td>3.0.52</td></tr>
+
+<tr><td>proto-plus</td><td>1.28.0</td></tr>
+
+<tr><td>protobuf</td><td>5.29.6</td></tr>
+
+<tr><td>psutil</td><td>7.2.2</td></tr>
+
+<tr><td>ptyprocess</td><td>0.7.0</td></tr>
+
+<tr><td>pure-eval</td><td>0.2.3</td></tr>
+
+<tr><td>pyarrow</td><td>24.0.0</td></tr>
+
+<tr><td>pyasn1</td><td>0.6.3</td></tr>
+
+<tr><td>pyasn1-modules</td><td>0.4.2</td></tr>
+
+<tr><td>pycodestyle</td><td>2.14.0</td></tr>
+
+<tr><td>pycparser</td><td>3.0</td></tr>
+
+<tr><td>pydantic</td><td>2.13.4</td></tr>
+
+<tr><td>pydantic-ai</td><td>0.0.30</td></tr>
+
+<tr><td>pydantic-ai-slim</td><td>0.0.30</td></tr>
+
+<tr><td>pydantic-core</td><td>2.46.4</td></tr>
+
+<tr><td>pydantic-graph</td><td>0.0.30</td></tr>
+
+<tr><td>pydata-google-auth</td><td>1.9.1</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pyflakes</td><td>3.4.0</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyjwt</td><td>2.12.1</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pyright</td><td>1.1.409</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-asyncio</td><td>1.3.0</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>pytest-xdist</td><td>3.8.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>python-json-logger</td><td>4.1.0</td></tr>
+
+<tr><td>python-levenshtein</td><td>0.27.3</td></tr>
+
+<tr><td>pytz</td><td>2026.2</td></tr>
+
+<tr><td>pyviz-comms</td><td>3.0.6</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>rapidfuzz</td><td>3.14.5</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>requests-file</td><td>3.0.1</td></tr>
+
+<tr><td>requests-oauthlib</td><td>2.0.0</td></tr>
+
+<tr><td>requests-toolbelt</td><td>1.0.0</td></tr>
+
+<tr><td>rich</td><td>15.0.0</td></tr>
+
+<tr><td>scikit-learn</td><td>1.8.0</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>scs</td><td>3.2.11</td></tr>
+
+<tr><td>setuptools</td><td>82.0.1</td></tr>
+
+<tr><td>shellingham</td><td>1.5.4</td></tr>
+
+<tr><td>simple-salesforce</td><td>1.12.9</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>sniffio</td><td>1.3.1</td></tr>
+
+<tr><td>sqlalchemy</td><td>2.0.49</td></tr>
+
+<tr><td>sqlglot</td><td>30.7.0</td></tr>
+
+<tr><td>sqlparse</td><td>0.5.5</td></tr>
+
+<tr><td>stack-data</td><td>0.6.3</td></tr>
+
+<tr><td>structlog</td><td>25.5.0</td></tr>
+
+<tr><td>threadpoolctl</td><td>3.6.0</td></tr>
+
+<tr><td>tokenizers</td><td>0.23.1</td></tr>
+
+<tr><td>toolz</td><td>1.1.0</td></tr>
+
+<tr><td>tornado</td><td>6.5.5</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>traitlets</td><td>5.15.0</td></tr>
+
+<tr><td>typeguard</td><td>4.5.1</td></tr>
+
+<tr><td>typer</td><td>0.25.1</td></tr>
+
+<tr><td>types-requests</td><td>2.33.0.20260508</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>typing-inspect</td><td>0.9.0</td></tr>
+
+<tr><td>typing-inspection</td><td>0.4.2</td></tr>
+
+<tr><td>tzdata</td><td>2026.2</td></tr>
+
+<tr><td>uc-micro-py</td><td>2.0.0</td></tr>
+
+<tr><td>uritemplate</td><td>4.2.0</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>wcwidth</td><td>0.7.0</td></tr>
+
+<tr><td>webencodings</td><td>0.5.1</td></tr>
+
+<tr><td>xyzservices</td><td>2026.3.0</td></tr>
+
+<tr><td>zeep</td><td>4.3.2</td></tr>
+
+<tr><td>zipp</td><td>3.23.1</td></tr>
+
+</table>
+</details>
+
+</body></html>

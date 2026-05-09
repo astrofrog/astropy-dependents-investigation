@@ -1,0 +1,140 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>nifty-ls - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>nifty-ls</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>1.0.1</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="pass">PASS</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>180.9s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>nifty_ls</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>..........ssssssssss.s.s...sss.....s.                                    [100%]
+
+-------------------------------------------- benchmark &#39;Nf=1000&#39;: 3 tests -------------------------------------------
+Name (time in ms)                       Min                  Mean                StdDev            Rounds  Iterations
+---------------------------------------------------------------------------------------------------------------------
+test_unbatched[finufft-1000]       188.0207 (1.0)        371.9492 (1.0)        226.9495 (1.26)          5           1
+test_unbatched[astropy-1000]       439.2683 (2.34)       567.1010 (1.52)       179.9218 (1.0)           5           1
+test_batched[finufft-1000]       9,071.2825 (48.25)    9,952.0492 (26.76)    1,262.4677 (7.02)          5           1
+---------------------------------------------------------------------------------------------------------------------
+
+--------------------------------- benchmark &#39;Nf=10000&#39;: 2 tests ----------------------------------
+Name (time in ms)          Min               Mean             StdDev            Rounds  Iterations
+--------------------------------------------------------------------------------------------------
+test[finufft-10000]     3.2081 (1.0)      10.8985 (1.0)      11.5336 (1.0)         148           1
+test[astropy-10000]     7.7938 (2.43)     29.0652 (2.67)     25.4588 (2.21)         30           1
+--------------------------------------------------------------------------------------------------
+
+----------------------------------- benchmark &#39;Nf=100000&#39;: 2 tests -----------------------------------
+Name (time in ms)             Min                Mean             StdDev            Rounds  Iterations
+------------------------------------------------------------------------------------------------------
+test[astropy-100000]     126.2428 (1.0)      210.8816 (1.0)      63.9675 (1.34)          5           1
+test[finufft-100000]     453.0094 (3.59)     504.1201 (2.39)     47.8598 (1.0)           5           1
+------------------------------------------------------------------------------------------------------
+
+-------------------------------- benchmark &#39;Nf=1000000&#39;: 2 tests ---------------------------------
+Name (time in s)             Min              Mean            StdDev            Rounds  Iterations
+--------------------------------------------------------------------------------------------------
+test[finufft-1000000]     1.0872 (1.0)      1.2266 (1.0)      0.1430 (1.0)           5           1
+test[astropy-1000000]     3.0598 (2.81)     3.7268 (3.04)     0.4804 (3.36)          5           1
+--------------------------------------------------------------------------------------------------
+
+Legend:
+  Outliers: 1 Standard Deviation from Mean; 1.5 IQR (InterQuartile Range) from 1st Quartile and 3rd Quartile.
+  OPS: Operations Per Second, computed as 1 / Mean
+21 passed, 16 skipped in 176.87s (0:02:56)
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (15)</strong></summary>
+<table class="meta-table">
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>finufft</td><td>2.5.1</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>nifty-ls</td><td>1.0.1</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>py-cpuinfo</td><td>9.0.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-benchmark</td><td>5.2.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+</table>
+</details>
+
+</body></html>

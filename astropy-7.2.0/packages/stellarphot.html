@@ -1,0 +1,1043 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>stellarphot - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>stellarphot</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>2.0.3</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>169.9s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>stellarphot</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>...............ssssss.ss..................ss...sss...................... [ 12%]
+......ssssssss........ssssssss.......................................... [ 24%]
+........................................................................ [ 37%]
+........................................................................ [ 49%]
+........................................................................ [ 62%]
+..........................................F
+=================================== FAILURES ===================================
+E   assert &#39;InconsistentTableError&#39; in &#39;{\n &#34;cells&#34;: [\n  {\n   &#34;cell_type&#34;: &#34;markdown&#34;,\n   &#34;id&#34;: &#34;da3cb3d4-b46f-4727-a3a6-e8651ecb3c09&#34;,\n   &#34;metadata&#34;: {\..._time&#34;: &#34;2026-05-09T16:40:18.505074+00:00&#34;,\n   &#34;version&#34;: &#34;2.7.0&#34;\n  }\n },\n &#34;nbformat&#34;: 4,\n &#34;nbformat_minor&#34;: 5\n}&#39;
+----------------------------- Captured stdout call -----------------------------
+[31m---------------------------------------------------------------------------[39m
+[31mKeyError[39m                                  Traceback (most recent call last)
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:651[39m, in [36mTraitType.get[39m[34m(self, obj, cls)[39m
+[32m    650[39m [38;5;28;01mtry[39;00m:
+[32m--&gt; [39m[32m651[39m     value = [30;43mobj[39;49m[30;43m.[39;49m[30;43m_trait_values[39;49m[30;43m[[39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mname[39;49m[30;43m][39;49m
+[32m    652[39m [38;5;28;01mexcept[39;00m [38;5;167;01mKeyError[39;00m:
+[32m    653[39m     [38;5;66;03m# Check for a dynamic initializer.[39;00m
+
+[31mKeyError[39m: &#39;kernel_spec_manager&#39;
+
+During handling of the above exception, another exception occurred:
+
+[31mKeyError[39m                                  Traceback (most recent call last)
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:651[39m, in [36mTraitType.get[39m[34m(self, obj, cls)[39m
+[32m    650[39m [38;5;28;01mtry[39;00m:
+[32m--&gt; [39m[32m651[39m     value = [30;43mobj[39;49m[30;43m.[39;49m[30;43m_trait_values[39;49m[30;43m[[39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mname[39;49m[30;43m][39;49m
+[32m    652[39m [38;5;28;01mexcept[39;00m [38;5;167;01mKeyError[39;00m:
+[32m    653[39m     [38;5;66;03m# Check for a dynamic initializer.[39;00m
+
+[31mKeyError[39m: &#39;data_dir&#39;
+
+During handling of the above exception, another exception occurred:
+
+[31mTraitError[39m                                Traceback (most recent call last)
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/stellarphot/settings/custom_widgets.py:1060[39m, in [36mPhotometryRunner._confirmation[39m[34m(self, change)[39m
+[32m   1055[39m     template_nb = get_pkg_data_filename(
+[32m   1056[39m         [33m&#34;[39m[33mphotometry_runner.ipynb[39m[33m&#34;[39m, package=[33m&#34;[39m[33mstellarphot.notebooks[39m[33m&#34;[39m
+[32m   1057[39m     )
+[32m   1059[39m     [38;5;28;01mwith[39;00m [38;5;28mself[39m.run_output:
+[32m-&gt; [39m[32m1060[39m         [30;43mpm[39;49m[30;43m.[39;49m[30;43mexecute_notebook[39;49m[30;43m([39;49m
+[32m   1061[39m [30;43m            [39;49m[30;43mtemplate_nb[39;49m[30;43m,[39;49m
+[32m   1062[39m [30;43m            [39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mphotometry_notebook_name[39;49m[30;43m,[39;49m
+[32m   1063[39m [30;43m            [39;49m[30;43mparameters[39;49m[30;43m=[39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mrun_settings[39;49m[30;43m.[39;49m[30;43mmodel_dump[39;49m[30;43m([39;49m[30;43mmode[39;49m[30;43m=[39;49m[30;43m&#34;[39;49m[30;43mjson[39;49m[30;43m&#34;[39;49m[30;43m)[39;49m[30;43m,[39;49m
+[32m   1064[39m [30;43m        [39;49m[30;43m)[39;49m
+[32m   1065[39m [38;5;28;01melse[39;00m:
+[32m   1066[39m     [38;5;66;03m# User said no, so reset to initial state.[39;00m
+[32m   1067[39m     [38;5;28mself[39m.fitsopen.file_chooser.reset()
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/papermill/execute.py:116[39m, in [36mexecute_notebook[39m[34m(input_path, output_path, parameters, engine_name, request_save_on_cell_execute, prepare_only, kernel_name, language, progress_bar, log_output, stdout_file, stderr_file, start_timeout, report_mode, cwd, **engine_kwargs)[39m
+[32m    114[39m [38;5;66;03m# Execute the Notebook in `cwd` if it is set[39;00m
+[32m    115[39m [38;5;28;01mwith[39;00m chdir(cwd):
+[32m--&gt; [39m[32m116[39m     nb = [30;43mpapermill_engines[39;49m[30;43m.[39;49m[30;43mexecute_notebook_with_engine[39;49m[30;43m([39;49m
+[32m    117[39m [30;43m        [39;49m[30;43mengine_name[39;49m[30;43m,[39;49m
+[32m    118[39m [30;43m        [39;49m[30;43mnb[39;49m[30;43m,[39;49m
+[32m    119[39m [30;43m        [39;49m[30;43minput_path[39;49m[30;43m=[39;49m[30;43minput_path[39;49m[30;43m,[39;49m
+[32m    120[39m [30;43m        [39;49m[30;43moutput_path[39;49m[30;43m=[39;49m[30;43moutput_path[39;49m[30;43m [39;49m[30;43;01mif[39;49;00m[30;43m [39;49m[30;43mrequest_save_on_cell_execute[39;49m[30;43m [39;49m[30;43;01melse[39;49;00m[30;43m [39;49m[30;43;01mNone[39;49;00m[30;43m,[39;49m
+[32m    121[39m [30;43m        [39;49m[30;43mkernel_name[39;49m[30;43m=[39;49m[30;43mkernel_name[39;49m[30;43m,[39;49m
+[32m    122[39m [30;43m        [39;49m[30;43mprogress_bar[39;49m[30;43m=[39;49m[30;43mprogress_bar[39;49m[30;43m,[39;49m
+[32m    123[39m [30;43m        [39;49m[30;43mlog_output[39;49m[30;43m=[39;49m[30;43mlog_output[39;49m[30;43m,[39;49m
+[32m    124[39m [30;43m        [39;49m[30;43mstart_timeout[39;49m[30;43m=[39;49m[30;43mstart_timeout[39;49m[30;43m,[39;49m
+[32m    125[39m [30;43m        [39;49m[30;43mstdout_file[39;49m[30;43m=[39;49m[30;43mstdout_file[39;49m[30;43m,[39;49m
+[32m    126[39m [30;43m        [39;49m[30;43mstderr_file[39;49m[30;43m=[39;49m[30;43mstderr_file[39;49m[30;43m,[39;49m
+[32m    127[39m [30;43m        [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mengine_kwargs[39;49m[30;43m,[39;49m
+[32m    128[39m [30;43m    [39;49m[30;43m)[39;49m
+[32m    130[39m [38;5;66;03m# Check for errors first (it saves on error before raising)[39;00m
+[32m    131[39m raise_for_execution_errors(nb, output_path)
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/papermill/engines.py:49[39m, in [36mPapermillEngines.execute_notebook_with_engine[39m[34m(self, engine_name, nb, kernel_name, **kwargs)[39m
+[32m     47[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mexecute_notebook_with_engine[39m([38;5;28mself[39m, engine_name, nb, kernel_name, **kwargs):
+[32m     48[39m [38;5;250m    [39m[33;03m&#34;&#34;&#34;Fetch a named engine and execute the nb object against it.&#34;&#34;&#34;[39;00m
+[32m---&gt; [39m[32m49[39m     [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43mget_engine[39;49m[30;43m([39;49m[30;43mengine_name[39;49m[30;43m)[39;49m[30;43m.[39;49m[30;43mexecute_notebook[39;49m[30;43m([39;49m[30;43mnb[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mkernel_name[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/papermill/engines.py:371[39m, in [36mEngine.execute_notebook[39m[34m(cls, nb, kernel_name, output_path, progress_bar, log_output, autosave_cell_every, **kwargs)[39m
+[32m    369[39m nb_man.notebook_start()
+[32m    370[39m [38;5;28;01mtry[39;00m:
+[32m--&gt; [39m[32m371[39m     [30;43mcls[39;49m[30;43m.[39;49m[30;43mexecute_managed_notebook[39;49m[30;43m([39;49m[30;43mnb_man[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mkernel_name[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mlog_output[39;49m[30;43m=[39;49m[30;43mlog_output[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
+[32m    372[39m [38;5;28;01mfinally[39;00m:
+[32m    373[39m     nb_man.cleanup_pbar()
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/papermill/engines.py:443[39m, in [36mNBClientEngine.execute_managed_notebook[39m[34m(cls, nb_man, kernel_name, log_output, stdout_file, stderr_file, start_timeout, execution_timeout, **kwargs)[39m
+[32m    432[39m [38;5;66;03m# Nicely handle preprocessor arguments prioritizing values set by engine[39;00m
+[32m    433[39m final_kwargs = merge_kwargs(
+[32m    434[39m     safe_kwargs,
+[32m    435[39m     timeout=execution_timeout [38;5;28;01mif[39;00m execution_timeout [38;5;28;01melse[39;00m kwargs.get([33m&#39;[39m[33mtimeout[39m[33m&#39;[39m),
+[32m   (...)[39m[32m    441[39m     stderr_file=stderr_file,
+[32m    442[39m )
+[32m--&gt; [39m[32m443[39m [38;5;28;01mreturn[39;00m [30;43mPapermillNotebookClient[39;49m[30;43m([39;49m[30;43mnb_man[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mfinal_kwargs[39;49m[30;43m)[39;49m[30;43m.[39;49m[30;43mexecute[39;49m[30;43m([39;49m[30;43m)[39;49m
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/papermill/clientwrap.py:43[39m, in [36mPapermillNotebookClient.execute[39m[34m(self, **kwargs)[39m
+[32m     40[39m [38;5;28;01mif[39;00m sys.version_info[[32m0[39m] == [32m3[39m [38;5;129;01mand[39;00m sys.version_info[[32m1[39m] &gt;= [32m8[39m [38;5;129;01mand[39;00m sys.platform.startswith([33m&#39;[39m[33mwin[39m[33m&#39;[39m):
+[32m     41[39m     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+[32m---&gt; [39m[32m43[39m [30;43m[39;49m[30;43;01mwith[39;49;00m[30;43m [39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43msetup_kernel[39;49m[30;43m([39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m[30;43m:[39;49m
+[32m     44[39m [30;43m    [39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mlog[39;49m[30;43m.[39;49m[30;43minfo[39;49m[30;43m([39;49m[30;43mf[39;49m[30;43m&#34;[39;49m[30;43mExecuting notebook with kernel: [39;49m[30;43;01m{[39;49;00m[30;43mself[39;49m[30;43m.[39;49m[30;43mkernel_name[39;49m[30;43;01m}[39;49;00m[30;43m&#34;[39;49m[30;43m)[39;49m
+[32m     45[39m [30;43m    [39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mpapermill_execute_cells[39;49m[30;43m([39;49m[30;43m)[39;49m
+
+[36mFile [39m[32m~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/contextlib.py:137[39m, in [36m_GeneratorContextManager.__enter__[39m[34m(self)[39m
+[32m    135[39m [38;5;28;01mdel[39;00m [38;5;28mself[39m.args, [38;5;28mself[39m.kwds, [38;5;28mself[39m.func
+[32m    136[39m [38;5;28;01mtry[39;00m:
+[32m--&gt; [39m[32m137[39m     [38;5;28;01mreturn[39;00m [30;43mnext[39;49m[30;43m([39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mgen[39;49m[30;43m)[39;49m
+[32m    138[39m [38;5;28;01mexcept[39;00m [38;5;167;01mStopIteration[39;00m:
+[32m    139[39m     [38;5;28;01mraise[39;00m [38;5;167;01mRuntimeError[39;00m([33m&#34;[39m[33mgenerator didn[39m[33m&#39;[39m[33mt yield[39m[33m&#34;[39m) [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;28;01mNone[39;00m
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/nbclient/client.py:600[39m, in [36mNotebookClient.setup_kernel[39m[34m(self, **kwargs)[39m
+[32m    597[39m     [38;5;28mself[39m.km = [38;5;28mself[39m.create_kernel_manager()
+[32m    599[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m.km.has_kernel:
+[32m--&gt; [39m[32m600[39m     [30;43mself[39;49m[30;43m.[39;49m[30;43mstart_new_kernel[39;49m[30;43m([39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
+[32m    602[39m [38;5;28;01mif[39;00m [38;5;28mself[39m.kc [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[32m    603[39m     [38;5;28mself[39m.start_new_kernel_client()
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/jupyter_core/utils/__init__.py:165[39m, in [36mrun_sync.&lt;locals&gt;.wrapped[39m[34m(*args, **kwargs)[39m
+[32m    162[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m loop_running:
+[32m    163[39m     [38;5;66;03m# No loop running, run the loop for this thread.[39;00m
+[32m    164[39m     loop = ensure_event_loop()
+[32m--&gt; [39m[32m165[39m     [38;5;28;01mreturn[39;00m [30;43mloop[39;49m[30;43m.[39;49m[30;43mrun_until_complete[39;49m[30;43m([39;49m[30;43minner[39;49m[30;43m)[39;49m
+[32m    167[39m [38;5;66;03m# Loop is currently running in this thread,[39;00m
+[32m    168[39m [38;5;66;03m# use a task runner.[39;00m
+[32m    169[39m [38;5;28;01mif[39;00m name [38;5;129;01mnot[39;00m [38;5;129;01min[39;00m _runner_map:
+
+[36mFile [39m[32m~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py:691[39m, in [36mBaseEventLoop.run_until_complete[39m[34m(self, future)[39m
+[32m    688[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m future.done():
+[32m    689[39m     [38;5;28;01mraise[39;00m [38;5;167;01mRuntimeError[39;00m([33m&#39;[39m[33mEvent loop stopped before Future completed.[39m[33m&#39;[39m)
+[32m--&gt; [39m[32m691[39m [38;5;28;01mreturn[39;00m [30;43mfuture[39;49m[30;43m.[39;49m[30;43mresult[39;49m[30;43m([39;49m[30;43m)[39;49m
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/nbclient/client.py:550[39m, in [36mNotebookClient.async_start_new_kernel[39m[34m(self, **kwargs)[39m
+[32m    542[39m [38;5;28;01mif[39;00m (
+[32m    543[39m     [38;5;28mhasattr[39m([38;5;28mself[39m.km, [33m&#34;[39m[33mipykernel[39m[33m&#34;[39m)
+[32m    544[39m     [38;5;129;01mand[39;00m [38;5;28mself[39m.km.ipykernel
+[32m    545[39m     [38;5;129;01mand[39;00m [38;5;28mself[39m.ipython_hist_file
+[32m    546[39m     [38;5;129;01mand[39;00m [38;5;129;01mnot[39;00m has_history_manager_arg
+[32m    547[39m ):
+[32m    548[39m     [38;5;28mself[39m.extra_arguments += [[33mf[39m[33m&#34;[39m[33m--HistoryManager.hist_file=[39m[38;5;132;01m{[39;00m[38;5;28mself[39m.ipython_hist_file[38;5;132;01m}[39;00m[33m&#34;[39m]
+[32m--&gt; [39m[32m550[39m [38;5;28;01mawait[39;00m ensure_async([38;5;28mself[39m.km.start_kernel(extra_arguments=[38;5;28mself[39m.extra_arguments, **kwargs))
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/jupyter_core/utils/__init__.py:214[39m, in [36mensure_async[39m[34m(obj)[39m
+[32m    212[39m obj = cast(Awaitable[T], obj)
+[32m    213[39m [38;5;28;01mtry[39;00m:
+[32m--&gt; [39m[32m214[39m     result = [38;5;28;01mawait[39;00m obj
+[32m    215[39m [38;5;28;01mexcept[39;00m [38;5;167;01mRuntimeError[39;00m [38;5;28;01mas[39;00m e:
+[32m    216[39m     [38;5;28;01mif[39;00m [38;5;28mstr[39m(e) == [33m&#34;[39m[33mcannot reuse already awaited coroutine[39m[33m&#34;[39m:
+[32m    217[39m         [38;5;66;03m# obj is already the coroutine&#39;s result[39;00m
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/jupyter_client/manager.py:97[39m, in [36min_pending_state.&lt;locals&gt;.wrapper[39m[34m(self, *args, **kwargs)[39m
+[32m     95[39m [38;5;28mself[39m._ready.set_exception(e)
+[32m     96[39m [38;5;28mself[39m.log.exception([38;5;28mself[39m._ready.exception())
+[32m---&gt; [39m[32m97[39m [38;5;28;01mraise[39;00m e
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/jupyter_client/manager.py:88[39m, in [36min_pending_state.&lt;locals&gt;.wrapper[39m[34m(self, *args, **kwargs)[39m
+[32m     85[39m     [38;5;28mself[39m._ready = _get_future()
+[32m     86[39m [38;5;28;01mtry[39;00m:
+[32m     87[39m     [38;5;66;03m# call wrapped method, await, and set the result or exception.[39;00m
+[32m---&gt; [39m[32m88[39m     out = [38;5;28;01mawait[39;00m method([38;5;28mself[39m, *args, **kwargs)
+[32m     89[39m     [38;5;66;03m# Add a small sleep to ensure tests can capture the state before done[39;00m
+[32m     90[39m     [38;5;28;01mawait[39;00m asyncio.sleep([32m0.01[39m)
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/jupyter_client/manager.py:441[39m, in [36mKernelManager._async_start_kernel[39m[34m(self, **kw)[39m
+[32m    429[39m [38;5;250m[39m[33;03m&#34;&#34;&#34;Starts a kernel on this host in a separate process.[39;00m
+[32m    430[39m 
+[32m    431[39m [33;03mIf random ports (port=0) are being used, this method must be called[39;00m
+[32m   (...)[39m[32m    438[39m [33;03m     and launching the kernel (e.g. Popen kwargs).[39;00m
+[32m    439[39m [33;03m&#34;&#34;&#34;[39;00m
+[32m    440[39m [38;5;28mself[39m._attempted_start = [38;5;28;01mTrue[39;00m
+[32m--&gt; [39m[32m441[39m kernel_cmd, kw = [38;5;28;01mawait[39;00m [38;5;28mself[39m._async_pre_start_kernel(**kw)
+[32m    443[39m [38;5;66;03m# launch the kernel subprocess[39;00m
+[32m    444[39m [38;5;28mself[39m.log.debug([33m&#34;[39m[33mStarting kernel: [39m[38;5;132;01m%s[39;00m[33m&#34;[39m, kernel_cmd)
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/jupyter_client/manager.py:403[39m, in [36mKernelManager._async_pre_start_kernel[39m[34m(self, **kw)[39m
+[32m    399[39m [38;5;28mself[39m._launch_args = kw.copy()
+[32m    400[39m [38;5;28;01mif[39;00m [38;5;28mself[39m.provisioner [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:  [38;5;66;03m# will not be None on restarts[39;00m
+[32m    401[39m     [38;5;28mself[39m.provisioner = KPF.instance(parent=[38;5;28mself[39m.parent).create_provisioner_instance(
+[32m    402[39m         [38;5;28mself[39m.kernel_id,
+[32m--&gt; [39m[32m403[39m         [30;43mself[39;49m[30;43m.[39;49m[30;43mkernel_spec[39;49m,
+[32m    404[39m         parent=[38;5;28mself[39m,
+[32m    405[39m     )
+[32m    406[39m kw = [38;5;28;01mawait[39;00m [38;5;28mself[39m.provisioner.pre_launch(**kw)
+[32m    407[39m kernel_cmd = kw.pop([33m&#34;[39m[33mcmd[39m[33m&#34;[39m)
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/jupyter_client/manager.py:196[39m, in [36mKernelManager.kernel_spec[39m[34m(self)[39m
+[32m    193[39m [38;5;129m@property[39m
+[32m    194[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mkernel_spec[39m([38;5;28mself[39m) -&gt; kernelspec.KernelSpec | [38;5;28;01mNone[39;00m:
+[32m    195[39m     [38;5;28;01mif[39;00m [38;5;28mself[39m._kernel_spec [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m [38;5;28mself[39m.kernel_name != [33m&#34;[39m[33m&#34;[39m:
+[32m--&gt; [39m[32m196[39m         [38;5;28mself[39m._kernel_spec = [30;43mself[39;49m[30;43m.[39;49m[30;43mkernel_spec_manager[39;49m.get_kernel_spec([38;5;28mself[39m.kernel_name)
+[32m    197[39m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m._kernel_spec
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:706[39m, in [36mTraitType.__get__[39m[34m(self, obj, cls)[39m
+[32m    704[39m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m
+[32m    705[39m [38;5;28;01melse[39;00m:
+[32m--&gt; [39m[32m706[39m     [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43mget[39;49m[30;43m([39;49m[30;43mobj[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mcls[39;49m[30;43m)[39;49m
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:654[39m, in [36mTraitType.get[39m[34m(self, obj, cls)[39m
+[32m    651[39m     value = obj._trait_values[[38;5;28mself[39m.name]
+[32m    652[39m [38;5;28;01mexcept[39;00m [38;5;167;01mKeyError[39;00m:
+[32m    653[39m     [38;5;66;03m# Check for a dynamic initializer.[39;00m
+[32m--&gt; [39m[32m654[39m     default = [30;43mobj[39;49m[30;43m.[39;49m[30;43mtrait_defaults[39;49m[30;43m([39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mname[39;49m[30;43m)[39;49m
+[32m    655[39m     [38;5;28;01mif[39;00m default [38;5;129;01mis[39;00m Undefined:
+[32m    656[39m         warn(
+[32m    657[39m             [33m&#34;[39m[33mExplicit using of Undefined as the default value [39m[33m&#34;[39m
+[32m    658[39m             [33m&#34;[39m[33mis deprecated in traitlets 5.0, and may cause [39m[33m&#34;[39m
+[32m   (...)[39m[32m    661[39m             stacklevel=[32m2[39m,
+[32m    662[39m         )
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:1905[39m, in [36mHasTraits.trait_defaults[39m[34m(self, *names, **metadata)[39m
+[32m   1902[39m         [38;5;28;01mraise[39;00m TraitError([33mf[39m[33m&#34;[39m[33m&#39;[39m[38;5;132;01m{[39;00mn[38;5;132;01m}[39;00m[33m&#39;[39m[33m is not a trait of [39m[33m&#39;[39m[38;5;132;01m{[39;00m[38;5;28mtype[39m([38;5;28mself[39m).[34m__name__[39m[38;5;132;01m}[39;00m[33m&#39;[39m[33m instances[39m[33m&#34;[39m)
+[32m   1904[39m [38;5;28;01mif[39;00m [38;5;28mlen[39m(names) == [32m1[39m [38;5;129;01mand[39;00m [38;5;28mlen[39m(metadata) == [32m0[39m:
+[32m-&gt; [39m[32m1905[39m     [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43m_get_trait_default_generator[39;49m[30;43m([39;49m[30;43mnames[39;49m[30;43m[[39;49m[30;43m0[39;49m[30;43m][39;49m[30;43m)[39;49m[30;43m([39;49m[30;43mself[39;49m[30;43m)[39;49m  [38;5;66;03m# type:ignore[no-any-return][39;00m
+[32m   1907[39m trait_names = [38;5;28mself[39m.trait_names(**metadata)
+[32m   1908[39m trait_names.extend(names)
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:1260[39m, in [36mEventHandler.__call__[39m[34m(self, *args, **kwargs)[39m
+[32m   1258[39m [38;5;250m[39m[33;03m&#34;&#34;&#34;Pass `*args` and `**kwargs` to the handler&#39;s function if it exists.&#34;&#34;&#34;[39;00m
+[32m   1259[39m [38;5;28;01mif[39;00m [38;5;28mhasattr[39m([38;5;28mself[39m, [33m&#34;[39m[33mfunc[39m[33m&#34;[39m):
+[32m-&gt; [39m[32m1260[39m     [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43mfunc[39;49m[30;43m([39;49m[30;43m*[39;49m[30;43margs[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
+[32m   1261[39m [38;5;28;01melse[39;00m:
+[32m   1262[39m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m._init_call(*args, **kwargs)
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/jupyter_client/manager.py:162[39m, in [36mKernelManager._kernel_spec_manager_default[39m[34m(self)[39m
+[32m    160[39m [38;5;129m@default[39m([33m&#34;[39m[33mkernel_spec_manager[39m[33m&#34;[39m)
+[32m    161[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34m_kernel_spec_manager_default[39m([38;5;28mself[39m) -&gt; kernelspec.KernelSpecManager:
+[32m--&gt; [39m[32m162[39m     [38;5;28;01mreturn[39;00m kernelspec.KernelSpecManager(data_dir=[30;43mself[39;49m[30;43m.[39;49m[30;43mdata_dir[39;49m)
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:706[39m, in [36mTraitType.__get__[39m[34m(self, obj, cls)[39m
+[32m    704[39m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m
+[32m    705[39m [38;5;28;01melse[39;00m:
+[32m--&gt; [39m[32m706[39m     [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43mget[39;49m[30;43m([39;49m[30;43mobj[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mcls[39;49m[30;43m)[39;49m
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:668[39m, in [36mTraitType.get[39m[34m(self, obj, cls)[39m
+[32m    666[39m [38;5;28;01mtry[39;00m:
+[32m    667[39m     obj._cross_validation_lock = [38;5;28;01mTrue[39;00m
+[32m--&gt; [39m[32m668[39m     value = [30;43mself[39;49m[30;43m.[39;49m[30;43m_validate[39;49m[30;43m([39;49m[30;43mobj[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mdefault[39;49m[30;43m)[39;49m
+[32m    669[39m [38;5;28;01mfinally[39;00m:
+[32m    670[39m     obj._cross_validation_lock = _cross_validation_lock
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:741[39m, in [36mTraitType._validate[39m[34m(self, obj, value)[39m
+[32m    739[39m     [38;5;28;01mreturn[39;00m value
+[32m    740[39m [38;5;28;01mif[39;00m [38;5;28mhasattr[39m([38;5;28mself[39m, [33m&#34;[39m[33mvalidate[39m[33m&#34;[39m):
+[32m--&gt; [39m[32m741[39m     value = [30;43mself[39;49m[30;43m.[39;49m[30;43mvalidate[39;49m[30;43m([39;49m[30;43mobj[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mvalue[39;49m[30;43m)[39;49m
+[32m    742[39m [38;5;28;01mif[39;00m obj._cross_validation_lock [38;5;129;01mis[39;00m [38;5;28;01mFalse[39;00m:
+[32m    743[39m     value = [38;5;28mself[39m._cross_validate(obj, value)
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:2962[39m, in [36mUnicode.validate[39m[34m(self, obj, value)[39m
+[32m   2960[39m         msg = [33m&#34;[39m[33mCould not decode [39m[38;5;132;01m{!r}[39;00m[33m for unicode trait [39m[33m&#39;[39m[38;5;132;01m{}[39;00m[33m&#39;[39m[33m of [39m[38;5;132;01m{}[39;00m[33m instance.[39m[33m&#34;[39m
+[32m   2961[39m         [38;5;28;01mraise[39;00m TraitError(msg.format(value, [38;5;28mself[39m.name, class_of(obj))) [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01me[39;00m
+[32m-&gt; [39m[32m2962[39m [30;43mself[39;49m[30;43m.[39;49m[30;43merror[39;49m[30;43m([39;49m[30;43mobj[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mvalue[39;49m[30;43m)[39;49m
+
+[36mFile [39m[32m~/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:850[39m, in [36mTraitType.error[39m[34m(self, obj, value, error, info)[39m
+[32m    844[39m [38;5;28;01melse[39;00m:
+[32m    845[39m     e = [33m&#34;[39m[33mThe [39m[33m&#39;[39m[38;5;132;01m{}[39;00m[33m&#39;[39m[33m trait expected [39m[38;5;132;01m{}[39;00m[33m, not [39m[38;5;132;01m{}[39;00m[33m.[39m[33m&#34;[39m.format(
+[32m    846[39m         [38;5;28mself[39m.name,
+[32m    847[39m         info [38;5;129;01mor[39;00m [38;5;28mself[39m.info(),
+[32m    848[39m         describe([33m&#34;[39m[33mthe[39m[33m&#34;[39m, value),
+[32m    849[39m     )
+[32m--&gt; [39m[32m850[39m [38;5;28;01mraise[39;00m TraitError(e)
+
+[31mTraitError[39m: The &#39;data_dir&#39; trait of an AsyncKernelManager instance expected a unicode string, not the PosixPath PosixPath(&#39;/tmp/pytest-of-tom/pytest-139/test_photometry_runner_with_va0/stellarphot&#39;).
+----------------------------- Captured stderr call -----------------------------
+
+Executing:   0%|          | 0/12 [00:00&lt;?, ?cell/s]
+Executing:   0%|          | 0/12 [00:00&lt;?, ?cell/s]
+------------------------------ Captured log call -------------------------------
+ERROR    traitlets:manager.py:96 The &#39;data_dir&#39; trait of an AsyncKernelManager instance expected a unicode string, not the PosixPath PosixPath(&#39;/tmp/pytest-of-tom/pytest-139/test_photometry_runner_with_va0/stellarphot&#39;).
+Traceback (most recent call last):
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py&#34;, line 651, in get
+    value = obj._trait_values[self.name]
+            ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: &#39;kernel_spec_manager&#39;
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py&#34;, line 651, in get
+    value = obj._trait_values[self.name]
+            ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: &#39;data_dir&#39;
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/jupyter_client/manager.py&#34;, line 88, in wrapper
+    out = await method(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/jupyter_client/manager.py&#34;, line 441, in _async_start_kernel
+    kernel_cmd, kw = await self._async_pre_start_kernel(**kw)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/jupyter_client/manager.py&#34;, line 403, in _async_pre_start_kernel
+    self.kernel_spec,
+    ^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/jupyter_client/manager.py&#34;, line 196, in kernel_spec
+    self._kernel_spec = self.kernel_spec_manager.get_kernel_spec(self.kernel_name)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py&#34;, line 706, in __get__
+    return self.get(obj, cls)  # type:ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py&#34;, line 654, in get
+    default = obj.trait_defaults(self.name)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py&#34;, line 1905, in trait_defaults
+    return self._get_trait_default_generator(names[0])(self)  # type:ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py&#34;, line 1260, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/jupyter_client/manager.py&#34;, line 162, in _kernel_spec_manager_default
+    return kernelspec.KernelSpecManager(data_dir=self.data_dir)
+                                                 ^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py&#34;, line 706, in __get__
+    return self.get(obj, cls)  # type:ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py&#34;, line 668, in get
+    value = self._validate(obj, default)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py&#34;, line 741, in _validate
+    value = self.validate(obj, value)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py&#34;, line 2962, in validate
+    self.error(obj, value)
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py&#34;, line 850, in error
+    raise TraitError(e)
+traitlets.traitlets.TraitError: The &#39;data_dir&#39; trait of an AsyncKernelManager instance expected a unicode string, not the PosixPath PosixPath(&#39;/tmp/pytest-of-tom/pytest-139/test_photometry_runner_with_va0/stellarphot&#39;).
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/stellarphot/settings/tests/test_photometry_runner.py:97: assert &#39;InconsistentTableError&#39; in &#39;{\n &#34;cells&#34;: [\n  {\n   &#34;cell_type&#34;: &#34;markdown&#34;,\n   &#34;id&#34;: &#34;da3cb3d4-b46f-4727-a3a6-e8651ecb3c09&#34;,\n   &#34;metadata&#34;: {\..._time&#34;: &#34;2026-05-09T16:40:18.505074+00:00&#34;,\n   &#34;version&#34;: &#34;2.7.0&#34;\n  }\n },\n &#34;nbformat&#34;: 4,\n &#34;nbformat_minor&#34;: 5\n}&#39;
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/stellarphot/settings/models.py:410
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/stellarphot/settings/models.py:410: PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: &#39;disabled&#39;). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.13/migration/
+    Field(
+
+venv/lib/python3.12/site-packages/stellarphot/settings/models.py:452
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/stellarphot/settings/models.py:452: PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: &#39;show_only_dirs&#39;). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.13/migration/
+    image_folder: Path = Field(
+
+venv/lib/python3.12/site-packages/stellarphot/settings/models.py:457
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/stellarphot/settings/models.py:457: PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: &#39;filter_pattern&#39;). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.13/migration/
+    aperture_settings_file: Path = Field(filter_pattern=&#34;*.json&#34;, default=&#34;&#34;)
+
+venv/lib/python3.12/site-packages/stellarphot/settings/models.py:458
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/stellarphot/settings/models.py:458: PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: &#39;filter_pattern&#39;). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.13/migration/
+    aperture_locations_file: Path = Field(
+
+venv/lib/python3.12/site-packages/stellarphot/settings/models.py:1236
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/stellarphot/settings/models.py:1236: PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: &#39;tooltip&#39;). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.13/migration/
+    Field(
+
+venv/lib/python3.12/site-packages/bqscales/traits.py:56
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/bqscales/traits.py:56: DeprecationWarning: metadata {&#39;args&#39;: (None,)} was set from the constructor. With traitlets 4.1, metadata should be set using the .tag() method, e.g., Int().tag(key1=&#39;value1&#39;, key2=&#39;value2&#39;)
+    super(Date, self).__init__(args=args, **kwargs)
+
+venv/lib/python3.12/site-packages/traitlets/traitlets.py:3630
+venv/lib/python3.12/site-packages/traitlets/traitlets.py:3630
+venv/lib/python3.12/site-packages/traitlets/traitlets.py:3630
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:3630: DeprecationWarning: Traits should be given as instances, not types (for example, `Int()`, not `Int`). Passing types is deprecated in traitlets 4.1.
+    super().__init__(trait=trait, default_value=default_value, **kwargs)
+
+venv/lib/python3.12/site-packages/traitlets/traitlets.py:3630
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:3630: DeprecationWarning: metadata {&#39;value&#39;: None} was set from the constructor. With traitlets 4.1, metadata should be set using the .tag() method, e.g., Int().tag(key1=&#39;value1&#39;, key2=&#39;value2&#39;)
+    super().__init__(trait=trait, default_value=default_value, **kwargs)
+
+venv/lib/python3.12/site-packages/traitlets/traitlets.py:3928
+venv/lib/python3.12/site-packages/traitlets/traitlets.py:3928
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:3928: DeprecationWarning: Keyword `trait` is deprecated in traitlets 5.0, use `value_trait` instead
+    warn(
+
+venv/lib/python3.12/site-packages/traitlets/traitlets.py:3973
+venv/lib/python3.12/site-packages/traitlets/traitlets.py:3973
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:3973: DeprecationWarning: Traits should be given as instances, not types (for example, `Int()`, not `Int`) Passing types is deprecated in traitlets 4.1.
+    warn(  # type:ignore[unreachable]
+
+venv/lib/python3.12/site-packages/traitlets/traitlets.py:4251
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:4251: DeprecationWarning: metadata {&#39;default&#39;: None} was set from the constructor. With traitlets 4.1, metadata should be set using the .tag() method, e.g., Int().tag(key1=&#39;value1&#39;, key2=&#39;value2&#39;)
+    super().__init__(default_value=default_value, **kwargs)
+
+venv/lib/python3.12/site-packages/stellarphot/gui_tools/tests/test_profile_and_comps.py::TestComparisonAndSeeing::test_init
+venv/lib/python3.12/site-packages/stellarphot/gui_tools/tests/test_seeing_profile.py::test_seeing_profile_object_creation
+venv/lib/python3.12/site-packages/stellarphot/gui_tools/tests/test_seeing_profile.py::test_seeing_profile_no_observatory
+venv/lib/python3.12/site-packages/stellarphot/gui_tools/tests/test_seeing_profile.py::test_seeing_profile_with_observatory[None]
+venv/lib/python3.12/site-packages/stellarphot/gui_tools/tests/test_seeing_profile.py::test_seeing_profile_with_observatory[dummy]
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:1393: DeprecationWarning: Passing unrecognized arguments to super(ChooseOrMakeNew).__init__(_testing_path=None).
+  object.__init__() takes exactly one argument (the instance to initialize)
+  This is deprecated in traitlets 4.2.This error will be raised in a future release of traitlets.
+    warn(
+
+venv/lib/python3.12/site-packages/stellarphot/gui_tools/tests/test_seeing_profile.py::test_seeing_profile_properties
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:1393: DeprecationWarning: Passing unrecognized arguments to super(ChooseOrMakeNew).__init__(_testing_path=PosixPath(&#39;/tmp/pytest-of-tom/pytest-139/test_seeing_profile_properties0&#39;)).
+  object.__init__() takes exactly one argument (the instance to initialize)
+  This is deprecated in traitlets 4.2.This error will be raised in a future release of traitlets.
+    warn(
+
+venv/lib/python3.12/site-packages/stellarphot/gui_tools/tests/test_seeing_profile.py::test_seeing_profile_save_apertures
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:1393: DeprecationWarning: Passing unrecognized arguments to super(ChooseOrMakeNew).__init__(_testing_path=PosixPath(&#39;/tmp/pytest-of-tom/pytest-139/test_seeing_profile_save_apert0&#39;)).
+  object.__init__() takes exactly one argument (the instance to initialize)
+  This is deprecated in traitlets 4.2.This error will be raised in a future release of traitlets.
+    warn(
+
+venv/lib/python3.12/site-packages/stellarphot/gui_tools/tests/test_seeing_profile.py::test_seeing_profile_save_box_title
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:1393: DeprecationWarning: Passing unrecognized arguments to super(ChooseOrMakeNew).__init__(_testing_path=PosixPath(&#39;/tmp/pytest-of-tom/pytest-139/test_seeing_profile_save_box_t0&#39;)).
+  object.__init__() takes exactly one argument (the instance to initialize)
+  This is deprecated in traitlets 4.2.This error will be raised in a future release of traitlets.
+    warn(
+
+venv/lib/python3.12/site-packages/stellarphot/gui_tools/tests/test_seeing_profile.py::test_seeing_profile_error_messages_no_star
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/traitlets/traitlets.py:1393: DeprecationWarning: Passing unrecognized arguments to super(ChooseOrMakeNew).__init__(_testing_path=PosixPath(&#39;/tmp/pytest-of-tom/pytest-139/test_seeing_profile_error_mess0&#39;)).
+  object.__init__() takes exactly one argument (the instance to initialize)
+  This is deprecated in traitlets 4.2.This error will be raised in a future release of traitlets.
+    warn(
+
+venv/lib/python3.12/site-packages/stellarphot/photometry/tests/test_detection.py::test_fwhm_computation[fit]
+venv/lib/python3.12/site-packages/stellarphot/photometry/tests/test_detection.py::test_fwhm_computation[profile]
+venv/lib/python3.12/site-packages/stellarphot/photometry/tests/test_detection.py::test_fwhm_computation[moments]
+venv/lib/python3.12/site-packages/stellarphot/photometry/tests/test_profiles.py::TestCenter::test_find_center_dim_star
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/astropy/wcs/wcs.py:648: FITSFixedWarning: RADECSYS= &#39;FK5 &#39; / Equatorial coordinate system 
+  the RADECSYS keyword is deprecated, use RADESYSa.
+    wcsprm = Wcsprm(
+
+venv/lib/python3.12/site-packages/stellarphot/settings/tests/test_astropy_pydantic.py: 1 warning
+venv/lib/python3.12/site-packages/stellarphot/settings/tests/test_custom_widgets.py: 76 warnings
+venv/lib/python3.12/site-packages/stellarphot/settings/tests/test_models.py: 15 warnings
+venv/lib/python3.12/site-packages/stellarphot/settings/tests/test_photometry_runner.py: 1 warning
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stellarphot-dplujw6a/venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:2599: RuntimeWarning: invalid value encountered in do_format (vectorized)
+    outputs = ufunc(*args, out=...)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED venv/lib/python3.12/site-packages/stellarphot/settings/tests/test_photometry_runner.py::TestPhotometryRunner::test_photometry_runner_with_valid_settings[True]
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 373 passed, 30 skipped, 121 warnings in 141.58s (0:02:21)
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (274)</strong></summary>
+<table class="meta-table">
+
+<tr><td>aggdraw</td><td>1.4.1</td></tr>
+
+<tr><td>aiobotocore</td><td>3.7.0</td></tr>
+
+<tr><td>aiohappyeyeballs</td><td>2.6.1</td></tr>
+
+<tr><td>aiohttp</td><td>3.13.5</td></tr>
+
+<tr><td>aioitertools</td><td>0.13.0</td></tr>
+
+<tr><td>aiosignal</td><td>1.4.0</td></tr>
+
+<tr><td>annotated-doc</td><td>0.0.4</td></tr>
+
+<tr><td>annotated-types</td><td>0.7.0</td></tr>
+
+<tr><td>anyio</td><td>4.13.0</td></tr>
+
+<tr><td>argcomplete</td><td>3.6.3</td></tr>
+
+<tr><td>argon2-cffi</td><td>25.1.0</td></tr>
+
+<tr><td>argon2-cffi-bindings</td><td>25.1.0</td></tr>
+
+<tr><td>arrow</td><td>1.4.0</td></tr>
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-healpix</td><td>1.1.3</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>astroquery</td><td>0.4.11</td></tr>
+
+<tr><td>astroscrappy</td><td>1.3.0</td></tr>
+
+<tr><td>astrowidgets</td><td>0.3.0</td></tr>
+
+<tr><td>asttokens</td><td>3.0.1</td></tr>
+
+<tr><td>async-lru</td><td>2.3.0</td></tr>
+
+<tr><td>attrs</td><td>26.1.0</td></tr>
+
+<tr><td>babel</td><td>2.18.0</td></tr>
+
+<tr><td>beautifulsoup4</td><td>4.14.3</td></tr>
+
+<tr><td>black</td><td>26.3.1</td></tr>
+
+<tr><td>bleach</td><td>6.3.0</td></tr>
+
+<tr><td>bokeh</td><td>3.9.0</td></tr>
+
+<tr><td>botocore</td><td>1.43.0</td></tr>
+
+<tr><td>bottleneck</td><td>1.6.0</td></tr>
+
+<tr><td>bqplot</td><td>0.13.1</td></tr>
+
+<tr><td>bqscales</td><td>0.3.7</td></tr>
+
+<tr><td>bracex</td><td>2.6</td></tr>
+
+<tr><td>cachetools</td><td>7.1.1</td></tr>
+
+<tr><td>casefy</td><td>1.1.0</td></tr>
+
+<tr><td>ccdproc</td><td>2.5.1</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>cffi</td><td>2.0.0</td></tr>
+
+<tr><td>cfgv</td><td>3.5.0</td></tr>
+
+<tr><td>chardet</td><td>7.4.3</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>click</td><td>8.3.3</td></tr>
+
+<tr><td>cloudpickle</td><td>3.1.2</td></tr>
+
+<tr><td>colorama</td><td>0.4.6</td></tr>
+
+<tr><td>comm</td><td>0.2.3</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>cryptography</td><td>48.0.0</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>dask</td><td>2026.3.0</td></tr>
+
+<tr><td>dask-image</td><td>2025.11.0</td></tr>
+
+<tr><td>datamodel-code-generator</td><td>0.40.0</td></tr>
+
+<tr><td>debugpy</td><td>1.8.20</td></tr>
+
+<tr><td>decorator</td><td>5.2.1</td></tr>
+
+<tr><td>deepdiff</td><td>9.0.0</td></tr>
+
+<tr><td>defusedxml</td><td>0.7.1</td></tr>
+
+<tr><td>dirty-equals</td><td>0.11</td></tr>
+
+<tr><td>distlib</td><td>0.4.0</td></tr>
+
+<tr><td>donfig</td><td>0.8.1.post1</td></tr>
+
+<tr><td>entrypoints</td><td>0.4</td></tr>
+
+<tr><td>et-xmlfile</td><td>2.0.0</td></tr>
+
+<tr><td>executing</td><td>2.2.1</td></tr>
+
+<tr><td>fastjsonschema</td><td>2.21.2</td></tr>
+
+<tr><td>fbpca</td><td>1.0</td></tr>
+
+<tr><td>filelock</td><td>3.29.0</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>fqdn</td><td>1.5.1</td></tr>
+
+<tr><td>frictionless</td><td>5.19.0</td></tr>
+
+<tr><td>frozenlist</td><td>1.8.0</td></tr>
+
+<tr><td>fsspec</td><td>2026.4.0</td></tr>
+
+<tr><td>gast</td><td>0.7.0</td></tr>
+
+<tr><td>genson</td><td>1.3.0</td></tr>
+
+<tr><td>ginga</td><td>6.0.0</td></tr>
+
+<tr><td>google-crc32c</td><td>1.8.0</td></tr>
+
+<tr><td>h11</td><td>0.16.0</td></tr>
+
+<tr><td>html5lib</td><td>1.1</td></tr>
+
+<tr><td>httpcore</td><td>1.0.9</td></tr>
+
+<tr><td>httpx</td><td>0.28.1</td></tr>
+
+<tr><td>humanize</td><td>4.15.0</td></tr>
+
+<tr><td>hypothesis</td><td>6.152.4</td></tr>
+
+<tr><td>identify</td><td>2.6.19</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>imageio</td><td>2.37.3</td></tr>
+
+<tr><td>immutables</td><td>0.21</td></tr>
+
+<tr><td>inflect</td><td>7.5.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>ipyautoui</td><td>0.9.0</td></tr>
+
+<tr><td>ipydatagrid</td><td>1.3.2</td></tr>
+
+<tr><td>ipyevents</td><td>2.0.4</td></tr>
+
+<tr><td>ipyfilechooser</td><td>0.6.0</td></tr>
+
+<tr><td>ipykernel</td><td>7.2.0</td></tr>
+
+<tr><td>ipython</td><td>9.13.0</td></tr>
+
+<tr><td>ipython-pygments-lexers</td><td>1.1.1</td></tr>
+
+<tr><td>ipyvue</td><td>1.12.0</td></tr>
+
+<tr><td>ipyvuetify</td><td>1.11.3</td></tr>
+
+<tr><td>ipywidgets</td><td>8.1.8</td></tr>
+
+<tr><td>isodate</td><td>0.7.2</td></tr>
+
+<tr><td>isoduration</td><td>20.11.0</td></tr>
+
+<tr><td>isort</td><td>7.0.0</td></tr>
+
+<tr><td>jaraco-classes</td><td>3.4.0</td></tr>
+
+<tr><td>jaraco-context</td><td>6.1.2</td></tr>
+
+<tr><td>jaraco-functools</td><td>4.4.0</td></tr>
+
+<tr><td>jedi</td><td>0.20.0</td></tr>
+
+<tr><td>jeepney</td><td>0.9.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>jmespath</td><td>1.1.0</td></tr>
+
+<tr><td>joblib</td><td>1.5.3</td></tr>
+
+<tr><td>json5</td><td>0.14.0</td></tr>
+
+<tr><td>jsonpointer</td><td>3.1.1</td></tr>
+
+<tr><td>jsonref</td><td>1.1.0</td></tr>
+
+<tr><td>jsonschema</td><td>4.26.0</td></tr>
+
+<tr><td>jsonschema-specifications</td><td>2025.9.1</td></tr>
+
+<tr><td>jupyter-app-launcher</td><td>0.3.2</td></tr>
+
+<tr><td>jupyter-client</td><td>8.8.0</td></tr>
+
+<tr><td>jupyter-core</td><td>5.9.1</td></tr>
+
+<tr><td>jupyter-events</td><td>0.12.1</td></tr>
+
+<tr><td>jupyter-lsp</td><td>2.3.1</td></tr>
+
+<tr><td>jupyter-server</td><td>2.18.2</td></tr>
+
+<tr><td>jupyter-server-proxy</td><td>4.5.0</td></tr>
+
+<tr><td>jupyter-server-terminals</td><td>0.5.4</td></tr>
+
+<tr><td>jupyterlab</td><td>4.5.7</td></tr>
+
+<tr><td>jupyterlab-pygments</td><td>0.3.0</td></tr>
+
+<tr><td>jupyterlab-server</td><td>2.28.0</td></tr>
+
+<tr><td>jupyterlab-widgets</td><td>3.0.16</td></tr>
+
+<tr><td>keyring</td><td>25.7.0</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>lark</td><td>1.3.1</td></tr>
+
+<tr><td>lazy-loader</td><td>0.5</td></tr>
+
+<tr><td>lightkurve</td><td>2.6.0</td></tr>
+
+<tr><td>locket</td><td>1.0.0</td></tr>
+
+<tr><td>markdown</td><td>3.10.2</td></tr>
+
+<tr><td>markdown-it-py</td><td>4.2.0</td></tr>
+
+<tr><td>marko</td><td>2.2.2</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>matplotlib-inline</td><td>0.2.2</td></tr>
+
+<tr><td>mdurl</td><td>0.1.2</td></tr>
+
+<tr><td>memoization</td><td>0.4.0</td></tr>
+
+<tr><td>mistune</td><td>3.2.1</td></tr>
+
+<tr><td>more-itertools</td><td>11.0.2</td></tr>
+
+<tr><td>multidict</td><td>6.7.1</td></tr>
+
+<tr><td>mypy-extensions</td><td>1.1.0</td></tr>
+
+<tr><td>narwhals</td><td>2.21.0</td></tr>
+
+<tr><td>nbclient</td><td>0.10.4</td></tr>
+
+<tr><td>nbconvert</td><td>7.17.1</td></tr>
+
+<tr><td>nbformat</td><td>5.10.4</td></tr>
+
+<tr><td>nest-asyncio</td><td>1.6.0</td></tr>
+
+<tr><td>networkx</td><td>3.6.1</td></tr>
+
+<tr><td>nodeenv</td><td>1.10.0</td></tr>
+
+<tr><td>notebook-shim</td><td>0.2.4</td></tr>
+
+<tr><td>numcodecs</td><td>0.16.5</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>openpyxl</td><td>3.1.5</td></tr>
+
+<tr><td>orderly-set</td><td>5.5.0</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>palettable</td><td>3.3.3</td></tr>
+
+<tr><td>pandas</td><td>2.3.3</td></tr>
+
+<tr><td>pandocfilters</td><td>1.5.1</td></tr>
+
+<tr><td>papermill</td><td>2.7.0</td></tr>
+
+<tr><td>parso</td><td>0.8.7</td></tr>
+
+<tr><td>partd</td><td>1.4.2</td></tr>
+
+<tr><td>pathspec</td><td>1.1.1</td></tr>
+
+<tr><td>patsy</td><td>1.0.2</td></tr>
+
+<tr><td>petl</td><td>1.7.17</td></tr>
+
+<tr><td>pexpect</td><td>4.9.0</td></tr>
+
+<tr><td>photutils</td><td>2.3.0</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>pims</td><td>0.7</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pre-commit</td><td>4.6.0</td></tr>
+
+<tr><td>prometheus-client</td><td>0.25.0</td></tr>
+
+<tr><td>prompt-toolkit</td><td>3.0.52</td></tr>
+
+<tr><td>propcache</td><td>0.5.2</td></tr>
+
+<tr><td>psutil</td><td>7.2.2</td></tr>
+
+<tr><td>ptyprocess</td><td>0.7.0</td></tr>
+
+<tr><td>pure-eval</td><td>0.2.3</td></tr>
+
+<tr><td>puremagic</td><td>2.2.0</td></tr>
+
+<tr><td>py2vega</td><td>0.7.0</td></tr>
+
+<tr><td>pyarrow</td><td>24.0.0</td></tr>
+
+<tr><td>pyavm</td><td>0.9.9</td></tr>
+
+<tr><td>pycparser</td><td>3.0</td></tr>
+
+<tr><td>pydantic</td><td>2.13.4</td></tr>
+
+<tr><td>pydantic-core</td><td>2.46.4</td></tr>
+
+<tr><td>pydantic-extra-types</td><td>2.11.1</td></tr>
+
+<tr><td>pydantic-settings</td><td>2.14.1</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pyproject-api</td><td>1.10.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-arraydiff</td><td>0.6.1</td></tr>
+
+<tr><td>pytest-astropy</td><td>0.11.0</td></tr>
+
+<tr><td>pytest-astropy-header</td><td>0.2.2</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-doctestplus</td><td>1.7.1</td></tr>
+
+<tr><td>pytest-filter-subpackage</td><td>0.2.0</td></tr>
+
+<tr><td>pytest-mock</td><td>3.15.1</td></tr>
+
+<tr><td>pytest-remotedata</td><td>0.4.1</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-calamine</td><td>0.6.2</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>python-discovery</td><td>1.3.0</td></tr>
+
+<tr><td>python-dotenv</td><td>1.2.2</td></tr>
+
+<tr><td>python-json-logger</td><td>4.1.0</td></tr>
+
+<tr><td>python-slugify</td><td>8.0.4</td></tr>
+
+<tr><td>pytokens</td><td>0.4.1</td></tr>
+
+<tr><td>pytz</td><td>2026.2</td></tr>
+
+<tr><td>pyvo</td><td>1.8.1</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>pyzmq</td><td>27.1.0</td></tr>
+
+<tr><td>qtpy</td><td>2.4.3</td></tr>
+
+<tr><td>referencing</td><td>0.37.0</td></tr>
+
+<tr><td>regions</td><td>0.11</td></tr>
+
+<tr><td>reproject</td><td>0.19.0</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>rfc3339-validator</td><td>0.1.4</td></tr>
+
+<tr><td>rfc3986</td><td>2.0.0</td></tr>
+
+<tr><td>rfc3986-validator</td><td>0.1.1</td></tr>
+
+<tr><td>rfc3987-syntax</td><td>1.1.0</td></tr>
+
+<tr><td>rich</td><td>15.0.0</td></tr>
+
+<tr><td>rpds-py</td><td>0.30.0</td></tr>
+
+<tr><td>ruff</td><td>0.15.12</td></tr>
+
+<tr><td>s3fs</td><td>2026.4.0</td></tr>
+
+<tr><td>scikit-image</td><td>0.26.0</td></tr>
+
+<tr><td>scikit-learn</td><td>1.8.0</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>secretstorage</td><td>3.5.0</td></tr>
+
+<tr><td>send2trash</td><td>2.1.0</td></tr>
+
+<tr><td>setuptools</td><td>82.0.1</td></tr>
+
+<tr><td>shellingham</td><td>1.5.4</td></tr>
+
+<tr><td>simpervisor</td><td>1.0.0</td></tr>
+
+<tr><td>simpleeval</td><td>1.0.7</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>slicerator</td><td>1.1.0</td></tr>
+
+<tr><td>sortedcontainers</td><td>2.4.0</td></tr>
+
+<tr><td>soupsieve</td><td>2.8.3</td></tr>
+
+<tr><td>stack-data</td><td>0.6.3</td></tr>
+
+<tr><td>stellarphot</td><td>2.0.3</td></tr>
+
+<tr><td>tabulate</td><td>0.10.0</td></tr>
+
+<tr><td>tenacity</td><td>9.1.4</td></tr>
+
+<tr><td>terminado</td><td>0.18.1</td></tr>
+
+<tr><td>text-unidecode</td><td>1.3</td></tr>
+
+<tr><td>threadpoolctl</td><td>3.6.0</td></tr>
+
+<tr><td>tifffile</td><td>2026.5.2</td></tr>
+
+<tr><td>tinycss2</td><td>1.4.0</td></tr>
+
+<tr><td>tomli-w</td><td>1.2.0</td></tr>
+
+<tr><td>toolz</td><td>1.1.0</td></tr>
+
+<tr><td>tornado</td><td>6.5.5</td></tr>
+
+<tr><td>tox</td><td>4.53.1</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>traitlets</td><td>5.15.0</td></tr>
+
+<tr><td>traittypes</td><td>0.2.3</td></tr>
+
+<tr><td>typeguard</td><td>4.5.1</td></tr>
+
+<tr><td>typer</td><td>0.25.1</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>typing-inspection</td><td>0.4.2</td></tr>
+
+<tr><td>tzdata</td><td>2026.2</td></tr>
+
+<tr><td>uncertainties</td><td>3.2.3</td></tr>
+
+<tr><td>uri-template</td><td>1.3.0</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>validators</td><td>0.35.0</td></tr>
+
+<tr><td>virtualenv</td><td>21.3.1</td></tr>
+
+<tr><td>wcmatch</td><td>10.1</td></tr>
+
+<tr><td>wcwidth</td><td>0.7.0</td></tr>
+
+<tr><td>webcolors</td><td>25.10.0</td></tr>
+
+<tr><td>webencodings</td><td>0.5.1</td></tr>
+
+<tr><td>websocket-client</td><td>1.9.0</td></tr>
+
+<tr><td>widgetsnbextension</td><td>4.0.15</td></tr>
+
+<tr><td>wrapt</td><td>2.1.2</td></tr>
+
+<tr><td>xlsxdatagrid</td><td>0.3.4</td></tr>
+
+<tr><td>xlsxwriter</td><td>3.2.9</td></tr>
+
+<tr><td>xyzservices</td><td>2026.3.0</td></tr>
+
+<tr><td>yarl</td><td>1.23.0</td></tr>
+
+<tr><td>zarr</td><td>3.2.1</td></tr>
+
+</table>
+</details>
+
+</body></html>

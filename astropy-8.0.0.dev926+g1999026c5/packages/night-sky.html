@@ -1,0 +1,167 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>night-sky - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>night-sky</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.4.0</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>44.0s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>night_sky</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>......
+--- stderr ---
+night-sky-klmetptg/venv/lib/python3.12/site-packages/pluggy/_manager.py&#34;, line 120 in _hookexec
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/pluggy/_hooks.py&#34;, line 512 in __call__
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/_pytest/python.py&#34;, line 1720 in runtest
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/_pytest/runner.py&#34;, line 179 in pytest_runtest_call
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/pluggy/_callers.py&#34;, line 121 in _multicall
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/pluggy/_manager.py&#34;, line 120 in _hookexec
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/pluggy/_hooks.py&#34;, line 512 in __call__
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/_pytest/runner.py&#34;, line 245 in &lt;lambda&gt;
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/_pytest/runner.py&#34;, line 353 in from_call
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/_pytest/runner.py&#34;, line 244 in call_and_report
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/_pytest/runner.py&#34;, line 137 in runtestprotocol
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/_pytest/runner.py&#34;, line 118 in pytest_runtest_protocol
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/pluggy/_callers.py&#34;, line 121 in _multicall
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/pluggy/_manager.py&#34;, line 120 in _hookexec
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/pluggy/_hooks.py&#34;, line 512 in __call__
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/_pytest/main.py&#34;, line 396 in pytest_runtestloop
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/pluggy/_callers.py&#34;, line 121 in _multicall
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/pluggy/_manager.py&#34;, line 120 in _hookexec
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/pluggy/_hooks.py&#34;, line 512 in __call__
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/_pytest/main.py&#34;, line 372 in _main
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/_pytest/main.py&#34;, line 318 in wrap_session
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/_pytest/main.py&#34;, line 365 in pytest_cmdline_main
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/pluggy/_callers.py&#34;, line 121 in _multicall
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/pluggy/_manager.py&#34;, line 120 in _hookexec
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/pluggy/_hooks.py&#34;, line 512 in __call__
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/_pytest/config/__init__.py&#34;, line 199 in main
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/_pytest/config/__init__.py&#34;, line 223 in console_main
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-night-sky-klmetptg/venv/lib/python3.12/site-packages/pytest/__main__.py&#34;, line 9 in &lt;module&gt;
+  File &#34;&lt;frozen runpy&gt;&#34;, line 88 in _run_code
+  File &#34;&lt;frozen runpy&gt;&#34;, line 198 in _run_module_as_main
+
+Extension modules: numpy._core._multiarray_umath, numpy.linalg._umath_linalg, erfa.ufunc, astropy.time._parse_times, astropy.table._column_mixins, astropy.table._np_utils, yaml._yaml, astropy.io.ascii.cparser, astropy.utils.xml._iterparser, astropy.io.fits._utils, astropy.io.fits.hdu.compressed._compression, astropy.io.votable.fast_converters, astropy.io.votable.tablewriter, PyQt5.QtCore, PyQt5.QtGui, PyQt5.QtWidgets, PIL._imaging, PyQt5.QtSvg, PyQt5.QtTest (total: 19)
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (29)</strong></summary>
+<table class="meta-table">
+
+<tr><td>ast-serialize</td><td>0.3.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>black</td><td>26.3.1</td></tr>
+
+<tr><td>click</td><td>8.3.3</td></tr>
+
+<tr><td>colorama</td><td>0.4.6</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>librt</td><td>0.10.0</td></tr>
+
+<tr><td>mypy</td><td>2.0.0</td></tr>
+
+<tr><td>mypy-extensions</td><td>1.1.0</td></tr>
+
+<tr><td>night-sky</td><td>0.4.0</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pathspec</td><td>1.1.1</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyqt5</td><td>5.15.11</td></tr>
+
+<tr><td>pyqt5-qt5</td><td>5.15.18</td></tr>
+
+<tr><td>pyqt5-sip</td><td>12.18.0</td></tr>
+
+<tr><td>pyqtgraph</td><td>0.14.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>pytokens</td><td>0.4.1</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>ExoIris - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>ExoIris</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>1.1.0</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="pass">PASS</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>70.9s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>exoiris</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>.................................                                        [100%]
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/pytransit/models/general.py:47
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ExoIris-biduzgvh/venv/lib/python3.12/site-packages/pytransit/models/general.py:47: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+    .. math:: I(\mu) = I(1) (1 - \sum_{n=1}^N u_n(1-\mu^n) )
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+33 passed, 1 warning in 63.29s (0:01:03)
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (70)</strong></summary>
+<table class="meta-table">
+
+<tr><td>annotated-types</td><td>0.7.0</td></tr>
+
+<tr><td>arviz</td><td>1.1.0</td></tr>
+
+<tr><td>arviz-base</td><td>1.1.0</td></tr>
+
+<tr><td>arviz-plots</td><td>1.1.0</td></tr>
+
+<tr><td>arviz-stats</td><td>1.1.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>blosc2</td><td>4.2.0</td></tr>
+
+<tr><td>celerite</td><td>0.4.3</td></tr>
+
+<tr><td>celerite2</td><td>0.3.2</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>corner</td><td>2.2.3</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>deprecated</td><td>1.3.1</td></tr>
+
+<tr><td>emcee</td><td>3.1.6</td></tr>
+
+<tr><td>exoiris</td><td>1.1.0</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>joblib</td><td>1.5.3</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>lazy-loader</td><td>0.5</td></tr>
+
+<tr><td>ldtk</td><td>1.8.5</td></tr>
+
+<tr><td>llvmlite</td><td>0.47.0</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>meepmeep</td><td>0.8.0</td></tr>
+
+<tr><td>msgpack</td><td>1.1.2</td></tr>
+
+<tr><td>ndindex</td><td>1.10.1</td></tr>
+
+<tr><td>numba</td><td>0.65.1</td></tr>
+
+<tr><td>numexpr</td><td>2.14.1</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>py-cpuinfo</td><td>9.0.0</td></tr>
+
+<tr><td>pydantic</td><td>2.13.4</td></tr>
+
+<tr><td>pydantic-core</td><td>2.46.4</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyopencl</td><td>2026.1.2</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pytools</td><td>2026.1</td></tr>
+
+<tr><td>pytransit</td><td>2.7.1</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>scikit-learn</td><td>1.8.0</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>seaborn</td><td>0.13.2</td></tr>
+
+<tr><td>semantic-version</td><td>2.10.0</td></tr>
+
+<tr><td>setuptools</td><td>82.0.1</td></tr>
+
+<tr><td>siphash24</td><td>1.8</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>tables</td><td>3.11.1</td></tr>
+
+<tr><td>tenacity</td><td>9.1.4</td></tr>
+
+<tr><td>threadpoolctl</td><td>3.6.0</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>traitlets</td><td>5.15.0</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>typing-inspection</td><td>0.4.2</td></tr>
+
+<tr><td>uncertainties</td><td>3.2.3</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>wrapt</td><td>2.1.2</td></tr>
+
+<tr><td>xarray</td><td>2026.4.0</td></tr>
+
+<tr><td>xarray-einstats</td><td>0.10.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

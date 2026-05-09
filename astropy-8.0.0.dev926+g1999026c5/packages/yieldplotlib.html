@@ -1,0 +1,445 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>yieldplotlib - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>yieldplotlib</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>1.2.0</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>34.0s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>yieldplotlib</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>.F
+=================================== FAILURES ===================================
+E   FileNotFoundError: [Errno 2] No such file or directory: &#39;/home/tom/Claude/sandbox/astropy-dependents-investigation/.tmp/atest-yieldplotlib-yu38pu1o/venv/lib/python3.11/site-packages/EXOSIMS/TargetList/dat_uvk/pickles_uk_33.fits&#39;
+
+During handling of the above exception, another exception occurred:
+E   UnboundLocalError: cannot access local variable &#39;fs&#39; where it is not associated with a value
+----------------------------- Captured stdout call -----------------------------
+Imported TargetList (prototype) from EXOSIMS.Prototypes.TargetList
+Imported EXOCAT1 (implementation) from EXOSIMS.StarCatalog.EXOCAT1
+Imported Nemati (implementation) from EXOSIMS.OpticalSystem.Nemati
+Imported Mennesson (implementation) from EXOSIMS.ZodiacalLight.Mennesson
+Imported PostProcessing (prototype) from EXOSIMS.Prototypes.PostProcessing
+Imported GalaxiesFaintStars (implementation) from EXOSIMS.BackgroundSources.GalaxiesFaintStars
+Imported BrownCompleteness (implementation) from EXOSIMS.Completeness.BrownCompleteness
+Imported EarthTwinHabZone1SDET (implementation) from EXOSIMS.PlanetP[...]ion.EarthTwinHabZone1SDET
+Imported PlanetPhysicalModel (prototype) from EXOSIMS.Prototypes.PlanetPhysicalModel
+Loading cached completeness file from &#34;/home/tom/.EXOSIMS/cache/v3.6.5/EarthTwinHabZone1SDETPlanetPhysicalModelBrownCompleteness100000000lambert87f58f4efda741e085bca2e3d41959ce.comp&#34;.
+Completeness loaded from cache.
+Imported AlbedoByRadiusDulzPlavchan (implementation) from EXOSIMS.PlanetP[...]lbedoByRadiusDulzPlavchan
+Imported Forecaster (implementation) from EXOSIMS.PlanetPhysicalModel.Forecaster
+2347 targets imported from star catalog.
+2316 targets remain after removing requested targets.
+2311 targets remain after removing those where spectral class cannot be established.
+2293 targets remain after removing white dwarfs and subdwarfs
+2293 targets remain after nan filtering.
+2293 targets remain after removing zero luminosity targets.
+Loaded JEZ0 for mode b9907de8260369dbc0de4044cc47a99d from /home/tom/.EXOSIMS/cache/v3.6.5/TargetList_EXOCAT1_ac99bf3a076c9b3a7e4d86c850a6d475nStars_2293_mode_b9907de8260369dbc0de4044cc47a99d.JEZ0
+Loaded JEZ0 for mode ebbae9a3e0946e57dd1a340d6dc78889 from /home/tom/.EXOSIMS/cache/v3.6.5/TargetList_EXOCAT1_ac99bf3a076c9b3a7e4d86c850a6d475nStars_2293_mode_ebbae9a3e0946e57dd1a340d6dc78889.JEZ0
+2293 targets remain after outside IWA filter.
+Loaded star fluxes values from /home/tom/.EXOSIMS/cache/v3.6.5/TargetList_EXOCAT1_ac99bf3a076c9b3a7e4d86c850a6d475_nStars_2293_mode_ebbae9a3e0946e57dd1a340d6dc78889.star_fluxes
+Loaded intCutoff_dMag values from /home/tom/.EXOSIMS/cache/v3.6.5/TargetList_EXOCAT1_ac99bf3a076c9b3a7e4d86c850a6d475_Nemati_Mennesson_vals_478344aa803448d65f12965df9e57752_mode_ebbae9a3e0946e57dd1a340d6dc78889.intCutoff_dMag
+Loaded intCutoff_comp values from /home/tom/.EXOSIMS/cache/v3.6.5/TargetList_EXOCAT1_ac99bf3a076c9b3a7e4d86c850a6d475_BrownCompleteness_vals_959d9174ae365ce713c418884cad801d.intCutoff_comp
+Generating int_comp values
+Loading cached dynamic completeness array from &#34;/home/tom/.EXOSIMS/cache/v3.6.5/EarthTwinHabZone1SDETPlanetPhysicalModelNematiEXOCAT110d0543658a4c6ebec51c506479c21d4.dcomp&#34;.
+Dynamic completeness array loaded from cache.
+2293 targets remain after completeness filter.
+----------------------------- Captured stderr call -----------------------------
+
+Loading EXOSIMSDirectory exosims:   0%|          | 0/8 [00:00&lt;?, ?item/s][38;5;51m[48;5;16m[yieldplotlib][0m [33mWARNING [2026-05-09 18:41:15,884] [0mUnknown file type: .fits
+
+Loading EXOSIMSDirectory exosims:  12%|█▎        | 1/8 [00:05&lt;00:41,  5.89s/item]
+------------------------------ Captured log call -------------------------------
+WARNING  yieldplotlib:directory_node.py:122 Unknown file type: .fits
+DEBUG    yieldplotlib:exosims_input_file.py:180 Deleting key cachedir from Example_EXOSIMS.json because an empty string was provided.
+DEBUG    yieldplotlib:exosims_input_file.py:180 Deleting key binaryleakfilepath from Example_EXOSIMS.json because an empty string was provided.
+DEBUG    yieldplotlib:exosims_input_file.py:180 Deleting key wdsfilepath from Example_EXOSIMS.json because an empty string was provided.
+DEBUG    yieldplotlib:exosims_input_file.py:180 Deleting key EZ_distribution from Example_EXOSIMS.json because an empty string was provided.
+DEBUG    yieldplotlib:exosims_input_file.py:215 Deleting key occ_trans from Example_EXOSIMS.json&#39;s starlight suppression system CEC2a because it does not exist locally.
+DEBUG    yieldplotlib:exosims_input_file.py:215 Deleting key core_thruput from Example_EXOSIMS.json&#39;s starlight suppression system CEC2a because it does not exist locally.
+DEBUG    yieldplotlib:exosims_input_file.py:215 Deleting key core_mean_intensity from Example_EXOSIMS.json&#39;s starlight suppression system CEC2a because it does not exist locally.
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/synphot/specio.py:226: UnboundLocalError: cannot access local variable &#39;fs&#39; where it is not associated with a value
+=============================== warnings summary ===============================
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:55: PyparsingDeprecationWarning: &#39;setParseAction&#39; deprecated - use &#39;set_parse_action&#39;
+    exponent = pp.Suppress(&#34;^&#34;) + pp.Regex(r&#34;[+-]?\d+&#34;).setParseAction(
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:63: PyparsingDeprecationWarning: &#39;setName&#39; deprecated - use &#39;set_name&#39;
+    identifier = pp.Word(pp.alphas + &#34;_&#34;, pp.alphanums + &#34;_&#34;).setName(&#34;identifier&#34;)
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:66: PyparsingDeprecationWarning: &#39;setName&#39; deprecated - use &#39;set_name&#39;
+    number = pp.common.number().setName(&#34;number&#34;)
+
+tests/test_datasets.py::test_fetch_ayo_data
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:69: PyparsingDeprecationWarning: &#39;escChar&#39; argument is deprecated, use &#39;esc_char&#39;
+    string = pp.QuotedString(&#34;&#39;&#34;, escChar=&#34;\\&#34;) | pp.QuotedString(&#39;&#34;&#39;, escChar=&#34;\\&#34;)
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:75: PyparsingDeprecationWarning: &#39;delimitedList&#39; deprecated - use &#39;DelimitedList&#39;
+    + pp.Optional(pp.delimitedList(number | string, delim=&#34;,&#34;))
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:78: PyparsingDeprecationWarning: &#39;setName&#39; deprecated - use &#39;set_name&#39;
+    .setName(&#34;array&#34;)
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:79: PyparsingDeprecationWarning: &#39;setParseAction&#39; deprecated - use &#39;set_parse_action&#39;
+    .setParseAction(self._convert_array)
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:83: PyparsingDeprecationWarning: &#39;setName&#39; deprecated - use &#39;set_name&#39;
+    param_ref = identifier.copy().setName(&#34;param_ref&#34;)
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:90: PyparsingDeprecationWarning: &#39;oneOf&#39; deprecated - use &#39;one_of&#39;
+    simple_expr = (expr_term + pp.oneOf(&#34;+ - * /&#34;) + expr_term).setName(
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:90: PyparsingDeprecationWarning: &#39;setName&#39; deprecated - use &#39;set_name&#39;
+    simple_expr = (expr_term + pp.oneOf(&#34;+ - * /&#34;) + expr_term).setName(
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:125: PyparsingDeprecationWarning: &#39;setParseAction&#39; deprecated - use &#39;set_parse_action&#39;
+    expression = simple_expr.setParseAction(process_expression)
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:130: PyparsingDeprecationWarning: &#39;setResultsName&#39; deprecated - use &#39;set_results_name&#39;
+    + pp.Word(pp.alphas).setResultsName(&#34;type&#34;)
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:138: PyparsingDeprecationWarning: &#39;setResultsName&#39; deprecated - use &#39;set_results_name&#39;
+    .setResultsName(&#34;units&#34;)
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:139: PyparsingDeprecationWarning: &#39;setParseAction&#39; deprecated - use &#39;set_parse_action&#39;
+    .setParseAction(self._convert_unit)
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:149: PyparsingDeprecationWarning: &#39;setResultsName&#39; deprecated - use &#39;set_results_name&#39;
+    identifier.setResultsName(&#34;key&#34;)
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:151: PyparsingDeprecationWarning: &#39;setResultsName&#39; deprecated - use &#39;set_results_name&#39;
+    + value_types.setResultsName(&#34;value&#34;)
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:154: PyparsingDeprecationWarning: &#39;setResultsName&#39; deprecated - use &#39;set_results_name&#39;
+    + pp.Optional(pp.SkipTo(&#34;{&#34;).setResultsName(&#34;comment_before_type&#34;))
+
+tests/test_datasets.py::test_fetch_ayo_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:156: PyparsingDeprecationWarning: &#39;setResultsName&#39; deprecated - use &#39;set_results_name&#39;
+    + pp.Optional(pp.SkipTo(pp.lineEnd()).setResultsName(&#34;comment_after_type&#34;))
+
+tests/test_datasets.py: 60 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/yieldplotlib/load/ayo/ayo_input.py:171: PyparsingDeprecationWarning: &#39;parseString&#39; deprecated - use &#39;parse_string&#39;
+    parsed = key_value.parseString(line, parseAll=True)
+
+tests/test_datasets.py: 60 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/pyparsing/util.py:466: PyparsingDeprecationWarning: &#39;parseAll&#39; argument is deprecated, use &#39;parse_all&#39;
+    return fn(self, *args, **kwargs)
+
+tests/test_datasets.py::test_fetch_exosims_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/EXOSIMS/Prototypes/OpticalSystem.py:586: UserWarning: Input FoV (10.0 arcsec) is larger than FoV computed from pixelScale (2.31 arcsec) for instrument imaging_EAC1_BroadbandVisible_500. This feels like a mistake.
+    warnings.warn(
+
+tests/test_datasets.py::test_fetch_exosims_data
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-yieldplotlib-_nfb4f9j/venv/lib/python3.12/site-packages/EXOSIMS/Prototypes/OpticalSystem.py:586: UserWarning: Input FoV (10.0 arcsec) is larger than FoV computed from pixelScale (2.31 arcsec) for instrument spectro_EAC1_IFS_910. This feels like a mistake.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED artifact/yieldplotlib-1.2.0/tests/test_datasets.py::test_fetch_exosims_data
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 1 passed, 141 warnings in 6.39s
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (112)</strong></summary>
+<table class="meta-table">
+
+<tr><td>absl-py</td><td>2.4.0</td></tr>
+
+<tr><td>angutils</td><td>1.0.0</td></tr>
+
+<tr><td>argcomplete</td><td>3.6.3</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>astroquery</td><td>0.4.11</td></tr>
+
+<tr><td>asttokens</td><td>3.0.1</td></tr>
+
+<tr><td>attrs</td><td>26.1.0</td></tr>
+
+<tr><td>beautifulsoup4</td><td>4.14.3</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>cffi</td><td>2.0.0</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>colorlog</td><td>6.10.1</td></tr>
+
+<tr><td>colorspacious</td><td>1.1.2</td></tr>
+
+<tr><td>comm</td><td>0.2.3</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>cryptography</td><td>48.0.0</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>cython</td><td>3.2.4</td></tr>
+
+<tr><td>debugpy</td><td>1.8.20</td></tr>
+
+<tr><td>decorator</td><td>5.2.1</td></tr>
+
+<tr><td>dependency-groups</td><td>1.3.1</td></tr>
+
+<tr><td>distlib</td><td>0.4.0</td></tr>
+
+<tr><td>docopt</td><td>0.6.2</td></tr>
+
+<tr><td>equinox</td><td>0.13.8</td></tr>
+
+<tr><td>executing</td><td>2.2.1</td></tr>
+
+<tr><td>exo-det-box</td><td>0.0.2</td></tr>
+
+<tr><td>exosims</td><td>3.6.5</td></tr>
+
+<tr><td>filelock</td><td>3.29.0</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>h5py</td><td>3.16.0</td></tr>
+
+<tr><td>html5lib</td><td>1.1</td></tr>
+
+<tr><td>humanize</td><td>4.15.0</td></tr>
+
+<tr><td>hwoutils</td><td>1.5.1</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>immutabledict</td><td>4.3.1</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>interpax</td><td>0.3.14</td></tr>
+
+<tr><td>ipykernel</td><td>7.2.0</td></tr>
+
+<tr><td>ipyparallel</td><td>9.1.0</td></tr>
+
+<tr><td>ipython</td><td>9.13.0</td></tr>
+
+<tr><td>ipython-pygments-lexers</td><td>1.1.1</td></tr>
+
+<tr><td>jaraco-classes</td><td>3.4.0</td></tr>
+
+<tr><td>jaraco-context</td><td>6.1.2</td></tr>
+
+<tr><td>jaraco-functools</td><td>4.4.0</td></tr>
+
+<tr><td>jax</td><td>0.10.0</td></tr>
+
+<tr><td>jaxlib</td><td>0.10.0</td></tr>
+
+<tr><td>jaxtyping</td><td>0.3.9</td></tr>
+
+<tr><td>jedi</td><td>0.20.0</td></tr>
+
+<tr><td>jeepney</td><td>0.9.0</td></tr>
+
+<tr><td>jplephem</td><td>2.24</td></tr>
+
+<tr><td>jupyter-client</td><td>8.8.0</td></tr>
+
+<tr><td>jupyter-core</td><td>5.9.1</td></tr>
+
+<tr><td>keplertools</td><td>1.4.1</td></tr>
+
+<tr><td>keyring</td><td>25.7.0</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>lineax</td><td>0.1.0</td></tr>
+
+<tr><td>lod-unit</td><td>1.8.0</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>matplotlib-inline</td><td>0.2.2</td></tr>
+
+<tr><td>meanstars</td><td>3.6.1</td></tr>
+
+<tr><td>ml-dtypes</td><td>0.5.4</td></tr>
+
+<tr><td>more-itertools</td><td>11.0.2</td></tr>
+
+<tr><td>mplcyberpunk</td><td>0.7.6</td></tr>
+
+<tr><td>nest-asyncio</td><td>1.6.0</td></tr>
+
+<tr><td>nox</td><td>2026.4.10</td></tr>
+
+<tr><td>numpy</td><td>2.2.6</td></tr>
+
+<tr><td>opt-einsum</td><td>3.4.0</td></tr>
+
+<tr><td>ortools</td><td>9.15.6755</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>parso</td><td>0.8.7</td></tr>
+
+<tr><td>pexpect</td><td>4.9.0</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pooch</td><td>1.9.0</td></tr>
+
+<tr><td>prompt-toolkit</td><td>3.0.52</td></tr>
+
+<tr><td>protobuf</td><td>6.33.6</td></tr>
+
+<tr><td>psutil</td><td>7.2.2</td></tr>
+
+<tr><td>ptyprocess</td><td>0.7.0</td></tr>
+
+<tr><td>pure-eval</td><td>0.2.3</td></tr>
+
+<tr><td>pycparser</td><td>3.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>python-discovery</td><td>1.3.0</td></tr>
+
+<tr><td>pyvo</td><td>1.8.1</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>pyzmq</td><td>27.1.0</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>scipy</td><td>1.14.1</td></tr>
+
+<tr><td>secretstorage</td><td>3.5.0</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>soupsieve</td><td>2.8.3</td></tr>
+
+<tr><td>stack-data</td><td>0.6.3</td></tr>
+
+<tr><td>synphot</td><td>1.7.0</td></tr>
+
+<tr><td>tornado</td><td>6.5.5</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>traitlets</td><td>5.15.0</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>virtualenv</td><td>21.3.1</td></tr>
+
+<tr><td>wadler-lindig</td><td>0.1.7</td></tr>
+
+<tr><td>wcwidth</td><td>0.7.0</td></tr>
+
+<tr><td>webencodings</td><td>0.5.1</td></tr>
+
+<tr><td>yieldplotlib</td><td>1.2.0</td></tr>
+
+<tr><td>yippy</td><td>2.4.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

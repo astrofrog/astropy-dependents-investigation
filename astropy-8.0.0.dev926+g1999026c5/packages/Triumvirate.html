@@ -1,0 +1,1186 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Triumvirate - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>Triumvirate</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.5.0</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>191.0s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>triumvirate</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>_kwargs = {&#39;item&#39;: &lt;Function test_compute_bispec[degrees0-diag-None]&gt;}
+firstresult = False
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -&gt; object | list[object]:
+        &#34;&#34;&#34;Execute a call into multiple python functions/methods and return the
+        result(s).
+    
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        &#34;&#34;&#34;
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError as e:
+                        # coverage bug - this is tested
+                        for argname in hook_impl.argnames:  # pragma: no cover
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f&#34;hook call must provide argument {argname!r}&#34;
+                                ) from e
+    
+                    if hook_impl.hookwrapper:
+                        function_gen = run_old_style_hookwrapper(hook_impl, hook_name, args)
+    
+                        next(function_gen)  # first yield
+                        teardowns.append(function_gen)
+    
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, &#34;did not yield&#34;)
+                    else:
+                        res = hook_impl.function(*args)
+                        if res is not None:
+                            results.append(res)
+                            if firstresult:  # halt further impl calls
+                                break
+            except BaseException as exc:
+                exception = exc
+        finally:
+            if firstresult:  # first result hooks return a single value
+                result = results[0] if results else None
+            else:
+                result = results
+    
+            # run all wrapper post-yield blocks
+            for teardown in reversed(teardowns):
+                try:
+                    if exception is not None:
+                        try:
+&gt;                           teardown.throw(exception)
+
+venv/lib/python3.12/site-packages/pluggy/_callers.py:139: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_impl = &lt;HookImpl plugin_name=&#39;timeout&#39;, plugin=&lt;module &#39;pytest_timeout&#39; from &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-Triumvirate-1x__nshi/venv/lib/python3.12/site-packages/pytest_timeout.py&#39;&gt;&gt;
+hook_name = &#39;pytest_runtest_call&#39;
+args = [&lt;Function test_compute_bispec[degrees0-diag-None]&gt;]
+
+    def run_old_style_hookwrapper(
+        hook_impl: HookImpl, hook_name: str, args: Sequence[object]
+    ) -&gt; Teardown:
+        &#34;&#34;&#34;
+        backward compatibility wrapper to run a old style hookwrapper as a wrapper
+        &#34;&#34;&#34;
+    
+        teardown: Teardown = cast(Teardown, hook_impl.function(*args))
+        try:
+            next(teardown)
+        except StopIteration:
+            _raise_wrapfail(teardown, &#34;did not yield&#34;)
+        try:
+            res = yield
+            result = Result(res, None)
+        except BaseException as exc:
+            result = Result(None, exc)
+        try:
+            teardown.send(result)
+        except StopIteration:
+            pass
+        except BaseException as e:
+            _warn_teardown_exception(hook_name, hook_impl, e)
+            raise
+        else:
+            _raise_wrapfail(teardown, &#34;has second yield&#34;)
+        finally:
+            teardown.close()
+&gt;       return result.get_result()
+               ^^^^^^^^^^^^^^^^^^^
+
+venv/lib/python3.12/site-packages/pluggy/_callers.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;pluggy._result.Result object at 0x7feed9525c00&gt;
+
+    def get_result(self) -&gt; ResultType:
+        &#34;&#34;&#34;Get the result(s) for this hook call.
+    
+        If the hook was marked as a ``firstresult`` only a single value
+        will be returned, otherwise a list of results.
+        &#34;&#34;&#34;
+        __tracebackhide__ = True
+        exc = self._exception
+        tb = self._traceback
+        if exc is None:
+            return cast(ResultType, self._result)
+        else:
+&gt;           raise exc.with_traceback(tb)
+
+venv/lib/python3.12/site-packages/pluggy/_result.py:103: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_impl = &lt;HookImpl plugin_name=&#39;timeout&#39;, plugin=&lt;module &#39;pytest_timeout&#39; from &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-Triumvirate-1x__nshi/venv/lib/python3.12/site-packages/pytest_timeout.py&#39;&gt;&gt;
+hook_name = &#39;pytest_runtest_call&#39;
+args = [&lt;Function test_compute_bispec[degrees0-diag-None]&gt;]
+
+    def run_old_style_hookwrapper(
+        hook_impl: HookImpl, hook_name: str, args: Sequence[object]
+    ) -&gt; Teardown:
+        &#34;&#34;&#34;
+        backward compatibility wrapper to run a old style hookwrapper as a wrapper
+        &#34;&#34;&#34;
+    
+        teardown: Teardown = cast(Teardown, hook_impl.function(*args))
+        try:
+            next(teardown)
+        except StopIteration:
+            _raise_wrapfail(teardown, &#34;did not yield&#34;)
+        try:
+&gt;           res = yield
+                  ^^^^^
+
+venv/lib/python3.12/site-packages/pluggy/_callers.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = &#39;pytest_runtest_call&#39;
+hook_impls = [&lt;HookImpl plugin_name=&#39;threadexception&#39;, plugin=&lt;module &#39;_pytest.threadexception&#39; from &#39;/home/tom/Claude/sandbox/astr...apturing=&lt;MultiCapture out=None err=None in_=None _state=&#39;suspended&#39; _in_suspended=False&gt; _capture_fixture=None&gt;&gt;, ...]
+caller_kwargs = {&#39;item&#39;: &lt;Function test_compute_bispec[degrees0-diag-None]&gt;}
+firstresult = False
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -&gt; object | list[object]:
+        &#34;&#34;&#34;Execute a call into multiple python functions/methods and return the
+        result(s).
+    
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        &#34;&#34;&#34;
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError as e:
+                        # coverage bug - this is tested
+                        for argname in hook_impl.argnames:  # pragma: no cover
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f&#34;hook call must provide argument {argname!r}&#34;
+                                ) from e
+    
+                    if hook_impl.hookwrapper:
+                        function_gen = run_old_style_hookwrapper(hook_impl, hook_name, args)
+    
+                        next(function_gen)  # first yield
+                        teardowns.append(function_gen)
+    
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, &#34;did not yield&#34;)
+                    else:
+                        res = hook_impl.function(*args)
+                        if res is not None:
+                            results.append(res)
+                            if firstresult:  # halt further impl calls
+                                break
+            except BaseException as exc:
+                exception = exc
+        finally:
+            if firstresult:  # first result hooks return a single value
+                result = results[0] if results else None
+            else:
+                result = results
+    
+            # run all wrapper post-yield blocks
+            for teardown in reversed(teardowns):
+                try:
+                    if exception is not None:
+                        try:
+&gt;                           teardown.throw(exception)
+
+venv/lib/python3.12/site-packages/pluggy/_callers.py:139: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+item = &lt;Function test_compute_bispec[degrees0-diag-None]&gt;
+
+    @hookimpl(wrapper=True)
+    def pytest_runtest_call(item: Item) -&gt; Generator[None]:
+        xfailed = item.stash.get(xfailed_key, None)
+        if xfailed is None:
+            item.stash[xfailed_key] = xfailed = evaluate_xfail_marks(item)
+    
+        if xfailed and not item.config.option.runxfail and not xfailed.run:
+            xfail(&#34;[NOTRUN] &#34; + xfailed.reason)
+    
+        try:
+&gt;           return (yield)
+                    ^^^^^
+
+venv/lib/python3.12/site-packages/_pytest/skipping.py:268: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = &#39;pytest_runtest_call&#39;
+hook_impls = [&lt;HookImpl plugin_name=&#39;threadexception&#39;, plugin=&lt;module &#39;_pytest.threadexception&#39; from &#39;/home/tom/Claude/sandbox/astr...apturing=&lt;MultiCapture out=None err=None in_=None _state=&#39;suspended&#39; _in_suspended=False&gt; _capture_fixture=None&gt;&gt;, ...]
+caller_kwargs = {&#39;item&#39;: &lt;Function test_compute_bispec[degrees0-diag-None]&gt;}
+firstresult = False
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -&gt; object | list[object]:
+        &#34;&#34;&#34;Execute a call into multiple python functions/methods and return the
+        result(s).
+    
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        &#34;&#34;&#34;
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError as e:
+                        # coverage bug - this is tested
+                        for argname in hook_impl.argnames:  # pragma: no cover
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f&#34;hook call must provide argument {argname!r}&#34;
+                                ) from e
+    
+                    if hook_impl.hookwrapper:
+                        function_gen = run_old_style_hookwrapper(hook_impl, hook_name, args)
+    
+                        next(function_gen)  # first yield
+                        teardowns.append(function_gen)
+    
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, &#34;did not yield&#34;)
+                    else:
+&gt;                       res = hook_impl.function(*args)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+venv/lib/python3.12/site-packages/pluggy/_callers.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+item = &lt;Function test_compute_bispec[degrees0-diag-None]&gt;
+
+    def pytest_runtest_call(item: Item) -&gt; None:
+        _update_current_test_var(item, &#34;call&#34;)
+        try:
+            del sys.last_type
+            del sys.last_value
+            del sys.last_traceback
+            if sys.version_info &gt;= (3, 12, 0):
+                del sys.last_exc  # type:ignore[attr-defined]
+        except AttributeError:
+            pass
+        try:
+&gt;           item.runtest()
+
+venv/lib/python3.12/site-packages/_pytest/runner.py:179: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;Function test_compute_bispec[degrees0-diag-None]&gt;
+
+    def runtest(self) -&gt; None:
+        &#34;&#34;&#34;Execute the underlying test function.&#34;&#34;&#34;
+&gt;       self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+
+venv/lib/python3.12/site-packages/_pytest/python.py:1720: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;HookCaller &#39;pytest_pyfunc_call&#39;&gt;
+kwargs = {&#39;pyfuncitem&#39;: &lt;Function test_compute_bispec[degrees0-diag-None]&gt;}
+firstresult = True
+
+    def __call__(self, **kwargs: object) -&gt; Any:
+        &#34;&#34;&#34;Call the hook.
+    
+        Only accepts keyword arguments, which should match the hook
+        specification.
+    
+        Returns the result(s) of calling all registered plugins, see
+        :ref:`calling`.
+        &#34;&#34;&#34;
+        assert not self.is_historic(), (
+            &#34;Cannot directly call a historic hook - use call_historic instead.&#34;
+        )
+        self._verify_all_args_are_provided(kwargs)
+        firstresult = self.spec.opts.get(&#34;firstresult&#34;, False) if self.spec else False
+        # Copy because plugins may register other plugins during iteration (#438).
+&gt;       return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+venv/lib/python3.12/site-packages/pluggy/_hooks.py:512: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;_pytest.config.PytestPluginManager object at 0x7fef34618fe0&gt;
+hook_name = &#39;pytest_pyfunc_call&#39;
+methods = [&lt;HookImpl plugin_name=&#39;python&#39;, plugin=&lt;module &#39;_pytest.python&#39; from &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-Triumvirate-1x__nshi/venv/lib/python3.12/site-packages/_pytest/python.py&#39;&gt;&gt;]
+kwargs = {&#39;pyfuncitem&#39;: &lt;Function test_compute_bispec[degrees0-diag-None]&gt;}
+firstresult = True
+
+    def _hookexec(
+        self,
+        hook_name: str,
+        methods: Sequence[HookImpl],
+        kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -&gt; object | list[object]:
+        # called from all hookcaller instances.
+        # enable_tracing will set its own wrapping function at self._inner_hookexec
+&gt;       return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+venv/lib/python3.12/site-packages/pluggy/_manager.py:120: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = &#39;pytest_pyfunc_call&#39;
+hook_impls = [&lt;HookImpl plugin_name=&#39;python&#39;, plugin=&lt;module &#39;_pytest.python&#39; from &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-Triumvirate-1x__nshi/venv/lib/python3.12/site-packages/_pytest/python.py&#39;&gt;&gt;]
+caller_kwargs = {&#39;pyfuncitem&#39;: &lt;Function test_compute_bispec[degrees0-diag-None]&gt;}
+firstresult = True
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -&gt; object | list[object]:
+        &#34;&#34;&#34;Execute a call into multiple python functions/methods and return the
+        result(s).
+    
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        &#34;&#34;&#34;
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError as e:
+                        # coverage bug - this is tested
+                        for argname in hook_impl.argnames:  # pragma: no cover
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f&#34;hook call must provide argument {argname!r}&#34;
+                                ) from e
+    
+                    if hook_impl.hookwrapper:
+                        function_gen = run_old_style_hookwrapper(hook_impl, hook_name, args)
+    
+                        next(function_gen)  # first yield
+                        teardowns.append(function_gen)
+    
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, &#34;did not yield&#34;)
+                    else:
+                        res = hook_impl.function(*args)
+                        if res is not None:
+                            results.append(res)
+                            if firstresult:  # halt further impl calls
+                                break
+            except BaseException as exc:
+                exception = exc
+        finally:
+            if firstresult:  # first result hooks return a single value
+                result = results[0] if results else None
+            else:
+                result = results
+    
+            # run all wrapper post-yield blocks
+            for teardown in reversed(teardowns):
+                try:
+                    if exception is not None:
+                        try:
+                            teardown.throw(exception)
+                        except RuntimeError as re:
+                            # StopIteration from generator causes RuntimeError
+                            # even for coroutine usage - see #544
+                            if (
+                                isinstance(exception, StopIteration)
+                                and re.__cause__ is exception
+                            ):
+                                teardown.close()
+                                continue
+                            else:
+                                raise
+                    else:
+                        teardown.send(result)
+                    # Following is unreachable for a well behaved hook wrapper.
+                    # Try to force finalizers otherwise postponed till GC action.
+                    # Note: close() may raise if generator handles GeneratorExit.
+                    teardown.close()
+                except StopIteration as si:
+                    result = si.value
+                    exception = None
+                    continue
+                except BaseException as e:
+                    exception = e
+                    continue
+                _raise_wrapfail(teardown, &#34;has second yield&#34;)
+    
+        if exception is not None:
+&gt;           raise exception
+
+venv/lib/python3.12/site-packages/pluggy/_callers.py:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = &#39;pytest_pyfunc_call&#39;
+hook_impls = [&lt;HookImpl plugin_name=&#39;python&#39;, plugin=&lt;module &#39;_pytest.python&#39; from &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-Triumvirate-1x__nshi/venv/lib/python3.12/site-packages/_pytest/python.py&#39;&gt;&gt;]
+caller_kwargs = {&#39;pyfuncitem&#39;: &lt;Function test_compute_bispec[degrees0-diag-None]&gt;}
+firstresult = True
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -&gt; object | list[object]:
+        &#34;&#34;&#34;Execute a call into multiple python functions/methods and return the
+        result(s).
+    
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        &#34;&#34;&#34;
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError as e:
+                        # coverage bug - this is tested
+                        for argname in hook_impl.argnames:  # pragma: no cover
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f&#34;hook call must provide argument {argname!r}&#34;
+                                ) from e
+    
+                    if hook_impl.hookwrapper:
+                        function_gen = run_old_style_hookwrapper(hook_impl, hook_name, args)
+    
+                        next(function_gen)  # first yield
+                        teardowns.append(function_gen)
+    
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, &#34;did not yield&#34;)
+                    else:
+&gt;                       res = hook_impl.function(*args)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+venv/lib/python3.12/site-packages/pluggy/_callers.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+pyfuncitem = &lt;Function test_compute_bispec[degrees0-diag-None]&gt;
+
+    @hookimpl(trylast=True)
+    def pytest_pyfunc_call(pyfuncitem: Function) -&gt; object | None:
+        testfunction = pyfuncitem.obj
+        if is_async_function(testfunction):
+            async_fail(pyfuncitem.nodeid)
+        funcargs = pyfuncitem.funcargs
+        testargs = {arg: funcargs[arg] for arg in pyfuncitem._fixtureinfo.argnames}
+&gt;       result = testfunction(**testargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+venv/lib/python3.12/site-packages/_pytest/python.py:166: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+degrees = (0, 0, 0), form = &#39;diag&#39;, idx_bin = None
+test_data_catalogue = &lt;triumvirate.catalogue.ParticleCatalogue object at 0x7feed7f2c290&gt;
+test_rand_catalogue = &lt;triumvirate.catalogue.ParticleCatalogue object at 0x7feed7f2ffb0&gt;
+test_binning_fourier = &lt;triumvirate.dataobjs.Binning object at 0x7fef06583000&gt;
+test_paramset = &lt;triumvirate.parameters.ParameterSet object at 0x7feed7e874c0&gt;
+test_logger = &lt;_CppLogAdapter root (INFO)&gt;
+test_stats_dir = PosixPath(&#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-Triumvirate-1x__nshi/artifact/triumvirate-0.5.0/tests/test_input/stats&#39;)
+
+    @pytest.mark.slow
+    @pytest.mark.parametrize(
+        &#34;degrees, form, idx_bin&#34;,
+        [
+            ((0, 0, 0), &#39;diag&#39;, None),
+            ((2, 0, 2), &#39;diag&#39;, None),
+            ((0, 0, 0), &#39;row&#39;, 0),
+        ]
+    )
+    def test_compute_bispec(degrees, form, idx_bin,
+                            test_data_catalogue, test_rand_catalogue,
+                            test_binning_fourier,
+                            test_paramset,
+                            test_logger,
+                            test_stats_dir):
+    
+        degree_tag = &#39;&#39;.join(map(str, degrees))
+        if form == &#39;off-diag&#39;:
+            form_tag = &#39;offdiag{:d}&#39;.format(idx_bin)
+        elif form == &#39;row&#39;:
+            form_tag = &#39;row{:d}&#39;.format(idx_bin)
+        else:
+            form_tag = form
+    
+&gt;       measurements = compute_bispec(
+            test_data_catalogue, test_rand_catalogue,
+            degrees=degrees,
+            binning=test_binning_fourier,
+            form=form,
+            idx_bin=idx_bin,
+            paramset=test_paramset,
+            logger=test_logger
+        )
+
+artifact/triumvirate-0.5.0/tests/test_threept.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+catalogue_data = &lt;triumvirate.catalogue.ParticleCatalogue object at 0x7feed7f2c290&gt;
+catalogue_rand = &lt;triumvirate.catalogue.ParticleCatalogue object at 0x7feed7f2ffb0&gt;
+los_data = None, los_rand = None, degrees = (0, 0, 0)
+binning = &lt;triumvirate.dataobjs.Binning object at 0x7fef06583000&gt;, form = &#39;diag&#39;
+idx_bin = None, sampling_params = None
+paramset = &lt;triumvirate.parameters.ParameterSet object at 0x7feed7e874c0&gt;
+save = False, logger = &lt;_CppLogAdapter root (INFO)&gt;
+
+    def compute_bispec(catalogue_data, catalogue_rand,
+                       los_data=None, los_rand=None,
+                       degrees=None, binning=None, form=None, idx_bin=None,
+                       sampling_params=None,
+                       paramset=None,
+                       save=False, logger=None):
+        &#34;&#34;&#34;Compute bispectrum from survey-like data and random catalogues in
+        the local plane-parallel approximation.
+    
+        Parameters
+        ----------
+        catalogue_data : :class:`~triumvirate.catalogue.ParticleCatalogue`
+            Data-source catalogue.
+        catalogue_rand : :class:`~triumvirate.catalogue.ParticleCatalogue`
+            Random-source catalogue.
+        los_data : (N, 3) array of float, optional
+            Specified lines of sight for the data-source catalogue.
+            If `None` (default), this is automatically computed using
+            :meth:`~triumvirate.catalogue.ParticleCatalogue.compute_los`.
+        los_rand : (N, 3) array of float, optional
+            Specified lines of sight for the random-source catalogue.
+            If `None` (default), this is automatically computed using
+            :meth:`~triumvirate.catalogue.ParticleCatalogue.compute_los`.
+        degrees : tuple of (int, int, int) or str of length 3, optional
+            Multipole degrees either as a tuple (&#39;ell1&#39;, &#39;ell2&#39;, &#39;ELL&#39;) or
+            as a string of length 3.  If not `None` (default), this will
+            override ``paramset[&#39;degrees&#39;]`` entries.  If a string, multipole
+            degrees are assumed to be single-digit integers.
+        binning : :class:`~triumvirate.dataobjs.Binning`, optional
+            Binning for the measurements.  If `None` (default),
+            this is constructed from `paramset`.
+        form : {&#39;diag&#39;, &#39;off-diag&#39;, &#39;row&#39;, &#39;full&#39;}, optional
+            Binning form of the measurements.  If not `None` (default),
+            this will override ``paramset[&#39;form&#39;]``.
+    
+            .. versionchanged:: 0.3.0
+                Add &#39;off-diag&#39; and &#39;row&#39; options and redefine &#39;full&#39; option.
+    
+        idx_bin : int, optional
+            When binning `form` is &#39;row&#39;, this is the fixed bin index for
+            the first coordinate dimension; when binning `form` is &#39;off-diag&#39;,
+            this is the upper-triangular off-diagonal index; otherwise, this
+            is ignored.  If not `None` (default), this will override
+            ``paramset[&#39;idx_bin&#39;]``.
+    
+            .. versionchanged:: 0.3.0
+                Expand definition to match changed `form`.
+    
+        sampling_params : dict, optional
+            Dictionary containing a subset of the following entries
+            for sampling parameters---
+    
+            - &#39;alignment&#39;: {&#39;centre&#39;, &#39;pad&#39;};
+            - &#39;boxsize&#39;: sequence of [float, float, float];
+            - &#39;ngrid&#39;: sequence of [int, int, int];
+            - &#39;assignment&#39;: {&#39;ngp&#39;, &#39;cic&#39;, &#39;tsc&#39;, &#39;pcs&#39;};
+            - &#39;interlace&#39;: bool;
+    
+            and exactly one of the following only when &#39;alignment&#39; is &#39;pad&#39;---
+    
+            - &#39;boxpad&#39;: float;
+            - &#39;gridpad&#39;: float.
+    
+            If not `None` (default), this will override the corresponding
+            entries in `paramset`.
+        paramset : :class:`~triumvirate.parameters.ParameterSet`, optional
+            Full parameter set (default is `None`).  This is used in lieu of
+            `degrees`, `binning`, `form`, `idx_bin` or `sampling_params`.
+        save : {&#39;.txt&#39;, &#39;.npz&#39;, False}, optional
+            If not `False` (default), save the measurements as a &#39;.txt&#39; file
+            or in &#39;.npz&#39; format.  The save path is determined from `paramset`
+            (if unset, a default file path in the current working directory is
+            used).
+        logger : :class:`logging.Logger`, optional
+            Logger (default is `None`).
+    
+        Returns
+        -------
+        results : dict of {str: :class:`numpy.ndarray`}
+            Measurement results as a dictionary with the following entries---
+    
+            - &#39;k1_bin&#39;, &#39;k2_bin&#39;: central wavenumber for each bin of
+              the first and second wavenumbers;
+            - &#39;k1_eff&#39;, &#39;k2_eff&#39;: effective wavenumber for each bin of
+              the first and second wavenumbers;
+            - &#39;nmodes_1&#39;, &#39;nmodes_2&#39;: number of wavevector modes in each bin
+              of the first and second wavenumbers;
+            - &#39;bk_raw&#39;: bispectrum raw measurements including any
+              specified normalisation and shot noise;
+            - &#39;bk_shot&#39;: bispectrum shot noise.
+    
+            The effective wavenumber is here defined as the average wavenumber
+            in each bin.
+    
+        Examples
+        --------
+        Specify multipole `degrees` (0, 0, 2) and bispectrum &#39;row&#39; `form` with
+        the first wavenumber fixed in the bin indexed 5.  These override the
+        corresponding parameters supplied by `paramset`.
+    
+        &gt;&gt;&gt; results = compute_bispec(
+        ...     catalogue_data, catalogue_rand,
+        ...     degrees=(0, 0, 2),
+        ...     form=&#39;full&#39;,
+        ...     idx_bin=5,
+        ...     paramset=paramset
+        ... )
+    
+        See more analogous examples in
+        :func:`~triumvirate.twopt.compute_powspec`.
+    
+        &#34;&#34;&#34;
+&gt;       results = _compute_3pt_stats_survey_like(
+            _compute_bispec,
+            catalogue_data, catalogue_rand,
+            los_data=los_data, los_rand=los_rand,
+            paramset=paramset, params_sampling=sampling_params,
+            degrees=degrees, binning=binning, form=form, idx_bin=idx_bin,
+            types={&#39;catalogue_type&#39;: &#39;survey&#39;, &#39;statistic_type&#39;: &#39;bispec&#39;},
+            save=save, logger=logger
+        )
+
+venv/lib/python3.12/site-packages/triumvirate/threept.py:784: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+threept_algofunc = &lt;cyfunction _compute_bispec at 0x7fef06562740&gt;
+catalogue_data = &lt;triumvirate.catalogue.ParticleCatalogue object at 0x7feed7f2c290&gt;
+catalogue_rand = &lt;triumvirate.catalogue.ParticleCatalogue object at 0x7feed7f2ffb0&gt;
+los_data = array([[-0.8660254, -0.5      ,  0.       ],
+       [ 0.       ,  1.       ,  0.       ],
+       [ 0.8660254, -0.5      ,  0.       ]])
+los_rand = array([[ 0.60300999, -0.3364951 ,  0.72329109],
+       [-0.24057949, -0.31088606,  0.91949517],
+       [ 0.50857648,  ...87],
+       [ 0.6823555 , -0.18089578,  0.70828504],
+       [-0.56232852, -0.66555847, -0.49073267]], shape=(30000, 3))
+paramset = &lt;triumvirate.parameters.ParameterSet object at 0x7feed7e874c0&gt;
+params_sampling = None, degrees = (0, 0, 0)
+binning = &lt;triumvirate.dataobjs.Binning object at 0x7fef06583000&gt;, form = &#39;diag&#39;
+idx_bin = None, types = {&#39;catalogue_type&#39;: &#39;survey&#39;, &#39;statistic_type&#39;: &#39;bispec&#39;}
+save = False, logger = &lt;_CppLogAdapter root (INFO)&gt;
+
+    def _compute_3pt_stats_survey_like(threept_algofunc,
+                                       catalogue_data, catalogue_rand,
+                                       los_data=None, los_rand=None,
+                                       paramset=None, params_sampling=None,
+                                       degrees=None, binning=None,
+                                       form=None, idx_bin=None, types=None,
+                                       save=False, logger=None):
+        &#34;&#34;&#34;Compute three-point statistics from survey-like data and random
+        catalogues in the local plane-parallel approximation.
+    
+        Parameters
+        ----------
+        threept_algofunc : callable
+            Three-point statistic algorithmic function.
+        catalogue_data : :class:`~triumvirate.catalogue.ParticleCatalogue`
+            Data-source catalogue.
+        catalogue_rand : :class:`~triumvirate.catalogue.ParticleCatalogue`
+            Random-source catalogue.
+        los_data : (N, 3) array of float, optional
+            Specified lines of sight for the data-source catalogue.
+            If `None` (default), this is automatically computed using
+            :meth:`~triumvirate.catalogue.ParticleCatalogue.compute_los`.
+        los_rand : (N, 3) array of float, optional
+            Specified lines of sight for the random-source catalogue.
+            If `None` (default), this is automatically computed using
+            :meth:`~triumvirate.catalogue.ParticleCatalogue.compute_los`.
+        paramset : :class:`~triumvirate.parameters.ParameterSet`, optional
+            Full parameter set.  If `None` (default), `degrees`, `binning`,
+            `form` and `params_sampling` should be provided; `idx_bin`
+            should be provided when `form` is &#39;full&#39;.
+        params_sampling : dict, optional
+            Dictionary containing a subset of the following entries
+            for sampling parameters---
+    
+            - &#39;alignment&#39;: {&#39;centre&#39;, &#39;pad&#39;};
+            - &#39;boxsize&#39;: sequence of [float, float, float];
+            - &#39;ngrid&#39;: sequence of [int, int, int];
+            - &#39;assignment&#39;: {&#39;ngp&#39;, &#39;cic&#39;, &#39;tsc&#39;, &#39;pcs&#39;};
+            - &#39;interlace&#39;: bool;
+    
+            and exactly one of the following only when &#39;alignment&#39; is &#39;pad&#39;---
+    
+            - &#39;boxpad&#39;: float;
+            - &#39;gridpad&#39;: float.
+    
+            If not `None` (default), this will override the corresponding
+            entries in `paramset`.
+        degrees : tuple of (int, int, int) or str of length 3, optional
+            Multipole degrees either as a tuple (&#39;ell1&#39;, &#39;ell2&#39;, &#39;ELL&#39;) or
+            as a string of length 3.  If not `None` (default), this will
+            override ``paramset[&#39;degrees&#39;]`` entries.  If a string, multipole
+            degrees are assumed to be single-digit integers.
+        binning : :class:`~triumvirate.dataobjs.Binning`, optional
+            Binning for the measurements.  If `None` (default),
+            this is constructed from `paramset`.
+        form : {&#39;diag&#39;, &#39;off-diag&#39;, &#39;row&#39;, &#39;full&#39;}, optional
+            Binning form of the measurements.  If not `None` (default),
+            this will override ``paramset[&#39;form&#39;]``.
+    
+            .. versionchanged:: 0.3.0
+                Add &#39;off-diag&#39; and &#39;row&#39; options and redefine &#39;full&#39; option.
+    
+        idx_bin : int, optional
+            When binning `form` is &#39;row&#39;, this is the fixed bin index for
+            the first coordinate dimension; when binning `form` is &#39;off-diag&#39;,
+            this is the upper-triangular off-diagonal index; otherwise, this
+            is ignored.  If not `None` (default), this will override
+            ``paramset[&#39;idx_bin&#39;]``.
+    
+            .. versionchanged:: 0.3.0
+                Expand definition to match changed `form`.
+    
+        types : dict, optional
+            &#39;catalogue_type&#39; and &#39;statistic_type&#39; values (default is `None`).
+            This should be set by the caller of this function.
+        save : {&#39;.txt&#39;, &#39;.npz&#39;, False}, optional
+            If not `False` (default), save the measurements as a &#39;.txt&#39; file
+            or in &#39;.npz&#39; format.  The save path is determined from `paramset`
+            (if unset, a default file path in the current working directory is
+            used).
+        logger : :class:`logging.Logger`, optional
+            Logger (default is `None`).
+    
+        Returns
+        -------
+        results : dict of {str: :class:`numpy.ndarray`}
+            Measurement results.
+    
+        &#34;&#34;&#34;
+        # --------------------------------------------------------------------
+        # Initialisation
+        # --------------------------------------------------------------------
+    
+        # -- Parameters ------------------------------------------------------
+    
+        paramset = _amalgamate_parameters(
+            paramset=paramset, params_sampling=params_sampling,
+            degrees=degrees, binning=binning, form=form, idx_bin=idx_bin, **types
+        )
+    
+        if isinstance(paramset, dict):  # likely redundant but safe
+            paramset = ParameterSet(param_dict=paramset, logger=logger)
+    
+        if logger:
+            logger.info(&#34;Parameter set have been initialised.&#34;)
+    
+        if paramset[&#39;catalogue_type&#39;] != &#39;survey&#39;:
+            raise ValueError(
+                &#34;`paramset` &#39;catalogue_type&#39; does not correspond to &#34;
+                &#34;the local plane-parallel clustering algorithm being called: &#34;
+                f&#34;catalogue_type = &#39;{paramset[&#39;catalogue_type&#39;]}&#39;.&#34;
+            )
+    
+        if paramset[&#39;statistic_type&#39;] == &#39;bispec&#39;:
+            statistic_name = &#39;bispectrum&#39;
+        elif paramset[&#39;statistic_type&#39;] == &#39;3pcf&#39;:
+            statistic_name = &#39;three-point correlation function&#39;
+        else:
+            raise ValueError(
+                &#34;`paramset` &#39;statistic_type&#39; does not correspond to &#34;
+                &#34;the clustering algorithm being called: &#34;
+                f&#34;statistic_type = &#39;{paramset[&#39;statistic_type&#39;]}&#39;.&#34;
+            )
+    
+        # -- Data ------------------------------------------------------------
+    
+        # Set up binning.
+        if binning is None:
+            binning = Binning.from_parameter_set(paramset)
+    
+        if logger:
+            logger.info(&#34;Binning has been initialised.&#34;)
+    
+        # Set up lines of sight.
+        if los_data is None:
+            los_data = catalogue_data.compute_los()
+        if los_rand is None:
+            los_rand = catalogue_rand.compute_los()
+    
+        los_data = np.ascontiguousarray(los_data)
+        los_rand = np.ascontiguousarray(los_rand)
+    
+        if logger:
+            logger.info(&#34;Lines of sight have been initialised.&#34;)
+    
+        # Set up box alignment.
+        if paramset[&#39;alignment&#39;] == &#39;centre&#39;:
+            catalogue_data.centre(
+                [paramset[&#39;boxsize&#39;][ax] for ax in [&#39;x&#39;, &#39;y&#39;, &#39;z&#39;]],
+                catalogue_ref=catalogue_rand
+            )
+        if paramset[&#39;alignment&#39;] == &#39;pad&#39;:
+            if paramset[&#39;padscale&#39;] == &#39;box&#39;:
+                kwargs = {&#39;boxsize_pad&#39;: paramset[&#39;padfactor&#39;]}
+            if paramset[&#39;padscale&#39;] == &#39;grid&#39;:
+                kwargs = {
+                    &#39;ngrid&#39;: [paramset[&#39;ngrid&#39;][ax] for ax in [&#39;x&#39;, &#39;y&#39;, &#39;z&#39;]],
+                    &#39;ngrid_pad&#39;: paramset[&#39;padfactor&#39;]
+                }
+            catalogue_data.pad(
+                [paramset[&#39;boxsize&#39;][ax] for ax in [&#39;x&#39;, &#39;y&#39;, &#39;z&#39;]],
+                catalogue_ref=catalogue_rand, **kwargs
+            )
+    
+        if logger:
+            logger.info(&#34;Catalogues have been aligned.&#34;)
+    
+        # --------------------------------------------------------------------
+        # Measurements
+        # --------------------------------------------------------------------
+    
+        # Prepare catalogues.
+        if logger:
+            logger.info(
+                &#34;Preparing catalogue for clustering algorithm...&#34;,
+                cpp_state=&#39;start&#39;
+            )
+    
+        particles_data = \
+            catalogue_data._convert_to_cpp_catalogue(verbose=paramset[&#39;verbose&#39;])
+        particles_rand = \
+            catalogue_rand._convert_to_cpp_catalogue(verbose=paramset[&#39;verbose&#39;])
+    
+        if logger:
+            logger.info(
+                &#34;... prepared catalogue for clustering algorithm.&#34;,
+                cpp_state=&#39;end&#39;
+            )
+    
+        # Set up constants.
+        alpha = catalogue_data.wstotal / catalogue_rand.wstotal
+    
+        if logger:
+            logger.info(&#34;Alpha contrast: %.6e.&#34;, alpha)
+    
+        norm_factor_part = _calc_bispec_normalisation_from_particles(
+            particles_rand, alpha
+        )
+        norm_factor_mesh = _calc_bispec_normalisation_from_mesh(
+            particles_rand, paramset, alpha
+        )
+        norm_factor_meshes = 0.
+    
+        if paramset[&#39;norm_convention&#39;] == &#39;none&#39;:
+            norm_factor = 1.
+            norm_log_mesg = (
+                &#34;Normalisation factors: &#34;
+                &#34;%.6e (particle), %.6e (mesh), %.6e (mesh-mixed; n/a) (none used).&#34;
+            )
+        if paramset[&#39;norm_convention&#39;] == &#39;particle&#39;:
+            norm_factor = norm_factor_part
+            norm_log_mesg = (
+                &#34;Normalisation factors: &#34;
+                &#34;%.6e (particle; used), %.6e (mesh), %.6e (mesh-mixed; n/a).&#34;
+            )
+        if paramset[&#39;norm_convention&#39;] == &#39;mesh&#39;:
+            norm_factor = norm_factor_mesh
+            norm_log_mesg = (
+                &#34;Normalisation factors: &#34;
+                &#34;%.6e (particle), %.6e (mesh; used), %.6e (mesh-mixed; n/a).&#34;
+            )
+        if paramset[&#39;norm_convention&#39;] == &#39;mesh-mixed&#39;:
+            norm_factor = norm_factor_meshes
+            norm_log_mesg = (
+                &#34;Normalisation factors: &#34;
+                &#34;%.6e (particle), %.6e (mesh), %.6e (mesh-mixed; used).&#34;
+            )
+    
+        if logger:
+            logger.info(
+                norm_log_mesg,
+                norm_factor_part, norm_factor_mesh, norm_factor_meshes
+            )
+    
+        # Perform measurement.
+        if logger:
+            logger.info(
+                &#34;Measuring %s from paired survey-type catalogues &#34;
+                &#34;in the local plane-parallel approximation...&#34;,
+                statistic_name,
+                cpp_state=&#39;start&#39;
+            )
+    
+&gt;       results = threept_algofunc(
+            particles_data, particles_rand, los_data, los_rand,
+            paramset, binning, norm_factor
+        )
+
+venv/lib/python3.12/site-packages/triumvirate/threept.py:623: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   ???
+
+src/triumvirate/_threept.pyx:166: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+signum = 14
+frame = &lt;frame at 0x7feed7f465c0, file &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-Triumvirate-1x__nshi/venv/lib/python3.12/site-packages/triumvirate/threept.py&#39;, line 623, code _compute_3pt_stats_survey_like&gt;
+
+    def handler(signum, frame):
+        __tracebackhide__ = True
+&gt;       timeout_sigalrm(item, settings)
+
+venv/lib/python3.12/site-packages/pytest_timeout.py:317: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+item = &lt;Function test_compute_bispec[degrees0-diag-None]&gt;
+settings = Settings(timeout=120.0, method=&#39;signal&#39;, func_only=False, disable_debugger_detection=False)
+
+    def timeout_sigalrm(item, settings):
+        &#34;&#34;&#34;Dump stack of threads and raise an exception.
+    
+        This will output the stacks of any threads other then the
+        current to stderr and then raise an AssertionError, thus
+        terminating the test.
+        &#34;&#34;&#34;
+        if not settings.disable_debugger_detection and is_debugging():
+            return
+        __tracebackhide__ = True
+        nthreads = len(threading.enumerate())
+        terminal = item.config.get_terminal_writer()
+        if nthreads &gt; 1:
+            terminal.sep(&#34;+&#34;, title=&#34;Timeout&#34;)
+        dump_stacks(terminal)
+        if nthreads &gt; 1:
+            terminal.sep(&#34;+&#34;, title=&#34;Timeout&#34;)
+&gt;       pytest.fail(PYTEST_FAILURE_MESSAGE % settings.timeout)
+
+venv/lib/python3.12/site-packages/pytest_timeout.py:502: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;_pytest.outcomes._Fail object at 0x7fef34750e30&gt;
+reason = &#39;Timeout (&gt;120.0s) from pytest-timeout.&#39;, pytrace = True
+
+    def __call__(self, reason: str = &#34;&#34;, pytrace: bool = True) -&gt; NoReturn:
+        __tracebackhide__ = True
+&gt;       raise Failed(msg=reason, pytrace=pytrace)
+E       Failed: Timeout (&gt;120.0s) from pytest-timeout.
+
+venv/lib/python3.12/site-packages/_pytest/outcomes.py:163: Failed
+------------------------------ Captured log call -------------------------------
+INFO     root:threept.py:484 Parameter set have been initialised.
+INFO     root:threept.py:511 Binning has been initialised.
+INFO     root:threept.py:523 Lines of sight have been initialised.
+INFO     root:catalogue.py:725 Offset extents of particle coordinates: {&#39;x&#39;: (450.002, 550.002 | 100.000), &#39;y&#39;: (471.122, 557.724 | 86.603), &#39;z&#39;: (500.017, 500.017 | 0.000)} (ParticleCatalogue(source=extfile:/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-Triumvirate-1x__nshi/artifact/triumvirate-0.5.0/tests/test_input/ctlgs/test_data_catalogue.txt)).
+INFO     root:catalogue.py:725 Offset extents of particle coordinates: {&#39;x&#39;: (0.015, 999.985 | 999.969), &#39;y&#39;: (0.017, 999.983 | 999.966), &#39;z&#39;: (0.031, 999.969 | 999.939)} (ParticleCatalogue(source=extfile:/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-Triumvirate-1x__nshi/artifact/triumvirate-0.5.0/tests/test_input/ctlgs/test_rand_catalogue.txt)).
+INFO     root:threept.py:545 Catalogues have been aligned.
+INFO     root:threept.py:553 Preparing catalogue for clustering algorithm... (entering C++)
+INFO     root:threept.py:564 ... prepared catalogue for clustering algorithm. (exited C++)
+INFO     root:threept.py:573 Alpha contrast: 1.000000e-04.
+INFO     root:threept.py:609 Normalisation factors: 3.703704e+16 (particle; used), 4.417104e+15 (mesh), 0.000000e+00 (mesh-mixed; n/a).
+INFO     root:threept.py:616 Measuring bispectrum from paired survey-type catalogues in the local plane-parallel approximation... (entering C++)
+src/triumvirate/_threept.pyx:166: Failed: Timeout (&gt;120.0s) from pytest-timeout.
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/triumvirate/winconv.py:81
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-Triumvirate-1x__nshi/venv/lib/python3.12/site-packages/triumvirate/winconv.py:81: UserWarning: The `triumvirate.winconv` module is currently experimental. Its behaviour has not been fully tested and may change in the future.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED artifact/triumvirate-0.5.0/tests/test_threept.py::test_compute_bispec[degrees0-diag-None]
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+============= 1 failed, 84 passed, 1 warning in 186.26s (0:03:06) ==============
+[2026-05-09 17:49:44 (+00:00:07) STAT C++] Parameters validated.
+[2026-05-09 17:49:44 (+00:00:07) WARN C++] `save_binned_vectors` is overridden, as `statistic_type` is &#39;modes&#39; so binned vectors are saved as the output to the default path.
+[2026-05-09 17:49:44 (+00:00:07) STAT C++] Parameters validated.
+[2026-05-09 17:49:45 (+00:00:07) STAT C++] Parameters validated.
+[2026-05-09 17:49:45 (+00:00:07) WARN C++] `save_binned_vectors` is overridden, as `statistic_type` is &#39;modes&#39; so binned vectors are saved as the output to the default path.
+[2026-05-09 17:49:45 (+00:00:07) STAT C++] Parameters validated.
+[2026-05-09 17:49:45 (+00:00:07) STAT C++] Parameters validated.
+[2026-05-09 17:49:45 (+00:00:07) STAT C++] Parameters validated.
+[2026-05-09 17:49:45 (+00:00:07) STAT C++] Parameters validated.
+[2026-05-09 17:49:46 (+00:00:08) STAT C++] Parameters validated.
+[2026-05-09 17:49:46 (+00:00:08) STAT C++] Parameters validated.
+[2026-05-09 17:49:46 (+00:00:08) STAT C++] Parameters validated.
+[2026-05-09 17:49:46 (+00:00:08) STAT C++] Parameters validated.
+[2026-05-09 17:49:46 (+00:00:08) INFO C++] Catalogue loaded: ntotal = 3, wtotal = 3.000, wstotal = 3.000 (source=extdata).
+[2026-05-09 17:49:46 (+00:00:08) INFO C++] Extents of particle coordinates: {&#39;x&#39;: (450.002, 550.002 | 100.000), &#39;y&#39;: (471.122, 557.724 | 86.603), &#39;z&#39;: (500.017, 500.017 | 0.000)} (source=extdata).
+[2026-05-09 17:49:46 (+00:00:09) INFO C++] Catalogue loaded: ntotal = 30000, wtotal = 30000.000, wstotal = 30000.000 (source=extdata).
+[2026-05-09 17:49:46 (+00:00:09) INFO C++] Extents of particle coordinates: {&#39;x&#39;: (0.015, 999.985 | 999.969), &#39;y&#39;: (0.017, 999.983 | 999.966), &#39;z&#39;: (0.031, 999.969 | 999.939)} (source=extdata).
+[2026-05-09 17:49:46 (+00:00:08) STAT C++] Computing bispectrum from paired survey-type catalogues...
+[2026-05-09 17:52:43 (+00:03:05) STAT C++] Bispectrum term computed at orders (m₁, m₂, M) = ±(0, 0, 0).
+[2026-05-09 17:52:43 (+00:03:05) STAT C++] ... computed bispectrum from paired survey-type catalogues.
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (15)</strong></summary>
+<table class="meta-table">
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>mpmath</td><td>1.3.0</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>sympy</td><td>1.14.0</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>triumvirate</td><td>0.5.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>soxs - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>soxs</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>5.3.0</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>297.7s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>soxs</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>..+++++++++++++++++++++++++++++++++++ Timeout ++++++++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~ Stack of Thread-1 (140216674285248) ~~~~~~~~~~~~~~~~~~~~~~
+  File &#34;/home/tom/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/threading.py&#34;, line 1032, in _bootstrap
+    self._bootstrap_inner()
+  File &#34;/home/tom/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/threading.py&#34;, line 1075, in _bootstrap_inner
+    self.run()
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-soxs-epbihs6h/venv/lib/python3.12/site-packages/tqdm/_monitor.py&#34;, line 60, in run
+    self.was_killed.wait(self.sleep_interval)
+  File &#34;/home/tom/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/threading.py&#34;, line 655, in wait
+    signaled = self._cond.wait(timeout)
+  File &#34;/home/tom/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/threading.py&#34;, line 359, in wait
+    gotit = waiter.acquire(True, timeout)
++++++++++++++++++++++++++++++++++++ Timeout ++++++++++++++++++++++++++++++++++++
+F
+=================================== FAILURES ===================================
+E   Failed: Timeout (&gt;120.0s) from pytest-timeout.
+----------------------------- Captured stderr call -----------------------------
+soxs : [INFO     ] 2026-05-09 18:33:54,459 Simulating events from 0 sources using instrument lynx_hdxi for 50 ks.
+soxs : [WARNING  ] 2026-05-09 18:33:54,459 No events from any of the sources in the catalog were detected!
+soxs : [INFO     ] 2026-05-09 18:33:54,460 Adding background events.
+soxs : [INFO     ] 2026-05-09 18:33:54,730 Adding in point-source background.
+soxs : [INFO     ] 2026-05-09 18:34:19,583 Simulating events from 1 sources using instrument lynx_hdxi for 50 ks.
+soxs : [INFO     ] 2026-05-09 18:34:26,606 Scattering energies with RMF xrs_hdxi.rmf.
+
+Scattering energies :   0%|          | 0/953924 [00:00&lt;?, ?it/s]
+Scattering energies :   0%|          | 96/953924 [00:00&lt;17:31, 906.74it/s]
+Scattering energies :   0%|          | 886/953924 [00:00&lt;03:15, 4864.96it/s]
+Scattering energies :   0%|          | 4134/953924 [00:00&lt;00:55, 17090.63it/s]
+Scattering energies :   1%|          | 9597/953924 [00:00&lt;00:32, 28630.35it/s]
+Scattering energies :   2%|▏         | 17371/953924 [00:00&lt;00:21, 43680.94it/s]
+Scattering energies :   3%|▎         | 25802/953924 [00:00&lt;00:16, 56236.31it/s]
+Scattering energies :   4%|▍         | 38437/953924 [00:00&lt;00:12, 74956.22it/s]
+Scattering energies :   6%|▋         | 59829/953924 [00:00&lt;00:07, 112503.41it/s]
+Scattering energies :   9%|▉         | 84906/953924 [00:00&lt;00:05, 150601.78it/s]
+Scattering energies :  13%|█▎        | 119293/953924 [00:01&lt;00:04, 206260.61it/s]
+Scattering energies :  15%|█▌        | 146830/953924 [00:01&lt;00:03, 215536.49it/s]
+Scattering energies :  18%|█▊        | 174437/953924 [00:01&lt;00:03, 232635.32it/s]
+Scattering energies :  22%|██▏       | 213275/953924 [00:01&lt;00:02, 267618.66it/s]
+Scattering energies :  26%|██▌       | 244478/953924 [00:01&lt;00:02, 280205.88it/s]
+Scattering energies :  30%|██▉       | 282249/953924 [00:01&lt;00:02, 308262.79it/s]
+Scattering energies :  33%|███▎      | 313511/953924 [00:01&lt;00:02, 302575.63it/s]
+Scattering energies :  36%|███▌      | 344425/953924 [00:01&lt;00:02, 300627.63it/s]
+Scattering energies :  40%|███▉      | 378353/953924 [00:01&lt;00:01, 311239.60it/s]
+Scattering energies :  43%|████▎     | 410652/953924 [00:02&lt;00:01, 299283.09it/s]
+Scattering energies :  47%|████▋     | 447614/953924 [00:02&lt;00:01, 307628.00it/s]
+Scattering energies :  50%|█████     | 478519/953924 [00:02&lt;00:01, 300266.44it/s]
+Scattering energies :  53%|█████▎    | 508740/953924 [00:02&lt;00:01, 283905.45it/s]
+Scattering energies :  56%|█████▋    | 538901/953924 [00:02&lt;00:01, 282213.95it/s]
+Scattering energies :  60%|█████▉    | 568348/953924 [00:02&lt;00:01, 284185.35it/s]
+Scattering energies :  63%|██████▎   | 597159/953924 [00:02&lt;00:01, 265117.07it/s]
+Scattering energies :  65%|██████▌   | 623976/953924 [00:02&lt;00:01, 236165.80it/s]
+Scattering energies :  68%|██████▊   | 651801/953924 [00:03&lt;00:01, 227508.87it/s]
+Scattering energies :  71%|███████   | 675373/953924 [00:03&lt;00:01, 220431.70it/s]
+Scattering energies :  73%|███████▎  | 697714/953924 [00:03&lt;00:01, 211484.42it/s]
+Scattering energies :  75%|███████▌  | 719270/953924 [00:03&lt;00:01, 195870.82it/s]
+Scattering energies :  77%|███████▋  | 739138/953924 [00:03&lt;00:01, 187340.25it/s]
+Scattering energies :  79%|███████▉  | 758288/953924 [00:03&lt;00:01, 168961.92it/s]
+Scattering energies :  81%|████████▏ | 775634/953924 [00:03&lt;00:01, 161226.26it/s]
+Scattering energies :  83%|████████▎ | 791975/953924 [00:03&lt;00:01, 161449.86it/s]
+Scattering energies :  85%|████████▍ | 808284/953924 [00:04&lt;00:01, 144030.17it/s]
+Scattering energies :  86%|████████▋ | 823017/953924 [00:04&lt;00:01, 130258.62it/s]
+Scattering energies :  88%|████████▊ | 836534/953924 [00:04&lt;00:00, 128244.01it/s]
+Scattering energies :  89%|████████▉ | 852655/953924 [00:04&lt;00:00, 135254.10it/s]
+Scattering energies :  91%|█████████ | 866565/953924 [00:04&lt;00:00, 132810.09it/s]
+Scattering energies :  92%|█████████▏| 880026/953924 [00:04&lt;00:00, 113420.99it/s]
+Scattering energies :  93%|█████████▎| 891888/953924 [00:04&lt;00:00, 114447.93it/s]
+Scattering energies :  95%|█████████▍| 903755/953924 [00:04&lt;00:00, 108283.38it/s]
+Scattering energies :  96%|█████████▌| 914895/953924 [00:05&lt;00:00, 90835.70it/s] 
+Scattering energies :  97%|█████████▋| 924553/953924 [00:05&lt;00:00, 60819.98it/s]
+Scattering energies :  98%|█████████▊| 932227/953924 [00:05&lt;00:00, 42674.55it/s]
+Scattering energies :  98%|█████████▊| 938223/953924 [00:06&lt;00:00, 30782.67it/s]
+Scattering energies :  99%|█████████▉| 942843/953924 [00:06&lt;00:00, 19868.75it/s]
+Scattering energies :  99%|█████████▉| 946306/953924 [00:07&lt;00:00, 18632.92it/s]
+Scattering energies :  99%|█████████▉| 949151/953924 [00:07&lt;00:00, 15859.63it/s]
+Scattering energies : 100%|█████████▉| 951406/953924 [00:07&lt;00:00, 10498.36it/s]
+Scattering energies : 100%|█████████▉| 953094/953924 [00:09&lt;00:00, 5633.65it/s] 
+Scattering energies : 100%|██████████| 953924/953924 [00:10&lt;00:00, 94959.99it/s]
+soxs : [INFO     ] 2026-05-09 18:34:37,152 Detected 953924 events in total.
+soxs : [INFO     ] 2026-05-09 18:34:37,158 Generated 953924 photons from the point-source background.
+soxs : [INFO     ] 2026-05-09 18:34:37,158 Adding in astrophysical foreground.
+
+Convolving spectrum :   0%|          | 0/12000 [00:00&lt;?, ?it/s]
+Convolving spectrum :   1%|▏         | 156/12000 [00:00&lt;00:08, 1453.00it/s]
+Convolving spectrum :   3%|▎         | 312/12000 [00:00&lt;00:07, 1513.37it/s]
+Convolving spectrum :   4%|▍         | 469/12000 [00:00&lt;00:08, 1389.22it/s]
+Convolving spectrum :   5%|▌         | 639/12000 [00:00&lt;00:07, 1501.66it/s]
+Convolving spectrum :   7%|▋         | 791/12000 [00:00&lt;00:08, 1336.61it/s]
+Convolving spectrum :   8%|▊         | 928/12000 [00:00&lt;00:09, 1151.60it/s]
+Convolving spectrum :   9%|▊         | 1049/12000 [00:00&lt;00:09, 1130.21it/s]
+Convolving spectrum :  10%|▉         | 1176/12000 [00:00&lt;00:09, 1167.46it/s]
+Convolving spectrum :  11%|█         | 1334/12000 [00:01&lt;00:08, 1261.40it/s]
+Convolving spectrum :  12%|█▏        | 1483/12000 [00:01&lt;00:07, 1325.85it/s]
+Convolving spectrum :  14%|█▎        | 1634/12000 [00:01&lt;00:07, 1378.34it/s]
+Convolving spectrum :  15%|█▍        | 1795/12000 [00:01&lt;00:07, 1445.43it/s]
+Convolving spectrum :  17%|█▋        | 1997/12000 [00:01&lt;00:06, 1542.94it/s]
+Convolving spectrum :  18%|█▊        | 2186/12000 [00:01&lt;00:05, 1641.68it/s]
+Convolving spectrum :  20%|█▉        | 2352/12000 [00:01&lt;00:06, 1519.05it/s]
+Convolving spectrum :  21%|██        | 2507/12000 [00:01&lt;00:06, 1494.06it/s]
+Convolving spectrum :  23%|██▎       | 2731/12000 [00:01&lt;00:05, 1701.84it/s]
+Convolving spectrum :  25%|██▌       | 3039/12000 [00:02&lt;00:04, 2032.32it/s]
+Convolving spectrum :  27%|██▋       | 3244/12000 [00:02&lt;00:04, 1973.21it/s]
+Convolving spectrum :  29%|██▊       | 3443/12000 [00:02&lt;00:04, 1958.72it/s]
+Convolving spectrum :  30%|███       | 3640/12000 [00:02&lt;00:04, 1858.41it/s]
+Convolving spectrum :  32%|███▏      | 3864/12000 [00:02&lt;00:04, 1963.65it/s]
+Convolving spectrum :  35%|███▍      | 4175/12000 [00:02&lt;00:03, 2288.72it/s]
+Convolving spectrum :  38%|███▊      | 4605/12000 [00:02&lt;00:02, 2868.87it/s]
+Convolving spectrum :  41%|████      | 4921/12000 [00:02&lt;00:02, 2953.59it/s]
+Convolving spectrum :  44%|████▍     | 5291/12000 [00:02&lt;00:02, 3171.76it/s]
+Convolving spectrum :  47%|████▋     | 5611/12000 [00:03&lt;00:02, 2621.85it/s]
+Convolving spectrum :  49%|████▉     | 5891/12000 [00:03&lt;00:02, 2268.52it/s]
+Convolving spectrum :  51%|█████     | 6137/12000 [00:03&lt;00:02, 2178.65it/s]
+Convolving spectrum :  53%|█████▎    | 6368/12000 [00:03&lt;00:02, 1971.29it/s]
+Convolving spectrum :  55%|█████▍    | 6576/12000 [00:03&lt;00:02, 1977.51it/s]
+Convolving spectrum :  57%|█████▋    | 6782/12000 [00:03&lt;00:02, 1944.26it/s]
+Convolving spectrum :  58%|█████▊    | 6982/12000 [00:03&lt;00:02, 1797.23it/s]
+Convolving spectrum :  60%|█████▉    | 7167/12000 [00:03&lt;00:02, 1780.77it/s]
+Convolving spectrum :  61%|██████    | 7348/12000 [00:04&lt;00:02, 1744.83it/s]
+Convolving spectrum :  63%|██████▎   | 7525/12000 [00:04&lt;00:02, 1582.43it/s]
+Convolving spectrum :  64%|██████▍   | 7706/12000 [00:04&lt;00:02, 1640.06it/s]
+Convolving spectrum :  66%|██████▌   | 7891/12000 [00:04&lt;00:02, 1615.79it/s]
+Convolving spectrum :  68%|██████▊   | 8101/12000 [00:04&lt;00:02, 1657.76it/s]
+Convolving spectrum :  69%|██████▉   | 8325/12000 [00:04&lt;00:02, 1793.41it/s]
+Convolving spectrum :  71%|███████   | 8507/12000 [00:04&lt;00:02, 1697.33it/s]
+Convolving spectrum :  72%|███████▏  | 8679/12000 [00:04&lt;00:02, 1622.35it/s]
+Convolving spectrum :  74%|███████▍  | 8856/12000 [00:04&lt;00:01, 1660.97it/s]
+Convolving spectrum :  76%|███████▌  | 9087/12000 [00:05&lt;00:01, 1830.73it/s]
+Convolving spectrum :  77%|███████▋  | 9273/12000 [00:05&lt;00:01, 1825.29it/s]
+Convolving spectrum :  79%|███████▉  | 9466/12000 [00:05&lt;00:01, 1843.23it/s]
+Convolving spectrum :  81%|████████  | 9713/12000 [00:05&lt;00:01, 1882.51it/s]
+Convolving spectrum :  83%|████████▎ | 9902/12000 [00:05&lt;00:01, 1734.13it/s]
+Convolving spectrum :  84%|████████▍ | 10078/12000 [00:05&lt;00:01, 1580.82it/s]
+Convolving spectrum :  85%|████████▌ | 10239/12000 [00:05&lt;00:01, 1491.13it/s]
+Convolving spectrum :  87%|████████▋ | 10391/12000 [00:05&lt;00:01, 1483.40it/s]
+Convolving spectrum :  88%|████████▊ | 10543/12000 [00:06&lt;00:01, 1390.45it/s]
+Convolving spectrum :  89%|████████▉ | 10710/12000 [00:06&lt;00:00, 1462.82it/s]
+Convolving spectrum :  90%|█████████ | 10859/12000 [00:06&lt;00:00, 1413.82it/s]
+Convolving spectrum :  92%|█████████▏| 11002/12000 [00:06&lt;00:00, 1347.00it/s]
+Convolving spectrum :  93%|█████████▎| 11138/12000 [00:06&lt;00:00, 1318.20it/s]
+Convolving spectrum :  94%|█████████▍| 11288/12000 [00:06&lt;00:00, 1318.93it/s]
+Convolving spectrum :  95%|█████████▌| 11421/12000 [00:06&lt;00:00, 1275.55it/s]
+Convolving spectrum :  96%|█████████▋| 11552/12000 [00:06&lt;00:00, 1265.06it/s]
+Convolving spectrum :  97%|█████████▋| 11679/12000 [00:06&lt;00:00, 1253.18it/s]
+Convolving spectrum :  98%|█████████▊| 11805/12000 [00:06&lt;00:00, 1254.04it/s]
+Convolving spectrum : 100%|█████████▉| 11983/12000 [00:07&lt;00:00, 1301.19it/s]
+Convolving spectrum : 100%|██████████| 12000/12000 [00:07&lt;00:00, 1685.52it/s]
+soxs : [INFO     ] 2026-05-09 18:35:41,489 Adding in instrumental background.
+soxs : [INFO     ] 2026-05-09 18:35:43,132 Making 8538155 events from the galactic foreground.
+soxs : [INFO     ] 2026-05-09 18:35:43,132 Making 130552 events from the instrumental background.
+soxs : [INFO     ] 2026-05-09 18:35:52,564 Observation complete.
+soxs : [INFO     ] 2026-05-09 18:35:52,574 Writing events to file evt1.fits.
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-soxs-epbihs6h/venv/lib/python3.12/site-packages/astropy/io/fits/hdu/table.py:1544: Failed: Timeout (&gt;120.0s) from pytest-timeout.
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/soxs/tests/test_bkgnd.py:23
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-soxs-epbihs6h/venv/lib/python3.12/site-packages/soxs/tests/test_bkgnd.py:23: UserWarning: This spectrum file was written without a &#39;binscale&#39; attribute! A linear energy binning will be assumed.
+    acisi_particle_bkgnd = Spectrum.from_file(os.path.join(soxs_files_path, &#34;acisi_particle_bkgnd.h5&#34;))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED venv/lib/python3.12/site-packages/soxs/tests/test_bkgnd.py::test_add_background
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 2 passed, 2 skipped, 1 warning in 291.20s (0:04:51)
+
+--- stderr ---
+soxs : [WARNING  ] 2026-05-09 18:31:06,797 Setting &#39;soxs_data_dir&#39; to /home/tom/.cache/soxs for this session. Please update your configuration if you want it somewhere else.
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (23)</strong></summary>
+<table class="meta-table">
+
+<tr><td>appdirs</td><td>1.4.4</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>h5py</td><td>3.16.0</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pooch</td><td>1.9.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>regions</td><td>0.11</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>soxs</td><td>5.3.0</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

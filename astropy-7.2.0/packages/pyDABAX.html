@@ -1,0 +1,158 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>pyDABAX - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>pyDABAX</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.3.1</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="pass">PASS</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>18.6s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>pydabax</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>============================= test session starts ==============================
+collected 1 item
+
+artifact/pyDABAX-0.3.1/tests/test_skeleton.py .                          [100%]
+
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/pydabax/elements.py:1526
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-pyDABAX-9zpz_z9a/venv/lib/python3.12/site-packages/pydabax/elements.py:1526: SyntaxWarning: invalid escape sequence &#39;\d&#39;
+    x = re.match(&#39;(\d*\.?\d*)([A-Z][a-z]?)(\d+\+|\d+\-|\+|\-)?&#39;, e)
+
+venv/lib/python3.12/site-packages/pydabax/elements.py:2305
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-pyDABAX-9zpz_z9a/venv/lib/python3.12/site-packages/pydabax/elements.py:2305: SyntaxWarning: invalid escape sequence &#39;\(&#39;
+    #formula = re.sub(&#34;\(|\)&#34;, &#34;&#34;, cmpd[&#39;formula&#39;])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.10-final-0 _______________
+
+Name                                                    Stmts   Miss  Cover   Missing
+-------------------------------------------------------------------------------------
+venv/lib/python3.12/site-packages/pydabax/__init__.py      11      0   100%
+venv/lib/python3.12/site-packages/pydabax/dabax.py         54     20    63%   43-46, 49-57, 60-61, 69-73
+venv/lib/python3.12/site-packages/pydabax/elements.py    1171    648    45%   29-30, 44-45, 55-58, 68-72, 82-89, 93-100, 127-128, 139, 142-143, 148, 154-155, 166-167, 172, 176-190, 194-222, 227-252, 258-262, 266-278, 282-288, 298-301, 305-341, 346-350, 355-359, 364-368, 373-377, 382-392, 397-398, 403-404, 409-410, 414-415, 419-420, 424, 428, 432, 436-437, 441-451, 455, 460-463, 468-472, 476, 480, 484, 493-499, 504-510, 514, 519-525, 529-530, 534-536, 540-542, 546-548, 553-562, 567-576, 581-585, 592-596, 601-605, 610, 616, 619-622, 626-635, 638-641, 644, 647-658, 661-667, 670-686, 689, 693-694, 697-698, 703-704, 707-708, 711-712, 715-721, 725-729, 742-760, 766-808, 814-838, 841-842, 845-846, 849-850, 853-857, 860-864, 867-871, 876-877, 881-885, 892-933, 937-938, 943-947, 950-951, 954-955, 958-959, 962-964, 971-1017, 1021-1022, 1025-1026, 1029-1033, 1042-1044, 1051-1052, 1076, 1078-1081, 1086, 1096-1108, 1112-1115, 1119, 1128, 1135-1141, 1145-1151, 1155-1161, 1165-1171, 1175-1181, 1185-1191, 1196, 1199-1207, 1210-1218, 1222-1230, 1235-1244, 1248-1256, 1260-1263, 1267, 1272, 1277, 1283, 1295-1302, 1307-1314, 1318, 1325-1326, 1330-1332, 1338-1344, 1348-1351, 1354-1359, 1365, 1370-1377, 1381-1385, 1389-1393, 1397-1448, 1475-1486, 1504-1509, 1521-1545, 1548-1553, 1556-1559, 1562-1565
+venv/lib/python3.12/site-packages/pydabax/skeleton.py      35     15    57%   57-82, 91-92, 102-106, 112, 116
+-------------------------------------------------------------------------------------
+TOTAL                                                    1271    683    46%
+======================== 1 passed, 2 warnings in 9.39s =========================
+
+--- stderr ---
+&lt;unknown&gt;:1526: SyntaxWarning: invalid escape sequence &#39;\d&#39;
+&lt;unknown&gt;:2305: SyntaxWarning: invalid escape sequence &#39;\(&#39;
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-pyDABAX-9zpz_z9a/venv/lib/python3.12/site-packages/pydabax/elements.py:1526: SyntaxWarning: invalid escape sequence &#39;\d&#39;
+  x = re.match(&#39;(\d*\.?\d*)([A-Z][a-z]?)(\d+\+|\d+\-|\+|\-)?&#39;, e)
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-pyDABAX-9zpz_z9a/venv/lib/python3.12/site-packages/pydabax/elements.py:2305: SyntaxWarning: invalid escape sequence &#39;\(&#39;
+  #formula = re.sub(&#34;\(|\)&#34;, &#34;&#34;, cmpd[&#39;formula&#39;])
+&lt;unknown&gt;:1526: SyntaxWarning: invalid escape sequence &#39;\d&#39;
+&lt;unknown&gt;:2305: SyntaxWarning: invalid escape sequence &#39;\(&#39;
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-pyDABAX-9zpz_z9a/venv/lib/python3.12/site-packages/pydabax/elements.py:1526: SyntaxWarning: invalid escape sequence &#39;\d&#39;
+  x = re.match(&#39;(\d*\.?\d*)([A-Z][a-z]?)(\d+\+|\d+\-|\+|\-)?&#39;, e)
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-pyDABAX-9zpz_z9a/venv/lib/python3.12/site-packages/pydabax/elements.py:2305: SyntaxWarning: invalid escape sequence &#39;\(&#39;
+  #formula = re.sub(&#34;\(|\)&#34;, &#34;&#34;, cmpd[&#39;formula&#39;])
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (21)</strong></summary>
+<table class="meta-table">
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>importlib-metadata</td><td>9.0.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pydabax</td><td>0.3.1</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>regex</td><td>2026.4.4</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>tinydb</td><td>4.8.2</td></tr>
+
+<tr><td>zipp</td><td>3.23.1</td></tr>
+
+</table>
+</details>
+
+</body></html>

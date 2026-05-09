@@ -1,0 +1,344 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>nrl-tracker - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>nrl-tracker</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>1.15.0</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>279.8s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>pytcl</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>........................................................................ [  2%]
+........................................................................ [  4%]
+........................................................................ [  6%]
+........................................................................ [  8%]
+........................................................................ [ 10%]
+........................................................................ [ 13%]
+........................................................................ [ 15%]
+........................................................................ [ 17%]
+...............................................sssssssssssssssssssssssss [ 19%]
+s....................................................................... [ 21%]
+..............s.......sssssssssssssssssssssssssssssss................... [ 24%]
+........................................................................ [ 26%]
+........................................................................ [ 28%]
+........................................................................ [ 30%]
+..................................................................ssssss [ 32%]
+sssssssssssss.................ssssss.......ss.......ssssss.............. [ 35%]
+........................................................................ [ 37%]
+........................................................................ [ 39%]
+........................................................................ [ 41%]
+........................................................................ [ 43%]
+........................................................................ [ 45%]
+........................................................................ [ 48%]
+.................................................sssssssssssssssssssssss [ 50%]
+sssssssssssssssssssssss................................................. [ 52%]
+........................................................................ [ 54%]
+........................................................................ [ 56%]
+........................................................................ [ 59%]
+..........................................................ssssssssssssss [ 61%]
+ssssssssss.............................................................. [ 63%]
+........................................................................ [ 65%]
+........................................................................ [ 67%]
+........................................................................ [ 70%]
+........................................................................ [ 72%]
+........................................................................ [ 74%]
+........................................................................ [ 76%]
+........................................................................ [ 78%]
+........................................................................ [ 81%]
+........................................................................ [ 83%]
+........................................................................ [ 85%]
+........................................................................ [ 87%]
+..............................................................ssssssssss [ 89%]
+ssss.................................................................... [ 91%]
+......................................F
+=================================== FAILURES ===================================
+E   Failed: Timeout (&gt;120.0s) from pytest-timeout.
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-nrl-tracker-3kegsth4/venv/lib/python3.12/site-packages/pytcl/io/track_database.py:446: Failed: Timeout (&gt;120.0s) from pytest-timeout.
+=============================== warnings summary ===============================
+tests/test_lambert.py::TestLambertUniversal::test_lambert_basic_earth_orbit
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-nrl-tracker-3kegsth4/venv/lib/python3.12/site-packages/pytcl/astronomical/lambert.py:163: RuntimeWarning: divide by zero encountered in scalar divide
+    A = sin_dnu * np.sqrt(r1_mag * r2_mag / (1 - cos_dnu))
+
+tests/test_lambert.py::TestLambertUniversal::test_lambert_basic_earth_orbit
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-nrl-tracker-3kegsth4/venv/lib/python3.12/site-packages/pytcl/astronomical/lambert.py:163: RuntimeWarning: invalid value encountered in scalar multiply
+    A = sin_dnu * np.sqrt(r1_mag * r2_mag / (1 - cos_dnu))
+
+tests/test_lambert.py::TestLambertIzzo::test_lambert_izzo_basic
+tests/test_lambert.py::TestLambertIzzo::test_lambert_izzo_different_options
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-nrl-tracker-3kegsth4/venv/lib/python3.12/site-packages/pytcl/astronomical/lambert.py:338: RuntimeWarning: invalid value encountered in arccos
+    psi = np.arccos(
+
+tests/test_lambert.py::TestLambertIzzo::test_lambert_izzo_basic
+tests/test_lambert.py::TestLambertIzzo::test_lambert_izzo_different_options
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-nrl-tracker-3kegsth4/venv/lib/python3.12/site-packages/pytcl/astronomical/lambert.py:343: RuntimeWarning: invalid value encountered in sqrt
+    x * lambda_param + y * np.sqrt(lambda_param * lambda_param - 1)
+
+tests/test_stft_comprehensive.py::TestSTFTEdgeCases::test_stft_single_sample
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-nrl-tracker-3kegsth4/venv/lib/python3.12/site-packages/scipy/signal/_spectral_py.py:1613: UserWarning: nperseg = 256 is greater than input length  = 1, using nperseg = 1
+    freqs, time, Zxx = _spectral_helper(x, x, fs, window, nperseg, noverlap,
+
+tests/test_stft_comprehensive.py::TestSTFTEdgeCases::test_stft_nperseg_larger_than_signal
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-nrl-tracker-3kegsth4/venv/lib/python3.12/site-packages/scipy/signal/_spectral_py.py:1613: UserWarning: nperseg = 256 is greater than input length  = 100, using nperseg = 100
+    freqs, time, Zxx = _spectral_helper(x, x, fs, window, nperseg, noverlap,
+
+tests/test_stft_comprehensive.py::TestSTFTEdgeCases::test_stft_real_vs_complex_input
+tests/test_stft_comprehensive.py::TestSTFTParameterHandling::test_stft_complex_input
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-nrl-tracker-3kegsth4/venv/lib/python3.12/site-packages/pytcl/mathematical_functions/transforms/stft.py:240: ComplexWarning: Casting complex values to real discards the imaginary part
+    x = np.asarray(x, dtype=np.float64)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_egm_comprehensive.py:70: Requires EGM2008 data file
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_egm_comprehensive.py:81: Requires EGM2008 data file
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_egm_comprehensive.py:90: Requires EGM2008 data file
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_egm_comprehensive.py:99: Requires EGM2008 data file
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_egm_comprehensive.py:108: Requires EGM2008 data file
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_egm_comprehensive.py:119: Requires EGM2008 data file
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_egm_comprehensive.py:130: Requires EGM2008 data file
+SKIPPED [19] artifact/nrl_tracker-1.15.0/tests/test_egm_comprehensive.py: Requires EGM2008 data file
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_emm.py:599: WMMHR2025 coefficient file not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:36: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:43: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:49: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:54: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:59: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:69: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:87: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:101: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:112: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:122: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:143: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:155: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:172: jplephem not installed
+SKIPPED [7] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:196: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:209: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:230: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:236: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:256: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:265: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:279: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:289: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:297: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:305: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:323: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_ephemerides.py:337: jplephem not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:23: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:31: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:44: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:64: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:85: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:115: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:142: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:172: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:212: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:227: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:242: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:262: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:289: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:306: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:325: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:342: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:357: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:376: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu.py:406: CuPy not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu_utils.py:171: GPU not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu_utils.py:181: GPU not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu_utils.py:192: GPU not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu_utils.py:206: GPU not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu_utils.py:217: GPU not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu_utils.py:227: GPU not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu_utils.py:306: GPU not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu_utils.py:318: GPU not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu_utils.py:401: MLX not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu_utils.py:410: MLX not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu_utils.py:419: MLX not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu_utils.py:427: MLX not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu_utils.py:440: MLX not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_gpu_utils.py:446: MLX not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:39: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:47: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:55: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:63: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:71: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:78: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:85: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:92: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:99: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:111: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:119: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:127: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:137: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:144: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:151: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:163: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:171: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:179: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:189: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:201: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:209: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:217: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:227: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:234: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:246: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:256: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:266: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:282: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:292: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:306: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:314: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:321: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:335: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:345: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:354: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:367: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:374: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:381: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:388: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:400: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:407: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:414: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:421: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:434: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:445: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_metrics_plotting_comprehensive.py:461: plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:233: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:242: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:250: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:265: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:285: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:297: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:313: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:335: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:350: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:360: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:370: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:383: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:396: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:407: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:417: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:427: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:443: plotly not installed
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:474: Plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:487: Plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:498: Plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:508: Plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:518: Plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:526: Plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_plotting.py:538: Plotly not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_terrain_loaders.py:538: GEBCO data file not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_terrain_loaders.py:549: Earth2014 data file not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_terrain_loaders.py:563: GEBCO data file not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_terrain_loaders.py:581: Earth2014 data files not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_terrain_loaders.py:604: GEBCO data file not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_terrain_loaders.py:617: GEBCO data file not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_terrain_loaders.py:630: GEBCO data file not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_terrain_loaders.py:643: GEBCO data file not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_terrain_loaders.py:657: GEBCO data file not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_terrain_loaders.py:671: Earth2014 data file not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_terrain_loaders.py:686: GEBCO data file not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_terrain_loaders.py:697: Earth2014 data file not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_terrain_loaders.py:710: GEBCO data file not available
+SKIPPED [1] artifact/nrl_tracker-1.15.0/tests/test_terrain_loaders.py:722: Earth2014 data file not available
+FAILED artifact/nrl_tracker-1.15.0/tests/test_track_management_scenarios.py::TestSingleSensorClutter::test_clutter_3_targets_10fa
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (18)</strong></summary>
+<table class="meta-table">
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>h5py</td><td>3.16.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>llvmlite</td><td>0.47.0</td></tr>
+
+<tr><td>nrl-tracker</td><td>1.15.0</td></tr>
+
+<tr><td>numba</td><td>0.65.1</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>py-cpuinfo</td><td>9.0.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-benchmark</td><td>5.2.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+</table>
+</details>
+
+</body></html>

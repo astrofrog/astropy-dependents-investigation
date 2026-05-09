@@ -1,0 +1,326 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>rust-ephem - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>rust-ephem</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.10.0</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="pass">PASS</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>173.6s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>rust_ephem</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>============================= test session starts ==============================
+collected 1957 items
+
+artifact/rust_ephem-0.10.0/tests/constraints/airmass_constraint/test_airmass_constraint.py . [  0%]
+..............                                                           [  0%]
+artifact/rust_ephem-0.10.0/tests/constraints/alt_az_constraint/test_alt_az_constraint.py . [  0%]
+..........                                                               [  1%]
+artifact/rust_ephem-0.10.0/tests/constraints/boresight_offset_constraint/test_boresight_offset_constraint.py . [  1%]
+............                                                             [  1%]
+artifact/rust_ephem-0.10.0/tests/constraints/bright_star_constraint/test_bright_star_constraint.py . [  2%]
+...................                                                      [  3%]
+artifact/rust_ephem-0.10.0/tests/constraints/bright_star_constraint/test_bright_star_validators.py . [  3%]
+................                                                         [  3%]
+artifact/rust_ephem-0.10.0/tests/constraints/bright_star_constraint/test_get_bright_stars.py . [  3%]
+.........                                                                [  4%]
+artifact/rust_ephem-0.10.0/tests/constraints/constraint_batch/test_constraint_batch.py . [  4%]
+..........                                                               [  4%]
+artifact/rust_ephem-0.10.0/tests/constraints/constraint_integration/test_constraint_integration.py . [  5%]
+....                                                                     [  5%]
+artifact/rust_ephem-0.10.0/tests/constraints/constraint_operator_combinators/test_constraint_operator_combinators.py . [  5%]
+.......                                                                  [  5%]
+artifact/rust_ephem-0.10.0/tests/constraints/constraint_result/test_constraint_result.py . [  5%]
+.........                                                                [  6%]
+artifact/rust_ephem-0.10.0/tests/constraints/constraint_static_methods/test_constraint_static_methods.py . [  6%]
+.................                                                        [  7%]
+artifact/rust_ephem-0.10.0/tests/constraints/constraint_validators/test_constraint_validators.py . [  7%]
+....                                                                     [  7%]
+artifact/rust_ephem-0.10.0/tests/constraints/daytime_constraint/test_daytime_constraint.py . [  7%]
+............                                                             [  7%]
+artifact/rust_ephem-0.10.0/tests/constraints/field_of_regard/test_field_of_regard.py . [  8%]
+..                                                                       [  8%]
+artifact/rust_ephem-0.10.0/tests/constraints/moon_phase_constraint/test_moon_phase_constraint.py . [  8%]
+.......................                                                  [  9%]
+artifact/rust_ephem-0.10.0/tests/constraints/orbit_pole_constraint/test_orbit_pole_constraint.py . [  9%]
+.......                                                                  [  9%]
+artifact/rust_ephem-0.10.0/tests/constraints/orbit_ram_constraint/test_orbit_ram_constraint.py . [  9%]
+......                                                                   [ 10%]
+artifact/rust_ephem-0.10.0/tests/constraints/pydantic_constraint_config/test_pydantic_constraint_config.py . [ 10%]
+........................................................................ [ 13%]
+...........                                                              [ 14%]
+artifact/rust_ephem-0.10.0/tests/constraints/roll_range/test_roll_range.py . [ 14%]
+.....................                                                    [ 15%]
+artifact/rust_ephem-0.10.0/tests/constraints/rust_constraint_mixin/test_rust_constraint_mixin.py . [ 15%]
+.................                                                        [ 16%]
+artifact/rust_ephem-0.10.0/tests/constraints/saa_constraint/test_saa_constraint.py . [ 16%]
+.............                                                            [ 17%]
+artifact/rust_ephem-0.10.0/tests/constraints/solar_roll_constraint/test_solar_roll_constraint.py . [ 17%]
+.......................                                                  [ 18%]
+artifact/rust_ephem-0.10.0/tests/constraints/sun_moon_angle_constraint/test_sun_moon_angle_constraint.py . [ 18%]
+........................................................................ [ 22%]
+........................................................................ [ 25%]
+.........................                                                [ 27%]
+artifact/rust_ephem-0.10.0/tests/constraints/swift_visibility/test_swift_visibility.py . [ 27%]
+.......................................                                  [ 29%]
+artifact/rust_ephem-0.10.0/tests/constraints/xor_constraint/test_xor_constraint.py . [ 29%]
+.....                                                                    [ 29%]
+artifact/rust_ephem-0.10.0/tests/ephemeris/ccsds_ephemeris/test_ccsds_ephemeris.py . [ 29%]
+.............                                                            [ 30%]
+artifact/rust_ephem-0.10.0/tests/ephemeris/ephemeris_parameters/test_ephemeris_parameters.py . [ 30%]
+...........ssssssssss................................................    [ 33%]
+artifact/rust_ephem-0.10.0/tests/ephemeris/ephemeris_type/test_ephemeris_type.py . [ 33%]
+..s..............................................................        [ 37%]
+artifact/rust_ephem-0.10.0/tests/ephemeris/file_ephemeris/test_file_ephemeris.py . [ 37%]
+..............................................                           [ 39%]
+artifact/rust_ephem-0.10.0/tests/ephemeris/get_body/test_get_body.py ... [ 39%]
+................................                                         [ 41%]
+artifact/rust_ephem-0.10.0/tests/ephemeris/ground_ephemeris/test_ground_ephemeris.py . [ 41%]
+....................................                                     [ 43%]
+artifact/rust_ephem-0.10.0/tests/ephemeris/spice_ephemeris/test_spice_ephemeris.py s [ 43%]
+sssssssssssssssssssssssss                                                [ 44%]
+artifact/rust_ephem-0.10.0/tests/ephemeris/spice_preload/test_spice_preload.py s [ 44%]
+.                                                                        [ 44%]
+artifact/rust_ephem-0.10.0/tests/ephemeris/tle_reading/test_tle_reading.py . [ 44%]
+............sssssssss....................                                [ 46%]
+artifact/rust_ephem-0.10.0/tests/integration/earth_skycoord/integration_test_earth_skycoord.py . [ 46%]
+........................................................................ [ 50%]
+...........................................................              [ 53%]
+artifact/rust_ephem-0.10.0/tests/integration/gcrs/integration_test_gcrs.py . [ 53%]
+....                                                                     [ 53%]
+artifact/rust_ephem-0.10.0/tests/integration/itrs_skycoord/integration_test_itrs_skycoord.py . [ 53%]
+....................................                                     [ 55%]
+artifact/rust_ephem-0.10.0/tests/integration/skycoord/integration_test_skycoord.py . [ 55%]
+........................................................................ [ 59%]
+........................................................................ [ 63%]
+....................................................................     [ 66%]
+artifact/rust_ephem-0.10.0/tests/integration/sun_moon/integration_test_sun_moon.py . [ 66%]
+.............                                                            [ 67%]
+artifact/rust_ephem-0.10.0/tests/integration/sun_moon_skycoord/integration_test_sun_moon_skycoord.py . [ 67%]
+........................................................................ [ 70%]
+........................................................................ [ 74%]
+........................................................................ [ 78%]
+........................................................................ [ 82%]
+........................................................................ [ 85%]
+.....................                                                    [ 86%]
+artifact/rust_ephem-0.10.0/tests/utils/airmass_astropy/test_airmass_astropy.py . [ 86%]
+...                                                                      [ 86%]
+artifact/rust_ephem-0.10.0/tests/utils/angular_radius/test_angular_radius.py . [ 87%]
+.....................................                                    [ 88%]
+artifact/rust_ephem-0.10.0/tests/utils/binary_search/test_binary_search.py . [ 88%]
+...............                                                          [ 89%]
+artifact/rust_ephem-0.10.0/tests/utils/eop_provider/test_eop_provider.py . [ 89%]
+..                                                                       [ 89%]
+artifact/rust_ephem-0.10.0/tests/utils/get_cache_dir/test_get_cache_dir.py . [ 89%]
+..                                                                       [ 90%]
+artifact/rust_ephem-0.10.0/tests/utils/index_method/test_index_method.py . [ 90%]
+............s...                                                         [ 90%]
+artifact/rust_ephem-0.10.0/tests/utils/leap_seconds/test_leap_seconds.py . [ 90%]
+.............................                                            [ 92%]
+artifact/rust_ephem-0.10.0/tests/utils/planetary_ephemeris/test_planetary_ephemeris.py s [ 92%]
+...                                                                      [ 92%]
+artifact/rust_ephem-0.10.0/tests/utils/ra_dec_properties/test_ra_dec_properties.py . [ 92%]
+.......................................................                  [ 95%]
+artifact/rust_ephem-0.10.0/tests/utils/typing_stubs/test_typing_stubs.py . [ 95%]
+........................................................................ [ 99%]
+.                                                                        [ 99%]
+artifact/rust_ephem-0.10.0/tests/utils/ut1_provider/test_ut1_provider.py . [ 99%]
+.............                                                            [100%]
+
+================= 1908 passed, 49 skipped in 167.93s (0:02:47) =================
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (66)</strong></summary>
+<table class="meta-table">
+
+<tr><td>alabaster</td><td>1.0.0</td></tr>
+
+<tr><td>annotated-types</td><td>0.7.0</td></tr>
+
+<tr><td>ast-serialize</td><td>0.3.0</td></tr>
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>astroquery</td><td>0.4.11</td></tr>
+
+<tr><td>babel</td><td>2.18.0</td></tr>
+
+<tr><td>beautifulsoup4</td><td>4.14.3</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>cffi</td><td>2.0.0</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>cryptography</td><td>48.0.0</td></tr>
+
+<tr><td>docutils</td><td>0.22.4</td></tr>
+
+<tr><td>html5lib</td><td>1.1</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>imagesize</td><td>2.0.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>jaraco-classes</td><td>3.4.0</td></tr>
+
+<tr><td>jaraco-context</td><td>6.1.2</td></tr>
+
+<tr><td>jaraco-functools</td><td>4.4.0</td></tr>
+
+<tr><td>jeepney</td><td>0.9.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>keyring</td><td>25.7.0</td></tr>
+
+<tr><td>librt</td><td>0.10.0</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>maturin</td><td>1.13.1</td></tr>
+
+<tr><td>more-itertools</td><td>11.0.2</td></tr>
+
+<tr><td>mypy</td><td>2.0.0</td></tr>
+
+<tr><td>mypy-extensions</td><td>1.1.0</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pathspec</td><td>1.1.1</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>prek</td><td>0.3.13</td></tr>
+
+<tr><td>pycparser</td><td>3.0</td></tr>
+
+<tr><td>pydantic</td><td>2.13.4</td></tr>
+
+<tr><td>pydantic-core</td><td>2.46.4</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>pyvo</td><td>1.8.1</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>roman-numerals</td><td>4.1.0</td></tr>
+
+<tr><td>ruff</td><td>0.15.12</td></tr>
+
+<tr><td>rust-ephem</td><td>0.10.0</td></tr>
+
+<tr><td>secretstorage</td><td>3.5.0</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>snowballstemmer</td><td>3.0.1</td></tr>
+
+<tr><td>soupsieve</td><td>2.8.3</td></tr>
+
+<tr><td>sphinx</td><td>9.1.0</td></tr>
+
+<tr><td>sphinx-rtd-theme</td><td>3.1.0</td></tr>
+
+<tr><td>sphinxcontrib-applehelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-devhelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-htmlhelp</td><td>2.1.0</td></tr>
+
+<tr><td>sphinxcontrib-jquery</td><td>4.1</td></tr>
+
+<tr><td>sphinxcontrib-jsmath</td><td>1.0.1</td></tr>
+
+<tr><td>sphinxcontrib-qthelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-serializinghtml</td><td>2.0.0</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>typing-inspection</td><td>0.4.2</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>webencodings</td><td>0.5.1</td></tr>
+
+</table>
+</details>
+
+</body></html>

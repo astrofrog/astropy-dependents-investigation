@@ -1,0 +1,436 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>backtracks - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>backtracks</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.6.4</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>159.9s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>backtracks</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>                
+iter: 52 | bound: 0 | nc: 1 | ncall: 161 | eff(%): 32.298 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.258 | dlogz:    inf &gt;  0.500                                                     
+iter: 53 | bound: 0 | nc: 2 | ncall: 163 | eff(%): 32.515 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.230 | dlogz:    inf &gt;  0.500                                                     
+iter: 54 | bound: 0 | nc: 2 | ncall: 165 | eff(%): 32.727 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.199 | dlogz:    inf &gt;  0.500                                                     
+iter: 55 | bound: 0 | nc: 1 | ncall: 166 | eff(%): 33.133 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.267 | dlogz:    inf &gt;  0.500                                                     
+iter: 56 | bound: 0 | nc: 1 | ncall: 167 | eff(%): 33.533 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.240 | dlogz:    inf &gt;  0.500                                                     
+iter: 57 | bound: 0 | nc: 1 | ncall: 168 | eff(%): 33.929 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.212 | dlogz:    inf &gt;  0.500                                                     
+iter: 58 | bound: 0 | nc: 3 | ncall: 171 | eff(%): 33.918 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.275 | dlogz:    inf &gt;  0.500                                                     
+iter: 59 | bound: 0 | nc: 2 | ncall: 173 | eff(%): 34.104 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.250 | dlogz:    inf &gt;  0.500                                                     
+iter: 60 | bound: 0 | nc: 3 | ncall: 176 | eff(%): 34.091 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.223 | dlogz:    inf &gt;  0.500                                                     
+iter: 61 | bound: 0 | nc: 1 | ncall: 177 | eff(%): 34.463 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.282 | dlogz:    inf &gt;  0.500                                                     
+iter: 62 | bound: 0 | nc: 1 | ncall: 178 | eff(%): 34.831 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.258 | dlogz:    inf &gt;  0.500                                                     
+iter: 63 | bound: 0 | nc: 1 | ncall: 179 | eff(%): 35.196 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.233 | dlogz:    inf &gt;  0.500                                                     
+iter: 64 | bound: 0 | nc: 1 | ncall: 180 | eff(%): 35.556 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.205 | dlogz:    inf &gt;  0.500                                                     
+iter: 65 | bound: 0 | nc: 2 | ncall: 182 | eff(%): 35.714 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.266 | dlogz:    inf &gt;  0.500                                                     
+iter: 66 | bound: 0 | nc: 6 | ncall: 188 | eff(%): 35.106 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.243 | dlogz:    inf &gt;  0.500                                                     
+iter: 67 | bound: 0 | nc: 5 | ncall: 193 | eff(%): 34.715 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.258 | dlogz:    inf &gt;  0.500                                                     
+iter: 68 | bound: 0 | nc: 1 | ncall: 194 | eff(%): 35.052 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.235 | dlogz:    inf &gt;  0.500                                                     
+iter: 69 | bound: 0 | nc: 1 | ncall: 195 | eff(%): 35.385 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.251 | dlogz:    inf &gt;  0.500                                                     
+iter: 70 | bound: 0 | nc: 1 | ncall: 196 | eff(%): 35.714 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.229 | dlogz:    inf &gt;  0.500                                                     
+iter: 71 | bound: 0 | nc: 3 | ncall: 199 | eff(%): 35.678 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.244 | dlogz:    inf &gt;  0.500                                                     
+iter: 72 | bound: 0 | nc: 6 | ncall: 205 | eff(%): 35.122 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.257 | dlogz:    inf &gt;  0.500                                                     
+iter: 73 | bound: 0 | nc: 2 | ncall: 207 | eff(%): 35.266 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.237 | dlogz:    inf &gt;  0.500                                                     
+iter: 74 | bound: 0 | nc: 1 | ncall: 208 | eff(%): 35.577 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.251 | dlogz:    inf &gt;  0.500                                                     
+iter: 75 | bound: 0 | nc: 2 | ncall: 210 | eff(%): 35.714 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.231 | dlogz:    inf &gt;  0.500                                                     
+iter: 76 | bound: 0 | nc: 1 | ncall: 211 | eff(%): 36.019 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.245 | dlogz:    inf &gt;  0.500                                                     
+iter: 77 | bound: 0 | nc: 1 | ncall: 212 | eff(%): 36.321 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.258 | dlogz:    inf &gt;  0.500                                                     
+iter: 78 | bound: 0 | nc: 1 | ncall: 213 | eff(%): 36.620 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.239 | dlogz:    inf &gt;  0.500                                                     
+iter: 79 | bound: 0 | nc: 2 | ncall: 215 | eff(%): 36.744 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.252 | dlogz:    inf &gt;  0.500                                                     
+iter: 80 | bound: 0 | nc: 5 | ncall: 220 | eff(%): 36.364 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.232 | dlogz:    inf &gt;  0.500                                                     
+iter: 81 | bound: 0 | nc: 3 | ncall: 223 | eff(%): 36.323 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.246 | dlogz:    inf &gt;  0.500                                                     
+iter: 82 | bound: 0 | nc: 3 | ncall: 226 | eff(%): 36.283 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.258 | dlogz:    inf &gt;  0.500                                                     
+iter: 83 | bound: 0 | nc: 1 | ncall: 227 | eff(%): 36.564 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.240 | dlogz:    inf &gt;  0.500                                                     
+iter: 84 | bound: 0 | nc: 3 | ncall: 230 | eff(%): 36.522 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.252 | dlogz:    inf &gt;  0.500                                                     
+iter: 85 | bound: 0 | nc: 5 | ncall: 235 | eff(%): 36.170 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.234 | dlogz:    inf &gt;  0.500                                                     
+iter: 86 | bound: 0 | nc: 2 | ncall: 237 | eff(%): 36.287 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.247 | dlogz:    inf &gt;  0.500                                                     
+iter: 87 | bound: 0 | nc: 2 | ncall: 239 | eff(%): 36.402 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.258 | dlogz:    inf &gt;  0.500                                                     
+iter: 88 | bound: 0 | nc: 2 | ncall: 241 | eff(%): 36.515 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.241 | dlogz:    inf &gt;  0.500                                                     
+iter: 89 | bound: 0 | nc: 1 | ncall: 242 | eff(%): 36.777 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.253 | dlogz:    inf &gt;  0.500                                                     
+iter: 90 | bound: 0 | nc: 2 | ncall: 244 | eff(%): 36.885 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.237 | dlogz:    inf &gt;  0.500                                                     
+iter: 91 | bound: 0 | nc: 2 | ncall: 246 | eff(%): 36.992 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.248 | dlogz:    inf &gt;  0.500                                                     
+iter: 92 | bound: 0 | nc: 1 | ncall: 247 | eff(%): 37.247 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.258 | dlogz:    inf &gt;  0.500                                                     
+iter: 93 | bound: 0 | nc: 3 | ncall: 250 | eff(%): 37.200 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.243 | dlogz:    inf &gt;  0.500                                                     
+iter: 94 | bound: 0 | nc: 1 | ncall: 251 | eff(%): 37.450 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.253 | dlogz:    inf &gt;  0.500                                                     
+iter: 95 | bound: 0 | nc: 5 | ncall: 256 | eff(%): 37.109 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.239 | dlogz:    inf &gt;  0.500                                                     
+iter: 96 | bound: 0 | nc: 3 | ncall: 259 | eff(%): 37.066 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.249 | dlogz:    inf &gt;  0.500                                                     
+iter: 97 | bound: 0 | nc: 3 | ncall: 262 | eff(%): 37.023 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.259 | dlogz:    inf &gt;  0.500                                                     
+iter: 98 | bound: 0 | nc: 3 | ncall: 265 | eff(%): 36.981 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.245 | dlogz:    inf &gt;  0.500                                                     
+iter: 99 | bound: 0 | nc: 6 | ncall: 271 | eff(%): 36.531 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.254 | dlogz:    inf &gt;  0.500                                                     
+iter: 100 | bound: 0 | nc: 12 | ncall: 283 | eff(%): 35.336 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.240 | dlogz:    inf &gt;  0.500                                                   
+iter: 101 | bound: 0 | nc: 1 | ncall: 284 | eff(%): 35.563 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.250 | dlogz:    inf &gt;  0.500                                                    
+iter: 102 | bound: 0 | nc: 5 | ncall: 289 | eff(%): 35.294 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.259 | dlogz:    inf &gt;  0.500                                                    
+iter: 103 | bound: 0 | nc: 2 | ncall: 291 | eff(%): 35.395 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.246 | dlogz:    inf &gt;  0.500                                                    
+iter: 104 | bound: 0 | nc: 3 | ncall: 294 | eff(%): 35.374 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.255 | dlogz:    inf &gt;  0.500                                                    
+iter: 105 | bound: 0 | nc: 2 | ncall: 296 | eff(%): 35.473 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.242 | dlogz:    inf &gt;  0.500                                                    
+iter: 106 | bound: 0 | nc: 1 | ncall: 297 | eff(%): 35.690 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.251 | dlogz:    inf &gt;  0.500                                                    
+iter: 107 | bound: 0 | nc: 1 | ncall: 298 | eff(%): 35.906 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.260 | dlogz:    inf &gt;  0.500                                                    
+iter: 108 | bound: 0 | nc: 4 | ncall: 302 | eff(%): 35.762 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.247 | dlogz:    inf &gt;  0.500                                                    
+iter: 109 | bound: 0 | nc: 2 | ncall: 304 | eff(%): 35.855 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.256 | dlogz:    inf &gt;  0.500                                                    
+iter: 110 | bound: 0 | nc: 8 | ncall: 312 | eff(%): 35.256 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.243 | dlogz:    inf &gt;  0.500                                                    
+iter: 111 | bound: 0 | nc: 5 | ncall: 317 | eff(%): 35.016 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.252 | dlogz:    inf &gt;  0.500                                                    
+iter: 112 | bound: 0 | nc: 1 | ncall: 318 | eff(%): 35.220 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.260 | dlogz:    inf &gt;  0.500                                                    
+iter: 113 | bound: 0 | nc: 3 | ncall: 321 | eff(%): 35.202 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.248 | dlogz:    inf &gt;  0.500                                                    
+iter: 114 | bound: 0 | nc: 1 | ncall: 322 | eff(%): 35.404 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.257 | dlogz:    inf &gt;  0.500                                                    
+iter: 115 | bound: 0 | nc: 3 | ncall: 325 | eff(%): 35.385 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.255 | dlogz:    inf &gt;  0.500                                                    
+iter: 116 | bound: 0 | nc: 5 | ncall: 330 | eff(%): 35.152 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.253 | dlogz:    inf &gt;  0.500                                                    
+iter: 117 | bound: 0 | nc: 2 | ncall: 332 | eff(%): 35.241 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.251 | dlogz:    inf &gt;  0.500                                                    
+iter: 118 | bound: 0 | nc: 7 | ncall: 339 | eff(%): 34.808 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.250 | dlogz:    inf &gt;  0.500                                                    
+iter: 119 | bound: 0 | nc: 3 | ncall: 342 | eff(%): 34.795 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.257 | dlogz:    inf &gt;  0.500                                                    
+iter: 120 | bound: 0 | nc: 6 | ncall: 348 | eff(%): 34.483 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.256 | dlogz:    inf &gt;  0.500                                                    
+iter: 121 | bound: 0 | nc: 1 | ncall: 349 | eff(%): 34.670 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.254 | dlogz:    inf &gt;  0.500                                                    
+iter: 122 | bound: 0 | nc: 4 | ncall: 353 | eff(%): 34.561 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.253 | dlogz:    inf &gt;  0.500                                                    
+iter: 123 | bound: 0 | nc: 4 | ncall: 357 | eff(%): 34.454 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.251 | dlogz:    inf &gt;  0.500                                                    
+iter: 124 | bound: 0 | nc: 4 | ncall: 361 | eff(%): 34.349 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.258 | dlogz:    inf &gt;  0.500                                                    
+iter: 125 | bound: 0 | nc: 1 | ncall: 362 | eff(%): 34.530 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.256 | dlogz:    inf &gt;  0.500                                                    
+iter: 126 | bound: 0 | nc: 2 | ncall: 364 | eff(%): 34.615 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.255 | dlogz:    inf &gt;  0.500                                                    
+iter: 127 | bound: 0 | nc: 3 | ncall: 367 | eff(%): 34.605 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.254 | dlogz:    inf &gt;  0.500                                                    
+iter: 128 | bound: 0 | nc: 8 | ncall: 375 | eff(%): 34.133 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.252 | dlogz:    inf &gt;  0.500                                                    
+iter: 129 | bound: 0 | nc: 4 | ncall: 379 | eff(%): 34.037 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.259 | dlogz:    inf &gt;  0.500                                                    
+iter: 130 | bound: 0 | nc: 1 | ncall: 380 | eff(%): 34.211 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.257 | dlogz:    inf &gt;  0.500                                                    
+iter: 131 | bound: 0 | nc: 5 | ncall: 385 | eff(%): 34.026 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.256 | dlogz:    inf &gt;  0.500                                                    
+iter: 132 | bound: 0 | nc: 6 | ncall: 391 | eff(%): 33.760 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.255 | dlogz:    inf &gt;  0.500                                                    
+iter: 133 | bound: 0 | nc: 1 | ncall: 392 | eff(%): 33.929 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.253 | dlogz:    inf &gt;  0.500                                                    
+iter: 134 | bound: 0 | nc: 8 | ncall: 400 | eff(%): 33.500 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.259 | dlogz:    inf &gt;  0.500                                                    
+iter: 135 | bound: 0 | nc: 4 | ncall: 404 | eff(%): 33.416 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.258 | dlogz:    inf &gt;  0.500                                                    
+iter: 136 | bound: 0 | nc: 1 | ncall: 405 | eff(%): 33.580 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.257 | dlogz:    inf &gt;  0.500                                                    
+iter: 137 | bound: 0 | nc: 34 | ncall: 439 | eff(%): 31.207 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.256 | dlogz:    inf &gt;  0.500                                                   
+iter: 138 | bound: 0 | nc: 7 | ncall: 446 | eff(%): 30.942 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.255 | dlogz:    inf &gt;  0.500                                                    
+iter: 139 | bound: 0 | nc: 5 | ncall: 451 | eff(%): 30.820 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.260 | dlogz:    inf &gt;  0.500                                                    
+iter: 140 | bound: 0 | nc: 14 | ncall: 465 | eff(%): 30.108 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.259 | dlogz:    inf &gt;  0.500                                                   
+iter: 141 | bound: 0 | nc: 13 | ncall: 478 | eff(%): 29.498 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.258 | dlogz:    inf &gt;  0.500                                                   
+iter: 142 | bound: 0 | nc: 3 | ncall: 481 | eff(%): 29.522 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.257 | dlogz:    inf &gt;  0.500                                                    
+iter: 143 | bound: 0 | nc: 3 | ncall: 484 | eff(%): 29.545 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.256 | dlogz:    inf &gt;  0.500                                                    
+iter: 144 | bound: 0 | nc: 18 | ncall: 502 | eff(%): 28.685 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.261 | dlogz:    inf &gt;  0.500                                                   
+iter: 145 | bound: 0 | nc: 2 | ncall: 504 | eff(%): 28.770 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.260 | dlogz:    inf &gt;  0.500                                                    
+iter: 146 | bound: 0 | nc: 11 | ncall: 515 | eff(%): 28.350 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.259 | dlogz:    inf &gt;  0.500                                                   
+iter: 147 | bound: 0 | nc: 15 | ncall: 530 | eff(%): 27.736 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.258 | dlogz:    inf &gt;  0.500                                                   
+iter: 148 | bound: 0 | nc: 5 | ncall: 535 | eff(%): 27.664 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.257 | dlogz:    inf &gt;  0.500                                                    
+iter: 149 | bound: 0 | nc: 3 | ncall: 538 | eff(%): 27.695 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.262 | dlogz:    inf &gt;  0.500                                                    
+iter: 150 | bound: 0 | nc: 1 | ncall: 539 | eff(%): 27.829 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.261 | dlogz:    inf &gt;  0.500                                                    
+iter: 151 | bound: 0 | nc: 2 | ncall: 541 | eff(%): 27.911 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.260 | dlogz:    inf &gt;  0.500                                                    
+iter: 152 | bound: 0 | nc: 5 | ncall: 546 | eff(%): 27.839 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.259 | dlogz:    inf &gt;  0.500                                                    
+iter: 153 | bound: 0 | nc: 6 | ncall: 552 | eff(%): 27.717 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.258 | dlogz:    inf &gt;  0.500                                                    
+iter: 154 | bound: 0 | nc: 1 | ncall: 553 | eff(%): 27.848 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.263 | dlogz:    inf &gt;  0.500                                                    
+iter: 155 | bound: 0 | nc: 1 | ncall: 554 | eff(%): 27.978 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.262 | dlogz:    inf &gt;  0.500                                                    
+iter: 156 | bound: 0 | nc: 7 | ncall: 561 | eff(%): 27.807 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.261 | dlogz:    inf &gt;  0.500                                                    
+iter: 157 | bound: 0 | nc: 4 | ncall: 565 | eff(%): 27.788 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.260 | dlogz:    inf &gt;  0.500                                                    
+iter: 158 | bound: 0 | nc: 3 | ncall: 568 | eff(%): 27.817 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.259 | dlogz:    inf &gt;  0.500                                                    
+iter: 159 | bound: 0 | nc: 6 | ncall: 574 | eff(%): 27.700 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.264 | dlogz:    inf &gt;  0.500                                                    
+iter: 160 | bound: 0 | nc: 2 | ncall: 576 | eff(%): 27.778 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.263 | dlogz:    inf &gt;  0.500                                                    
+iter: 161 | bound: 0 | nc: 1 | ncall: 577 | eff(%): 27.903 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.262 | dlogz:    inf &gt;  0.500                                                    
+iter: 162 | bound: 0 | nc: 8 | ncall: 585 | eff(%): 27.692 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.261 | dlogz:    inf &gt;  0.500                                                    
+iter: 163 | bound: 0 | nc: 6 | ncall: 591 | eff(%): 27.580 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.260 | dlogz:    inf &gt;  0.500                                                    
+iter: 164 | bound: 0 | nc: 2 | ncall: 593 | eff(%): 27.656 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.265 | dlogz:    inf &gt;  0.500                                                    
+iter: 165 | bound: 0 | nc: 1 | ncall: 594 | eff(%): 27.778 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.264 | dlogz:    inf &gt;  0.500                                                    
+iter: 166 | bound: 0 | nc: 3 | ncall: 597 | eff(%): 27.806 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.263 | dlogz:    inf &gt;  0.500                                                    
+iter: 167 | bound: 0 | nc: 3 | ncall: 600 | eff(%): 27.833 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.262 | dlogz:    inf &gt;  0.500                                                    
+iter: 168 | bound: 0 | nc: 11 | ncall: 611 | eff(%): 27.496 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.261 | dlogz:    inf &gt;  0.500                                                   
+iter: 169 | bound: 0 | nc: 1 | ncall: 612 | eff(%): 27.614 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.265 | dlogz:    inf &gt;  0.500                                                    
+iter: 170 | bound: 0 | nc: 18 | ncall: 630 | eff(%): 26.984 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.264 | dlogz:    inf &gt;  0.500                                                   
+iter: 171 | bound: 0 | nc: 10 | ncall: 640 | eff(%): 26.719 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.264 | dlogz:    inf &gt;  0.500                                                   
+iter: 172 | bound: 0 | nc: 1 | ncall: 641 | eff(%): 26.833 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.263 | dlogz:    inf &gt;  0.500                                                    
+iter: 173 | bound: 0 | nc: 8 | ncall: 649 | eff(%): 26.656 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.262 | dlogz:    inf &gt;  0.500                                                    
+iter: 174 | bound: 0 | nc: 3 | ncall: 652 | eff(%): 26.687 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.266 | dlogz:    inf &gt;  0.500                                                    
+iter: 175 | bound: 0 | nc: 7 | ncall: 659 | eff(%): 26.555 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.265 | dlogz:    inf &gt;  0.500                                                    
+iter: 176 | bound: 0 | nc: 3 | ncall: 662 | eff(%): 26.586 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.265 | dlogz:    inf &gt;  0.500                                                    
+iter: 177 | bound: 0 | nc: 14 | ncall: 676 | eff(%): 26.183 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.264 | dlogz:    inf &gt;  0.500                                                   
+iter: 178 | bound: 0 | nc: 15 | ncall: 691 | eff(%): 25.760 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.265 | dlogz:    inf &gt;  0.500                                                   
+iter: 179 | bound: 0 | nc: 1 | ncall: 692 | eff(%): 25.867 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.265 | dlogz:    inf &gt;  0.500                                                    
+iter: 180 | bound: 0 | nc: 12 | ncall: 704 | eff(%): 25.568 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.266 | dlogz:    inf &gt;  0.500                                                   
+iter: 181 | bound: 0 | nc: 23 | ncall: 727 | eff(%): 24.897 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.266 | dlogz:    inf &gt;  0.500                                                   
+iter: 182 | bound: 0 | nc: 1 | ncall: 728 | eff(%): 25.000 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.265 | dlogz:    inf &gt;  0.500                                                    
+iter: 183 | bound: 0 | nc: 1 | ncall: 729 | eff(%): 25.103 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.266 | dlogz:    inf &gt;  0.500                                                    
+iter: 184 | bound: 0 | nc: 5 | ncall: 734 | eff(%): 25.068 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.266 | dlogz:    inf &gt;  0.500                                                    
+iter: 185 | bound: 0 | nc: 15 | ncall: 749 | eff(%): 24.700 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.267 | dlogz:    inf &gt;  0.500                                                   
+iter: 186 | bound: 0 | nc: 8 | ncall: 757 | eff(%): 24.571 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.267 | dlogz:    inf &gt;  0.500                                                    
+iter: 187 | bound: 0 | nc: 6 | ncall: 763 | eff(%): 24.509 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.266 | dlogz:    inf &gt;  0.500                                                    
+iter: 188 | bound: 0 | nc: 2 | ncall: 765 | eff(%): 24.575 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.267 | dlogz:    inf &gt;  0.500                                                    
+iter: 189 | bound: 0 | nc: 2 | ncall: 767 | eff(%): 24.641 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.267 | dlogz:    inf &gt;  0.500                                                    
+iter: 190 | bound: 0 | nc: 5 | ncall: 772 | eff(%): 24.611 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.268 | dlogz:    inf &gt;  0.500                                                    
+iter: 191 | bound: 0 | nc: 9 | ncall: 781 | eff(%): 24.456 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.267 | dlogz:    inf &gt;  0.500                                                    
+iter: 192 | bound: 0 | nc: 37 | ncall: 818 | eff(%): 23.472 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.267 | dlogz:    inf &gt;  0.500                                                   
+iter: 193 | bound: 0 | nc: 12 | ncall: 830 | eff(%): 23.253 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.268 | dlogz:    inf &gt;  0.500                                                   
+iter: 194 | bound: 0 | nc: 15 | ncall: 845 | eff(%): 22.959 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.268 | dlogz:    inf &gt;  0.500                                                   
+iter: 195 | bound: 0 | nc: 3 | ncall: 848 | eff(%): 22.995 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.269 | dlogz:    inf &gt;  0.500                                                    
+iter: 196 | bound: 0 | nc: 2 | ncall: 850 | eff(%): 23.059 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.268 | dlogz:    inf &gt;  0.500                                                    
+iter: 197 | bound: 0 | nc: 1 | ncall: 851 | eff(%): 23.149 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.268 | dlogz:    inf &gt;  0.500                                                    
+iter: 198 | bound: 0 | nc: 1 | ncall: 852 | eff(%): 23.239 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.269 | dlogz:    inf &gt;  0.500                                                    
+iter: 199 | bound: 0 | nc: 9 | ncall: 861 | eff(%): 23.113 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.269 | dlogz:    inf &gt;  0.500                                                    
+iter: 200 | bound: 0 | nc: 10 | ncall: 871 | eff(%): 22.962 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.270 | dlogz:    inf &gt;  0.500                                                   
+iter: 201 | bound: 0 | nc: 4 | ncall: 875 | eff(%): 22.971 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.269 | dlogz:    inf &gt;  0.500                                                    
+iter: 202 | bound: 0 | nc: 1 | ncall: 876 | eff(%): 23.059 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.269 | dlogz:    inf &gt;  0.500                                                    
+iter: 203 | bound: 0 | nc: 27 | ncall: 903 | eff(%): 22.481 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.270 | dlogz:    inf &gt;  0.500                                                   
+iter: 204 | bound: 0 | nc: 6 | ncall: 909 | eff(%): 22.442 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.270 | dlogz:    inf &gt;  0.500                                                    
+iter: 205 | bound: 0 | nc: 29 | ncall: 938 | eff(%): 21.855 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.271 | dlogz:    inf &gt;  0.500                                                   
+iter: 206 | bound: 0 | nc: 1 | ncall: 939 | eff(%): 21.938 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.270 | dlogz:    inf &gt;  0.500                                                    
+iter: 207 | bound: 0 | nc: 64 | ncall: 1003 | eff(%): 20.638 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.270 | dlogz:    inf &gt;  0.500                                                  
+iter: 208 | bound: 0 | nc: 4 | ncall: 1007 | eff(%): 20.655 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.271 | dlogz:    inf &gt;  0.500                                                   
+iter: 209 | bound: 0 | nc: 6 | ncall: 1013 | eff(%): 20.632 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.270 | dlogz:    inf &gt;  0.500                                                   
+iter: 210 | bound: 0 | nc: 1 | ncall: 1014 | eff(%): 20.710 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.272 | dlogz:    inf &gt;  0.500                                                   
+iter: 211 | bound: 0 | nc: 6 | ncall: 1020 | eff(%): 20.686 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.271 | dlogz:    inf &gt;  0.500                                                   
+iter: 212 | bound: 0 | nc: 3 | ncall: 1023 | eff(%): 20.723 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.271 | dlogz:    inf &gt;  0.500                                                   
+iter: 213 | bound: 0 | nc: 2 | ncall: 1025 | eff(%): 20.780 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.272 | dlogz:    inf &gt;  0.500                                                   
+iter: 214 | bound: 0 | nc: 9 | ncall: 1034 | eff(%): 20.696 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.271 | dlogz:    inf &gt;  0.500                                                   
+iter: 215 | bound: 0 | nc: 8 | ncall: 1042 | eff(%): 20.633 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.273 | dlogz:    inf &gt;  0.500                                                   
+iter: 216 | bound: 0 | nc: 6 | ncall: 1048 | eff(%): 20.611 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.272 | dlogz:    inf &gt;  0.500                                                   
+iter: 217 | bound: 0 | nc: 6 | ncall: 1054 | eff(%): 20.588 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.272 | dlogz:    inf &gt;  0.500                                                   
+iter: 218 | bound: 0 | nc: 5 | ncall: 1059 | eff(%): 20.585 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.273 | dlogz:    inf &gt;  0.500                                                   
+iter: 219 | bound: 0 | nc: 18 | ncall: 1077 | eff(%): 20.334 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.272 | dlogz:    inf &gt;  0.500                                                  
+iter: 220 | bound: 0 | nc: 5 | ncall: 1082 | eff(%): 20.333 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.273 | dlogz:    inf &gt;  0.500                                                   
+iter: 221 | bound: 0 | nc: 4 | ncall: 1086 | eff(%): 20.350 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.273 | dlogz:    inf &gt;  0.500                                                   
+iter: 222 | bound: 0 | nc: 2 | ncall: 1088 | eff(%): 20.404 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.273 | dlogz:    inf &gt;  0.500                                                   
+iter: 223 | bound: 0 | nc: 17 | ncall: 1105 | eff(%): 20.181 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.274 | dlogz:    inf &gt;  0.500                                                  
+iter: 224 | bound: 0 | nc: 14 | ncall: 1119 | eff(%): 20.018 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.273 | dlogz:    inf &gt;  0.500                                                  
+iter: 225 | bound: 0 | nc: 8 | ncall: 1127 | eff(%): 19.965 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.274 | dlogz:    inf &gt;  0.500                                                   
+iter: 226 | bound: 0 | nc: 3 | ncall: 1130 | eff(%): 20.000 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.274 | dlogz:    inf &gt;  0.500                                                   
+iter: 227 | bound: 0 | nc: 24 | ncall: 1154 | eff(%): 19.671 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.274 | dlogz:    inf &gt;  0.500                                                  
+iter: 228 | bound: 0 | nc: 25 | ncall: 1179 | eff(%): 19.338 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.275 | dlogz:    inf &gt;  0.500                                                  
+iter: 229 | bound: 0 | nc: 10 | ncall: 1189 | eff(%): 19.260 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.274 | dlogz:    inf &gt;  0.500                                                  
+iter: 230 | bound: 0 | nc: 7 | ncall: 1196 | eff(%): 19.231 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.275 | dlogz:    inf &gt;  0.500                                                   
+iter: 231 | bound: 0 | nc: 4 | ncall: 1200 | eff(%): 19.250 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.275 | dlogz:    inf &gt;  0.500                                                   
+iter: 232 | bound: 0 | nc: 4 | ncall: 1204 | eff(%): 19.269 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.274 | dlogz:    inf &gt;  0.500                                                   
+iter: 233 | bound: 0 | nc: 1 | ncall: 1205 | eff(%): 19.336 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.275 | dlogz:    inf &gt;  0.500                                                   
+iter: 234 | bound: 0 | nc: 3 | ncall: 1208 | eff(%): 19.371 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.275 | dlogz:    inf &gt;  0.500                                                   
+iter: 235 | bound: 0 | nc: 2 | ncall: 1210 | eff(%): 19.421 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.276 | dlogz:    inf &gt;  0.500                                                   
+iter: 236 | bound: 0 | nc: 7 | ncall: 1217 | eff(%): 19.392 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.276 | dlogz:    inf &gt;  0.500                                                   
+iter: 237 | bound: 0 | nc: 1 | ncall: 1218 | eff(%): 19.458 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.275 | dlogz:    inf &gt;  0.500                                                   
+iter: 238 | bound: 0 | nc: 9 | ncall: 1227 | eff(%): 19.397 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.276 | dlogz:    inf &gt;  0.500                                                   
+iter: 239 | bound: 0 | nc: 9 | ncall: 1236 | eff(%): 19.337 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.276 | dlogz:    inf &gt;  0.500                                                   
+iter: 240 | bound: 0 | nc: 8 | ncall: 1244 | eff(%): 19.293 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.277 | dlogz:    inf &gt;  0.500                                                   
+iter: 241 | bound: 0 | nc: 3 | ncall: 1247 | eff(%): 19.326 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.277 | dlogz:    inf &gt;  0.500                                                   
+iter: 242 | bound: 0 | nc: 10 | ncall: 1257 | eff(%): 19.252 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.276 | dlogz:    inf &gt;  0.500                                                  
+iter: 243 | bound: 0 | nc: 9 | ncall: 1266 | eff(%): 19.194 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.277 | dlogz:    inf &gt;  0.500                                                   
+iter: 244 | bound: 0 | nc: 84 | ncall: 1350 | eff(%): 18.074 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.277 | dlogz:    inf &gt;  0.500                                                  
+iter: 245 | bound: 0 | nc: 5 | ncall: 1355 | eff(%): 18.081 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.277 | dlogz:    inf &gt;  0.500                                                   
+iter: 246 | bound: 0 | nc: 2 | ncall: 1357 | eff(%): 18.128 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.278 | dlogz:    inf &gt;  0.500                                                   
+iter: 247 | bound: 0 | nc: 31 | ncall: 1388 | eff(%): 17.795 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.278 | dlogz:    inf &gt;  0.500                                                  
+iter: 248 | bound: 0 | nc: 47 | ncall: 1435 | eff(%): 17.282 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.278 | dlogz:    inf &gt;  0.500                                                  
+iter: 249 | bound: 0 | nc: 14 | ncall: 1449 | eff(%): 17.184 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.278 | dlogz:    inf &gt;  0.500                                                  
+iter: 250 | bound: 0 | nc: 21 | ncall: 1470 | eff(%): 17.007 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.278 | dlogz:    inf &gt;  0.500                                                  
+iter: 251 | bound: 0 | nc: 42 | ncall: 1512 | eff(%): 16.601 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.278 | dlogz:    inf &gt;  0.500                                                  
+iter: 252 | bound: 0 | nc: 4 | ncall: 1516 | eff(%): 16.623 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.279 | dlogz:    inf &gt;  0.500                                                   
+iter: 253 | bound: 0 | nc: 25 | ncall: 1541 | eff(%): 16.418 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.279 | dlogz:    inf &gt;  0.500                                                  
+iter: 254 | bound: 0 | nc: 2 | ncall: 1543 | eff(%): 16.461 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.279 | dlogz:    inf &gt;  0.500                                                   
+iter: 255 | bound: 0 | nc: 35 | ncall: 1578 | eff(%): 16.160 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.279 | dlogz:    inf &gt;  0.500                                                  
+iter: 256 | bound: 0 | nc: 26 | ncall: 1604 | eff(%): 15.960 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.279 | dlogz:    inf &gt;  0.500                                                  
+iter: 257 | bound: 0 | nc: 10 | ncall: 1614 | eff(%): 15.923 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.280 | dlogz:    inf &gt;  0.500                                                  
+iter: 258 | bound: 0 | nc: 26 | ncall: 1640 | eff(%): 15.732 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.280 | dlogz:    inf &gt;  0.500                                                  
+iter: 259 | bound: 0 | nc: 3 | ncall: 1643 | eff(%): 15.764 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.280 | dlogz:    inf &gt;  0.500                                                   
+iter: 260 | bound: 0 | nc: 25 | ncall: 1668 | eff(%): 15.588 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.280 | dlogz:    inf &gt;  0.500                                                  
+iter: 261 | bound: 0 | nc: 7 | ncall: 1675 | eff(%): 15.582 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.280 | dlogz:    inf &gt;  0.500                                                   
+iter: 262 | bound: 0 | nc: 33 | ncall: 1708 | eff(%): 15.340 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.280 | dlogz:    inf &gt;  0.500                                                  
+iter: 263 | bound: 0 | nc: 1 | ncall: 1709 | eff(%): 15.389 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.281 | dlogz:    inf &gt;  0.500                                                   
+iter: 264 | bound: 0 | nc: 6 | ncall: 1715 | eff(%): 15.394 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.281 | dlogz:    inf &gt;  0.500                                                   
+iter: 265 | bound: 0 | nc: 17 | ncall: 1732 | eff(%): 15.300 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.281 | dlogz:    inf &gt;  0.500                                                  
+iter: 266 | bound: 0 | nc: 9 | ncall: 1741 | eff(%): 15.279 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.281 | dlogz:    inf &gt;  0.500                                                   
+iter: 267 | bound: 0 | nc: 25 | ncall: 1766 | eff(%): 15.119 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.281 | dlogz:    inf &gt;  0.500                                                  
+iter: 268 | bound: 0 | nc: 10 | ncall: 1776 | eff(%): 15.090 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.282 | dlogz:    inf &gt;  0.500                                                  
+iter: 269 | bound: 0 | nc: 27 | ncall: 1803 | eff(%): 14.920 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.282 | dlogz:    inf &gt;  0.500                                                  
+iter: 270 | bound: 0 | nc: 3 | ncall: 1806 | eff(%): 14.950 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.282 | dlogz:    inf &gt;  0.500                                                   
+iter: 271 | bound: 0 | nc: 31 | ncall: 1837 | eff(%): 14.752 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.282 | dlogz:    inf &gt;  0.500                                                  
+iter: 272 | bound: 0 | nc: 28 | ncall: 1865 | eff(%): 14.584 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.282 | dlogz:    inf &gt;  0.500                                                  
+iter: 273 | bound: 0 | nc: 22 | ncall: 1887 | eff(%): 14.467 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.282 | dlogz:    inf &gt;  0.500                                                  
+iter: 274 | bound: 0 | nc: 32 | ncall: 1919 | eff(%): 14.278 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.283 | dlogz:    inf &gt;  0.500                                                  
+iter: 275 | bound: 0 | nc: 13 | ncall: 1932 | eff(%): 14.234 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.283 | dlogz:    inf &gt;  0.500                                                  
+iter: 276 | bound: 0 | nc: 2 | ncall: 1934 | eff(%): 14.271 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.283 | dlogz:    inf &gt;  0.500                                                   
+iter: 277 | bound: 0 | nc: 19 | ncall: 1953 | eff(%): 14.183 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.283 | dlogz:    inf &gt;  0.500                                                  
+iter: 278 | bound: 0 | nc: 11 | ncall: 1964 | eff(%): 14.155 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.283 | dlogz:    inf &gt;  0.500                                                  
+iter: 279 | bound: 0 | nc: 6 | ncall: 1970 | eff(%): 14.162 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.284 | dlogz:    inf &gt;  0.500                                                   
+iter: 280 | bound: 0 | nc: 64 | ncall: 2034 | eff(%): 13.766 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.283 | dlogz:    inf &gt;  0.500                                                  
+iter: 281 | bound: 0 | nc: 3 | ncall: 2037 | eff(%): 13.795 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.284 | dlogz:    inf &gt;  0.500                                                   
+iter: 282 | bound: 0 | nc: 49 | ncall: 2086 | eff(%): 13.519 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.284 | dlogz:    inf &gt;  0.500                                                  
+iter: 283 | bound: 0 | nc: 18 | ncall: 2104 | eff(%): 13.451 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.284 | dlogz:    inf &gt;  0.500                                                  
+iter: 284 | bound: 0 | nc: 1 | ncall: 2105 | eff(%): 13.492 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.284 | dlogz:    inf &gt;  0.500                                                   
+iter: 285 | bound: 0 | nc: 3 | ncall: 2108 | eff(%): 13.520 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.284 | dlogz:    inf &gt;  0.500                                                   
+iter: 286 | bound: 0 | nc: 22 | ncall: 2130 | eff(%): 13.427 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.285 | dlogz:    inf &gt;  0.500                                                  
+iter: 287 | bound: 0 | nc: 9 | ncall: 2139 | eff(%): 13.417 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.285 | dlogz:    inf &gt;  0.500                                                   
+iter: 288 | bound: 0 | nc: 13 | ncall: 2152 | eff(%): 13.383 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.285 | dlogz:    inf &gt;  0.500                                                  
+iter: 289 | bound: 0 | nc: 8 | ncall: 2160 | eff(%): 13.380 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.285 | dlogz:    inf &gt;  0.500                                                   
+iter: 290 | bound: 0 | nc: 10 | ncall: 2170 | eff(%): 13.364 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.285 | dlogz:    inf &gt;  0.500                                                  
+iter: 291 | bound: 0 | nc: 17 | ncall: 2187 | eff(%): 13.306 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.285 | dlogz:    inf &gt;  0.500                                                  
+iter: 292 | bound: 0 | nc: 41 | ncall: 2228 | eff(%): 13.106 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.286 | dlogz:    inf &gt;  0.500                                                  
+iter: 293 | bound: 0 | nc: 10 | ncall: 2238 | eff(%): 13.092 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.286 | dlogz:    inf &gt;  0.500                                                  
+iter: 294 | bound: 0 | nc: 6 | ncall: 2244 | eff(%): 13.102 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.286 | dlogz:    inf &gt;  0.500                                                   
+iter: 295 | bound: 0 | nc: 12 | ncall: 2256 | eff(%): 13.076 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.286 | dlogz:    inf &gt;  0.500                                                  
+iter: 296 | bound: 0 | nc: 20 | ncall: 2276 | eff(%): 13.005 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.286 | dlogz:    inf &gt;  0.500                                                  
+iter: 297 | bound: 0 | nc: 12 | ncall: 2288 | eff(%): 12.981 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.287 | dlogz:    inf &gt;  0.500                                                  
+iter: 298 | bound: 0 | nc: 9 | ncall: 2297 | eff(%): 12.973 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.287 | dlogz:    inf &gt;  0.500                                                   
+iter: 299 | bound: 0 | nc: 39 | ncall: 2336 | eff(%): 12.800 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.287 | dlogz:    inf &gt;  0.500                                                  
+iter: 300 | bound: 0 | nc: 69 | ncall: 2405 | eff(%): 12.474 | loglstar:   -inf &lt;   -inf &lt;    inf | logz:   -inf +/-  0.287 | dlogz:    inf &gt;  0.500                                                  
+/home/tom/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/threading.py:355: Failed: Timeout (&gt;120.0s) from pytest-timeout.
+=========================== short test summary info ============================
+FAILED artifact/backtracks-0.6.4/tests/test_backtracks.py::TestBacktracks::test_fit
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 2 passed in 148.56s (0:02:28)
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (53)</strong></summary>
+<table class="meta-table">
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>astroquery</td><td>0.4.11</td></tr>
+
+<tr><td>backtracks</td><td>0.6.4</td></tr>
+
+<tr><td>beautifulsoup4</td><td>4.14.3</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>cffi</td><td>2.0.0</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>corner</td><td>2.2.3</td></tr>
+
+<tr><td>cryptography</td><td>48.0.0</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>dill</td><td>0.4.1</td></tr>
+
+<tr><td>dynesty</td><td>3.0.0</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>html5lib</td><td>1.1</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>jaraco-classes</td><td>3.4.0</td></tr>
+
+<tr><td>jaraco-context</td><td>6.1.2</td></tr>
+
+<tr><td>jaraco-functools</td><td>4.4.0</td></tr>
+
+<tr><td>jeepney</td><td>0.9.0</td></tr>
+
+<tr><td>keyring</td><td>25.7.0</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>more-itertools</td><td>11.0.2</td></tr>
+
+<tr><td>multiprocess</td><td>0.70.19</td></tr>
+
+<tr><td>novas</td><td>3.1.1.6</td></tr>
+
+<tr><td>novas-de405</td><td>1997.1</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pycparser</td><td>3.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pyvo</td><td>1.8.1</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>schwimmbad</td><td>0.4.2</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>seaborn</td><td>0.13.2</td></tr>
+
+<tr><td>secretstorage</td><td>3.5.0</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>soupsieve</td><td>2.8.3</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>webencodings</td><td>0.5.1</td></tr>
+
+</table>
+</details>
+
+</body></html>

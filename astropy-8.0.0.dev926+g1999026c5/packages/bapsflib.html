@@ -1,0 +1,218 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>bapsflib - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>bapsflib</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>2026.4.0</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="pass">PASS</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>36.8s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>bapsflib</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>sssss............... [  4%]
+.............................. [ 11%]
+...sssss.........sssss........sssss...........sssss..... [ 24%]
+..........sssss.............................................sssss.. [ 39%]
+.......ssss.............................ssss............ssss [ 53%]
+....................ssss......ssss......ssss......ssss......ssss [ 68%]
+..................................................................... [ 83%]
+.............................. [ 90%]
+........................................                                                           [100%]
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/controls/tests/test_parsers.py::TestCLParse::test_apply_patterns
+venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/controls/tests/test_parsers.py::TestCLParse::test_apply_patterns
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-bapsflib-74s88o1b/venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/controls/parsers.py:240: HDFMappingWarning: Symbolic group (VOLT) removed since some or all of the &#39;command list&#39; has None values
+    warn(
+
+venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/controls/tests/test_parsers.py::TestCLParse::test_apply_patterns
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-bapsflib-74s88o1b/venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/controls/parsers.py:254: HDFMappingWarning: Symbolic group (FREQ) removed since all entries in &#39;command list&#39; do NOT have the same type
+    warn(
+
+venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/controls/tests/test_parsers.py::TestCLParse::test_apply_patterns
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-bapsflib-74s88o1b/venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/controls/parsers.py:240: HDFMappingWarning: Symbolic group (FREQ) removed since some or all of the &#39;command list&#39; has None values
+    warn(
+
+venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/digitizers/tests/test_lecroy.py: 9 warnings
+venv/lib/python3.12/site-packages/bapsflib/_hdf/utils/tests/test_file.py: 3 warnings
+venv/lib/python3.12/site-packages/bapsflib/_hdf/utils/tests/test_hdfreaddata.py: 1 warning
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-bapsflib-74s88o1b/venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/digitizers/templates.py:532: HDFMappingWarning: `config_name` not specified, assuming &#39;lecroy&#39;.
+    warn(
+
+venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/digitizers/tests/test_lecroy.py: 9 warnings
+venv/lib/python3.12/site-packages/bapsflib/_hdf/utils/tests/test_file.py: 3 warnings
+venv/lib/python3.12/site-packages/bapsflib/_hdf/utils/tests/test_hdfreaddata.py: 1 warning
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-bapsflib-74s88o1b/venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/digitizers/templates.py:612: HDFMappingWarning: No `adc` specified, but only one adc used...assuming adc &#39;lecroy&#39;
+    warn(
+
+venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/digitizers/tests/test_sis3301.py::TestSIS3301::test_construct_dataset_name
+venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/digitizers/tests/test_sis3301.py::TestSIS3301::test_construct_header_dataset_name
+venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/digitizers/tests/test_siscrate.py::TestSISCrate::test_construct_dataset_name
+venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/digitizers/tests/test_siscrate.py::TestSISCrate::test_construct_dataset_name
+venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/digitizers/tests/test_siscrate.py::TestSISCrate::test_construct_header_dataset_name
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-bapsflib-74s88o1b/venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/digitizers/templates.py:532: HDFMappingWarning: `config_name` not specified, assuming &#39;config01&#39;.
+    warn(
+
+venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/digitizers/tests/test_siscrate.py::TestSISCrate::test_construct_header_dataset_name
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-bapsflib-74s88o1b/venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/digitizers/templates.py:612: HDFMappingWarning: No `adc` specified, but only one adc used...assuming adc &#39;SIS 3302&#39;
+    warn(
+
+venv/lib/python3.12/site-packages/bapsflib/_hdf/utils/tests/test_hdfreaddata.py::TestHDFReadData::test_kwarg_adc
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-bapsflib-74s88o1b/venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/digitizers/templates.py:612: HDFMappingWarning: No `adc` specified, but only one adc used...assuming adc &#39;SIS 3301&#39;
+    warn(
+
+venv/lib/python3.12/site-packages/bapsflib/utils/tests/test_decorators.py::TestWithBF::test_settings_by_decorator_kwargs
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-bapsflib-74s88o1b/venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/mapper.py:117: HDFMappingWarning: Group for control devices (&#39;a different path&#39;) does NOT exist.
+    warn(
+
+venv/lib/python3.12/site-packages/bapsflib/utils/tests/test_decorators.py::TestWithBF::test_settings_by_method_self
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-bapsflib-74s88o1b/venv/lib/python3.12/site-packages/bapsflib/_hdf/maps/mapper.py:117: HDFMappingWarning: Group for control devices (&#39;a new path&#39;) does NOT exist.
+    warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+369 passed, 67 skipped, 39 warnings, 442 subtests passed in 31.95s
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (41)</strong></summary>
+<table class="meta-table">
+
+<tr><td>alabaster</td><td>1.0.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>babel</td><td>2.18.0</td></tr>
+
+<tr><td>bapsf-motion</td><td>2025.7.0</td></tr>
+
+<tr><td>bapsflib</td><td>2026.4.0</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>docutils</td><td>0.22.4</td></tr>
+
+<tr><td>h5py</td><td>3.16.0</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>imagesize</td><td>2.0.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>numpydoc</td><td>1.10.0</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>roman-numerals</td><td>4.1.0</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>snowballstemmer</td><td>3.0.1</td></tr>
+
+<tr><td>sphinx</td><td>9.1.0</td></tr>
+
+<tr><td>sphinxcontrib-applehelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-devhelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-htmlhelp</td><td>2.1.0</td></tr>
+
+<tr><td>sphinxcontrib-jsmath</td><td>1.0.1</td></tr>
+
+<tr><td>sphinxcontrib-qthelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-serializinghtml</td><td>2.0.0</td></tr>
+
+<tr><td>tomli-w</td><td>1.2.0</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>xarray</td><td>2026.4.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

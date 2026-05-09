@@ -1,0 +1,303 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>ScopeSim_Templates - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>ScopeSim_Templates</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.8.1</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="pass">PASS</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>188.3s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>scopesim_templates</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>..............................s......................................... [ 77%]
+.....................                                                    [100%]
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_calibration/test_calibration.py::TestFlatField::test_flat_field_returns_source_object
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/scopesim_templates/calibration/calibration.py:116: RuntimeWarning: Make sure to turn off the appropriate ScopeSim effects during the simulation
+    warnings.warn(&#34;Make sure to turn off the appropriate ScopeSim effects &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_calibration/test_calibration.py::TestLamp::test_lamp_returns_source_object
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/scopesim_templates/calibration/calibration.py:63: RuntimeWarning: Make sure to turn off the appropriate ScopeSim effects during the simulation
+    warnings.warn(&#34;Make sure to turn off the appropriate ScopeSim effects &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_micado/test_viking_fields.py::TestVikingCatalogues::test_load_viking_field
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/scopesim_templates/tests/test_micado/test_viking_fields.py:60: PendingDeprecationWarning: Direct item access for source fields may become deprecated in the future. Use the .field attribute instead.
+    star_x, star_y = stars[0].field[&#34;x&#34;].data, stars[0][&#34;y&#34;].data
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_misc/test_misc.py::TestSourceFromImageHDU::test_actually_produces_image
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_misc/test_misc.py::TestSourceFromImageHDU::test_scales
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_misc/test_misc.py::TestSourceFromImageHDU::test_scales
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/astropy/wcs/wcs.py:3814: FITSFixedWarning: END 
+  keyrecords following the END keyrecord were ignored.
+    wcsprms = find_all_wcs_c(header_bytes, relax, keysel_flags)
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706638 km / s &gt; 76.8130374861435 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396711369 km / s &gt; 76.79945885583041 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706565 km / s &gt; 86.47048384208483 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706908 km / s &gt; 85.78285805496617 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706626 km / s &gt; 85.69301798156434 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.88963967064 km / s &gt; 86.98907501264475 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396711096 km / s &gt; 87.7014509809953 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706581 km / s &gt; 87.94031931592666 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396711026 km / s &gt; 87.70325319545003 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396711403 km / s &gt; 86.99508662222783 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396711027 km / s &gt; 85.69810825003205 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706747 km / s &gt; 85.7483101179878 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706707 km / s &gt; 86.40072479536424 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706582 km / s &gt; 96.59671775477848 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396707091 km / s &gt; 100.25991411298685 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396710711 km / s &gt; 102.74705172120136 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706365 km / s &gt; 102.01375292579866 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706581 km / s &gt; 101.85862561950769 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706612 km / s &gt; 102.01275110209278 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396711096 km / s &gt; 102.75385274888544 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396711341 km / s &gt; 100.28194113849916 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706555 km / s &gt; 96.61365241574394 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706549 km / s &gt; 112.86040922462637 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396710735 km / s &gt; 115.44196166172453 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706581 km / s &gt; 116.84903494002856 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706805 km / s &gt; 115.4680744348449 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+venv/lib/python3.12/site-packages/scopesim_templates/tests/test_utils/test_validate_content.py::TestContentOfFields::test_is_fields_a_list
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-ScopeSim_Templates-f8vs_31l/venv/lib/python3.12/site-packages/spextra/spextra.py:1229: UserWarning: Spectrum is undersampled for provided sigma value, 1018.8896396706664 km / s &gt; 112.8839796055915 km / s.
+    warnings.warn(&#34;Spectrum is undersampled for provided sigma value, &#34;
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+92 passed, 1 skipped, 33 warnings in 184.66s (0:03:04)
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (48)</strong></summary>
+<table class="meta-table">
+
+<tr><td>anisocado</td><td>0.5.0</td></tr>
+
+<tr><td>anyio</td><td>4.13.0</td></tr>
+
+<tr><td>astar-utils</td><td>0.5.2</td></tr>
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>beautifulsoup4</td><td>4.14.3</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>colorama</td><td>0.4.6</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>docutils</td><td>0.22.4</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>h11</td><td>0.16.0</td></tr>
+
+<tr><td>httpcore</td><td>1.0.9</td></tr>
+
+<tr><td>httpx</td><td>0.28.1</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>lxml</td><td>6.1.0</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>more-itertools</td><td>10.8.0</td></tr>
+
+<tr><td>numpy</td><td>2.2.6</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pooch</td><td>1.9.0</td></tr>
+
+<tr><td>pyckles</td><td>0.6.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>scopesim</td><td>0.11.3</td></tr>
+
+<tr><td>scopesim-templates</td><td>0.8.1</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>skycalc-ipy</td><td>0.7.0</td></tr>
+
+<tr><td>soupsieve</td><td>2.8.3</td></tr>
+
+<tr><td>spextra</td><td>0.43.5</td></tr>
+
+<tr><td>synphot</td><td>1.7.0</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

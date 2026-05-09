@@ -1,0 +1,303 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>birdcage-tui - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>birdcage-tui</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>2026.2.18</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>7.0s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>birdcage_tui</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>.............F
+=================================== FAILURES ===================================
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/venv/lib/python3.12/site-packages/_pytest/python.py:156: Failed: async def functions are not natively supported.
+=============================== warnings summary ===============================
+artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:21
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:21: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:40
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:40: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:59
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:59: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:78
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:78: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:104
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:104: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:132
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:132: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:158
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:158: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:190
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:190: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:221
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:221: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:254
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py:254: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_craft_integration.py:34
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_craft_integration.py:34: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_craft_integration.py:60
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_craft_integration.py:60: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_craft_integration.py:107
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_craft_integration.py:107: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_craft_mode.py:88
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_craft_mode.py:88: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_craft_mode.py:118
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_craft_mode.py:118: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_craft_mode.py:161
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_craft_mode.py:161: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_craft_mode.py:198
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_craft_mode.py:198: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_craft_mode.py:234
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_craft_mode.py:234: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_demo_craft.py:28
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_demo_craft.py:28: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_demo_craft.py:51
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_demo_craft.py:51: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_demo_craft.py:71
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_demo_craft.py:71: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_demo_craft.py:94
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_demo_craft.py:94: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_demo_craft.py:134
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_demo_craft.py:134: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:29
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:29: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:48
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:48: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:83
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:83: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:123
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:123: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:165
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:165: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:200
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:200: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:225
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:225: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:261
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_step_size_velocity.py:261: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_sweep_stop.py:15
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_sweep_stop.py:15: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_sweep_stop.py:59
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_sweep_stop.py:59: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_sweep_stop.py:102
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_sweep_stop.py:102: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_track_mode.py:49
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_track_mode.py:49: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_track_mode.py:84
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_track_mode.py:84: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_track_mode.py:119
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_track_mode.py:119: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_track_mode.py:170
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_track_mode.py:170: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_track_mode.py:211
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_track_mode.py:211: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_track_mode.py:260
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_track_mode.py:260: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+artifact/birdcage_tui-2026.2.18/tests/test_track_mode.py:300
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-birdcage-tui-75z1ecif/artifact/birdcage_tui-2026.2.18/tests/test_track_mode.py:300: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED artifact/birdcage_tui-2026.2.18/tests/test_camera_overlay.py::test_f6_opens_camera_overlay
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 13 passed, 41 warnings in 4.25s
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (24)</strong></summary>
+<table class="meta-table">
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>birdcage-tui</td><td>2026.2.18</td></tr>
+
+<tr><td>click</td><td>8.3.3</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>linkify-it-py</td><td>2.1.0</td></tr>
+
+<tr><td>markdown-it-py</td><td>4.2.0</td></tr>
+
+<tr><td>mdit-py-plugins</td><td>0.6.0</td></tr>
+
+<tr><td>mdurl</td><td>0.1.2</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyserial</td><td>3.5</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>rich</td><td>15.0.0</td></tr>
+
+<tr><td>textual</td><td>8.2.5</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>uc-micro-py</td><td>2.0.0</td></tr>
+
+<tr><td>winegard-birdcage</td><td>2026.2.18</td></tr>
+
+</table>
+</details>
+
+</body></html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>asgardpy - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>asgardpy</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.5.3</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>56.1s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>asgardpy</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>
+*** You might want to declare GAMMAPY_DATA as a global env variable
+export GAMMAPY_DATA=$PWD/gammapy-data/1.3
+
+Or as part of your conda environment:
+conda env config vars set GAMMAPY_DATA=$PWD/gammapy-data/1.3
+conda activate gammapy-1.3
+
+
+System:
+
+	python_executable      : /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-asgardpy-7mwm2zfh/venv/bin/python 
+	python_version         : 3.12.10    
+	machine                : x86_64     
+	system                 : Linux      
+
+
+Gammapy package:
+
+	version                : 1.3        
+	path                   : /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-asgardpy-7mwm2zfh/venv/lib/python3.12/site-packages/gammapy 
+
+
+Other packages:
+
+	numpy                  : 2.4.4      
+	scipy                  : 1.17.1     
+	astropy                : 7.2.0      
+	regions                : 0.11       
+	click                  : 8.3.3      
+	yaml                   : 6.0.3      
+	IPython                : 9.13.0     
+	jupyterlab             : 4.5.7      
+	matplotlib             : 3.9.4      
+	pandas                 : 3.0.2      
+	healpy                 : not installed 
+	iminuit                : 2.32.0     
+	sherpa                 : not installed 
+	naima                  : not installed 
+	emcee                  : not installed 
+	corner                 : not installed 
+	ray                    : not installed 
+
+
+Gammapy environment variables:
+
+	GAMMAPY_DATA           : ./gammapy-data 
+
+E
+==================================== ERRORS ====================================
+______________________ ERROR at setup of test_joint_3d_1d ______________________
+E   FileNotFoundError: [Errno 2] No such file or directory: &#39;src/asgardpy/tests/config_test_base.yaml&#39;
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:64
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-asgardpy-7mwm2zfh/venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: &#39;oneOf&#39; deprecated - use &#39;one_of&#39;
+    prop = Group((name + Suppress(&#34;=&#34;) + comma_separated(value)) | oneOf(_CONSTANTS))
+
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-asgardpy-7mwm2zfh/venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: &#39;parseString&#39; deprecated - use &#39;parse_string&#39;
+    parse = parser.parseString(pattern)
+
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-asgardpy-7mwm2zfh/venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: &#39;resetCache&#39; deprecated - use &#39;reset_cache&#39;
+    parser.resetCache()
+
+venv/lib/python3.12/site-packages/matplotlib/_mathtext.py:45
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-asgardpy-7mwm2zfh/venv/lib/python3.12/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: &#39;enablePackrat&#39; deprecated - use &#39;enable_packrat&#39;
+    ParserElement.enablePackrat()
+
+venv/lib/python3.12/site-packages/gammapy/scripts/download.py:104
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-asgardpy-7mwm2zfh/venv/lib/python3.12/site-packages/gammapy/scripts/download.py:104: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+    tar.extractall(path=destination, members=members(tar))
+
+venv/lib/python3.12/site-packages/gammapy/scripts/info.py:108
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-asgardpy-7mwm2zfh/venv/lib/python3.12/site-packages/gammapy/scripts/info.py:108: DeprecationWarning: The &#39;__version__&#39; attribute is deprecated and will be removed in Click 9.1. Use feature detection or &#39;importlib.metadata.version(&#34;click&#34;)&#39; instead.
+    module_version = getattr(module, &#34;__version__&#34;, &#34;no version info found&#34;)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR venv/lib/python3.12/site-packages/asgardpy/analysis/tests/test_analysis_steps.py::test_joint_3d_1d
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+16 warnings, 1 error in 39.85s
+
+--- stderr ---
+
+  0%|          | 0.00/152M [00:00&lt;?, ?B/s]
+  2%|▏         | 3.28M/152M [00:00&lt;00:04, 34.2MB/s]
+  4%|▍         | 6.55M/152M [00:00&lt;00:05, 29.4MB/s]
+  7%|▋         | 10.3M/152M [00:00&lt;00:04, 33.3MB/s]
+  9%|▉         | 13.5M/152M [00:00&lt;00:04, 29.2MB/s]
+ 12%|█▏        | 18.0M/152M [00:00&lt;00:04, 34.9MB/s]
+ 14%|█▍        | 21.4M/152M [00:00&lt;00:04, 29.4MB/s]
+ 16%|█▌        | 24.4M/152M [00:00&lt;00:05, 26.0MB/s]
+ 18%|█▊        | 27.1M/152M [00:01&lt;00:05, 24.2MB/s]
+ 19%|█▉        | 29.5M/152M [00:01&lt;00:05, 24.4MB/s]
+ 22%|██▏       | 33.0M/152M [00:01&lt;00:04, 26.7MB/s]
+ 24%|██▍       | 36.5M/152M [00:01&lt;00:04, 29.1MB/s]
+ 26%|██▌       | 39.4M/152M [00:01&lt;00:04, 29.3MB/s]
+ 28%|██▊       | 42.8M/152M [00:01&lt;00:03, 30.7MB/s]
+ 30%|███       | 45.8M/152M [00:01&lt;00:03, 30.7MB/s]
+ 32%|███▏      | 48.8M/152M [00:01&lt;00:03, 30.4MB/s]
+ 34%|███▍      | 51.8M/152M [00:01&lt;00:03, 30.5MB/s]
+ 36%|███▌      | 55.0M/152M [00:01&lt;00:03, 29.4MB/s]
+ 38%|███▊      | 57.8M/152M [00:02&lt;00:04, 21.8MB/s]
+ 40%|███▉      | 60.2M/152M [00:02&lt;00:04, 19.5MB/s]
+ 41%|████      | 62.2M/152M [00:02&lt;00:05, 15.8MB/s]
+ 42%|████▏     | 64.3M/152M [00:02&lt;00:05, 16.9MB/s]
+ 43%|████▎     | 66.1M/152M [00:02&lt;00:05, 16.7MB/s]
+ 45%|████▍     | 67.8M/152M [00:02&lt;00:06, 14.3MB/s]
+ 46%|████▌     | 70.3M/152M [00:03&lt;00:05, 16.7MB/s]
+ 48%|████▊     | 72.5M/152M [00:03&lt;00:04, 17.6MB/s]
+ 50%|█████     | 76.1M/152M [00:03&lt;00:03, 22.5MB/s]
+ 52%|█████▏    | 78.8M/152M [00:03&lt;00:03, 24.0MB/s]
+ 54%|█████▍    | 82.0M/152M [00:03&lt;00:02, 26.5MB/s]
+ 56%|█████▌    | 84.8M/152M [00:03&lt;00:02, 27.3MB/s]
+ 58%|█████▊    | 88.0M/152M [00:03&lt;00:02, 25.9MB/s]
+ 60%|██████    | 91.2M/152M [00:03&lt;00:02, 27.9MB/s]
+ 62%|██████▏   | 94.5M/152M [00:03&lt;00:02, 29.3MB/s]
+ 64%|██████▍   | 97.8M/152M [00:04&lt;00:01, 30.8MB/s]
+ 66%|██████▋   | 101M/152M [00:04&lt;00:01, 31.6MB/s] 
+ 69%|██████▊   | 104M/152M [00:04&lt;00:01, 32.1MB/s]
+ 71%|███████   | 107M/152M [00:04&lt;00:01, 32.4MB/s]
+ 73%|███████▎  | 111M/152M [00:04&lt;00:01, 32.9MB/s]
+ 75%|███████▌  | 114M/152M [00:04&lt;00:01, 33.1MB/s]
+ 77%|███████▋  | 117M/152M [00:04&lt;00:01, 33.3MB/s]
+ 79%|███████▉  | 120M/152M [00:04&lt;00:01, 32.8MB/s]
+ 81%|████████▏ | 124M/152M [00:04&lt;00:00, 31.9MB/s]
+ 83%|████████▎ | 127M/152M [00:05&lt;00:00, 30.4MB/s]
+ 85%|████████▌ | 130M/152M [00:05&lt;00:00, 29.4MB/s]
+ 87%|████████▋ | 132M/152M [00:05&lt;00:00, 25.9MB/s]
+ 89%|████████▉ | 135M/152M [00:05&lt;00:00, 27.1MB/s]
+ 91%|█████████ | 138M/152M [00:05&lt;00:00, 28.3MB/s]
+ 93%|█████████▎| 141M/152M [00:05&lt;00:00, 28.9MB/s]
+ 95%|█████████▍| 144M/152M [00:05&lt;00:00, 29.9MB/s]
+ 97%|█████████▋| 147M/152M [00:05&lt;00:00, 29.7MB/s]
+ 99%|█████████▉| 150M/152M [00:05&lt;00:00, 30.2MB/s]
+153MB [00:05, 30.1MB/s]                           
+156MB [00:06, 31.5MB/s]
+160MB [00:06, 30.6MB/s]
+163MB [00:06, 31.2MB/s]
+166MB [00:06, 31.4MB/s]
+169MB [00:06, 31.3MB/s]
+172MB [00:06, 31.3MB/s]
+175MB [00:06, 31.5MB/s]
+178MB [00:06, 31.3MB/s]
+181MB [00:06, 32.0MB/s]
+184MB [00:06, 32.5MB/s]
+187MB [00:07, 31.8MB/s]
+191MB [00:07, 32.5MB/s]
+194MB [00:07, 32.5MB/s]
+197MB [00:07, 32.4MB/s]
+200MB [00:07, 32.4MB/s]
+203MB [00:07, 32.0MB/s]
+206MB [00:07, 31.6MB/s]
+209MB [00:07, 32.0MB/s]
+213MB [00:07, 32.2MB/s]
+216MB [00:08, 33.2MB/s]
+219MB [00:08, 32.9MB/s]
+223MB [00:08, 33.3MB/s]
+226MB [00:08, 33.0MB/s]
+229MB [00:08, 32.9MB/s]
+232MB [00:08, 32.4MB/s]
+235MB [00:08, 28.4MB/s]
+238MB [00:08, 29.6MB/s]
+238MB [00:08, 28.4MB/s]
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (188)</strong></summary>
+<table class="meta-table">
+
+<tr><td>accessible-pygments</td><td>0.0.5</td></tr>
+
+<tr><td>alabaster</td><td>1.0.0</td></tr>
+
+<tr><td>annotated-types</td><td>0.7.0</td></tr>
+
+<tr><td>anyio</td><td>4.13.0</td></tr>
+
+<tr><td>argon2-cffi</td><td>25.1.0</td></tr>
+
+<tr><td>argon2-cffi-bindings</td><td>25.1.0</td></tr>
+
+<tr><td>arrow</td><td>1.4.0</td></tr>
+
+<tr><td>asgardpy</td><td>0.5.3</td></tr>
+
+<tr><td>ast-serialize</td><td>0.3.0</td></tr>
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>asttokens</td><td>3.0.1</td></tr>
+
+<tr><td>async-lru</td><td>2.3.0</td></tr>
+
+<tr><td>attrs</td><td>26.1.0</td></tr>
+
+<tr><td>autodoc-pydantic</td><td>2.2.0</td></tr>
+
+<tr><td>babel</td><td>2.18.0</td></tr>
+
+<tr><td>beautifulsoup4</td><td>4.14.3</td></tr>
+
+<tr><td>bleach</td><td>6.3.0</td></tr>
+
+<tr><td>build</td><td>1.5.0</td></tr>
+
+<tr><td>cachetools</td><td>7.1.1</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>cffi</td><td>2.0.0</td></tr>
+
+<tr><td>cfgv</td><td>3.5.0</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>click</td><td>8.3.3</td></tr>
+
+<tr><td>codespell</td><td>2.4.2</td></tr>
+
+<tr><td>colorama</td><td>0.4.6</td></tr>
+
+<tr><td>comm</td><td>0.2.3</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>debugpy</td><td>1.8.20</td></tr>
+
+<tr><td>decorator</td><td>5.2.1</td></tr>
+
+<tr><td>defusedxml</td><td>0.7.1</td></tr>
+
+<tr><td>distlib</td><td>0.4.0</td></tr>
+
+<tr><td>docutils</td><td>0.22.4</td></tr>
+
+<tr><td>executing</td><td>2.2.1</td></tr>
+
+<tr><td>fastjsonschema</td><td>2.21.2</td></tr>
+
+<tr><td>filelock</td><td>3.29.0</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>fqdn</td><td>1.5.1</td></tr>
+
+<tr><td>furo</td><td>2025.12.19</td></tr>
+
+<tr><td>gammapy</td><td>1.3</td></tr>
+
+<tr><td>h11</td><td>0.16.0</td></tr>
+
+<tr><td>httpcore</td><td>1.0.9</td></tr>
+
+<tr><td>httpx</td><td>0.28.1</td></tr>
+
+<tr><td>identify</td><td>2.6.19</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>imagesize</td><td>2.0.0</td></tr>
+
+<tr><td>iminuit</td><td>2.32.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>ipykernel</td><td>7.2.0</td></tr>
+
+<tr><td>ipython</td><td>9.13.0</td></tr>
+
+<tr><td>ipython-pygments-lexers</td><td>1.1.1</td></tr>
+
+<tr><td>ipywidgets</td><td>8.1.8</td></tr>
+
+<tr><td>isoduration</td><td>20.11.0</td></tr>
+
+<tr><td>isort</td><td>8.0.1</td></tr>
+
+<tr><td>jedi</td><td>0.20.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>json5</td><td>0.14.0</td></tr>
+
+<tr><td>jsonpointer</td><td>3.1.1</td></tr>
+
+<tr><td>jsonschema</td><td>4.26.0</td></tr>
+
+<tr><td>jsonschema-specifications</td><td>2025.9.1</td></tr>
+
+<tr><td>jupyter</td><td>1.1.1</td></tr>
+
+<tr><td>jupyter-client</td><td>8.8.0</td></tr>
+
+<tr><td>jupyter-console</td><td>6.6.3</td></tr>
+
+<tr><td>jupyter-core</td><td>5.9.1</td></tr>
+
+<tr><td>jupyter-events</td><td>0.12.1</td></tr>
+
+<tr><td>jupyter-lsp</td><td>2.3.1</td></tr>
+
+<tr><td>jupyter-server</td><td>2.18.2</td></tr>
+
+<tr><td>jupyter-server-terminals</td><td>0.5.4</td></tr>
+
+<tr><td>jupyterlab</td><td>4.5.7</td></tr>
+
+<tr><td>jupyterlab-pygments</td><td>0.3.0</td></tr>
+
+<tr><td>jupyterlab-server</td><td>2.28.0</td></tr>
+
+<tr><td>jupyterlab-widgets</td><td>3.0.16</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>lark</td><td>1.3.1</td></tr>
+
+<tr><td>librt</td><td>0.10.0</td></tr>
+
+<tr><td>markdown-it-py</td><td>4.2.0</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>matplotlib</td><td>3.9.4</td></tr>
+
+<tr><td>matplotlib-inline</td><td>0.2.2</td></tr>
+
+<tr><td>mdit-py-plugins</td><td>0.6.0</td></tr>
+
+<tr><td>mdurl</td><td>0.1.2</td></tr>
+
+<tr><td>mistune</td><td>3.2.1</td></tr>
+
+<tr><td>mypy</td><td>2.0.0</td></tr>
+
+<tr><td>mypy-extensions</td><td>1.1.0</td></tr>
+
+<tr><td>myst-parser</td><td>5.0.0</td></tr>
+
+<tr><td>nbclient</td><td>0.10.4</td></tr>
+
+<tr><td>nbconvert</td><td>7.17.1</td></tr>
+
+<tr><td>nbformat</td><td>5.10.4</td></tr>
+
+<tr><td>nest-asyncio</td><td>1.6.0</td></tr>
+
+<tr><td>nodeenv</td><td>1.10.0</td></tr>
+
+<tr><td>notebook</td><td>7.5.6</td></tr>
+
+<tr><td>notebook-shim</td><td>0.2.4</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pandocfilters</td><td>1.5.1</td></tr>
+
+<tr><td>parso</td><td>0.8.7</td></tr>
+
+<tr><td>pathspec</td><td>1.1.1</td></tr>
+
+<tr><td>pexpect</td><td>4.9.0</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pre-commit</td><td>4.6.0</td></tr>
+
+<tr><td>prometheus-client</td><td>0.25.0</td></tr>
+
+<tr><td>prompt-toolkit</td><td>3.0.52</td></tr>
+
+<tr><td>psutil</td><td>7.2.2</td></tr>
+
+<tr><td>ptyprocess</td><td>0.7.0</td></tr>
+
+<tr><td>pure-eval</td><td>0.2.3</td></tr>
+
+<tr><td>pycparser</td><td>3.0</td></tr>
+
+<tr><td>pydantic</td><td>2.13.4</td></tr>
+
+<tr><td>pydantic-core</td><td>2.46.4</td></tr>
+
+<tr><td>pydantic-settings</td><td>2.14.1</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pyproject-api</td><td>1.10.0</td></tr>
+
+<tr><td>pyproject-hooks</td><td>1.2.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-sphinx</td><td>0.7.1</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>python-discovery</td><td>1.3.0</td></tr>
+
+<tr><td>python-dotenv</td><td>1.2.2</td></tr>
+
+<tr><td>python-json-logger</td><td>4.1.0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>pyzmq</td><td>27.1.0</td></tr>
+
+<tr><td>referencing</td><td>0.37.0</td></tr>
+
+<tr><td>regions</td><td>0.11</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>rfc3339-validator</td><td>0.1.4</td></tr>
+
+<tr><td>rfc3986-validator</td><td>0.1.1</td></tr>
+
+<tr><td>rfc3987-syntax</td><td>1.1.0</td></tr>
+
+<tr><td>roman-numerals</td><td>4.1.0</td></tr>
+
+<tr><td>rpds-py</td><td>0.30.0</td></tr>
+
+<tr><td>ruamel-yaml</td><td>0.19.1</td></tr>
+
+<tr><td>ruff</td><td>0.15.12</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>seaborn</td><td>0.13.2</td></tr>
+
+<tr><td>send2trash</td><td>2.1.0</td></tr>
+
+<tr><td>setuptools</td><td>82.0.1</td></tr>
+
+<tr><td>setuptools-scm</td><td>10.0.5</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>snowballstemmer</td><td>3.0.1</td></tr>
+
+<tr><td>soupsieve</td><td>2.8.3</td></tr>
+
+<tr><td>sphinx</td><td>9.1.0</td></tr>
+
+<tr><td>sphinx-autobuild</td><td>2025.8.25</td></tr>
+
+<tr><td>sphinx-autodoc-typehints</td><td>3.10.2</td></tr>
+
+<tr><td>sphinx-basic-ng</td><td>1.0.0b2</td></tr>
+
+<tr><td>sphinx-changelog</td><td>1.6.0</td></tr>
+
+<tr><td>sphinx-copybutton</td><td>0.5.2</td></tr>
+
+<tr><td>sphinxcontrib-applehelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-devhelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-htmlhelp</td><td>2.1.0</td></tr>
+
+<tr><td>sphinxcontrib-jsmath</td><td>1.0.1</td></tr>
+
+<tr><td>sphinxcontrib-qthelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-serializinghtml</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-towncrier</td><td>0.5.0a0</td></tr>
+
+<tr><td>stack-data</td><td>0.6.3</td></tr>
+
+<tr><td>starlette</td><td>1.0.0</td></tr>
+
+<tr><td>terminado</td><td>0.18.1</td></tr>
+
+<tr><td>tinycss2</td><td>1.4.0</td></tr>
+
+<tr><td>tomli-w</td><td>1.2.0</td></tr>
+
+<tr><td>tornado</td><td>6.5.5</td></tr>
+
+<tr><td>towncrier</td><td>24.8.0</td></tr>
+
+<tr><td>tox</td><td>4.53.1</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>traitlets</td><td>5.15.0</td></tr>
+
+<tr><td>types-pyyaml</td><td>6.0.12.20260508</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>typing-inspection</td><td>0.4.2</td></tr>
+
+<tr><td>tzdata</td><td>2026.2</td></tr>
+
+<tr><td>uri-template</td><td>1.3.0</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>uvicorn</td><td>0.46.0</td></tr>
+
+<tr><td>vcs-versioning</td><td>1.1.1</td></tr>
+
+<tr><td>virtualenv</td><td>21.3.1</td></tr>
+
+<tr><td>watchfiles</td><td>1.1.1</td></tr>
+
+<tr><td>wcwidth</td><td>0.7.0</td></tr>
+
+<tr><td>webcolors</td><td>25.10.0</td></tr>
+
+<tr><td>webencodings</td><td>0.5.1</td></tr>
+
+<tr><td>websocket-client</td><td>1.9.0</td></tr>
+
+<tr><td>websockets</td><td>16.0</td></tr>
+
+<tr><td>widgetsnbextension</td><td>4.0.15</td></tr>
+
+<tr><td>xmltodict</td><td>1.0.4</td></tr>
+
+</table>
+</details>
+
+</body></html>

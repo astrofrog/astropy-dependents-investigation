@@ -1,0 +1,462 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>hipscat - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>hipscat</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.3.9</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>40.8s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>hipscat</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>........................................................................ [ 22%]
+........................................................................ [ 44%]
+........................................................................ [ 66%]
+...........................................F
+=================================== FAILURES ===================================
+E   astropy.units.errors.UnitConversionError: Can only apply &#39;less_equal&#39; function to dimensionless quantities when other argument is not a quantity (unless the latter is all zero/infinity/nan).
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hipscat-m32ue384/venv/lib/python3.12/site-packages/astropy/units/quantity_helper/converters.py:195: astropy.units.errors.UnitConversionError: Can only apply &#39;less_equal&#39; function to dimensionless quantities when other argument is not a quantity (unless the latter is all zero/infinity/nan).
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:88
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:88
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:88
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:88
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:88
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:88
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hipscat-m32ue384/venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:88: PyparsingDeprecationWarning: &#39;parseString&#39; deprecated - use &#39;parse_string&#39;
+    parse = parser.parseString(pattern)
+
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:92
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:92
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:92
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:92
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:92
+venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:92
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hipscat-m32ue384/venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:92: PyparsingDeprecationWarning: &#39;resetCache&#39; deprecated - use &#39;reset_cache&#39;
+    parser.resetCache()
+
+venv/lib/python3.12/site-packages/matplotlib/_mathtext.py:45
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hipscat-m32ue384/venv/lib/python3.12/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: &#39;enablePackrat&#39; deprecated - use &#39;enable_packrat&#39;
+    ParserElement.enablePackrat()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED artifact/hipscat-0.3.9/tests/hipscat/pixel_math/test_margin_bounding.py::test_check_margin_bounds
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 259 passed, 13 warnings in 5.88s
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (176)</strong></summary>
+<table class="meta-table">
+
+<tr><td>adlfs</td><td>2026.5.0</td></tr>
+
+<tr><td>aiobotocore</td><td>3.7.0</td></tr>
+
+<tr><td>aiohappyeyeballs</td><td>2.6.1</td></tr>
+
+<tr><td>aiohttp</td><td>3.13.5</td></tr>
+
+<tr><td>aioitertools</td><td>0.13.0</td></tr>
+
+<tr><td>aiosignal</td><td>1.4.0</td></tr>
+
+<tr><td>anyio</td><td>4.13.0</td></tr>
+
+<tr><td>argon2-cffi</td><td>25.1.0</td></tr>
+
+<tr><td>argon2-cffi-bindings</td><td>25.1.0</td></tr>
+
+<tr><td>arrow</td><td>1.4.0</td></tr>
+
+<tr><td>ast-serialize</td><td>0.3.0</td></tr>
+
+<tr><td>astroid</td><td>4.0.4</td></tr>
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>asttokens</td><td>3.0.1</td></tr>
+
+<tr><td>asv</td><td>0.6.3</td></tr>
+
+<tr><td>asv-runner</td><td>0.2.1</td></tr>
+
+<tr><td>async-lru</td><td>2.3.0</td></tr>
+
+<tr><td>attrs</td><td>26.1.0</td></tr>
+
+<tr><td>azure-core</td><td>1.41.0</td></tr>
+
+<tr><td>azure-identity</td><td>1.25.3</td></tr>
+
+<tr><td>azure-storage-blob</td><td>12.28.0</td></tr>
+
+<tr><td>babel</td><td>2.18.0</td></tr>
+
+<tr><td>beautifulsoup4</td><td>4.14.3</td></tr>
+
+<tr><td>black</td><td>26.3.1</td></tr>
+
+<tr><td>bleach</td><td>6.3.0</td></tr>
+
+<tr><td>botocore</td><td>1.43.0</td></tr>
+
+<tr><td>build</td><td>1.5.0</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>cffi</td><td>2.0.0</td></tr>
+
+<tr><td>cfgv</td><td>3.5.0</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>click</td><td>8.3.3</td></tr>
+
+<tr><td>comm</td><td>0.2.3</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>cryptography</td><td>48.0.0</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>debugpy</td><td>1.8.20</td></tr>
+
+<tr><td>decorator</td><td>5.2.1</td></tr>
+
+<tr><td>defusedxml</td><td>0.7.1</td></tr>
+
+<tr><td>dill</td><td>0.4.1</td></tr>
+
+<tr><td>distlib</td><td>0.4.0</td></tr>
+
+<tr><td>executing</td><td>2.2.1</td></tr>
+
+<tr><td>fastjsonschema</td><td>2.21.2</td></tr>
+
+<tr><td>filelock</td><td>3.29.0</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>fqdn</td><td>1.5.1</td></tr>
+
+<tr><td>frozenlist</td><td>1.8.0</td></tr>
+
+<tr><td>fsspec</td><td>2026.4.0</td></tr>
+
+<tr><td>h11</td><td>0.16.0</td></tr>
+
+<tr><td>healpy</td><td>1.19.0</td></tr>
+
+<tr><td>hipscat</td><td>0.3.9</td></tr>
+
+<tr><td>httpcore</td><td>1.0.9</td></tr>
+
+<tr><td>httpx</td><td>0.28.1</td></tr>
+
+<tr><td>identify</td><td>2.6.19</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>importlib-metadata</td><td>9.0.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>ipykernel</td><td>7.2.0</td></tr>
+
+<tr><td>ipython</td><td>9.13.0</td></tr>
+
+<tr><td>ipython-pygments-lexers</td><td>1.1.1</td></tr>
+
+<tr><td>ipywidgets</td><td>8.1.8</td></tr>
+
+<tr><td>isodate</td><td>0.7.2</td></tr>
+
+<tr><td>isoduration</td><td>20.11.0</td></tr>
+
+<tr><td>isort</td><td>8.0.1</td></tr>
+
+<tr><td>jedi</td><td>0.20.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>jmespath</td><td>1.1.0</td></tr>
+
+<tr><td>json5</td><td>0.14.0</td></tr>
+
+<tr><td>jsonpointer</td><td>3.1.1</td></tr>
+
+<tr><td>jsonschema</td><td>4.26.0</td></tr>
+
+<tr><td>jsonschema-specifications</td><td>2025.9.1</td></tr>
+
+<tr><td>jupyter</td><td>1.1.1</td></tr>
+
+<tr><td>jupyter-client</td><td>8.8.0</td></tr>
+
+<tr><td>jupyter-console</td><td>6.6.3</td></tr>
+
+<tr><td>jupyter-core</td><td>5.9.1</td></tr>
+
+<tr><td>jupyter-events</td><td>0.12.1</td></tr>
+
+<tr><td>jupyter-lsp</td><td>2.3.1</td></tr>
+
+<tr><td>jupyter-server</td><td>2.18.2</td></tr>
+
+<tr><td>jupyter-server-terminals</td><td>0.5.4</td></tr>
+
+<tr><td>jupyterlab</td><td>4.5.7</td></tr>
+
+<tr><td>jupyterlab-pygments</td><td>0.3.0</td></tr>
+
+<tr><td>jupyterlab-server</td><td>2.28.0</td></tr>
+
+<tr><td>jupyterlab-widgets</td><td>3.0.16</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>lark</td><td>1.3.1</td></tr>
+
+<tr><td>librt</td><td>0.10.0</td></tr>
+
+<tr><td>llvmlite</td><td>0.47.0</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>matplotlib</td><td>3.8.4</td></tr>
+
+<tr><td>matplotlib-inline</td><td>0.2.2</td></tr>
+
+<tr><td>mccabe</td><td>0.7.0</td></tr>
+
+<tr><td>mistune</td><td>3.2.1</td></tr>
+
+<tr><td>mocpy</td><td>0.20.0</td></tr>
+
+<tr><td>msal</td><td>1.36.0</td></tr>
+
+<tr><td>msal-extensions</td><td>1.3.1</td></tr>
+
+<tr><td>multidict</td><td>6.7.1</td></tr>
+
+<tr><td>mypy</td><td>2.0.0</td></tr>
+
+<tr><td>mypy-extensions</td><td>1.1.0</td></tr>
+
+<tr><td>nbclient</td><td>0.10.4</td></tr>
+
+<tr><td>nbconvert</td><td>7.17.1</td></tr>
+
+<tr><td>nbformat</td><td>5.10.4</td></tr>
+
+<tr><td>nest-asyncio</td><td>1.6.0</td></tr>
+
+<tr><td>nodeenv</td><td>1.10.0</td></tr>
+
+<tr><td>notebook</td><td>7.5.6</td></tr>
+
+<tr><td>notebook-shim</td><td>0.2.4</td></tr>
+
+<tr><td>numba</td><td>0.65.1</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pandocfilters</td><td>1.5.1</td></tr>
+
+<tr><td>parso</td><td>0.8.7</td></tr>
+
+<tr><td>pathspec</td><td>1.1.1</td></tr>
+
+<tr><td>pexpect</td><td>4.9.0</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pre-commit</td><td>4.6.0</td></tr>
+
+<tr><td>prometheus-client</td><td>0.25.0</td></tr>
+
+<tr><td>prompt-toolkit</td><td>3.0.52</td></tr>
+
+<tr><td>propcache</td><td>0.5.2</td></tr>
+
+<tr><td>psutil</td><td>7.2.2</td></tr>
+
+<tr><td>ptyprocess</td><td>0.7.0</td></tr>
+
+<tr><td>pure-eval</td><td>0.2.3</td></tr>
+
+<tr><td>pyarrow</td><td>24.0.0</td></tr>
+
+<tr><td>pycparser</td><td>3.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyjwt</td><td>2.12.1</td></tr>
+
+<tr><td>pylint</td><td>4.0.5</td></tr>
+
+<tr><td>pympler</td><td>1.1</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pyproject-hooks</td><td>1.2.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-mock</td><td>3.15.1</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>python-discovery</td><td>1.3.0</td></tr>
+
+<tr><td>python-json-logger</td><td>4.1.0</td></tr>
+
+<tr><td>pytokens</td><td>0.4.1</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>pyzmq</td><td>27.1.0</td></tr>
+
+<tr><td>referencing</td><td>0.37.0</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>rfc3339-validator</td><td>0.1.4</td></tr>
+
+<tr><td>rfc3986-validator</td><td>0.1.1</td></tr>
+
+<tr><td>rfc3987-syntax</td><td>1.1.0</td></tr>
+
+<tr><td>rpds-py</td><td>0.30.0</td></tr>
+
+<tr><td>s3fs</td><td>2026.4.0</td></tr>
+
+<tr><td>send2trash</td><td>2.1.0</td></tr>
+
+<tr><td>setuptools</td><td>82.0.1</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>soupsieve</td><td>2.8.3</td></tr>
+
+<tr><td>stack-data</td><td>0.6.3</td></tr>
+
+<tr><td>tabulate</td><td>0.10.0</td></tr>
+
+<tr><td>terminado</td><td>0.18.1</td></tr>
+
+<tr><td>tinycss2</td><td>1.4.0</td></tr>
+
+<tr><td>tomli</td><td>2.4.1</td></tr>
+
+<tr><td>tomlkit</td><td>0.14.0</td></tr>
+
+<tr><td>tornado</td><td>6.5.5</td></tr>
+
+<tr><td>traitlets</td><td>5.15.0</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>tzdata</td><td>2026.2</td></tr>
+
+<tr><td>uri-template</td><td>1.3.0</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>virtualenv</td><td>21.3.1</td></tr>
+
+<tr><td>wcwidth</td><td>0.7.0</td></tr>
+
+<tr><td>webcolors</td><td>25.10.0</td></tr>
+
+<tr><td>webencodings</td><td>0.5.1</td></tr>
+
+<tr><td>websocket-client</td><td>1.9.0</td></tr>
+
+<tr><td>widgetsnbextension</td><td>4.0.15</td></tr>
+
+<tr><td>wrapt</td><td>2.1.2</td></tr>
+
+<tr><td>yarl</td><td>1.23.0</td></tr>
+
+<tr><td>zipp</td><td>3.23.1</td></tr>
+
+</table>
+</details>
+
+</body></html>

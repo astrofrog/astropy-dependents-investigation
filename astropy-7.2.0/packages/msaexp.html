@@ -1,0 +1,681 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>msaexp - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>msaexp</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.9.17</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="pass">PASS</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>303.1s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>msaexp</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>.............................s...                                        [100%]
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/grizli/utils.py:11897
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/grizli/utils.py:11897: SyntaxWarning: invalid escape sequence &#39;\?&#39;
+    var results = new RegExp(&#39;[\?&amp;]&#39; + name + &#39;=([^&amp;#]*)&#39;).exec(window.location.href);
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py: 150 warnings
+venv/lib/python3.12/site-packages/msaexp/tests/test_utils.py: 20 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/gwcs/coordinate_frames.py:119: AstropyDeprecationWarning: The isiterable function is deprecated and may be removed in a future version.
+          Use numpy.iterable() instead.
+    if astutil.isiterable(unit):
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py: 150 warnings
+venv/lib/python3.12/site-packages/msaexp/tests/test_utils.py: 20 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/gwcs/coordinate_frames.py:163: AstropyDeprecationWarning: The isiterable function is deprecated and may be removed in a future version.
+          Use numpy.iterable() instead.
+    elif not isiterable(pht):
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_slit_group
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_slit_group
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_slit_group
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_slit_group
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/msaexp/slit_combine.py:2799: DeprecationWarning: Bitwise inversion &#39;~&#39; on bool is deprecated and will be removed in Python 3.16. This returns the bitwise inversion of the underlying int object and is usually not what you expect from negating a bool. Use the &#39;not&#39; operator for boolean negation or ~int(x) if you really want the bitwise inversion of the underlying int.
+    if ~np.allclose(np.array(plevels), plev):
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;GRATING_DIFFS&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;TRACE_WITH_XPOS&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;TRACE_WITH_YPOS&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;TRACE_FROM_YOFFSET&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;SHUTTER_OFFSET&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;STUCK_THRESHOLD&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;DILATE_FAILED_OPEN&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;NUM_SHUTTERS&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;UNDO_BARSHADOW&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;BAR_CORR_MODE&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;FIX_PRISM_NORM&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;WRAPPED_BARSHADOW&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;OWN_BARSHADOW&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;NOD_OFFSET&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;UNDO_PATHLOSS&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;REFERENCE_EXPOSURE&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;PAD_BORDER&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;POSITION_KEY&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;HAS_SKY_ARRAYS&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;WEIGHT_TYPE&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;PERCENTILE_OUTLIERS&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;GLOBAL_SKY_DF&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;WITH_FS_OFFSET&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;WITH_SFLAT_CORRECTION&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;WITH_EXTRA_DQ&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;REMOVED_PATHLOSS&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/numpy/lib/function_base.py:4824: UserWarning: Warning: &#39;partition&#39; will ignore the &#39;mask&#39; of the MaskedColumn.
+    arr.partition(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/numpy/core/fromnumeric.py:771: UserWarning: Warning: &#39;partition&#39; will ignore the &#39;mask&#39; of the MaskedColumn.
+    a.partition(kth, axis=axis, kind=kind, order=order)
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_spectra.py::test_fit_redshift
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/convenience.py:666: AstropyUserWarning: Attribute `flamunit` of type &lt;class &#39;astropy.units.core.CompositeUnit&#39;&gt; cannot be added to FITS Header - skipping
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_spectra.py::test_fit_redshift
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/convenience.py:666: AstropyUserWarning: Attribute `fluxunit` of type &lt;class &#39;astropy.units.core.PrefixUnit&#39;&gt; cannot be added to FITS Header - skipping
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_combine.py::test_full_script
+venv/lib/python3.12/site-packages/msaexp/tests/test_spectra.py::test_fit_redshift
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/io/fits/convenience.py:666: AstropyUserWarning: Attribute `waveunit` of type &lt;class &#39;astropy.units.core.PrefixUnit&#39;&gt; cannot be added to FITS Header - skipping
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_msa.py: 16 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/units/core.py:2102: UnitsWarning: &#39;unitless&#39; did not parse as fits unit: At col 0, Unit &#39;unitless&#39; not supported by the FITS standard.  If this is meant to be a custom unit, define it with &#39;u.def_unit&#39;. To have it recognized inside a file reader or other code, enable it with &#39;u.add_enabled_units&#39;. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
+    warnings.warn(msg, UnitsWarning)
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_msa.py::test_mast_queries
+venv/lib/python3.12/site-packages/msaexp/tests/test_msa.py::test_mast_queries
+venv/lib/python3.12/site-packages/msaexp/tests/test_msa.py::test_mast_queries
+venv/lib/python3.12/site-packages/msaexp/tests/test_msa.py::test_mast_queries
+venv/lib/python3.12/site-packages/msaexp/tests/test_msa.py::test_mast_queries
+venv/lib/python3.12/site-packages/msaexp/tests/test_msa.py::test_mast_queries
+venv/lib/python3.12/site-packages/msaexp/tests/test_msa.py::test_mast_queries
+venv/lib/python3.12/site-packages/msaexp/tests/test_msa.py::test_mast_queries
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/astropy/units/core.py:2102: UnitsWarning: &#39;degrees&#39; did not parse as fits unit: At col 0, Unit &#39;degrees&#39; not supported by the FITS standard.  If this is meant to be a custom unit, define it with &#39;u.def_unit&#39;. To have it recognized inside a file reader or other code, enable it with &#39;u.add_enabled_units&#39;. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
+    warnings.warn(msg, UnitsWarning)
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_msa.py::test_mast_queries
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/msaexp/msa.py:1729: FutureWarning: `estimate` is deprecated since version 0.26 and will be removed in version 2.2. Please use `EuclideanTransform.from_estimate` class constructor instead.
+    tf.estimate((output - x0) * cosd, (input - x0) * cosd)
+
+venv/lib/python3.12/site-packages/msaexp/tests/test_utils.py::test_linelist
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-msaexp-hyu7jq21/venv/lib/python3.12/site-packages/msaexp/utils/lines.py:563: UserWarning: Tight layout not applied. tight_layout cannot make Axes height small enough to accommodate all Axes decorations.
+    fig.tight_layout(pad=1)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+32 passed, 2 skipped, 576 warnings in 285.52s (0:04:45)
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (129)</strong></summary>
+<table class="meta-table">
+
+<tr><td>asdf</td><td>3.5.0</td></tr>
+
+<tr><td>asdf-astropy</td><td>0.11.0</td></tr>
+
+<tr><td>asdf-coordinates-schemas</td><td>0.5.1</td></tr>
+
+<tr><td>asdf-standard</td><td>1.5.0</td></tr>
+
+<tr><td>asdf-transform-schemas</td><td>0.6.0</td></tr>
+
+<tr><td>asdf-wcs-schemas</td><td>0.5.0</td></tr>
+
+<tr><td>astro-prospector</td><td>1.4.1</td></tr>
+
+<tr><td>astro-sedpy</td><td>0.4.1</td></tr>
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>astroquery</td><td>0.4.11</td></tr>
+
+<tr><td>attrs</td><td>26.1.0</td></tr>
+
+<tr><td>bayesicfitting</td><td>3.2.5</td></tr>
+
+<tr><td>beautifulsoup4</td><td>4.14.3</td></tr>
+
+<tr><td>blinker</td><td>1.9.0</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>cffi</td><td>2.0.0</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>click</td><td>8.3.3</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>crds</td><td>12.1.11</td></tr>
+
+<tr><td>cryptography</td><td>48.0.0</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>cython</td><td>3.2.4</td></tr>
+
+<tr><td>drizzle</td><td>2.2.0</td></tr>
+
+<tr><td>dust-extinction</td><td>1.7</td></tr>
+
+<tr><td>eazy</td><td>0.8.5</td></tr>
+
+<tr><td>et-xmlfile</td><td>2.0.0</td></tr>
+
+<tr><td>extinction</td><td>0.4.8</td></tr>
+
+<tr><td>filelock</td><td>3.29.0</td></tr>
+
+<tr><td>flake8</td><td>7.3.0</td></tr>
+
+<tr><td>flask</td><td>3.1.3</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>future</td><td>1.0.0</td></tr>
+
+<tr><td>geos</td><td>0.2.3</td></tr>
+
+<tr><td>grizli</td><td>1.13.10</td></tr>
+
+<tr><td>gwcs</td><td>0.22.1</td></tr>
+
+<tr><td>h5py</td><td>3.16.0</td></tr>
+
+<tr><td>html5lib</td><td>1.1</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>imageio</td><td>2.37.3</td></tr>
+
+<tr><td>importlib-metadata</td><td>9.0.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>itsdangerous</td><td>2.2.0</td></tr>
+
+<tr><td>jaraco-classes</td><td>3.4.0</td></tr>
+
+<tr><td>jaraco-context</td><td>6.1.2</td></tr>
+
+<tr><td>jaraco-functools</td><td>4.4.0</td></tr>
+
+<tr><td>jeepney</td><td>0.9.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>jmespath</td><td>1.1.0</td></tr>
+
+<tr><td>joblib</td><td>1.5.3</td></tr>
+
+<tr><td>jsonschema</td><td>4.26.0</td></tr>
+
+<tr><td>jsonschema-specifications</td><td>2025.9.1</td></tr>
+
+<tr><td>jwst</td><td>1.16.1</td></tr>
+
+<tr><td>keyring</td><td>25.7.0</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>lazy-loader</td><td>0.5</td></tr>
+
+<tr><td>llvmlite</td><td>0.47.0</td></tr>
+
+<tr><td>lxml</td><td>6.1.0</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>mastquery</td><td>1.8.7</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>mccabe</td><td>0.7.0</td></tr>
+
+<tr><td>more-itertools</td><td>11.0.2</td></tr>
+
+<tr><td>msaexp</td><td>0.9.17</td></tr>
+
+<tr><td>networkx</td><td>3.6.1</td></tr>
+
+<tr><td>numba</td><td>0.65.1</td></tr>
+
+<tr><td>numexpr</td><td>2.14.1</td></tr>
+
+<tr><td>numpy</td><td>1.26.4</td></tr>
+
+<tr><td>opencv-python-headless</td><td>4.11.0.86</td></tr>
+
+<tr><td>openpyxl</td><td>3.1.5</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>parsley</td><td>1.3</td></tr>
+
+<tr><td>peakutils</td><td>1.3.5</td></tr>
+
+<tr><td>photutils</td><td>1.12.0</td></tr>
+
+<tr><td>pillow</td><td>11.2.1</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>poppy</td><td>1.1.2</td></tr>
+
+<tr><td>psutil</td><td>7.2.2</td></tr>
+
+<tr><td>pycodestyle</td><td>2.14.0</td></tr>
+
+<tr><td>pycparser</td><td>3.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pyflakes</td><td>3.4.0</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pysiaf</td><td>0.25.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pyvo</td><td>1.8.1</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>referencing</td><td>0.37.0</td></tr>
+
+<tr><td>regions</td><td>0.11</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>rpds-py</td><td>0.30.0</td></tr>
+
+<tr><td>scikit-image</td><td>0.26.0</td></tr>
+
+<tr><td>scikit-learn</td><td>1.8.0</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>secretstorage</td><td>3.5.0</td></tr>
+
+<tr><td>semantic-version</td><td>2.10.0</td></tr>
+
+<tr><td>sep</td><td>1.4.1</td></tr>
+
+<tr><td>setuptools</td><td>67.8.0</td></tr>
+
+<tr><td>shapely</td><td>2.1.2</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>soupsieve</td><td>2.8.3</td></tr>
+
+<tr><td>spherical-geometry</td><td>1.4.0</td></tr>
+
+<tr><td>sregion</td><td>1.7</td></tr>
+
+<tr><td>stcal</td><td>1.9.0</td></tr>
+
+<tr><td>stdatamodels</td><td>2.1.2</td></tr>
+
+<tr><td>stpipe</td><td>0.7.0</td></tr>
+
+<tr><td>stsci-imagestats</td><td>1.8.4</td></tr>
+
+<tr><td>stsci-stimage</td><td>0.3.0</td></tr>
+
+<tr><td>stsci-tools</td><td>4.3.0</td></tr>
+
+<tr><td>stwcs</td><td>1.7.3</td></tr>
+
+<tr><td>synphot</td><td>1.7.0</td></tr>
+
+<tr><td>threadpoolctl</td><td>3.6.0</td></tr>
+
+<tr><td>tifffile</td><td>2026.3.3</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>tristars</td><td>0.1</td></tr>
+
+<tr><td>tweakwcs</td><td>0.8.12</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>unik</td><td>1.0</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>webencodings</td><td>0.5.1</td></tr>
+
+<tr><td>werkzeug</td><td>3.1.8</td></tr>
+
+<tr><td>wiimatch</td><td>0.3.2</td></tr>
+
+<tr><td>zipp</td><td>3.23.1</td></tr>
+
+</table>
+</details>
+
+</body></html>

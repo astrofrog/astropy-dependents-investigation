@@ -1,0 +1,332 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>exorl - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>exorl</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.2.0</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>18.8s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>exorl</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>.....
+ERROR: Coverage failure: total of 21 is less than fail-under=80
+                                                                         [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.10-final-0 _______________
+
+Name                                                                      Stmts   Miss  Cover   Missing
+-------------------------------------------------------------------------------------------------------
+venv/lib/python3.12/site-packages/exorl/__init__.py                           0      0   100%
+venv/lib/python3.12/site-packages/exorl/cli.py                               47     28    40%   32-64, 68
+venv/lib/python3.12/site-packages/exorl/commands/__init__.py                  0      0   100%
+venv/lib/python3.12/site-packages/exorl/commands/demo.py                      4      4     0%   1-7
+venv/lib/python3.12/site-packages/exorl/commands/eval.py                      4      4     0%   1-7
+venv/lib/python3.12/site-packages/exorl/commands/eval_generalisation.py     119    119     0%   1-247
+venv/lib/python3.12/site-packages/exorl/commands/figure.py                   27     27     0%   1-58
+venv/lib/python3.12/site-packages/exorl/commands/generate_demos.py          116    116     0%   1-211
+venv/lib/python3.12/site-packages/exorl/commands/planet.py                   17     17     0%   1-39
+venv/lib/python3.12/site-packages/exorl/commands/population.py               25     25     0%   1-44
+venv/lib/python3.12/site-packages/exorl/commands/pretrain_bc.py             112    112     0%   1-182
+venv/lib/python3.12/site-packages/exorl/commands/train.py                     4      4     0%   1-7
+venv/lib/python3.12/site-packages/exorl/commands/train_sac.py               241    241     0%   1-423
+venv/lib/python3.12/site-packages/exorl/core/__init__.py                     24      0   100%
+venv/lib/python3.12/site-packages/exorl/core/atmosphere_science.py          315    228    28%   140-153, 157, 166-167, 171-173, 180-185, 217-219, 223-238, 242-245, 249-252, 256-266, 270-274, 278-279, 283-286, 290-291, 295-302, 306, 317-368, 378-382, 439-441, 458-470, 492-517, 529-533, 543-575, 617, 623, 629, 642-653, 666-673, 682-688, 706-721, 741-767, 787-801, 815-818, 841-888
+venv/lib/python3.12/site-packages/exorl/core/climate.py                     285    207    27%   109-117, 133-134, 146-148, 164, 183-191, 205-215, 242-245, 266-271, 310, 313-322, 354, 398-409, 413-417, 421-423, 430-452, 456, 471-519, 544-579, 587-590, 595-605, 613-614, 630-640, 667-691, 720-768, 781-784
+venv/lib/python3.12/site-packages/exorl/core/comms.py                       121    121     0%   39-324
+venv/lib/python3.12/site-packages/exorl/core/env.py                         354    305    14%   56-66, 83-84, 90-91, 98-100, 106-107, 113-114, 133-217, 221, 246-254, 257-265, 278-306, 328-331, 334-353, 356-358, 431-509, 517-540, 544-591, 613-662, 666-739, 743-806, 809, 812
+venv/lib/python3.12/site-packages/exorl/core/generator.py                    69     49    29%   173, 206-207, 234-353, 368
+venv/lib/python3.12/site-packages/exorl/core/geology.py                     199    134    33%   144-151, 158-166, 187-207, 217-224, 236-257, 261-268, 272-273, 277-278, 282-283, 305-350, 354-359, 366-367, 379-388, 398-404, 411-426, 448-472, 477-485, 490-504
+venv/lib/python3.12/site-packages/exorl/core/ground_track.py                188    147    22%   83-162, 186, 190, 193, 196, 199-200, 203-204, 209-213, 220-223, 231-235, 238-240, 266-312, 337-371, 378-384, 408-416, 436-455, 469-492
+venv/lib/python3.12/site-packages/exorl/core/habitability.py                335    289    14%   51-64, 69-80, 96-119, 127-137, 146-173, 182-202, 212-232, 242-287, 297-333, 345-362, 375-402, 412-434, 474, 479, 484-493, 500-564, 568-599, 603, 633-704
+venv/lib/python3.12/site-packages/exorl/core/heliocentric.py                339    263    22%   87-95, 104-112, 137, 141-146, 150-157, 160-168, 182-253, 259-264, 282, 300-391, 401-406, 436-449, 469-479, 501, 505, 509, 514, 519-520, 525-527, 534, 538, 544, 579-582, 592-607, 618-653, 677-696, 702, 712-720, 752, 759-760, 777-779, 793-795, 809, 835, 875-925
+venv/lib/python3.12/site-packages/exorl/core/interior.py                    211    140    34%   139-142, 201, 226, 244, 269-279, 298-459, 462, 469, 476, 485, 493, 497, 507, 511, 516, 540-552, 556-566, 580-607, 621-631, 649-664
+venv/lib/python3.12/site-packages/exorl/core/interplanetary_env.py          416    354    15%   75-85, 124-125, 131-132, 138-155, 162-163, 169-170, 251-308, 317-337, 340-354, 357-365, 370-426, 431-438, 444-461, 465-533, 538-602, 606-635, 644-733, 738-835, 840-861, 864
+venv/lib/python3.12/site-packages/exorl/core/kepler_catalog.py              166    104    37%   94, 98, 102-103, 107, 111, 115, 120, 125-126, 130, 138-159, 167-233, 240-248, 581, 584, 587, 593-597, 601-604, 608-609, 618-630, 634-635, 641-661, 668-678, 692-694
+venv/lib/python3.12/site-packages/exorl/core/launch_window.py               161    106    34%   21-23, 28, 42-56, 74, 78, 90-92, 107, 147-171, 187-205, 217-240, 243-248, 260-261, 264-265, 268-269, 294-306, 319, 322-333, 342-348, 361-363, 366-369, 374-379
+venv/lib/python3.12/site-packages/exorl/core/mission.py                     278    221    21%   50, 60, 67-70, 76-78, 81-94, 118-149, 189, 194, 199, 202-220, 247-328, 371-487, 527-579, 608-613, 623-624, 642-646, 651-656, 691-743
+venv/lib/python3.12/site-packages/exorl/core/observation.py                 199    145    27%   86, 89-98, 137, 142, 166-172, 188-198, 218-220, 247-253, 265-266, 303-317, 340-359, 378, 404-405, 434-460, 503-555, 600-685
+venv/lib/python3.12/site-packages/exorl/core/orbital_analysis.py            283    210    26%   39, 44, 49, 54, 72-79, 97-102, 110-113, 128-133, 142, 153-162, 173-175, 212, 231-250, 264-287, 302-310, 346-367, 377-386, 429-496, 510-520, 530-536, 558-568, 583-608, 623-637, 672-675, 687-703, 713, 738-780, 783-797
+venv/lib/python3.12/site-packages/exorl/core/physics.py                     150     96    36%   39, 43, 47, 51, 55, 60, 63, 80, 104-107, 129, 155-158, 170-201, 211-215, 230-257, 266-312
+venv/lib/python3.12/site-packages/exorl/core/planet.py                      259     98    62%   85-87, 90-92, 96-101, 182, 187, 194, 198, 211-212, 222-239, 243, 247-248, 255-261, 275-279, 282-306, 369-373, 377-378, 386-396, 404-407, 415-417, 424-428, 435-439, 446-448, 455-457, 464-468, 486-524
+venv/lib/python3.12/site-packages/exorl/core/planet_io.py                   116     87    25%   53-55, 60-66, 71-85, 93-111, 127-129, 152-156, 164-166, 173-268, 273-274, 286-289, 294-295, 309, 314, 319
+venv/lib/python3.12/site-packages/exorl/core/population.py                  224    224     0%   28-546
+venv/lib/python3.12/site-packages/exorl/core/power.py                        92     92     0%   41-291
+venv/lib/python3.12/site-packages/exorl/core/science_ops_env.py             228    228     0%   72-484
+venv/lib/python3.12/site-packages/exorl/core/soi.py                         162     68    58%   17, 21, 30-35, 39, 42, 46-48, 52, 56, 59, 62, 83, 87, 96-99, 102-107, 110, 130, 134, 143, 164, 168-174, 178-183, 189-190, 201-202, 219, 226-227, 231-251, 260-265
+venv/lib/python3.12/site-packages/exorl/core/star.py                        170     84    51%   52-60, 69, 99-101, 106-108, 141, 146, 151, 156, 161, 170, 175, 184-186, 190, 205-228, 232-234, 245-246, 255-256, 261-262, 267-268, 272, 276, 281-284, 294-298, 316-321, 328, 335, 339, 352-355, 359-375, 383, 395, 407, 419, 431, 443, 455
+venv/lib/python3.12/site-packages/exorl/core/surface_energy.py              148    106    28%   52-54, 58, 62, 65, 87-89, 94-95, 100-101, 106, 115-118, 121, 162-211, 249-281, 308-313, 329-340, 377-471
+venv/lib/python3.12/site-packages/exorl/core/thermal_evolution.py           233    233     0%   51-596
+venv/lib/python3.12/site-packages/exorl/core/tidal.py                       149    103    31%   78-91, 97-100, 113, 133-143, 180-193, 204-208, 219-220, 236-251, 279, 289, 300-308, 343-366, 384-402, 417-447, 461-500
+venv/lib/python3.12/site-packages/exorl/visualization/__init__.py             1      0   100%
+venv/lib/python3.12/site-packages/exorl/visualization/visualizer.py         721    619    14%   116-123, 128-138, 159-160, 176, 305-386, 408-466, 477-582, 593-646, 655-700, 731-899, 919-1043, 1065-1209, 1236-1438, 1458-1576, 1583-1676, 1683-1745, 1758-1836
+-------------------------------------------------------------------------------------------------------
+TOTAL                                                                      7312   5758    21%
+Coverage XML written to file coverage.xml
+FAIL Required test coverage of 80% not reached. Total coverage: 21.25%
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (101)</strong></summary>
+<table class="meta-table">
+
+<tr><td>annotated-types</td><td>0.7.0</td></tr>
+
+<tr><td>ast-serialize</td><td>0.3.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>black</td><td>26.3.1</td></tr>
+
+<tr><td>build</td><td>1.5.0</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>cfgv</td><td>3.5.0</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>click</td><td>8.1.8</td></tr>
+
+<tr><td>click-option-group</td><td>0.5.9</td></tr>
+
+<tr><td>cloudpickle</td><td>3.1.2</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>cuda-bindings</td><td>13.2.0</td></tr>
+
+<tr><td>cuda-pathfinder</td><td>1.5.4</td></tr>
+
+<tr><td>cuda-toolkit</td><td>13.0.2</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>deprecated</td><td>1.3.1</td></tr>
+
+<tr><td>distlib</td><td>0.4.0</td></tr>
+
+<tr><td>dotty-dict</td><td>1.3.1</td></tr>
+
+<tr><td>exorl</td><td>0.2.0</td></tr>
+
+<tr><td>farama-notifications</td><td>0.0.6</td></tr>
+
+<tr><td>filelock</td><td>3.29.0</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>fsspec</td><td>2026.4.0</td></tr>
+
+<tr><td>gitdb</td><td>4.0.12</td></tr>
+
+<tr><td>gitpython</td><td>3.1.50</td></tr>
+
+<tr><td>gymnasium</td><td>1.2.3</td></tr>
+
+<tr><td>identify</td><td>2.6.19</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>importlib-resources</td><td>6.5.2</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>isort</td><td>8.0.1</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>librt</td><td>0.10.0</td></tr>
+
+<tr><td>markdown-it-py</td><td>4.2.0</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>mdurl</td><td>0.1.2</td></tr>
+
+<tr><td>mpmath</td><td>1.3.0</td></tr>
+
+<tr><td>mypy</td><td>2.0.0</td></tr>
+
+<tr><td>mypy-extensions</td><td>1.1.0</td></tr>
+
+<tr><td>networkx</td><td>3.6.1</td></tr>
+
+<tr><td>nodeenv</td><td>1.10.0</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>nvidia-cublas</td><td>13.1.0.3</td></tr>
+
+<tr><td>nvidia-cuda-cupti</td><td>13.0.85</td></tr>
+
+<tr><td>nvidia-cuda-nvrtc</td><td>13.0.88</td></tr>
+
+<tr><td>nvidia-cuda-runtime</td><td>13.0.96</td></tr>
+
+<tr><td>nvidia-cudnn-cu13</td><td>9.19.0.56</td></tr>
+
+<tr><td>nvidia-cufft</td><td>12.0.0.61</td></tr>
+
+<tr><td>nvidia-cufile</td><td>1.15.1.6</td></tr>
+
+<tr><td>nvidia-curand</td><td>10.4.0.35</td></tr>
+
+<tr><td>nvidia-cusolver</td><td>12.0.4.66</td></tr>
+
+<tr><td>nvidia-cusparse</td><td>12.6.3.3</td></tr>
+
+<tr><td>nvidia-cusparselt-cu13</td><td>0.8.0</td></tr>
+
+<tr><td>nvidia-nccl-cu13</td><td>2.28.9</td></tr>
+
+<tr><td>nvidia-nvjitlink</td><td>13.0.88</td></tr>
+
+<tr><td>nvidia-nvshmem-cu13</td><td>3.4.5</td></tr>
+
+<tr><td>nvidia-nvtx</td><td>13.0.85</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>3.0.2</td></tr>
+
+<tr><td>pathspec</td><td>1.1.1</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pre-commit</td><td>4.6.0</td></tr>
+
+<tr><td>pydantic</td><td>2.13.4</td></tr>
+
+<tr><td>pydantic-core</td><td>2.46.4</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pyproject-hooks</td><td>1.2.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>python-discovery</td><td>1.3.0</td></tr>
+
+<tr><td>python-gitlab</td><td>6.5.0</td></tr>
+
+<tr><td>python-semantic-release</td><td>10.5.3</td></tr>
+
+<tr><td>pytokens</td><td>0.4.1</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>requests-toolbelt</td><td>1.0.0</td></tr>
+
+<tr><td>rich</td><td>14.3.4</td></tr>
+
+<tr><td>ruff</td><td>0.15.12</td></tr>
+
+<tr><td>setuptools</td><td>81.0.0</td></tr>
+
+<tr><td>shellingham</td><td>1.5.4</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>smmap</td><td>5.0.3</td></tr>
+
+<tr><td>stable-baselines3</td><td>2.8.0</td></tr>
+
+<tr><td>sympy</td><td>1.14.0</td></tr>
+
+<tr><td>tomlkit</td><td>0.13.3</td></tr>
+
+<tr><td>torch</td><td>2.11.0</td></tr>
+
+<tr><td>triton</td><td>3.6.0</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>typing-inspection</td><td>0.4.2</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>virtualenv</td><td>21.3.1</td></tr>
+
+<tr><td>wrapt</td><td>2.1.2</td></tr>
+
+</table>
+</details>
+
+</body></html>

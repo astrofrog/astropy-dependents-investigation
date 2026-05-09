@@ -1,0 +1,675 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>sigmas - 8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">8.0.0.dev926+g1999026c5</a></nav>
+<h1>sigmas</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>8.0.0.dev926+g1999026c5</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.1.2</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>67.2s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>sigmas</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>F
+=================================== FAILURES ===================================
+E   AttributeError: module &#39;numpy&#39; has no attribute &#39;trapz&#39;. Did you mean: &#39;trace&#39;?
+----------------------------- Captured stdout call -----------------------------
+Package path is: /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/inst_pkgs
+Installing Armazones
+Gathering information from server ...
+Connection successful, starting download ...
+Installing ELT
+Gathering information from server ...
+Connection successful, starting download ...
+Installing METIS
+Gathering information from server ...
+Connection successful, starting download ...
+ERROR - Unhandled exception occured, see log file for details.
+Traceback (most recent call last):
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/utils.py&#34;, line 1053, in wrapper
+    output = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/optics/optical_train.py&#34;, line 91, in __init__
+    self.load(cmds)
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/optics/optical_train.py&#34;, line 121, in load
+    self.optics_manager = OpticsManager(self.yaml_dicts)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/optics/optics_manager.py&#34;, line 44, in __init__
+    self.load_effects(yaml_dicts, **self.meta)
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/optics/optics_manager.py&#34;, line 89, in load_effects
+    self.optical_elements.extend(OpticalElement(dic, **kwargs)
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/optics/optics_manager.py&#34;, line 89, in &lt;genexpr&gt;
+    self.optical_elements.extend(OpticalElement(dic, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/optics/optical_element.py&#34;, line 78, in __init__
+    self.effects.append(make_effect(eff_dic,
+                        ^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/effects/effects_utils.py&#34;, line 81, in make_effect
+    effect = effect_cls(**effect_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/effects/ter_curves.py&#34;, line 697, in __init__
+    self.table = self.get_table()
+                 ^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/effects/ter_curves.py&#34;, line 654, in get_table
+    centres = u.Quantity([ter.centre for ter in ters])
+                          ^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/effects/ter_curves.py&#34;, line 453, in centre
+    num = np.trapz(thru * wave**2, x=wave)
+          ^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/numpy/__init__.py&#34;, line 792, in __getattr__
+    raise AttributeError(f&#34;module {__name__!r} has no attribute {attr!r}&#34;)
+AttributeError: module &#39;numpy&#39; has no attribute &#39;trapz&#39;. Did you mean: &#39;trace&#39;?
+ERROR - Python:
+3.12.10 (main, May 30 2025, 05:37:37) [Clang 20.1.4 ]
+
+Installed Python packages:
+           anisocado: 0.3.0
+             astropy: 8.0.0.dev926+g1999026c5
+      beautifulsoup4: 4.14.3
+            docutils: 0.22.4
+                lxml: 6.1.0
+          matplotlib: 3.10.9
+      more-itertools: 10.8.0
+               numpy: 2.4.4
+               pooch: 1.9.0
+              pyyaml: 6.0.3
+            requests: 2.33.1
+      requests-cache: 1.3.1
+               scipy: 1.17.1
+       scopesim_data: could not be loaded.
+  scopesim_templates: 0.5.1
+         skycalc-ipy: 0.2.0
+             synphot: 1.7.0
+                tqdm: 4.67.3
+
+Installed IRDB packages:
+  Armazones: 2023-07-11
+        ELT: 2025-10-26
+      METIS: 2026-04-17
+
+Operating System info:
+   System: Linux
+  Release: 6.1.0-43-amd64
+  Version: #1 SMP PREEMPT_DYNAMIC Debian 6.1.162-1 (2026-02-08)
+  Machine: x86_64
+
+----------------------------- Captured stderr call -----------------------------
+
+Downloading Armazones:   0%|[32m          [0m| 0/76048 [00:00&lt;?, ?it/s][32m[0m
+Downloading Armazones: 100%|[32m██████████[0m| 74.3k/74.3k [00:00&lt;00:00, 82.7MB/s][32m[0m
+
+Extracting  Armazones:   0%|[32m          [0m| 0/10 [00:00&lt;?, ?it/s][32m[0m
+Extracting  Armazones: 100%|[32m██████████[0m| 10/10 [00:00&lt;00:00, 2123.91it/s][32m[0m
+
+Downloading ELT:   0%|[32m          [0m| 0/55214 [00:00&lt;?, ?it/s][32m[0m
+Downloading ELT: 100%|[32m██████████[0m| 53.9k/53.9k [00:00&lt;00:00, 82.6MB/s][32m[0m
+
+Extracting  ELT:   0%|[32m          [0m| 0/17 [00:00&lt;?, ?it/s][32m[0m
+Extracting  ELT: 100%|[32m██████████[0m| 17/17 [00:00&lt;00:00, 4125.86it/s][32m[0m
+
+Downloading METIS:   0%|[32m          [0m| 0/36892715 [00:00&lt;?, ?it/s][32m[0m
+Downloading METIS:  32%|[32m███▏      [0m| 11.4M/35.2M [00:00&lt;00:00, 119MB/s][32m[0m
+Downloading METIS:  70%|[32m██████▉   [0m| 24.5M/35.2M [00:00&lt;00:00, 130MB/s][32m[0m
+Downloading METIS: 100%|[32m██████████[0m| 35.2M/35.2M [00:00&lt;00:00, 132MB/s][32m[0m
+
+Extracting  METIS:   0%|[32m          [0m| 0/212 [00:00&lt;?, ?it/s][32m[0m
+Extracting  METIS:  19%|[32m█▉        [0m| 41/212 [00:00&lt;00:00, 318.55it/s][32m[0m
+Extracting  METIS:  34%|[32m███▍      [0m| 73/212 [00:00&lt;00:01, 91.36it/s][32m[0m 
+Extracting  METIS:  99%|[32m█████████▊[0m| 209/212 [00:00&lt;00:00, 312.34it/s][32m[0m
+Extracting  METIS: 100%|[32m██████████[0m| 212/212 [00:00&lt;00:00, 261.68it/s][32m[0m
+------------------------------ Captured log call -------------------------------
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/ HTTP/1.1&#34; 200 2469
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:190 Searching folder &#39;atmo/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/atmo/ HTTP/1.1&#34; 200 917
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;atmo/&#34;.
+INFO     root:database.py:190 Searching folder &#39;example_data/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/example_data/ HTTP/1.1&#34; 200 2744
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;example_data/&#34;.
+INFO     root:database.py:190 Searching folder &#39;instruments/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/instruments/ HTTP/1.1&#34; 200 None
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;MAORY&#39;, &#39;HAWKI&#39;, &#39;OSIRIS&#39;, &#39;METIS&#39;, &#39;MORFEO&#39;, &#39;WFC3&#39;, &#39;MOSAIC&#39;, &#39;NIRCam&#39;, &#39;test_package&#39;, &#39;MICADO&#39;, &#39;MICADO_Sci&#39;}.
+INFO     root:database.py:190 Searching folder &#39;locations/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/locations/ HTTP/1.1&#34; 200 3007
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;Paranal&#39;, &#39;Armazones&#39;, &#39;LaPalma&#39;}.
+INFO     root:database.py:190 Searching folder &#39;psfs/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/psfs/ HTTP/1.1&#34; 200 3273
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;psfs/&#34;.
+INFO     root:database.py:190 Searching folder &#39;telescopes/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/telescopes/ HTTP/1.1&#34; 200 6463
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;GTC&#39;, &#39;ELT&#39;, &#39;ViennaLT&#39;, &#39;JWST&#39;, &#39;VLT&#39;, &#39;LFOA&#39;, &#39;HST&#39;}.
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/instruments/ HTTP/1.1&#34; 200 None
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/locations/ HTTP/1.1&#34; 200 3007
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/telescopes/ HTTP/1.1&#34; 200 6463
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/ HTTP/1.1&#34; 200 2469
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:190 Searching folder &#39;atmo/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/atmo/ HTTP/1.1&#34; 200 917
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;atmo/&#34;.
+INFO     root:database.py:190 Searching folder &#39;example_data/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/example_data/ HTTP/1.1&#34; 200 2744
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;example_data/&#34;.
+INFO     root:database.py:190 Searching folder &#39;instruments/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/instruments/ HTTP/1.1&#34; 200 None
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;MAORY&#39;, &#39;HAWKI&#39;, &#39;OSIRIS&#39;, &#39;METIS&#39;, &#39;MORFEO&#39;, &#39;WFC3&#39;, &#39;MOSAIC&#39;, &#39;NIRCam&#39;, &#39;test_package&#39;, &#39;MICADO&#39;, &#39;MICADO_Sci&#39;}.
+INFO     root:database.py:190 Searching folder &#39;locations/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/locations/ HTTP/1.1&#34; 200 3007
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;Paranal&#39;, &#39;Armazones&#39;, &#39;LaPalma&#39;}.
+INFO     root:database.py:190 Searching folder &#39;psfs/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/psfs/ HTTP/1.1&#34; 200 3273
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;psfs/&#34;.
+INFO     root:database.py:190 Searching folder &#39;telescopes/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/telescopes/ HTTP/1.1&#34; 200 6463
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;GTC&#39;, &#39;ELT&#39;, &#39;ViennaLT&#39;, &#39;JWST&#39;, &#39;VLT&#39;, &#39;LFOA&#39;, &#39;HST&#39;}.
+DEBUG    requests_cache.backends:__init__.py:67 Initializing backend: None test_cache
+DEBUG    requests_cache.backends.base:base.py:319 Initialized SQLiteDict with serializer: SerializerPipeline(name=pickle, n_stages=2)
+DEBUG    requests_cache.backends.sqlite:sqlite.py:252 Opening connection to /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/test_cache.sqlite:responses
+DEBUG    requests_cache.backends.base:base.py:319 Initialized SQLiteDict with serializer: None
+DEBUG    requests_cache.backends.sqlite:sqlite.py:252 Opening connection to /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/test_cache.sqlite:redirects
+DEBUG    requests_cache.policy.actions:actions.py:105 Cache directives from request headers: CacheDirectives()
+DEBUG    requests_cache.policy.actions:actions.py:424 Pre-read cache checks: Passed
+DEBUG    requests_cache.policy.actions:actions.py:221 Post-read cache actions: CacheActions(expire_after=-1, send_request=True)
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/locations/Armazones.2023-07-11.zip HTTP/1.1&#34; 200 76048
+DEBUG    requests_cache.policy.actions:actions.py:424 Pre-write cache checks: Passed
+DEBUG    requests_cache.backends.base:base.py:107 Closing backend connections
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/ HTTP/1.1&#34; 200 2469
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:190 Searching folder &#39;atmo/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/atmo/ HTTP/1.1&#34; 200 917
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;atmo/&#34;.
+INFO     root:database.py:190 Searching folder &#39;example_data/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/example_data/ HTTP/1.1&#34; 200 2744
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;example_data/&#34;.
+INFO     root:database.py:190 Searching folder &#39;instruments/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/instruments/ HTTP/1.1&#34; 200 None
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;MAORY&#39;, &#39;HAWKI&#39;, &#39;OSIRIS&#39;, &#39;METIS&#39;, &#39;MORFEO&#39;, &#39;WFC3&#39;, &#39;MOSAIC&#39;, &#39;NIRCam&#39;, &#39;test_package&#39;, &#39;MICADO&#39;, &#39;MICADO_Sci&#39;}.
+INFO     root:database.py:190 Searching folder &#39;locations/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/locations/ HTTP/1.1&#34; 200 3007
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;Paranal&#39;, &#39;Armazones&#39;, &#39;LaPalma&#39;}.
+INFO     root:database.py:190 Searching folder &#39;psfs/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/psfs/ HTTP/1.1&#34; 200 3273
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;psfs/&#34;.
+INFO     root:database.py:190 Searching folder &#39;telescopes/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/telescopes/ HTTP/1.1&#34; 200 6463
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;GTC&#39;, &#39;ELT&#39;, &#39;ViennaLT&#39;, &#39;JWST&#39;, &#39;VLT&#39;, &#39;LFOA&#39;, &#39;HST&#39;}.
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/instruments/ HTTP/1.1&#34; 200 None
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/locations/ HTTP/1.1&#34; 200 3007
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/telescopes/ HTTP/1.1&#34; 200 6463
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/ HTTP/1.1&#34; 200 2469
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:190 Searching folder &#39;atmo/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/atmo/ HTTP/1.1&#34; 200 917
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;atmo/&#34;.
+INFO     root:database.py:190 Searching folder &#39;example_data/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/example_data/ HTTP/1.1&#34; 200 2744
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;example_data/&#34;.
+INFO     root:database.py:190 Searching folder &#39;instruments/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/instruments/ HTTP/1.1&#34; 200 None
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;MAORY&#39;, &#39;HAWKI&#39;, &#39;OSIRIS&#39;, &#39;METIS&#39;, &#39;MORFEO&#39;, &#39;WFC3&#39;, &#39;MOSAIC&#39;, &#39;NIRCam&#39;, &#39;test_package&#39;, &#39;MICADO&#39;, &#39;MICADO_Sci&#39;}.
+INFO     root:database.py:190 Searching folder &#39;locations/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/locations/ HTTP/1.1&#34; 200 3007
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;Paranal&#39;, &#39;Armazones&#39;, &#39;LaPalma&#39;}.
+INFO     root:database.py:190 Searching folder &#39;psfs/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/psfs/ HTTP/1.1&#34; 200 3273
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;psfs/&#34;.
+INFO     root:database.py:190 Searching folder &#39;telescopes/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/telescopes/ HTTP/1.1&#34; 200 6463
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;GTC&#39;, &#39;ELT&#39;, &#39;ViennaLT&#39;, &#39;JWST&#39;, &#39;VLT&#39;, &#39;LFOA&#39;, &#39;HST&#39;}.
+DEBUG    requests_cache.backends:__init__.py:67 Initializing backend: None test_cache
+DEBUG    requests_cache.backends.base:base.py:319 Initialized SQLiteDict with serializer: SerializerPipeline(name=pickle, n_stages=2)
+DEBUG    requests_cache.backends.sqlite:sqlite.py:252 Opening connection to /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/test_cache.sqlite:responses
+DEBUG    requests_cache.backends.base:base.py:319 Initialized SQLiteDict with serializer: None
+DEBUG    requests_cache.backends.sqlite:sqlite.py:252 Opening connection to /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/test_cache.sqlite:redirects
+DEBUG    requests_cache.policy.actions:actions.py:105 Cache directives from request headers: CacheDirectives()
+DEBUG    requests_cache.policy.actions:actions.py:424 Pre-read cache checks: Passed
+DEBUG    requests_cache.policy.actions:actions.py:221 Post-read cache actions: CacheActions(expire_after=-1, send_request=True)
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/telescopes/ELT.2025-10-26.zip HTTP/1.1&#34; 200 55214
+DEBUG    requests_cache.policy.actions:actions.py:424 Pre-write cache checks: Passed
+DEBUG    requests_cache.backends.base:base.py:107 Closing backend connections
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/ HTTP/1.1&#34; 200 2469
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:190 Searching folder &#39;atmo/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/atmo/ HTTP/1.1&#34; 200 917
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;atmo/&#34;.
+INFO     root:database.py:190 Searching folder &#39;example_data/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/example_data/ HTTP/1.1&#34; 200 2744
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;example_data/&#34;.
+INFO     root:database.py:190 Searching folder &#39;instruments/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/instruments/ HTTP/1.1&#34; 200 None
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;MAORY&#39;, &#39;HAWKI&#39;, &#39;OSIRIS&#39;, &#39;METIS&#39;, &#39;MORFEO&#39;, &#39;WFC3&#39;, &#39;MOSAIC&#39;, &#39;NIRCam&#39;, &#39;test_package&#39;, &#39;MICADO&#39;, &#39;MICADO_Sci&#39;}.
+INFO     root:database.py:190 Searching folder &#39;locations/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/locations/ HTTP/1.1&#34; 200 3007
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;Paranal&#39;, &#39;Armazones&#39;, &#39;LaPalma&#39;}.
+INFO     root:database.py:190 Searching folder &#39;psfs/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/psfs/ HTTP/1.1&#34; 200 3273
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;psfs/&#34;.
+INFO     root:database.py:190 Searching folder &#39;telescopes/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/telescopes/ HTTP/1.1&#34; 200 6463
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;GTC&#39;, &#39;ELT&#39;, &#39;ViennaLT&#39;, &#39;JWST&#39;, &#39;VLT&#39;, &#39;LFOA&#39;, &#39;HST&#39;}.
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/instruments/ HTTP/1.1&#34; 200 None
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/locations/ HTTP/1.1&#34; 200 3007
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/telescopes/ HTTP/1.1&#34; 200 6463
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/ HTTP/1.1&#34; 200 2469
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:190 Searching folder &#39;atmo/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/atmo/ HTTP/1.1&#34; 200 917
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;atmo/&#34;.
+INFO     root:database.py:190 Searching folder &#39;example_data/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/example_data/ HTTP/1.1&#34; 200 2744
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;example_data/&#34;.
+INFO     root:database.py:190 Searching folder &#39;instruments/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/instruments/ HTTP/1.1&#34; 200 None
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;MAORY&#39;, &#39;HAWKI&#39;, &#39;OSIRIS&#39;, &#39;METIS&#39;, &#39;MORFEO&#39;, &#39;WFC3&#39;, &#39;MOSAIC&#39;, &#39;NIRCam&#39;, &#39;test_package&#39;, &#39;MICADO&#39;, &#39;MICADO_Sci&#39;}.
+INFO     root:database.py:190 Searching folder &#39;locations/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/locations/ HTTP/1.1&#34; 200 3007
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;Paranal&#39;, &#39;Armazones&#39;, &#39;LaPalma&#39;}.
+INFO     root:database.py:190 Searching folder &#39;psfs/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/psfs/ HTTP/1.1&#34; 200 3273
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:194 No packages found in directory &#34;psfs/&#34;.
+INFO     root:database.py:190 Searching folder &#39;telescopes/&#39;
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/telescopes/ HTTP/1.1&#34; 200 6463
+DEBUG    charset_normalizer:api.py:721 Encoding detection: ascii is most likely the one.
+INFO     root:database.py:196 Found packages {&#39;GTC&#39;, &#39;ELT&#39;, &#39;ViennaLT&#39;, &#39;JWST&#39;, &#39;VLT&#39;, &#39;LFOA&#39;, &#39;HST&#39;}.
+DEBUG    requests_cache.backends:__init__.py:67 Initializing backend: None test_cache
+DEBUG    requests_cache.backends.base:base.py:319 Initialized SQLiteDict with serializer: SerializerPipeline(name=pickle, n_stages=2)
+DEBUG    requests_cache.backends.sqlite:sqlite.py:252 Opening connection to /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/test_cache.sqlite:responses
+DEBUG    requests_cache.backends.base:base.py:319 Initialized SQLiteDict with serializer: None
+DEBUG    requests_cache.backends.sqlite:sqlite.py:252 Opening connection to /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/test_cache.sqlite:redirects
+DEBUG    requests_cache.policy.actions:actions.py:105 Cache directives from request headers: CacheDirectives()
+DEBUG    requests_cache.policy.actions:actions.py:424 Pre-read cache checks: Passed
+DEBUG    requests_cache.policy.actions:actions.py:221 Post-read cache actions: CacheActions(expire_after=-1, send_request=True)
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/instruments/METIS.2026-04-17.zip HTTP/1.1&#34; 200 36892715
+DEBUG    requests_cache.policy.actions:actions.py:424 Pre-write cache checks: Passed
+DEBUG    requests_cache.backends.base:base.py:107 Closing backend connections
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): scopesim.univie.ac.at:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://scopesim.univie.ac.at:443 &#34;GET /InstPkgSvr/api.php?package_name=METIS HTTP/1.1&#34; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): etimecalret-002.eso.org:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://etimecalret-002.eso.org:443 &#34;POST /observing/etc/api/skycalc HTTP/1.1&#34; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): etimecalret-002.eso.org:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://etimecalret-002.eso.org:443 &#34;GET /observing/etc/api/rmtmp?d=2a39cb67-c4db-40bx-932c-a6b1da33d69d HTTP/1.1&#34; 200 None
+ERROR    root:utils.py:1058 Unhandled exception occured, see log file for details.
+Traceback (most recent call last):
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/utils.py&#34;, line 1053, in wrapper
+    output = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/optics/optical_train.py&#34;, line 91, in __init__
+    self.load(cmds)
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/optics/optical_train.py&#34;, line 121, in load
+    self.optics_manager = OpticsManager(self.yaml_dicts)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/optics/optics_manager.py&#34;, line 44, in __init__
+    self.load_effects(yaml_dicts, **self.meta)
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/optics/optics_manager.py&#34;, line 89, in load_effects
+    self.optical_elements.extend(OpticalElement(dic, **kwargs)
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/optics/optics_manager.py&#34;, line 89, in &lt;genexpr&gt;
+    self.optical_elements.extend(OpticalElement(dic, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/optics/optical_element.py&#34;, line 78, in __init__
+    self.effects.append(make_effect(eff_dic,
+                        ^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/effects/effects_utils.py&#34;, line 81, in make_effect
+    effect = effect_cls(**effect_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/effects/ter_curves.py&#34;, line 697, in __init__
+    self.table = self.get_table()
+                 ^^^^^^^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/effects/ter_curves.py&#34;, line 654, in get_table
+    centres = u.Quantity([ter.centre for ter in ters])
+                          ^^^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/scopesim/effects/ter_curves.py&#34;, line 453, in centre
+    num = np.trapz(thru * wave**2, x=wave)
+          ^^^^^^^^
+  File &#34;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/numpy/__init__.py&#34;, line 792, in __getattr__
+    raise AttributeError(f&#34;module {__name__!r} has no attribute {attr!r}&#34;)
+AttributeError: module &#39;numpy&#39; has no attribute &#39;trapz&#39;. Did you mean: &#39;trace&#39;?
+ERROR    root:utils.py:497 Python:
+3.12.10 (main, May 30 2025, 05:37:37) [Clang 20.1.4 ]
+
+Installed Python packages:
+           anisocado: 0.3.0
+             astropy: 8.0.0.dev926+g1999026c5
+      beautifulsoup4: 4.14.3
+            docutils: 0.22.4
+                lxml: 6.1.0
+          matplotlib: 3.10.9
+      more-itertools: 10.8.0
+               numpy: 2.4.4
+               pooch: 1.9.0
+              pyyaml: 6.0.3
+            requests: 2.33.1
+      requests-cache: 1.3.1
+               scipy: 1.17.1
+       scopesim_data: could not be loaded.
+  scopesim_templates: 0.5.1
+         skycalc-ipy: 0.2.0
+             synphot: 1.7.0
+                tqdm: 4.67.3
+
+Installed IRDB packages:
+  Armazones: 2023-07-11
+        ELT: 2025-10-26
+      METIS: 2026-04-17
+
+Operating System info:
+   System: Linux
+  Release: 6.1.0-43-amd64
+  Version: #1 SMP PREEMPT_DYNAMIC Debian 6.1.162-1 (2026-02-08)
+  Machine: x86_64
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/numpy/__init__.py:792: AttributeError: module &#39;numpy&#39; has no attribute &#39;trapz&#39;. Did you mean: &#39;trace&#39;?
+=============================== warnings summary ===============================
+tests/test_sim.py: 10 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/astropy/units/core.py:2101: UnitsWarning: &#39;ph/s/m2/micron/arcsec2&#39; did not parse as fits unit: At col 8, Unit &#39;micron&#39; not supported by the FITS standard.  If this is meant to be a custom unit, define it with &#39;u.def_unit&#39;. To have it recognized inside a file reader or other code, enable it with &#39;u.add_enabled_units&#39;. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
+    warnings.warn(msg, UnitsWarning)
+
+tests/test_sim.py::test_hdu
+tests/test_sim.py::test_hdu
+tests/test_sim.py::test_hdu
+tests/test_sim.py::test_hdu
+tests/test_sim.py::test_hdu
+tests/test_sim.py::test_hdu
+tests/test_sim.py::test_hdu
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-sigmas-ixgezv9f/venv/lib/python3.12/site-packages/astropy/units/core.py:2101: UnitsWarning: &#39;1&#39; did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with &#39;u.def_unit&#39;. To have it recognized inside a file reader or other code, enable it with &#39;u.add_enabled_units&#39;. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
+    warnings.warn(msg, UnitsWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED artifact/sigmas-0.1.2/tests/test_sim.py::test_hdu - AttributeError: mo...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 17 warnings in 61.19s (0:01:01)
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (68)</strong></summary>
+<table class="meta-table">
+
+<tr><td>alabaster</td><td>1.0.0</td></tr>
+
+<tr><td>anisocado</td><td>0.3.0</td></tr>
+
+<tr><td>astar-utils</td><td>0.5.2</td></tr>
+
+<tr><td>astrodonut</td><td>0.1.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>attrs</td><td>26.1.0</td></tr>
+
+<tr><td>babel</td><td>2.18.0</td></tr>
+
+<tr><td>beautifulsoup4</td><td>4.14.3</td></tr>
+
+<tr><td>blinker</td><td>1.9.0</td></tr>
+
+<tr><td>cattrs</td><td>26.1.0</td></tr>
+
+<tr><td>certifi</td><td>2026.4.22</td></tr>
+
+<tr><td>charset-normalizer</td><td>3.4.7</td></tr>
+
+<tr><td>click</td><td>8.3.3</td></tr>
+
+<tr><td>colorama</td><td>0.4.6</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>docutils</td><td>0.22.4</td></tr>
+
+<tr><td>flask</td><td>3.1.3</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>imagesize</td><td>2.0.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>itsdangerous</td><td>2.2.0</td></tr>
+
+<tr><td>jinja2</td><td>3.1.6</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>lxml</td><td>6.1.0</td></tr>
+
+<tr><td>markupsafe</td><td>3.0.3</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>more-itertools</td><td>10.8.0</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>platformdirs</td><td>4.9.6</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pooch</td><td>1.9.0</td></tr>
+
+<tr><td>pyckles</td><td>0.2</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>requests</td><td>2.33.1</td></tr>
+
+<tr><td>requests-cache</td><td>1.3.1</td></tr>
+
+<tr><td>roman-numerals</td><td>4.1.0</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>scopesim</td><td>0.7.1</td></tr>
+
+<tr><td>scopesim-templates</td><td>0.5.1</td></tr>
+
+<tr><td>sigmas</td><td>0.1.2</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>skycalc-ipy</td><td>0.2.0</td></tr>
+
+<tr><td>snowballstemmer</td><td>3.0.1</td></tr>
+
+<tr><td>soupsieve</td><td>2.8.3</td></tr>
+
+<tr><td>spextra</td><td>0.33</td></tr>
+
+<tr><td>sphinx</td><td>9.1.0</td></tr>
+
+<tr><td>sphinxcontrib-applehelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-devhelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-htmlhelp</td><td>2.1.0</td></tr>
+
+<tr><td>sphinxcontrib-jsmath</td><td>1.0.1</td></tr>
+
+<tr><td>sphinxcontrib-qthelp</td><td>2.0.0</td></tr>
+
+<tr><td>sphinxcontrib-serializinghtml</td><td>2.0.0</td></tr>
+
+<tr><td>synphot</td><td>1.7.0</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>url-normalize</td><td>3.0.0</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>werkzeug</td><td>3.1.8</td></tr>
+
+</table>
+</details>
+
+</body></html>

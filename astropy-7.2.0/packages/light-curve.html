@@ -1,0 +1,458 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>light-curve - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>light-curve</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>0.12.1</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>62.6s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>light_curve</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>yes</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>........................................................................ [  2%]
+........................................................................ [  4%]
+........................................................................ [  6%]
+........................................................................ [  9%]
+........................................................................ [ 11%]
+........................................................................ [ 13%]
+........................................................................ [ 15%]
+........................................................................ [ 18%]
+........................................................................ [ 20%]
+........................................................................ [ 22%]
+........................................................................ [ 25%]
+........................................................................ [ 27%]
+........................................................................ [ 29%]
+........................................................................ [ 31%]
+........................................................................ [ 34%]
+........................................................................ [ 36%]
+........................................................................ [ 38%]
+........................................................................ [ 40%]
+........................................................................ [ 43%]
+........................................................................ [ 45%]
+........................................................................ [ 47%]
+........................................................................ [ 50%]
+........................................................................ [ 52%]
+........................................................................ [ 54%]
+........................................................................ [ 56%]
+........................................................................ [ 59%]
+........................................................................ [ 61%]
+........................................................................ [ 63%]
+...............................uF
+=================================== FAILURES ===================================
+E   FileNotFoundError: [Errno 2] No such file or directory: &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/artifact/light_curve-0.12.1/tests/light-curve-test-data/SNIa/snIa_bandg_minobs10_beforepeak3_afterpeak4.csv&#39;
+/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/artifact/light_curve-0.12.1/tests/test_w_bench.py:93: FileNotFoundError: [Errno 2] No such file or directory: &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/artifact/light_curve-0.12.1/tests/light-curve-test-data/SNIa/snIa_bandg_minobs10_beforepeak3_afterpeak4.csv&#39;
+=============================== warnings summary ===============================
+tests/light_curve_ext/test_periodogram.py::test_vs_lombscargle
+tests/light_curve_ext/test_periodogram.py::test_vs_lombscargle
+tests/light_curve_ext/test_periodogram.py::test_benchmark_periodogram_scipy[np.linspace-freqs0]
+tests/light_curve_ext/test_periodogram.py::test_benchmark_periodogram_scipy[np.geomspace-freqs1]
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/scipy/_lib/deprecation.py:234: DeprecationWarning: Use of parameter &#39;precenter&#39; is deprecated as of SciPy 1.17.0 and will be removed in 1.19.0. Please leave &#39;precenter&#39; unspecified. Passing True to &#39;precenter&#39; can be exactly substituted by passing &#39;y = (y - y.mean())&#39; into the input. Consider setting `floating_mean` to True instead.
+    return f(*args, **kwargs)
+
+tests/light_curve_py/features/test_adnormal.py::test_adnormal
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.adnormal.AndersonDarlingNormal is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_adnormal.py::test_adnormal
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/features/adnormal.py:12: FutureWarning: As of SciPy 1.17, users must choose a p-value calculation method by providing the `method` parameter. `method=&#39;interpolate&#39;` interpolates the p-value from pre-calculated tables; `method` may also be an instance of `MonteCarloMethod` to approximate the p-value via Monte Carlo simulation. When `method` is specified, the result object will include a `pvalue` attribute and not attributes `critical_value`, `significance_level`, or `fit_result`. Beginning in 1.19.0, these other attributes will no longer be available, and a p-value will always be computed according to one of the available `method` options.
+    return anderson(m).statistic * (1 + 4 / n - 25 / n**2)
+
+tests/light_curve_py/features/test_amplitude.py::test_amplitude
+tests/light_curve_py/features/test_bins.py::test_bins_size
+tests/light_curve_py/features/test_extractor.py::test_extractor_all_python
+tests/test_w_bench.py::TestAmplitude::test_feature_length
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.amplitude.Amplitude is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_beyondnstd.py::test_beyondnstd_1
+tests/light_curve_py/features/test_beyondnstd.py::test_beyondnsts_2
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.beyondnstd.BeyondNStd is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_bins.py::test_bins_1
+tests/light_curve_py/features/test_bins.py::test_bins_2
+tests/light_curve_py/features/test_bins.py::test_bins_3
+tests/light_curve_py/features/test_bins.py::test_bins_size
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.bins.Bins is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_bins.py::test_bins_1
+tests/light_curve_py/features/test_bins.py::test_bins_2
+tests/light_curve_py/features/test_bins.py::test_bins_3
+tests/light_curve_py/features/test_bins.py::test_bins_size
+tests/light_curve_py/features/test_extractor.py::test_extractor_all_python
+tests/light_curve_py/features/test_extractor.py::test_extractor_mixed_python_rust
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.extractor._PyExtractor is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_bins.py::test_bins_size
+tests/light_curve_py/features/test_mean.py::test_mean_1
+tests/light_curve_py/features/test_mean.py::test_mean_2
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.mean.Mean is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_bins.py::test_bins_size
+tests/light_curve_py/features/test_color_of_median.py::test_color_of_median
+tests/light_curve_py/features/test_median.py::test_median_1
+tests/light_curve_py/features/test_median.py::test_median_2
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.median.Median is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_color_of_median.py::test_color_of_median
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.color_of_median.ColorOfMedian is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_cusum.py::test_cusum
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.cusum.Cusum is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_eta.py::test_eta
+tests/light_curve_py/features/test_etae.py::test_etae_1
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.eta.Eta is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_etae.py::test_etae_1
+tests/light_curve_py/features/test_etae.py::test_etae_2
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.etae.EtaE is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_excvar.py::test_excvar
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.excvar.ExcessVariance is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_extractor.py::test_extractor_all_python
+tests/light_curve_py/features/test_extractor.py::test_extractor_mixed_python_rust
+tests/light_curve_py/features/test_otsusplit.py::test_otsu_1
+tests/light_curve_py/features/test_otsusplit.py::test_otsu_2
+tests/light_curve_py/features/test_otsusplit.py::test_otsu_thr
+tests/light_curve_py/features/test_otsusplit.py::test_otsu_sort
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.otsusplit.OtsuSplit is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_intpercrange.py::test_intpercrange_1
+tests/light_curve_py/features/test_intpercrange.py::test_intpercrange_2
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.intpercrange.InterPercentileRange is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_kurtosis.py::test_kurtosis
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.kurtosis.Kurtosis is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_linfit.py::test_linfit
+tests/light_curve_py/test_single_band.py::test_no_init_bands_no_input_bands
+tests/light_curve_py/test_single_band.py::test_init_bands_no_input_bands
+tests/light_curve_py/test_single_band.py::test_no_init_bands_input_bands
+tests/light_curve_py/test_single_band.py::test_init_bands_eq_input_bands
+tests/light_curve_py/test_single_band.py::test_init_bands_less_input_bands
+tests/light_curve_py/test_single_band.py::test_init_bands_more_input_bands
+tests/light_curve_py/test_single_band.py::test_init_bands_different_input_bands
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.linfit.LinearFit is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_lintrend.py::test_lintrend_1
+tests/light_curve_py/features/test_lintrend.py::test_lintrend_2
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.lintrend.LinearTrend is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_magnpratio.py::test_magnpratio_1
+tests/light_curve_py/features/test_magnpratio.py::test_magnpratio_2
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.magnpratio.MagnitudePercentageRatio is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_maxslope.py::test_maxslope
+tests/light_curve_py/test_call.py::test_normalize
+tests/light_curve_py/test_call.py::test_fill_zero_division
+tests/light_curve_py/test_call.py::test_fill_inf_values
+tests/light_curve_py/test_call.py::test_non_unique_values
+tests/light_curve_py/test_call.py::test_non_sorted_values
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.maxslope.MaximumSlope is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_meanvar.py::test_meanvar
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.meanvar.MeanVariance is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_medabsdev.py::test_medabsdev
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.medabsdev.MedianAbsoluteDeviation is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_medbufrperc.py::test_medbufrperc
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.medbufrperc.MedianBufferRangePercentage is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_n_not_det_before_fd.py::test_flux
+tests/light_curve_py/features/test_n_not_det_before_fd.py::test_flux_strictly_fainter
+tests/light_curve_py/features/test_n_not_det_before_fd.py::test_without_non_detections
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.flux_n_not_det_before_fd.FluxNNotDetBeforeFd is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_n_not_det_before_fd.py::test_magnitude
+tests/light_curve_py/features/test_n_not_det_before_fd.py::test_magnitude_strictly_fainter
+tests/light_curve_py/features/test_n_not_det_before_fd.py::test_without_non_detections
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.magnitude_n_not_det_before_fd.MagnitudeNNotDetBeforeFd is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_otsusplit.py::test_otsu_1
+tests/light_curve_py/features/test_otsusplit.py::test_otsu_2
+tests/light_curve_py/features/test_otsusplit.py::test_otsu_sort
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/numpy/_core/_methods.py:219: RuntimeWarning: Degrees of freedom &lt;= 0 for slice
+    ret = _var(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+
+tests/light_curve_py/features/test_otsusplit.py::test_otsu_1
+tests/light_curve_py/features/test_otsusplit.py::test_otsu_2
+tests/light_curve_py/features/test_otsusplit.py::test_otsu_sort
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/numpy/_core/_methods.py:211: RuntimeWarning: invalid value encountered in scalar divide
+    ret = ret.dtype.type(ret / rcount)
+
+tests/light_curve_py/features/test_pdiffmperc.py::test_pdiffmperc
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.pdiffmperc.PercentDifferenceMagnitudePercentile is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_percampl.py::test_medabsdev
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.percampl.PercentAmplitude is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_ptp_var.py::test_ptpvar
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.ptp_var.PeakToPeakVar is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_rainbow.py::test_noisy_with_baseline
+tests/light_curve_py/features/test_rainbow.py::test_noisy_all_functions_combination
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.rainbow.generic.RainbowFit is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_redchi2.py::test_redchi2_equal_sigma
+tests/light_curve_py/features/test_redchi2.py::test_redchi2_different_sigma
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.redchi2.ReducedChi2 is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_roms.py::test_roms_const_data
+tests/light_curve_py/features/test_roms.py::test_roms_periodic_data
+tests/light_curve_py/features/test_roms.py::test_roms_norm_data_1
+tests/light_curve_py/features/test_roms.py::test_roms_norm_data_2
+tests/light_curve_py/features/test_roms.py::test_roms_expon_data_1
+tests/light_curve_py/features/test_roms.py::test_roms_expon_data_2
+tests/light_curve_py/features/test_roms.py::test_roms_gamma_data_1
+tests/light_curve_py/features/test_roms.py::test_roms_gamma_data_2
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.roms.Roms is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_skew.py::test_skew
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.skew.Skew is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_stdev.py::test_stdev
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.stdev.StandardDeviation is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_stetsonk.py::test_stetsonk_1
+tests/light_curve_py/features/test_stetsonk.py::test_stetsonk_2
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.stetsonk.StetsonK is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/features/test_weightmean.py::test_weightmean
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/warnings.py:19: ExperimentalWarning: Function light_curve.light_curve_py.features.weightmean.WeightedMean is experimental and may cause any kind of troubles
+    warn_experimental(message)
+
+tests/light_curve_py/test_call.py::test_fill_zero_division
+tests/light_curve_py/test_call.py::test_non_unique_values
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/features/maxslope.py:10: RuntimeWarning: invalid value encountered in divide
+    div = np.abs(np.divide(m_span, t_span))
+
+tests/light_curve_py/test_call.py::test_fill_inf_values
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-light-curve-94wncvwf/venv/lib/python3.12/site-packages/light_curve/light_curve_py/features/maxslope.py:10: RuntimeWarning: overflow encountered in divide
+    div = np.abs(np.divide(m_span, t_span))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED artifact/light_curve-0.12.1/tests/test_w_bench.py::TestAmplitude::test_feature_length
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 2047 passed, 101 warnings, 1 subtests passed in 54.40s
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (62)</strong></summary>
+<table class="meta-table">
+
+<tr><td>aiobotocore</td><td>3.7.0</td></tr>
+
+<tr><td>aiohappyeyeballs</td><td>2.6.1</td></tr>
+
+<tr><td>aiohttp</td><td>3.13.5</td></tr>
+
+<tr><td>aioitertools</td><td>0.13.0</td></tr>
+
+<tr><td>aiosignal</td><td>1.4.0</td></tr>
+
+<tr><td>arro3-core</td><td>0.8.0</td></tr>
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>attrs</td><td>26.1.0</td></tr>
+
+<tr><td>botocore</td><td>1.43.0</td></tr>
+
+<tr><td>cesium</td><td>0.12.4</td></tr>
+
+<tr><td>click</td><td>8.3.3</td></tr>
+
+<tr><td>cloudpickle</td><td>3.1.2</td></tr>
+
+<tr><td>dask</td><td>2026.3.0</td></tr>
+
+<tr><td>deprecated</td><td>1.3.1</td></tr>
+
+<tr><td>frozenlist</td><td>1.8.0</td></tr>
+
+<tr><td>fsspec</td><td>2026.4.0</td></tr>
+
+<tr><td>gatspy</td><td>0.3</td></tr>
+
+<tr><td>idna</td><td>3.13</td></tr>
+
+<tr><td>iminuit</td><td>2.32.0</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>jmespath</td><td>1.1.0</td></tr>
+
+<tr><td>joblib</td><td>1.5.3</td></tr>
+
+<tr><td>light-curve</td><td>0.12.1</td></tr>
+
+<tr><td>locket</td><td>1.0.0</td></tr>
+
+<tr><td>markdown-pytest</td><td>0.6.0</td></tr>
+
+<tr><td>multidict</td><td>6.7.1</td></tr>
+
+<tr><td>nanoarrow</td><td>0.8.0</td></tr>
+
+<tr><td>nested-pandas</td><td>0.6.9</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pandas</td><td>2.3.3</td></tr>
+
+<tr><td>partd</td><td>1.4.2</td></tr>
+
+<tr><td>pathlib-abc</td><td>0.5.2</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>polars</td><td>1.40.1</td></tr>
+
+<tr><td>polars-runtime-32</td><td>1.40.1</td></tr>
+
+<tr><td>propcache</td><td>0.5.2</td></tr>
+
+<tr><td>py-cpuinfo</td><td>9.0.0</td></tr>
+
+<tr><td>pyarrow</td><td>24.0.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-benchmark</td><td>5.2.3</td></tr>
+
+<tr><td>pytest-subtests</td><td>0.15.0</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pytz</td><td>2026.2</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>ruff</td><td>0.15.12</td></tr>
+
+<tr><td>s3fs</td><td>2026.4.0</td></tr>
+
+<tr><td>scikit-learn</td><td>1.8.0</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>threadpoolctl</td><td>3.6.0</td></tr>
+
+<tr><td>toolz</td><td>1.1.0</td></tr>
+
+<tr><td>typing-extensions</td><td>4.15.0</td></tr>
+
+<tr><td>tzdata</td><td>2026.2</td></tr>
+
+<tr><td>universal-pathlib</td><td>0.3.10</td></tr>
+
+<tr><td>urllib3</td><td>2.7.0</td></tr>
+
+<tr><td>wrapt</td><td>2.1.2</td></tr>
+
+<tr><td>yarl</td><td>1.23.0</td></tr>
+
+</table>
+</details>
+
+</body></html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>stingray - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>stingray</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>2.3.2</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="pass">PASS</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>301.2s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>stingray</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>sssssssssssssssssssssssssssssss...ssssssssssssssssssssssssssssssssssssss [  3%]
+ssssssssssss............................................................ [  7%]
+ss.s.ssssssss.........ss................................ssssssssssssssss [ 11%]
+sssssssssssssss......................................................... [ 15%]
+.....................................ss.sss............................. [ 19%]
+.........ssssss......................................................... [ 22%]
+........sssssssssss..................................................... [ 26%]
+....................................................s................... [ 30%]
+......................................................................s. [ 34%]
+ss.s.........................................................s.........s [ 38%]
+ss...................................................................... [ 42%]
+...........................ss....s..........ss.......................... [ 45%]
+........................................................................ [ 49%]
+........................................................................ [ 53%]
+........................................................................ [ 57%]
+........................................................................ [ 61%]
+........................s............................................... [ 65%]
+...................................................ss................s.. [ 68%]
+........................ss.............................................. [ 72%]
+................ssssssssssssssssssssssssssssssssssssss.................. [ 76%]
+......................s.............................s................... [ 80%]
+........................................................................ [ 84%]
+...........................ssss.....................ss.................. [ 87%]
+........................................................................ [ 91%]
+...................................................sssss................ [ 95%]
+.........ssssssssssssssssss.ss.sss.....s.ss.sss.....s.ss.sss.....s.ss.ss [ 99%]
+s.....ssss                                                               [100%]
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/stingray/utils.py:54
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/utils.py:54: UserWarning: The recommended numba package is not installed. Some functionality might be slower.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/stingray/modeling/tests/test_scripts.py::TestFitLorentzians::test_fit_crossspectrum
+venv/lib/python3.12/site-packages/stingray/modeling/tests/test_scripts.py::TestFitLorentzians::test_fit_powerspectrum
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/modeling/posterior.py:302: RuntimeWarning: divide by zero encountered in log
+    - np.log(self.yerr)
+
+venv/lib/python3.12/site-packages/stingray/modeling/tests/test_scripts.py::TestFitLorentzians::test_fit_crossspectrum
+venv/lib/python3.12/site-packages/stingray/modeling/tests/test_scripts.py::TestFitLorentzians::test_fit_powerspectrum
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/modeling/posterior.py:303: RuntimeWarning: divide by zero encountered in divide
+    - (self.y - mean_model) ** 2 / (2.0 * self.yerr**2)
+
+venv/lib/python3.12/site-packages/stingray/modeling/tests/test_scripts.py::TestFitLorentzians::test_fit_crossspectrum
+venv/lib/python3.12/site-packages/stingray/modeling/tests/test_scripts.py::TestFitLorentzians::test_fit_powerspectrum
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/modeling/posterior.py:301: RuntimeWarning: invalid value encountered in subtract
+    -0.5 * np.log(2.0 * np.pi)
+
+venv/lib/python3.12/site-packages/stingray/pulse/tests/test_modeling.py::test_gaussian_function
+venv/lib/python3.12/site-packages/stingray/pulse/tests/test_modeling.py::test_gaussian_bounds
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/astropy/modeling/functional_models.py:219: RuntimeWarning: underflow encountered in exp
+    return amplitude * np.exp(-0.5 * (x - mean) ** 2 / stddev**2)
+
+venv/lib/python3.12/site-packages/stingray/pulse/tests/test_modeling.py::test_gaussian_function
+venv/lib/python3.12/site-packages/stingray/pulse/tests/test_modeling.py::test_gaussian_bounds
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/astropy/modeling/functional_models.py:219: RuntimeWarning: underflow encountered in multiply
+    return amplitude * np.exp(-0.5 * (x - mean) ** 2 / stddev**2)
+
+venv/lib/python3.12/site-packages/stingray/simulator/tests/test_simulator.py: 39 warnings
+venv/lib/python3.12/site-packages/stingray/tests/test_crosscorrelation.py: 1 warning
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py: 2 warnings
+venv/lib/python3.12/site-packages/stingray/tests/test_lightcurve.py: 3 warnings
+venv/lib/python3.12/site-packages/stingray/tests/test_lombscargle.py: 3 warnings
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py: 1 warning
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/utils.py:492: UserWarning: SIMON says: Stingray only uses poisson err_dist at the moment. All analysis in the light curve will assume Poisson errors. Sorry for the inconvenience.
+    warnings.warn(&#34;SIMON says: {0}&#34;.format(message), **kwargs)
+
+venv/lib/python3.12/site-packages/stingray/simulator/tests/test_simulator.py: 6 warnings
+venv/lib/python3.12/site-packages/stingray/tests/test_crosscorrelation.py: 1 warning
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py: 122 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/fourier.py:1766: UserWarning: n_ave is below 30. Please note that the error bars on the quantities derived from the cross spectrum are only reliable for a large number of averaged powers.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/stingray/simulator/tests/test_simulator.py: 6 warnings
+venv/lib/python3.12/site-packages/stingray/tests/test_crosscorrelation.py: 1 warning
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py: 78 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/fourier.py:1800: RuntimeWarning: divide by zero encountered in divide
+    dphi = np.sqrt((1 - gsq) / (2 * gsq * n_ave))
+
+venv/lib/python3.12/site-packages/stingray/simulator/tests/test_simulator.py: 4 warnings
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py: 87 warnings
+venv/lib/python3.12/site-packages/stingray/tests/test_fourier.py: 1 warning
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/fourier.py:1800: RuntimeWarning: invalid value encountered in sqrt
+    dphi = np.sqrt((1 - gsq) / (2 * gsq * n_ave))
+
+venv/lib/python3.12/site-packages/stingray/tests/test_base.py::TestStingrayObject::test_file_roundtrip_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_base.py::TestStingrayTimeseries::test_file_roundtrip_fits[True]
+venv/lib/python3.12/site-packages/stingray/tests/test_base.py::TestStingrayTimeseries::test_file_roundtrip_fits[False]
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestCovarianceIO::test_file_roundtrip_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestComplexCovarianceIO::test_file_roundtrip_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestRmsIO::test_file_roundtrip_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestLagIO::test_file_roundtrip_fits
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/io.py:1529: UserWarning: None output does not allow saving metadata at maximum precision. Converting to lower precision
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/stingray/tests/test_base.py::TestStingrayObject::test_file_roundtrip_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_base.py::TestStingrayTimeseries::test_file_roundtrip_fits[True]
+venv/lib/python3.12/site-packages/stingray/tests/test_base.py::TestStingrayTimeseries::test_file_roundtrip_fits[False]
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/astropy/io/fits/convenience.py:666: AstropyUserWarning: Attribute `panesapa` of type &lt;class &#39;numpy.ndarray&#39;&gt; cannot be added to FITS Header - skipping
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/stingray/tests/test_base.py::TestStingrayObject::test_file_roundtrip_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_base.py::TestStingrayTimeseries::test_file_roundtrip_fits[True]
+venv/lib/python3.12/site-packages/stingray/tests/test_base.py::TestStingrayTimeseries::test_file_roundtrip_fits[False]
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;parafritus&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/stingray/tests/test_base.py::TestStingrayObject::test_file_roundtrip_fits
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;pirichitus&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/stingray/tests/test_base.py::TestStingrayObject::test_file_roundtrip_fits
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;pistochedus&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/stingray/tests/test_base.py::TestStingrayTimeseries::test_file_roundtrip_fits[True]
+venv/lib/python3.12/site-packages/stingray/tests/test_base.py::TestStingrayTimeseries::test_file_roundtrip_fits[False]
+venv/lib/python3.12/site-packages/stingray/tests/test_events.py::TestEvents::test_io_with_fits
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;high_precision&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/stingray/tests/test_base.py::TestStingrayTimeseries::test_file_roundtrip_fits[True]
+venv/lib/python3.12/site-packages/stingray/tests/test_base.py::TestStingrayTimeseries::test_file_roundtrip_fits[False]
+venv/lib/python3.12/site-packages/stingray/tests/test_events.py::TestEvents::test_io_with_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_lightcurve.py::TestLightcurve::test_io_with_fits
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/astropy/io/fits/convenience.py:666: AstropyUserWarning: Attribute `gti` of type &lt;class &#39;numpy.ndarray&#39;&gt; cannot be added to FITS Header - skipping
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/stingray/tests/test_covariancespectrum.py: 79 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/covariancespectrum.py:445: RuntimeWarning: invalid value encountered in scalar power
+    return (num / denom) ** 0.5
+
+venv/lib/python3.12/site-packages/stingray/tests/test_covariancespectrum.py: 15 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/covariancespectrum.py:331: RuntimeWarning: invalid value encountered in sqrt
+    energy_covar = covar / xs_var**0.5
+
+venv/lib/python3.12/site-packages/stingray/tests/test_covariancespectrum.py::TestCovariancewithLightcurves::test_class_initializes_with_lightcurves
+venv/lib/python3.12/site-packages/stingray/tests/test_covariancespectrum.py::TestCovariancewithLightcurves::test_set_lc_flag_correctly
+venv/lib/python3.12/site-packages/stingray/tests/test_covariancespectrum.py::TestCovariancewithLightcurves::test_lc_with_no_band_interest
+venv/lib/python3.12/site-packages/stingray/tests/test_covariancespectrum.py::TestCovariancewithLightcurves::test_ref_band_interest_created_correctly
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/covariancespectrum.py:445: RuntimeWarning: divide by zero encountered in scalar divide
+    return (num / denom) ** 0.5
+
+venv/lib/python3.12/site-packages/stingray/tests/test_covariancespectrum.py::TestCovariancewithLightcurves::test_class_initializes_with_lightcurves
+venv/lib/python3.12/site-packages/stingray/tests/test_covariancespectrum.py::TestCovariancewithLightcurves::test_set_lc_flag_correctly
+venv/lib/python3.12/site-packages/stingray/tests/test_covariancespectrum.py::TestCovariancewithLightcurves::test_lc_with_no_band_interest
+venv/lib/python3.12/site-packages/stingray/tests/test_covariancespectrum.py::TestCovariancewithLightcurves::test_ref_band_interest_created_correctly
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/covariancespectrum.py:331: RuntimeWarning: divide by zero encountered in divide
+    energy_covar = covar / xs_var**0.5
+
+venv/lib/python3.12/site-packages/stingray/tests/test_covariancespectrum.py::TestAveragedCovariancespectrum::test_with_full_segment
+venv/lib/python3.12/site-packages/stingray/tests/test_covariancespectrum.py::TestAveragedCovariancespectrum::test_with_two_segments
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/covariancespectrum.py:581: RuntimeWarning: invalid value encountered in sqrt
+    energy_covar = covar / xs_var**0.5
+
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py: 19 warnings
+venv/lib/python3.12/site-packages/stingray/tests/test_fourier.py: 1 warning
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/fourier.py:1789: RuntimeWarning: invalid value encountered in sqrt
+    dIm = np.sqrt((PrPs - cross_power.real**2 + cross_power.imag**2) / two_n_ave)
+
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py: 18 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/crossspectrum.py:1888: UserWarning: Some error bars in the Averaged Crossspectrum are invalid.Defaulting to sqrt(2 / M) in Leahy norm, rescaled to the appropriate norm.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestAveragedCrossspectrumEvents::test_coherence
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestAveragedCrossspectrum::test_coherence
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestAveragedCrossspectrumOverlap::test_coherence
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestAveragedCrossspectrumOverlap::test_old_coherence_warns
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/fourier.py:939: RuntimeWarning: invalid value encountered in divide
+    uncertainty = (2**0.5 * coherence * (1 - coherence)) / (np.sqrt(coherence) * n_ave**0.5)
+
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestCoherence::test_high_intr_coherence[True]
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestCoherence::test_high_intr_coherence[False]
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestCoherence::test_high_coherence
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestAveragedCrossspectrum::test_coherence
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestAveragedCrossspectrumOverlap::test_coherence
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestAveragedCrossspectrumOverlap::test_old_coherence_warns
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/utils.py:492: UserWarning: SIMON says: Number of segments used in averaging is significantly low. The result might not follow the expected statistical distributions.
+    warnings.warn(&#34;SIMON says: {0}&#34;.format(message), **kwargs)
+
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestRoundTrip::test_file_roundtrip_lossy[fits]
+venv/lib/python3.12/site-packages/stingray/tests/test_events.py::TestEvents::test_io_with_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_lightcurve.py::TestLightcurve::test_io_with_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_powerspectrum.py::TestRoundTrip::test_file_roundtrip_lossy[fits]
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/io.py:1529: UserWarning: fits output does not allow saving metadata at maximum precision. Converting to lower precision
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestRoundTrip::test_file_roundtrip_lossy[fits]
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;channels_overlap&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestDynamicalCrossspectrum::test_rebin_small_dt
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestDynamicalCrossspectrum::test_rebin_time_sum_method
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestDynamicalCrossspectrum::test_rebin_n
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestDynamicalCrossspectrum::test_rebin_n_average
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestDynamicalCrossspectrum::test_rebin_n_warns_for_non_integer
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestDynamicalCrossspectrum::test_rebin_n_fails_for_n_lt_1
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestDynamicalCrossspectrum::test_rebin_n_copies_for_n_1
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestDynamicalCrossspectrum::test_rebin_time_mean_method[mean]
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestDynamicalCrossspectrum::test_rebin_time_mean_method[average]
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/crossspectrum.py:2462: RuntimeWarning: invalid value encountered in divide
+    conv = avg.cs_all / avg.unnorm_cs_all
+
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py: 38 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/fourier.py:1782: RuntimeWarning: invalid value encountered in sqrt
+    dphi = np.sqrt(
+
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestAveragedCrossspectrumOverlap::test_with_multiple_lightcurves_variable_length
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestAveragedCrossspectrumOverlap::test_rebin
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestAveragedCrossspectrumOverlap::test_rebin_factor
+venv/lib/python3.12/site-packages/stingray/tests/test_crossspectrum.py::TestAveragedCrossspectrumOverlap::test_rebin_log
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/fourier.py:1780: RuntimeWarning: invalid value encountered in sqrt
+    dRe = dIm = dG = np.sqrt(power_over_2n * (seg_power - frac))
+
+venv/lib/python3.12/site-packages/stingray/tests/test_lombscargle.py: 11 warnings
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/crossspectrum.py:921: RuntimeWarning: invalid value encountered in sqrt
+    nph = np.sqrt(self.nphots1 * self.nphots2)
+
+venv/lib/python3.12/site-packages/stingray/tests/test_powerspectrum.py::TestPowerspectrum::test_classical_significances_trial_correction
+venv/lib/python3.12/site-packages/stingray/tests/test_powerspectrum.py::TestPowerspectrum::test_pvals_is_numpy_array
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/stats.py:237: RuntimeWarning: underflow encountered in scalar power
+    return np.log(1 - (1 - np.exp(logp1)) ** n)
+
+venv/lib/python3.12/site-packages/stingray/tests/test_powerspectrum.py::TestDynamicalPowerspectrum::test_rebin_small_dt
+venv/lib/python3.12/site-packages/stingray/tests/test_powerspectrum.py::TestDynamicalPowerspectrum::test_rebin_time_sum_method
+venv/lib/python3.12/site-packages/stingray/tests/test_powerspectrum.py::TestDynamicalPowerspectrum::test_rebin_time_mean_method[mean]
+venv/lib/python3.12/site-packages/stingray/tests/test_powerspectrum.py::TestDynamicalPowerspectrum::test_rebin_time_mean_method[average]
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/stingray/powerspectrum.py:1130: RuntimeWarning: invalid value encountered in divide
+    conv = avg.cs_all / avg.unnorm_cs_all
+
+venv/lib/python3.12/site-packages/stingray/tests/test_powerspectrum.py::TestRoundTrip::test_file_roundtrip_lossy[fits]
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;show_progress&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestCovarianceIO::test_file_roundtrip_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestComplexCovarianceIO::test_file_roundtrip_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestRmsIO::test_file_roundtrip_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestLagIO::test_file_roundtrip_fits
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;min_phot_per_segment&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestCovarianceIO::test_file_roundtrip_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestComplexCovarianceIO::test_file_roundtrip_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestRmsIO::test_file_roundtrip_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestLagIO::test_file_roundtrip_fits
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;return_complex&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestCovarianceIO::test_file_roundtrip_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestComplexCovarianceIO::test_file_roundtrip_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestRmsIO::test_file_roundtrip_fits
+venv/lib/python3.12/site-packages/stingray/tests/test_varenergyspectrum.py::TestLagIO::test_file_roundtrip_fits
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-stingray-y7emw0xn/venv/lib/python3.12/site-packages/astropy/io/fits/card.py:271: VerifyWarning: Keyword name &#39;segment_size&#39; is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+1619 passed, 264 skipped, 626 warnings in 285.84s (0:04:45)
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (34)</strong></summary>
+<table class="meta-table">
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>attrs</td><td>26.1.0</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>hypothesis</td><td>6.152.4</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-arraydiff</td><td>0.6.1</td></tr>
+
+<tr><td>pytest-astropy</td><td>0.11.0</td></tr>
+
+<tr><td>pytest-astropy-header</td><td>0.2.2</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-doctestplus</td><td>1.7.1</td></tr>
+
+<tr><td>pytest-filter-subpackage</td><td>0.2.0</td></tr>
+
+<tr><td>pytest-mock</td><td>3.15.1</td></tr>
+
+<tr><td>pytest-remotedata</td><td>0.4.1</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>sortedcontainers</td><td>2.4.0</td></tr>
+
+<tr><td>stingray</td><td>2.3.2</td></tr>
+
+</table>
+</details>
+
+</body></html>

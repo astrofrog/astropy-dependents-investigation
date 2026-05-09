@@ -1,0 +1,202 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>hendrics - 7.2.0</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../../index.html">&larr; All versions</a> / <a href="../index.html">7.2.0</a></nav>
+<h1>hendrics</h1>
+<table class="meta-table">
+  <tr><td><strong>Astropy version</strong></td><td>7.2.0</td></tr>
+  <tr><td><strong>Package version</strong></td><td>8.5.1</td></tr>
+  <tr><td><strong>Installed</strong></td><td>yes</td></tr>
+  <tr><td><strong>Has tests</strong></td><td>yes</td></tr>
+  <tr><td><strong>Tests passed</strong></td>
+      <td><span class="fail">FAIL</span>
+          </td></tr>
+  <tr><td><strong>Duration</strong></td><td>26.5s</td></tr>
+  <tr><td><strong>Artifact</strong></td>
+      <td>sdist (module discovery: sdist)</td></tr>
+  <tr><td><strong>Import targets</strong></td><td>hendrics</td></tr>
+  <tr><td><strong>External tests dir</strong></td><td>no</td></tr>
+</table>
+
+
+<h2>Test output</h2>
+<pre>F
+=================================== FAILURES ===================================
+E   FileNotFoundError: [Errno 2] No such file or directory: &#39;HENreadfile&#39;
+---------------------------- Captured stdout setup -----------------------------
+[&#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hendrics-g9znbooo/venv/lib/python3.12/site-packages/hendrics/tests/data/monol_testA_E3-50_0d000244141_128_leahy_pds&#39;, &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hendrics-g9znbooo/venv/lib/python3.12/site-packages/hendrics/tests/data/monol_testB_E3-50_0d000244141_128_leahy_pds.p&#39;, &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hendrics-g9znbooo/venv/lib/python3.12/site-packages/hendrics/tests/data/monol_test_E3-50_0d000244141_128_leahy_cpds&#39;, &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hendrics-g9znbooo/venv/lib/python3.12/site-packages/hendrics/tests/data/monol_testA_E3-50_0d000244141_128_leahy_pds.p&#39;, &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hendrics-g9znbooo/venv/lib/python3.12/site-packages/hendrics/tests/data/monol_test_E3-50_0d000244141_128_leahy_cpds.p&#39;, &#39;/home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hendrics-g9znbooo/venv/lib/python3.12/site-packages/hendrics/tests/data/monol_testB_E3-50_0d000244141_128_leahy_pds&#39;]
+---------------------------- Captured stderr setup -----------------------------
+
+0it [00:00, ?it/s]
+4it [00:00, 5598.00it/s]
+
+0it [00:00, ?it/s]
+4it [00:00, 7749.29it/s]
+
+0it [00:00, ?it/s]
+4it [00:00, 4834.93it/s]
+/home/tom/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/subprocess.py:1955: FileNotFoundError: [Errno 2] No such file or directory: &#39;HENreadfile&#39;
+=============================== warnings summary ===============================
+venv/lib/python3.12/site-packages/stingray/utils.py:54
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hendrics-g9znbooo/venv/lib/python3.12/site-packages/stingray/utils.py:54: UserWarning: The recommended numba package is not installed. Some functionality might be slower.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/hendrics/io.py:43
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hendrics-g9znbooo/venv/lib/python3.12/site-packages/hendrics/io.py:43: UserWarning: Warning! NetCDF is not available. Using pickle format.
+    warnings.warn(msg)
+
+venv/lib/python3.12/site-packages/hendrics/fold.py:35
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hendrics-g9znbooo/venv/lib/python3.12/site-packages/hendrics/fold.py:35: UserWarning: PINT is not installed. Some pulsar functionality will not be available
+    warnings.warn(&#34;PINT is not installed. &#34; &#34;Some pulsar functionality will not be available&#34;)
+
+venv/lib/python3.12/site-packages/hendrics/tests/test_a_complete_run.py::TestFullRun::test_scripts_are_installed
+venv/lib/python3.12/site-packages/hendrics/tests/test_a_complete_run.py::TestFullRun::test_scripts_are_installed
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hendrics-g9znbooo/venv/lib/python3.12/site-packages/stingray/base.py:1250: UserWarning: The time array is not sorted. Sorting it now.
+    warnings.warn(&#34;The time array is not sorted. Sorting it now.&#34;)
+
+venv/lib/python3.12/site-packages/hendrics/tests/test_a_complete_run.py::TestFullRun::test_scripts_are_installed
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hendrics-g9znbooo/venv/lib/python3.12/site-packages/hendrics/fspec.py:615: UserWarning: Beware! For cpds and derivatives, I assume that the files are from only two instruments and in pairs (even in random order)
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/hendrics/tests/test_a_complete_run.py::TestFullRun::test_scripts_are_installed
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hendrics-g9znbooo/venv/lib/python3.12/site-packages/stingray/fourier.py:1766: UserWarning: n_ave is below 30. Please note that the error bars on the quantities derived from the cross spectrum are only reliable for a large number of averaged powers.
+    warnings.warn(
+
+venv/lib/python3.12/site-packages/hendrics/tests/test_a_complete_run.py::TestFullRun::test_scripts_are_installed
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hendrics-g9znbooo/venv/lib/python3.12/site-packages/stingray/fourier.py:1800: RuntimeWarning: divide by zero encountered in divide
+    dphi = np.sqrt((1 - gsq) / (2 * gsq * n_ave))
+
+venv/lib/python3.12/site-packages/hendrics/tests/test_a_complete_run.py::TestFullRun::test_scripts_are_installed
+  /home/tom/Claude/sandbox/astropy-downstream/.tmp/atest-hendrics-g9znbooo/venv/lib/python3.12/site-packages/stingray/fourier.py:1800: RuntimeWarning: invalid value encountered in sqrt
+    dphi = np.sqrt((1 - gsq) / (2 * gsq * n_ave))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED venv/lib/python3.12/site-packages/hendrics/tests/test_a_complete_run.py::TestFullRun::test_scripts_are_installed
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 9 warnings in 18.31s
+</pre>
+
+
+<details>
+<summary><strong>Installed deps (36)</strong></summary>
+<table class="meta-table">
+
+<tr><td>astropy</td><td>7.2.0</td></tr>
+
+<tr><td>astropy-iers-data</td><td>0.2026.5.4.1.4.54</td></tr>
+
+<tr><td>attrs</td><td>26.1.0</td></tr>
+
+<tr><td>contourpy</td><td>1.3.3</td></tr>
+
+<tr><td>coverage</td><td>7.13.5</td></tr>
+
+<tr><td>cycler</td><td>0.12.1</td></tr>
+
+<tr><td>fonttools</td><td>4.62.1</td></tr>
+
+<tr><td>hendrics</td><td>8.5.1</td></tr>
+
+<tr><td>hypothesis</td><td>6.152.4</td></tr>
+
+<tr><td>iniconfig</td><td>2.3.0</td></tr>
+
+<tr><td>kiwisolver</td><td>1.5.0</td></tr>
+
+<tr><td>matplotlib</td><td>3.10.9</td></tr>
+
+<tr><td>numpy</td><td>2.4.4</td></tr>
+
+<tr><td>packaging</td><td>26.2</td></tr>
+
+<tr><td>pillow</td><td>12.2.0</td></tr>
+
+<tr><td>pluggy</td><td>1.6.0</td></tr>
+
+<tr><td>pyerfa</td><td>2.0.1.5</td></tr>
+
+<tr><td>pygments</td><td>2.20.0</td></tr>
+
+<tr><td>pyparsing</td><td>3.3.2</td></tr>
+
+<tr><td>pytest</td><td>9.0.3</td></tr>
+
+<tr><td>pytest-arraydiff</td><td>0.6.1</td></tr>
+
+<tr><td>pytest-astropy</td><td>0.11.0</td></tr>
+
+<tr><td>pytest-astropy-header</td><td>0.2.2</td></tr>
+
+<tr><td>pytest-cov</td><td>7.1.0</td></tr>
+
+<tr><td>pytest-doctestplus</td><td>1.7.1</td></tr>
+
+<tr><td>pytest-filter-subpackage</td><td>0.2.0</td></tr>
+
+<tr><td>pytest-mock</td><td>3.15.1</td></tr>
+
+<tr><td>pytest-remotedata</td><td>0.4.1</td></tr>
+
+<tr><td>pytest-timeout</td><td>2.4.0</td></tr>
+
+<tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+
+<tr><td>pyyaml</td><td>6.0.3</td></tr>
+
+<tr><td>scipy</td><td>1.17.1</td></tr>
+
+<tr><td>six</td><td>1.17.0</td></tr>
+
+<tr><td>sortedcontainers</td><td>2.4.0</td></tr>
+
+<tr><td>stingray</td><td>2.3.2</td></tr>
+
+<tr><td>tqdm</td><td>4.67.3</td></tr>
+
+</table>
+</details>
+
+</body></html>

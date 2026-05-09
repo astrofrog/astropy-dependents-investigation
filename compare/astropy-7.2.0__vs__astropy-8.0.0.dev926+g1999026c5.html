@@ -1,0 +1,1169 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Compare astropy-7.2.0 vs astropy-8.0.0.dev926+g1999026c5</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; }
+  h1, h2 { margin-top: 0; }
+  a { color: #0366d6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; position: sticky; top: 0; cursor: pointer; }
+  tr:hover { background: #f0f0f0; }
+  .pass { color: #22863a; font-weight: bold; }
+  .fail { color: #cb2431; font-weight: bold; }
+  .skip { color: #6a737d; }
+  .pill, .pill-sm { display: inline-block; border-radius: 12px; font-size: 0.85em; }
+  .pill { padding: 2px 8px; }
+  .pill-sm { padding: 1px 6px; font-size: 0.8em; border-radius: 10px; }
+  a.pill-link { text-decoration: none; }
+  a.pill-link:hover .pill, a.pill-link:hover .pill-sm { filter: brightness(0.94); text-decoration: none; }
+  .pill.pass, .pill-sm.pass { background: #dcffe4; color: #22863a; }
+  .pill.fail, .pill-sm.fail { background: #ffdce0; color: #cb2431; }
+  .pill.no-tests, .pill-sm.no-tests { background: #eef2f6; color: #6a737d; }
+  .pill.install-fail, .pill-sm.install-fail { background: #fff1d6; color: #b08000; }
+  .pill.skip { background: #f1f1f1; color: #6a737d; }
+  .regression { background: #fff5f5 !important; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+        overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; }
+  nav { margin-bottom: 1.5em; font-size: 0.9em; }
+  .stats { display: flex; gap: 2em; margin-bottom: 1.5em; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2em; font-weight: bold; }
+  .filter-bar { margin-bottom: 1em; }
+  .filter-bar input { padding: 6px 10px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-bar select { padding: 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .filter-row { margin-bottom: 0.5em; display: flex; gap: 0.5em; flex-wrap: wrap; align-items: center; }
+  .filter-row .label { color: #6a737d; font-size: 0.85em; min-width: 6em; }
+  .preset { padding: 4px 12px; border: 1px solid #ddd; background: #f6f8fa;
+            border-radius: 14px; cursor: pointer; font-size: 0.85em; }
+  .preset:hover { background: #eaeef2; }
+  .preset.active { background: #0366d6; color: white; border-color: #0366d6; }
+  details summary { cursor: pointer; padding: 4px 0; }
+  .meta-table td { padding: 4px 10px; }
+  .meta-table { width: auto; }
+  .err-block pre { max-height: 320px; }
+</style>
+</head><body>
+<nav><a href="../index.html">&larr; All versions</a></nav>
+<h1>astropy-7.2.0 vs astropy-8.0.0.dev926+g1999026c5</h1>
+
+<h2>Regressions (passed &rarr; failed): 9</h2>
+
+<table><thead><tr><th>Package</th><th>astropy-7.2.0</th><th>astropy-8.0.0.dev926+g1999026c5</th></tr></thead><tbody>
+
+<tr>
+  <td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/APLpy.html">APLpy</a></td>
+  <td><span class="pill pass">PASS</span></td>
+  <td><span class="pill fail">FAIL</span></td>
+</tr>
+
+<tr>
+  <td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/astro-expanse.html">astro-expanse</a></td>
+  <td><span class="pill pass">PASS</span></td>
+  <td><span class="pill fail">FAIL</span></td>
+</tr>
+
+<tr>
+  <td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/astropy-xarray.html">astropy-xarray</a></td>
+  <td><span class="pill pass">PASS</span></td>
+  <td><span class="pill fail">FAIL</span></td>
+</tr>
+
+<tr>
+  <td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/fitscube.html">fitscube</a></td>
+  <td><span class="pill pass">PASS</span></td>
+  <td><span class="pill fail">FAIL</span></td>
+</tr>
+
+<tr>
+  <td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/glue-astronomy.html">glue-astronomy</a></td>
+  <td><span class="pill pass">PASS</span></td>
+  <td><span class="pill fail">FAIL</span></td>
+</tr>
+
+<tr>
+  <td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/naima.html">naima</a></td>
+  <td><span class="pill pass">PASS</span></td>
+  <td><span class="pill fail">FAIL</span></td>
+</tr>
+
+<tr>
+  <td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/sigmas.html">sigmas</a></td>
+  <td><span class="pill pass">PASS</span></td>
+  <td><span class="pill fail">FAIL</span></td>
+</tr>
+
+<tr>
+  <td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/stdatamodels.html">stdatamodels</a></td>
+  <td><span class="pill pass">PASS</span></td>
+  <td><span class="pill fail">FAIL</span></td>
+</tr>
+
+<tr>
+  <td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/stingray.html">stingray</a></td>
+  <td><span class="pill pass">PASS</span></td>
+  <td><span class="pill fail">FAIL</span></td>
+</tr>
+
+</tbody></table>
+
+
+<h2>Fixes (failed &rarr; passed): 3</h2>
+
+<table><thead><tr><th>Package</th><th>astropy-7.2.0</th><th>astropy-8.0.0.dev926+g1999026c5</th></tr></thead><tbody>
+
+<tr>
+  <td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/bayes-hfs.html">bayes-hfs</a></td>
+  <td><span class="pill fail">FAIL</span></td>
+  <td><span class="pill pass">PASS</span></td>
+</tr>
+
+<tr>
+  <td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/getCalspec.html">getCalspec</a></td>
+  <td><span class="pill fail">FAIL</span></td>
+  <td><span class="pill pass">PASS</span></td>
+</tr>
+
+<tr>
+  <td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/wis.html">wis</a></td>
+  <td><span class="pill fail">FAIL</span></td>
+  <td><span class="pill pass">PASS</span></td>
+</tr>
+
+</tbody></table>
+
+
+<h2>New install failures: 168</h2>
+
+<table><thead><tr><th>Package</th><th>Error</th></tr></thead><tbody>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/ASDtools.html">ASDtools</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/ASTRA-spectra.html">ASTRA-spectra</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0.1
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/AnisoCADO.html">AnisoCADO</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.1.7
+          astropy&gt;=8.0.0
+      and anisocado==0.5.0 depen</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/AstroForge.html">AstroForge</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.3.1
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/BAccMod.html">BAccMod</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;4.0
+          astropy&gt;=8.0
+      and baccmod==0.4.1 depends on </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/DDFacet.html">DDFacet</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;3.0
+          astropy&gt;7.2.0
+      and ddfacet==0.9.1.0 depends </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/EveryStamp.html">EveryStamp</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/ExoJAX.html">ExoJAX</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/MaDDG.html">MaDDG</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.3.1
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/MonoTools.html">MonoTools</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/PyDIET.html">PyDIET</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/Pyckles.html">Pyckles</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.1.7
+          astropy&gt;=8.0.0
+      and pyckles==0.6.0 depends</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/RM-Tools.html">RM-Tools</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/SLOPpy-package.html">SLOPpy-package</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.1
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/ScopeSim.html">ScopeSim</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.1.7
+          astropy&gt;=8.0.0
+      and scopesim==0.11.3 depen</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/ScopeSim-Templates.html">ScopeSim-Templates</a></td>
+    <td>pesim-templates==0.5.2 are incompatible.
+      And because we know from (1) that all of:
+          astropy&lt;6.0.1
+          astropy&gt;=8.0.0
+      , numpy&lt;2.0, scopesim-templates==0.5.2 are incompatible,</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/ScopeSim_Templates.html">ScopeSim_Templates</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.1.7
+          astropy&gt;=8.0.0
+      and scopesim-templates==0.</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/VSPEC.html">VSPEC</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/VisiOmatic.html">VisiOmatic</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/aqc-cli.html">aqc-cli</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.1.0
+          astropy&gt;=8.0.0
+      and aqc-cli==1.3.0 depends</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/arpes.html">arpes</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/asgardpy.html">asgardpy</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0
+          astropy&gt;=8.0
+      and asgardpy==0.5.3 depends on</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/astro-elisa.html">astro-elisa</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.3
+          astropy&gt;=7.3
+      and astro-elisa==0.2.4 depends</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/astro-ranch.html">astro-ranch</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.1
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/astrodb-scripts.html">astrodb-scripts</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/astrophot.html">astrophot</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.3
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/astropy.html">astropy</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because there is no version of astropy[docs]==7.2.0 and you require astropy[docs]==7.2.0, we can conclude that your requirements are unsatisfia</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/astrosr.html">astrosr</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/astrowisp.html">astrowisp</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/autoarray.html">autoarray</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.0
+          astropy&gt;7.2.0
+      and autoarray==2026.5.8.2 dep</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/autofit.html">autofit</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/autogalaxy.html">autogalaxy</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.0
+          astropy&gt;7.2.0
+      and autogalaxy==2026.5.8.2 de</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/autowisp.html">autowisp</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/azely.html">azely</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6
+          astropy&gt;=8
+      and azely==1.0.0 depends on astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/besta.html">besta</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/blochpesto.html">blochpesto</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/bloodmoon.html">bloodmoon</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0
+          astropy&gt;=8.dev0
+      and bloodmoon==0.1.0 depend</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/c108.html">c108</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.0
+          astropy&gt;=8.0
+      and c108[dev]==0.2.6 depends o</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/caracal.html">caracal</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0
+          astropy&gt;=8
+      and caracal==1.2.1rc1 depends on</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/cosmap.html">cosmap</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0.1
+          astropy&gt;=8.0.0
+      and cosmap==0.4.3 depends </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/ctao-bdms-clients.html">ctao-bdms-clients</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.0.1
+          astropy&gt;=8.0.0
+      and ctao-bdms-clients==0.8</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/ctao-calibpipe.html">ctao-calibpipe</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of ctapipe[all] are available:
+          ctapipe[all]&lt;=0.29.0
+          ctapipe[all]==0.30.0
+      and ctap</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/ctapipe.html">ctapipe</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.1
+          astropy&gt;=8.0.0
+      and ctapipe==0.30.0 depends </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/decode.html">decode</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6
+          astropy&gt;=8
+      and decode==2025.10.0 depends on a</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/demerge.html">demerge</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6
+          astropy&gt;=8
+      and demerge==2025.8.4 depends on a</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/direcd.html">direcd</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/disco-astronomy.html">disco-astronomy</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.0.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/disko.html">disko</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because disko==1.0.6 depends on tart2ms&gt;=0.7.1 and tart2ms&gt;=0.7.1 depends on astropy&gt;=7.1.0,&lt;8.0.0, we can conclude that disko==1.0.6 depends o</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/dl1-data-handler.html">dl1-data-handler</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because ctapipe&gt;=0.28.0 depends on astropy&gt;=6.1,&lt;8.0.0 and only the following versions of ctapipe are available:
+          ctapipe&lt;=0.28.0
+    </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/dvsg.html">dvsg</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6
+          astropy==8.0.0.dev926+g1999026c5
+      and astropy=</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/eloy.html">eloy</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/eovsapy.html">eovsapy</a></td>
+    <td>y_configuration
+          return _apply(dist, config, filepath)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File &#34;/home/tom/.cache/uv/builds-v0/.tmpDCIhkF/lib/python3.12/site-packages/setu</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/eradiate.html">eradiate</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/ethoscopy.html">ethoscopy</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0
+          astropy&gt;=8.0
+      and ethoscopy==2.2.0 depends o</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/exoctk.html">exoctk</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/exosim.html">exosim</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.1.0
+          astropy&gt;=8.0.0
+      and exosim==2.1.1 depends </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/fastspecfit.html">fastspecfit</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/fits2db.html">fits2db</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.0.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/fitstoolz.html">fitstoolz</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.1.0
+          astropy&gt;=8.0.0
+      and fitstoolz==0.0.1b1 dep</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/flarenet20.html">flarenet20</a></td>
+    <td>e only the following versions of astropy are available:
+          astropy&lt;5.3
+          astropy==8.0.0.dev926+g1999026c5
+      and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclu</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/fleck.html">fleck</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/flits.html">flits</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because there is no version of astropy==7.2.0 and flits==0.5.0 depends on astropy==7.2.0, we can conclude that flits==0.5.0 cannot be used.
+   </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/fme.html">fme</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/fmflow.html">fmflow</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6
+          astropy&gt;=8
+      and fmflow==0.5.0 depends on astro</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/galsynthspec.html">galsynthspec</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/ginput.html">ginput</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;3.1.2
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/gmlutil-data-extraction.html">gmlutil-data-extraction</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.0.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/gnatss.html">gnatss</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.1.7
+          astropy&gt;=8
+      and gnatss==0.3.1 depends on a</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/h5darkframes.html">h5darkframes</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.2.0
+          astropy&gt;=8.0.0
+      and h5darkframes==0.1.7 de</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/hapsira.html">hapsira</a></td>
+    <td>timeout</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/head-direction.html">head-direction</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/heinlein.html">heinlein</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0.1
+          astropy&gt;=8.0.0
+      and heinlein==0.10.11 depe</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/hipscatalog-gen.html">hipscatalog-gen</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6
+          astropy&gt;=8
+      and hipscatalog-gen==0.3.0 depends</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/ichigo-imaka.html">ichigo-imaka</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/incinerator.html">incinerator</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.1.0
+          astropy&gt;=8.0.0
+      and incinerator==1.0.0 dep</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/inoribea-astrocli.html">inoribea-astrocli</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.1.0
+          astropy&gt;=8.0.0
+      and inoribea-astrocli==1.4</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/irsol-data-pipeline.html">irsol-data-pipeline</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/irsol-data-pipeline-cli.html">irsol-data-pipeline-cli</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because there is no version of astropy==7.2.0 and irsol-data-pipeline-cli==0.1.46 depends on astropy==7.2.0, we can conclude that
+      irsol-d</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/jaxspec.html">jaxspec</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.0.0
+          astropy&gt;=8
+      and jaxspec==0.3.4 depends on </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/jnkepler.html">jnkepler</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/kaipy.html">kaipy</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because there is no version of astropy==7.2.0 and kaipy==1.1.5 depends on astropy==7.2.0, we can conclude that kaipy==1.1.5 cannot be used.
+   </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/kastredux.html">kastredux</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/katpoint.html">katpoint</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;4.1
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/lamatrix.html">lamatrix</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/lco-aligner.html">lco-aligner</a></td>
+    <td>v926+g1999026c5
+      and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that astropy&gt;=5.0 depends on numpy&gt;=2.0.
+      And because lco-aligner==0.0.1 depends on astropy&gt;=5.0,</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/lightcurver.html">lightcurver</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/lime-stable.html">lime-stable</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.1
+          astropy&gt;=8.dev0
+      and lime-stable==2.2.dev2 d</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/lksearch.html">lksearch</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/lofar-calculator.html">lofar-calculator</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/lucupy.html">lucupy</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.1
+          astropy&gt;=8.0
+      and lucupy==0.2.8 depends on a</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/mcfine.html">mcfine</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because there is no version of astropy==7.2.0 and mcfine==0.4 depends on astropy==7.2.0, we can conclude that mcfine==0.4 cannot be used.
+     </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/mono-cbp.html">mono-cbp</a></td>
+    <td>&gt;=1.16.5,&lt;1.25.0.
+      And because scipy&gt;=1.9.2,&lt;=1.9.3 depends on numpy&gt;=1.18.5,&lt;1.26.0 and numpy&gt;=1.19.5,&lt;1.27.0, we can conclude that scipy&gt;=1.7.0,&lt;1.11.0 depends on
+      numpy&gt;=1.16.5,&lt;1.27.0.
+ </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/mosaic-queen.html">mosaic-queen</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/mufasa.html">mufasa</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/multirex.html">multirex</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.0.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/nf2.html">nf2</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on packaging&gt;=25.0, we can conclude tha</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/nightskycam.html">nightskycam</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.2.0
+          astropy&gt;=8.0.0
+      and nightskycam==0.1.28 de</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/nightskycam-images.html">nightskycam-images</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.2.0
+          astropy&gt;=8.0.0
+      and nightskycam-images==0.</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/opencosmo.html">opencosmo</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.2.0
+          astropy&gt;=8.0.0
+      and opencosmo==1.2.7 depen</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/orpheus-npcf.html">orpheus-npcf</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6
+          astropy==8.0.0.dev926+g1999026c5
+      and astropy=</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/overlappogram.html">overlappogram</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/pepedd-nodes.html">pepedd-nodes</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.2.0
+          astropy&gt;=7.3.dev0
+      and pepedd-nodes==0.1.1</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/piva.html">piva</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;4.2
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/population-synthesis-toolkit.html">population-synthesis-toolkit</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.0.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/profiley.html">profiley</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;4.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/pyechelle.html">pyechelle</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.3.4
+          astropy&gt;=8.0.0
+      and pyechelle==0.4.0 depen</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/pyird.html">pyird</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/pylongslit.html">pylongslit</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.1.7
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/pyobs-brot.html">pyobs-brot</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0.1
+          astropy&gt;=8
+      and pyobs-brot==0.1.20 depends</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/pyobs-core.html">pyobs-core</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0.1
+          astropy&gt;=8
+      and pyobs-core==1.41.0 depends</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/pyobs-flipro.html">pyobs-flipro</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0.1
+          astropy&gt;=8
+      and pyobs-flipro==1.2.0 depend</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/pyobs-pilar.html">pyobs-pilar</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0.1
+          astropy&gt;=8
+      and pyobs-pilar==1.7.0 depends</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/pysme-astro.html">pysme-astro</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6
+          astropy&gt;=8
+      and pysme-astro==1.0.1 depends on </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/pyspextool.html">pyspextool</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/pzserver.html">pzserver</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6
+          astropy&gt;=8
+      and pzserver==0.3.4 depends on ast</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/qfitswidget.html">qfitswidget</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0.1
+          astropy&gt;=8
+      and qfitswidget==0.13.1 depend</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/qumas.html">qumas</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/qusi.html">qusi</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.2.1
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/radionets-radiotools.html">radionets-radiotools</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.1.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/ravest.html">ravest</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.2.0
+          astropy&gt;=8.0.0
+      and ravest==0.4.0 depends </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/rbinvariantslib.html">rbinvariantslib</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.1
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/resonances.html">resonances</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.1.0
+          astropy&gt;=8.0.0
+      and resonances==0.5.0 depe</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/roman-snpit-snappl.html">roman-snpit-snappl</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.1.0
+          astropy&gt;=8.0.0
+      and roman-snpit-snappl==0.</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/scopesim-targets.html">scopesim-targets</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.1.7
+          astropy&gt;=8.0.0
+      and scopesim-targets==0.1.</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/sdps-45m.html">sdps-45m</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6
+          astropy&gt;=8
+      and sdps-45m==0.5.0 depends on ast</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/sdss-actorcore.html">sdss-actorcore</a></td>
+    <td>ndencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;4.0.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astropy==8.0.0.dev926+g1999026c5 depends on n</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/sdss-cherno.html">sdss-cherno</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.0.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/sdss-coordio.html">sdss-coordio</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.0.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/sdss-too.html">sdss-too</a></td>
+    <td>dss-too==1.1.1 depends on numpy&gt;=2.0. (1)
+
+      Because sdss-coordio&gt;=1.13.0 depends on numpy&gt;=1.23.0,&lt;2 and only the following versions of sdss-coordio are available:
+          sdss-coordio&lt;=1.13.0
+</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/seismolab.html">seismolab</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;4.1rc1
+          astropy==8.0.0.dev926+g1999026c5
+      and ast</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/shapelets.html">shapelets</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/skycalc-ipy.html">skycalc-ipy</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.1.7
+          astropy&gt;=8.0.0
+      and skycalc-ipy==0.7.0 dep</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/space-ska.html">space-ska</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.1
+          astropy&gt;=8.0
+      and space-ska==2.1 depends on </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/spacelink.html">spacelink</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0.1
+          astropy&gt;=8.0.0
+      and spacelink==0.1.12 depe</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/speXtra.html">speXtra</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.1.7
+          astropy&gt;=8.0.0
+      and spextra==0.43.5 depend</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/spec2flux.html">spec2flux</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/spicypy.html">spicypy</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;3.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/splat.html">splat</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/spxquery.html">spxquery</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0
+          astropy&gt;=8.0
+      and spxquery==0.2.2 depends on</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/ssdc-sedbuilder.html">ssdc-sedbuilder</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0
+          astropy&gt;=8.dev0
+      and ssdc-sedbuilder==1.1.4 </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/star-shine.html">star-shine</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;4.3.1
+          astropy&gt;=8.0.0
+      and star-shine==0.3.5 depe</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/star_shine.html">star_shine</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;4.3.1
+          astropy&gt;=8.0.0
+      and star-shine==0.3.6 depe</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/starbash.html">starbash</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.1.1
+          astropy&gt;=8.0.0
+      and starbash==0.2.5 depend</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/stctm.html">stctm</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/stela-toolkit.html">stela-toolkit</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/suncasa.html">suncasa</a></td>
+    <td>figuration
+          return _apply(dist, config, filepath)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File &#34;/home/tom/.cache/uv/builds-v0/.tmpbyJBFW/lib/python3.12/site-packages/setuptool</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/superphot-plus.html">superphot-plus</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/svgdigitizer.html">svgdigitizer</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5
+          astropy&gt;=8
+      and svgdigitizer==0.14.3 depends o</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/taitale.html">taitale</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0.0
+          astropy&gt;=8.0.0
+      and taitale==1.0.1 depends</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/talbotextractor.html">talbotextractor</a></td>
+    <td>ving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.0.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astropy==8.0.0.dev926+g1999026c5 dep</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/tart2ms.html">tart2ms</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.1.0
+          astropy&gt;=8.0.0
+      and tart2ms==0.8.0 depends</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/teda.html">teda</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;=5.2.2
+          astropy==8.0.0.dev926+g1999026c5
+      and ast</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/timeSpace.html">timeSpace</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.0
+          astropy&gt;=8
+      and timespace==0.1.0 depends on </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/timewise.html">timewise</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.1
+          astropy&gt;=8.0.0
+      and timewise==1.0.0a10 depen</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/tom-education.html">tom-education</a></td>
+    <td>compatible.
+      And because only the following versions of astropy are available:
+          astropy&lt;3
+          astropy&gt;=5.3.3
+      and tomtoolkit&gt;=2.18.0,&lt;=2.22.1 depends on astropy&gt;=5.3.3,&lt;6, we </td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/tomtoolkit.html">tomtoolkit</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.3.3
+          astropy&gt;=8
+      and tomtoolkit==3.0.0a8 depend</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/torchklip.html">torchklip</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/tuskitoo.html">tuskitoo</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astrop</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/twirl.html">twirl</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.1.1
+          astropy&gt;=8
+      and twirl==0.5.1 depends on as</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/ucdmcmc.html">ucdmcmc</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/unite.html">unite</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.2.0
+          astropy&gt;=8
+      and unite==2.7.2 depends on as</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/unitpackage.html">unitpackage</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5
+          astropy&gt;=8
+      and unitpackage==0.13.3 depends on</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/vspec-vsm.html">vspec-vsm</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/xsnap.html">xsnap</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7.0.0
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/yaqq.html">yaqq</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;6.1.6
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/zodipy.html">zodipy</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;5.0.1
+          astropy==8.0.0.dev926+g1999026c5
+      and astr</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/zstarview.html">zstarview</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only the following versions of astropy are available:
+          astropy&lt;7
+          astropy&gt;=8
+      and zstarview==1.22.3 depends on a</td></tr>
+
+<tr><td><a href="../astropy-8.0.0.dev926+g1999026c5/packages/zvartools.html">zvartools</a></td>
+    <td>  × No solution found when resolving dependencies:
+  ╰─▶ Because only astropy==8.0.0.dev926+g1999026c5 is available and astropy==8.0.0.dev926+g1999026c5 depends on numpy&gt;=2.0, we can conclude that all</td></tr>
+
+</tbody></table>
+
+</body></html>
